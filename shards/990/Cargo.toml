@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+miden-funding-service = "=0.18.2"
+miden-node = "=0.18.2"
+miden-node-block-producer = "=0.18.2"
+miden-node-rpc = "=0.18.2"
+miden-ntx-builder = "=0.18.2"
+miden-validator = "=0.18.2"
+skardi = "=0.8.0"
+skidmarks = "=0.1.9"
+valknut-rs = "=1.5.1"

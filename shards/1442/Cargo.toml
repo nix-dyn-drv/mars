@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+tasker-client = "=0.1.8"
+tasker-ctl = "=0.1.8"
+tasker-mcp = "=0.1.8"
+tasker-orchestration = "=0.1.8"
+tasker-sdk = "=0.1.8"
+tasker-shared = "=0.1.8"
+tasker-worker = "=0.1.8"

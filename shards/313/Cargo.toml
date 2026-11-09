@@ -1,0 +1,53 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+brk_rolldown_watcher = "=0.3.0"
+bundla = "=0.2.0"
+calepin = "=0.0.61"
+cucumber-reporter = "=0.4.4"
+datavzrd = "=2.76.0"
+didactic = "=0.1.1"
+dioprism-cli = "=0.2.0-alpha.1"
+dioprism-ssr = "=0.2.0-alpha.1"
+fob-bundler = "=0.5.0"
+fob-cli = "=0.5.0"
+fob-plugin-astro = "=0.3.0"
+fob-plugin-css = "=0.4.2"
+fob-plugin-svelte = "=0.3.0"
+fob-plugin-vue = "=0.3.0"
+ic-sqlite = "=0.1.0"
+ic-sqlite-features = "=0.1.1"
+iocaine = "=3.5.1"
+iocaine-powder = "=3.5.1"
+litesite = "=2.5.0"
+mdbook-pagecrypt = "=0.2.0"
+neur = "=0.1.0"
+novos = "=0.1.528"
+nucleusflow = "=0.0.11"
+pict-rs-admin = "=0.2.1"
+rolldown_filter_analyzer = "=0.1.0"
+rolldown_plugin_build_import_analysis = "=0.1.0"
+rolldown_plugin_dynamic_import_vars = "=0.1.0"
+rolldown_plugin_import_glob = "=0.1.0"
+rolldown_plugin_transform = "=0.1.0"
+rolldown_plugin_vite_html = "=0.1.0"
+rolldown_plugin_web_worker_post = "=0.1.0"
+sfumato = "=0.5.0"
+sfumato-adapters = "=0.5.0"
+simple-web = "=0.6.0"
+slurp-dev-server = "=0.1.1"
+trunk = "=0.22.1"
+wolfpack-lang = "=0.5.1"

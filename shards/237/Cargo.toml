@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bark-cli = "=0.8.1"
+bark-json = "=0.8.1"
+bark-nwc = "=0.7.1"
+bark-rest = "=0.8.1"
+bark-rest-client = "=0.8.1"
+bark-server-rpc = "=0.8.1"
+bark-wallet = "=0.8.1"
+cgx-cli = "=0.5.3"
+ethers-hardhat-rs = "=0.1.0"
+ethers-macros-rs = "=0.1.0"
+ethers-providers-rs = "=0.1.0"
+laminar-sql = "=0.33.0"
+mcpkill = "=0.1.0"
+memori-ai-core = "=0.7.1"
+quickgui = "=0.1.6"
+semstore = "=0.1.0"
+skill-mcp = "=0.3.0"
+skill-runtime = "=0.3.0"
+telemetry-server = "=0.1.0"
+turbo-surf-core = "=0.7.1"
+turbo-surf-page = "=0.7.1"
+turbo-surf-view = "=0.7.1"

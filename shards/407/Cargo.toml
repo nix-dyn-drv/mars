@@ -1,0 +1,39 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+claudix = "=0.5.1"
+code2graph-cli = "=0.0.0-beta.17"
+diffler-core = "=0.21.1"
+diffr-cli = "=0.1.23"
+diffr-core = "=0.1.23"
+m1nd-mcp = "=1.6.5"
+narwhal-app = "=2.3.0"
+narwhal-commands = "=2.3.0"
+narwhal-mcp = "=2.3.0"
+narwhal-tui = "=2.3.0"
+ndelement = "=0.4.0"
+ndfunctionspace = "=0.4.0"
+ndmesh = "=0.4.0"
+prx = "=0.6.4"
+relay-knowledge = "=1.1.22"
+sem-cli = "=0.29.0"
+sem-mcp = "=0.29.0"
+sql-lsp = "=0.1.3"
+sqry-lang-sql = "=33.0.1"
+sqry-plugin-registry = "=33.0.1"
+trouve = "=1.1.0"
+weave-cli = "=0.7.0"
+weave-mcp = "=0.7.0"

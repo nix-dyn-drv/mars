@@ -1,0 +1,36 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bevui-28 = "=0.1.1"
+bevy-gotrue = "=0.2.0"
+bevy-postgrest = "=0.2.0"
+bevyhub-cli = "=0.0.1-rc.2"
+bom-buddy = "=0.1.1"
+crityp = "=0.15.12"
+datafusion-bigtable = "=0.1.0"
+dust-lang = "=0.4.2"
+elfsign = "=0.0.2"
+open-gpui-reqwest-client = "=0.2.0"
+procop = "=0.1.0"
+pyrudof = "=0.2.12"
+rusk-wallet = "=0.3.0"
+seedwing-policy-engine = "=0.1.0-alpha.2"
+shippo-release = "=0.1.32"
+stablebond-sdk = "=3.0.20"
+statac = "=0.8.0"
+vcp-cli = "=4.2.0"
+vcp-core = "=4.2.0"
+vcp-wasm = "=4.2.0"

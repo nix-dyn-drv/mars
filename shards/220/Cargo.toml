@@ -1,0 +1,65 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+axiom-core = "=2.0.13"
+bitcoin-bench = "=0.1.16-alpha.0"
+bitcoin-blockfilter = "=0.1.16-alpha.0"
+bitcoin-cli = "=0.1.16-alpha.0"
+bitcoin-coincontrol = "=0.1.16-alpha.0"
+bitcoin-coinselect = "=0.1.16-alpha.0"
+bitcoin-daemon = "=0.1.16-alpha.0"
+bitcoin-dummywallet = "=0.1.16-alpha.0"
+bitcoin-dumpwallet = "=0.1.16-alpha.0"
+bitcoin-fuzz = "=0.1.16-alpha.0"
+bitcoin-index = "=0.1.16-alpha.0"
+bitcoin-indexed-chain = "=0.1.16-alpha.0"
+bitcoin-init = "=0.1.16-alpha.0"
+bitcoin-ipc = "=0.1.16-alpha.0"
+bitcoin-mainsignals = "=0.1.16-alpha.0"
+bitcoin-miner = "=0.1.16-alpha.0"
+bitcoin-net-zmq = "=0.1.16-alpha.0"
+bitcoin-peerman = "=0.1.16-alpha.0"
+bitcoin-qt = "=0.1.16-alpha.0"
+bitcoin-restapi = "=0.1.16-alpha.0"
+bitcoin-test = "=0.1.16-alpha.0"
+bitcoinrpc-blockchain = "=0.1.16-alpha.0"
+bitcoinrpc-dump = "=0.1.16-alpha.0"
+bitcoinrpc-mining = "=0.1.16-alpha.0"
+bitcoinrpc-misc = "=0.1.16-alpha.0"
+bitcoinrpc-net = "=0.1.16-alpha.0"
+bitcoinrpc-txn = "=0.1.16-alpha.0"
+bitcoinrpc-wallet = "=0.1.16-alpha.0"
+bitcoinwallet-fees = "=0.1.16-alpha.0"
+bitcoinwallet-init = "=0.1.16-alpha.0"
+bitcoinwallet-library = "=0.1.16-alpha.0"
+bitcoinwallet-receive = "=0.1.16-alpha.0"
+bitcoinwallet-spend = "=0.1.16-alpha.0"
+cosmian_kmip = "=5.28.0"
+cosmian_kms_base_hsm = "=5.28.0"
+cosmian_kms_interfaces = "=5.28.0"
+crypt2pay_pkcs11_loader = "=5.28.0"
+destiny_rs = "=0.1.1"
+hnr = "=0.5.0"
+nos-cli = "=0.1.0"
+nym-mixnet-contract = "=1.4.0"
+nym-vesting-contract = "=1.4.0"
+proteccio_pkcs11_loader = "=5.28.0"
+shellcast = "=20251214.0.0"
+smartcardhsm_pkcs11_loader = "=5.28.0"
+softhsm2_pkcs11_loader = "=5.28.0"
+utimaco_pkcs11_loader = "=5.28.0"
+wicrs_api = "=0.2.1"
+wirc_server = "=0.3.0"

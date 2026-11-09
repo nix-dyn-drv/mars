@@ -1,0 +1,41 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+arexibo = "=0.5.0"
+argui-layout = "=0.4.0"
+argui-ui = "=0.4.0"
+argui-widgets = "=0.3.2"
+cargo-registry-markdown = "=0.1.1"
+csusage-adapter-all = "=0.0.29"
+csusage-adapter-antigravity = "=0.0.29"
+csusage-adapter-claude-science = "=0.0.29"
+csusage-adapter-goose = "=0.0.29"
+csusage-adapter-hermes = "=0.0.29"
+csusage-adapter-kilo = "=0.0.29"
+csusage-adapter-opencode = "=0.0.29"
+csusage-adapter-zcode = "=0.0.29"
+csusage-test-support = "=0.0.29"
+dbgflow-server = "=0.4.0"
+flow_macro = "=0.42.0"
+loonfs-api = "=0.4.0"
+loonfs-types = "=0.5.0"
+microsoft-webui-wasm = "=3.0.5"
+neocogi-platform-plugin = "=0.1.0-alpha.2"
+neocogi-platform-plugin-dylib = "=0.1.0-alpha.2"
+retroglyph-gl = "=0.4.1"
+retroglyph-terminal-wasm = "=0.3.4"
+rsdocs2docset = "=0.4.1"
+tiro = "=0.4.1"

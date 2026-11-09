@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+axonyx-runtime = "=0.8.3"
+cargo-axonyx = "=0.8.8"
+flowide = "=0.31.0"
+psmore = "=0.3.1"
+rusty-whisper = "=0.1.3"

@@ -1,0 +1,60 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+attnres = "=0.1.1"
+auth0wrap = "=0.1.1"
+bimm = "=0.19.4"
+bimm-firehose = "=0.19.4"
+bimm-firehose-image = "=0.19.4"
+block-graph = "=0.4.0"
+burn-deblur = "=0.1.0"
+burn-rmexp-dyntensor = "=0.0.5"
+burn-rmexp-tensorlib = "=0.0.5"
+burn_attention = "=0.1.0"
+crabsaxs = "=0.1.1"
+deduco = "=0.1.2"
+hedged-rpc-client = "=0.1.0"
+hydracache-cluster = "=0.73.0"
+hydracache-cluster-chitchat = "=0.73.0"
+hydracache-server = "=0.73.0"
+instmodel = "=2.1.0"
+jepa-compat = "=0.1.0"
+jepa-core = "=0.1.0"
+jepa-train = "=0.1.0"
+jepa-vision = "=0.1.0"
+jepa-world = "=0.1.0"
+jsona-cli = "=0.6.0"
+manopt-rs = "=0.1.2"
+native-pyannote-rs = "=0.1.4"
+qoqo-qryd = "=0.21.0"
+ratune = "=0.17.0"
+reglyco-saxs = "=0.2.3"
+rsvim = "=0.1.2"
+rwrd = "=0.4.0"
+silero_vad_burn = "=0.1.1"
+smtp_srv = "=0.2.41"
+topiary-core = "=0.8.0"
+triage = "=0.3.0"
+turbine-sdk = "=0.1.2"
+turbine-tui = "=0.1.2"
+wav2vec-burn = "=0.1.0"
+whis-core = "=0.7.2"
+world-models-gpc-compat = "=0.1.0"
+world-models-gpc-core = "=0.1.0"
+world-models-gpc-eval = "=0.1.0"
+world-models-gpc-policy = "=0.1.0"
+world-models-gpc-train = "=0.1.0"
+world-models-gpc-world = "=0.1.0"

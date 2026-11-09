@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+decds = "=0.2.0"
+depyler-analysis = "=4.1.1"
+depyler-analyzer = "=4.1.1"
+depyler-core = "=4.1.1"
+depyler-graph = "=4.1.1"
+depyler-lambda = "=4.1.1"
+depyler-ruchy = "=3.25.0"
+depyler-testing = "=4.1.1"
+depyler-tooling = "=4.1.1"
+depyler-verify = "=4.1.1"
+hc_deepkey_sdk = "=0.8.6"
+hc_deepkey_types = "=0.9.6"
+hc_utils = "=0.5.3"
+phantom-quic-btls = "=0.6.0"

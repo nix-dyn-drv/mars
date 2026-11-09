@@ -1,0 +1,41 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+duper_lsp = "=0.1.4"
+duperfmt = "=0.1.1"
+hejpics = "=0.5.0"
+kaspa-addressmanager = "=2.1.0"
+kaspa-cli = "=2.1.0"
+kaspa-connectionmanager = "=2.1.0"
+kaspa-daemon = "=2.1.0"
+kaspa-grpc-server = "=2.1.0"
+kaspa-p2p-flows = "=2.1.0"
+kaspa-rpc-service = "=2.1.0"
+kaspa-stratum-bridge = "=2.1.0"
+kaspa-wallet = "=2.1.0"
+kaspa-wallet-cli-wasm = "=2.1.0"
+kaspa-wallet-core = "=2.1.0"
+kaspa-wasm = "=2.1.0"
+kaspa-wrpc-client = "=2.1.0"
+kaspa-wrpc-proxy = "=2.1.0"
+kaspa-wrpc-server = "=2.1.0"
+kaspa-wrpc-wasm = "=2.1.0"
+kaspad = "=2.1.0"
+peng_quad = "=0.5.6"
+rerun_urdf = "=0.1.1"
+roplat_rerun = "=0.4.0"
+sweet_net = "=0.4.1"
+urlap = "=0.1.0-alpha.1"

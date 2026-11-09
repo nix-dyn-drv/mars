@@ -1,0 +1,28 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+exatok = "=0.1.1"
+smd_macro = "=0.0.7"
+smithy = "=0.0.7"
+vize_l0_derive = "=0.717.0"
+vyre = "=0.7.2"
+vyre-debug = "=0.7.1"
+vyre-driver-cuda = "=0.7.2"
+vyre-harness = "=0.7.1"
+vyre-lints = "=0.7.2"
+vyre-macros = "=0.7.2"
+vyre-runtime = "=0.7.2"
+weirflow = "=0.1.2"

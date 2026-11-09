@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fastmcp-cli = "=0.13.0"
+fastmcp-client = "=0.13.0"
+fastmcp-rust = "=0.13.0"
+fastmcp-server = "=0.13.0"
+fastmcp-transport = "=0.13.0"

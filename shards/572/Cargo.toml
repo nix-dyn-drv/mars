@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+elifrs = "=0.13.0"
+geph5-client = "=0.5.0"
+kinode = "=0.5.0"
+librmo = "=0.4.4"
+macho-cli = "=0.5.6"
+odm = "=0.0.1"
+odm-migration-utility = "=0.0.19"
+open-stock = "=0.1.20"
+ordinary-app = "=0.12.0"
+ordinary-build = "=0.12.0"
+ordinary-function = "=0.12.0"
+ordinary-modify = "=0.12.0"
+ordinaryd = "=0.12.0"
+relay-core-http = "=0.15.0"
+relay-core-probe = "=0.15.0"
+relay-core-runtime = "=0.15.0"
+zhihun = "=0.1.0"

@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bitvex = "=0.3.1"
+bulwark-config = "=0.6.0"
+darn_cli = "=0.4.0"
+darn_core = "=0.4.0"
+iroh-n0des = "=0.10.0"
+iroh-persist = "=0.1.6"
+iroh-relay-holochain = "=0.96.1"
+koji = "=3.4.0"
+lend = "=0.1.0"
+lumen-mcp-server = "=1.0.0"
+meshconf = "=0.1.0"
+mixt = "=0.2.0"
+navar-iroh = "=0.2.0"
+perspt-dashboard = "=0.6.6"
+perspt-store = "=0.6.6"

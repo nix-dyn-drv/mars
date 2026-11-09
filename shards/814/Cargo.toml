@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+idiomatic-sh-asymptote = "=0.1.2"
+idiomatic-sh-asymptote-core = "=0.1.2"
+idiomatic-sh-ryo-html = "=0.1.2"
+signal-backup-decode = "=0.2.3"

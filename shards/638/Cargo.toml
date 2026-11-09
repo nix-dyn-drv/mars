@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fletch = "=0.2.0"
+getmeta = "=2026.2.10"
+hadrian = "=0.0.0-alpha.11"
+hone-server = "=0.1.0"
+honed = "=0.1.0"
+on-prem-cli = "=2.6.3"
+rag-server_blf = "=2.3.1"
+rslife = "=0.2.13"
+rust-asr = "=0.1.4"
+telarex-core = "=0.5.1"
+telarex-tui = "=0.5.1"

@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+frame-cli = "=0.5.0"
+frame-host = "=0.6.0"
+gadget-common = "=0.1.0"
+hamelin = "=0.24.1"
+hamelin_datafusion = "=0.24.1"
+lockdocs = "=0.7.5"

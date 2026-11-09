@@ -1,0 +1,51 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bun_browser_engine = "=1.4.8"
+cargo_auto_lib = "=4.0.6"
+fogvault-native = "=0.1.0"
+inexor-rgf-plugin-arithmetic = "=0.9.1"
+inexor-rgf-plugin-base = "=0.9.1"
+inexor-rgf-plugin-binary = "=0.9.1"
+inexor-rgf-plugin-color = "=0.9.1"
+inexor-rgf-plugin-comparison = "=0.9.1"
+inexor-rgf-plugin-config = "=0.9.1"
+inexor-rgf-plugin-connector = "=0.9.1"
+inexor-rgf-plugin-date-time = "=0.9.1"
+inexor-rgf-plugin-file = "=0.9.1"
+inexor-rgf-plugin-flow = "=0.9.1"
+inexor-rgf-plugin-git = "=0.9.1"
+inexor-rgf-plugin-graphql-client = "=0.9.1"
+inexor-rgf-plugin-graphql-schema-visualization = "=0.9.1"
+inexor-rgf-plugin-json = "=0.9.1"
+inexor-rgf-plugin-logical = "=0.9.1"
+inexor-rgf-plugin-metadata = "=0.9.1"
+inexor-rgf-plugin-numeric = "=0.9.1"
+inexor-rgf-plugin-random = "=0.9.1"
+inexor-rgf-plugin-result = "=0.9.1"
+inexor-rgf-plugin-state = "=0.9.1"
+inexor-rgf-plugin-string = "=0.9.1"
+inexor-rgf-plugin-system-environment = "=0.9.1"
+inexor-rgf-plugin-taxonomy = "=0.9.1"
+inexor-rgf-plugin-trigger = "=0.9.1"
+inexor-rgf-plugin-value = "=0.9.1"
+l2r0-profiler-host = "=0.20.1"
+nils-memo = "=1.21.9"
+pastr-web = "=0.1.1"
+riperf3-cli = "=0.8.0"
+rotbl = "=0.3.0"
+ssh_auth_podman_push = "=1.1.14"
+vivac = "=0.22.1"

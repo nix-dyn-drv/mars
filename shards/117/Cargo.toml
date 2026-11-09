@@ -1,0 +1,49 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+anchor-spl-openbook = "=0.25.0"
+arti-tor-client = "=0.0.0"
+aurex = "=0.1.1"
+babelfont = "=0.2.5"
+bionic-reader = "=0.3.0"
+blissify-rs = "=0.1.2"
+bsync = "=0.1.0"
+cntp_i18n = "=0.3.0"
+cntp_i18n_core = "=0.3.0"
+cntp_i18n_gen = "=0.3.0"
+cntp_i18n_macros = "=0.3.0"
+cntp_localesupport = "=0.3.0"
+fontbe = "=1.0.0"
+fontc = "=1.0.0"
+fontmerge = "=0.2.2"
+glyphs-reader = "=1.0.0"
+glyphs2fontir = "=1.0.0"
+hyli-bus = "=0.15.0"
+meow-editor = "=1.4.0"
+mozjs_collator_glue = "=153.6.0"
+mozjs_normalizer_glue = "=153.6.0"
+oth_rvault = "=0.4.0"
+plm-rs = "=0.1.4"
+ps-datalake = "=0.1.0-18"
+python-core = "=0.5.1"
+remenu = "=0.3.0"
+shadergarden = "=0.2.0"
+shadergraph = "=0.1.0"
+soco = "=1.0.1"
+styling-lint = "=0.1.0"
+ufo2fontir = "=1.0.0"
+v-individual-model = "=0.2.6"
+veriwasm = "=0.1.4"

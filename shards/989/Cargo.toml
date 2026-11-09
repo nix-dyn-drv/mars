@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+microagents-cli = "=1.0.0"
+miden-node-db = "=0.18.2"
+miden-node-store = "=0.18.2"
+miden-note-transport = "=0.18.2"
+monocle = "=1.6.1"
+nu_plugin_connectorx = "=0.3.1"
+rustyclaw = "=0.3.2"
+rustyclaw-core = "=0.3.2"
+rustyclaw-desktop = "=0.3.2"
+rustyclaw-gateway = "=0.3.2"
+rustyclaw-onboard = "=0.3.2"
+rustyclaw-tui = "=0.3.2"
+rustyclaw-view = "=0.3.2"
+shannonshell = "=0.5.5"
+stalwart = "=0.16.0"

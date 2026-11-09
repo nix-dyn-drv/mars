@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+identity_account_storage = "=0.6.3"
+nofi = "=0.2.4"
+sar-core = "=0.1.1"
+sound-shader = "=0.1.1"
+termitype = "=0.0.11"

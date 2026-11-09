@@ -1,0 +1,42 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+appam = "=0.2.0"
+argentum_notification_infrastructure = "=0.3.1"
+argentum_standard_ui = "=0.3.1"
+blitz = "=0.2.1"
+cyber-radio = "=0.1.0"
+cyber-radio-relay = "=0.1.0"
+data-courier = "=0.1.0-beta.4"
+dioxus-native = "=0.7.10"
+envstash = "=0.1.12"
+hqe-infra = "=0.2.0"
+itack = "=0.1.2"
+jig-repository = "=0.9.1"
+jig-state = "=0.9.1"
+llm-optimizer-processor = "=0.1.1"
+network-dmenu = "=1.7.0"
+omni-code-bridge = "=0.7.0"
+omochi-utils = "=0.3.2"
+reflect-exchange-rates = "=0.1.8"
+shadowrocks = "=0.1.0"
+solana-transaction-status-client-types-wasm = "=4.0.2"
+syspulse-py = "=0.1.2"
+uda-connector = "=0.1.7"
+vobes-cli = "=0.1.7"
+vobes-mcp = "=0.1.6"
+wadm = "=0.21.1"
+wadm-client = "=0.10.0"

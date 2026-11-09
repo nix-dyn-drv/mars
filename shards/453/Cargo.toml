@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+crabcode = "=0.0.14"
+ecotokens = "=0.31.0"
+envy-secrets = "=0.5.1"
+genominicus = "=0.4.2"
+hu = "=0.1.15"
+lichen-client-sdk = "=0.1.7"
+lumen = "=2.32.0"
+mold-ai-tui = "=0.20.2"
+newt-tui = "=0.8.5"
+poly-cli = "=0.5.0"
+pyx = "=0.3.0"
+rcmd-egui = "=4.69.0"
+riftenlabs-indexer = "=0.1.0"
+rtfm-dammit = "=0.1.0"
+seqsizzle = "=0.5.0"
+veks = "=4.3.3"
+veks-pipeline = "=4.3.3"
+vultan = "=1.0.1"
+ygrep-cli = "=4.0.4"

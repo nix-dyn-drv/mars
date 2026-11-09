@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+interpretthis = "=0.4.1"
+parlov-core = "=0.7.0"
+parlov-elicit = "=0.5.0"
+typesayer-parser = "=0.1.2"

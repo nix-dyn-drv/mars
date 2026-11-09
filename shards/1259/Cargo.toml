@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+rsql_driver_cockroachdb = "=0.21.0"
+rsql_driver_cratedb = "=0.21.0"
+rsql_driver_postgres = "=0.21.0"
+rsql_driver_postgresql = "=0.21.0"
+rsql_driver_redshift = "=0.21.0"
+rsql_repl = "=0.21.0"
+stakpak-ak = "=0.3.88"
+stakpak-api = "=0.3.88"
+stakpak-mcp-client = "=0.3.88"
+stakpak-mcp-config = "=0.3.88"
+stakpak-shared = "=0.3.88"
+vera2-core = "=0.12.16-aristoddle.1"
+vera2-mcp = "=0.12.16-aristoddle.1"

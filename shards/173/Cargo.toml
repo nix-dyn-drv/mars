@@ -1,0 +1,52 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+asimov-module-kit = "=25.9.0"
+atoxide-cli = "=0.1.3"
+atoxide-lsp = "=0.1.3"
+convex-analytics = "=0.14.0"
+convex-bonds = "=0.14.0"
+convex-core = "=0.14.0"
+convex-credit = "=0.14.0"
+convex-curves = "=0.14.0"
+convex-math = "=0.14.0"
+convex-rates = "=0.14.0"
+ferrum-kernels = "=0.18.5"
+ferrum-quantization = "=0.18.5"
+ferrum-testkit = "=0.18.5"
+garage = "=2.5.0"
+glaux = "=0.7.0"
+gollum-indexing = "=0.4.0"
+hindsight-mcp = "=0.1.5"
+hugrs = "=0.7.0"
+mini_claw = "=0.1.17"
+ngit-ci = "=0.1.1"
+nongoose = "=0.1.0-beta.1"
+nostr-gossip-sqlite = "=0.45.1"
+nostr-sqlite = "=0.45.2"
+oxidoc-core = "=0.1.12"
+sapphire-call = "=0.6.1"
+sapphire-call-cli = "=0.7.0"
+seal-cli = "=0.30.1"
+seal-tui = "=0.30.1"
+smbcloud-auth-py = "=0.3.34"
+smbcloud-auth-sdk-py = "=1.1.1"
+tl-cli = "=0.2.1"
+tunnet = "=0.2.0"
+wiretap-rs = "=0.3.0"
+yacme-protocol = "=1.1.0"
+yacme-schema = "=1.1.0"
+yacme-service = "=1.1.0"

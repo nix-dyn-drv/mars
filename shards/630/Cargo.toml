@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fibertools-rs = "=0.13.1"
+gnostr-web = "=971907.1844.75902"
+keylease = "=0.2.1"
+todozi = "=0.1.1"
+veles-cli = "=0.6.0"
+x402-chain-near = "=0.5.1"

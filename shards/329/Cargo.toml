@@ -1,0 +1,50 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+burn_dragon = "=0.4.0"
+burn_dragon_cli = "=0.4.0"
+burn_dragon_fovea_viewer = "=0.4.0"
+hxrts-aura-agent = "=0.2.0"
+hxrts-aura-amp = "=0.2.0"
+hxrts-aura-anti-entropy = "=0.2.0"
+hxrts-aura-app = "=0.2.0"
+hxrts-aura-authentication = "=0.2.0"
+hxrts-aura-authorization = "=0.2.0"
+hxrts-aura-chat = "=0.2.0"
+hxrts-aura-composition = "=0.2.0"
+hxrts-aura-consensus = "=0.2.0"
+hxrts-aura-core = "=0.2.0"
+hxrts-aura-effects = "=0.2.0"
+hxrts-aura-guards = "=0.2.0"
+hxrts-aura-invitation = "=0.2.0"
+hxrts-aura-journal = "=0.2.0"
+hxrts-aura-macros = "=0.2.0"
+hxrts-aura-maintenance = "=0.2.0"
+hxrts-aura-mpst = "=0.2.0"
+hxrts-aura-protocol = "=0.2.0"
+hxrts-aura-recovery = "=0.2.0"
+hxrts-aura-relational = "=0.2.0"
+hxrts-aura-rendezvous = "=0.2.0"
+hxrts-aura-signature = "=0.2.0"
+hxrts-aura-social = "=0.2.0"
+hxrts-aura-store = "=0.2.0"
+hxrts-aura-sync = "=0.2.0"
+hxrts-aura-transport = "=0.2.0"
+maw-workspaces = "=0.61.0"
+oxkart = "=0.0.2"
+sockudo-http = "=2.2.0"
+tamias = "=0.1.2"
+univert = "=0.4.0"

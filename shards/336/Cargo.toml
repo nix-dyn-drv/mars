@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+byte_blocks_types = "=0.0.0"
+dc_converter_tof = "=0.2.0"
+hypetrigger = "=0.4.1"
+mini-slcan-ng = "=0.2.0"
+pdfrum = "=0.5.3"
+pdfrum-anyrender = "=0.5.3"
+pdfrum-edit = "=0.5.3"

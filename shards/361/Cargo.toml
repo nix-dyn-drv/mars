@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-nextest = "=0.9.151"
+cfetch = "=0.10.3"
+gcrecomp-ui = "=0.0.1-alpha"
+ordinary-monitor = "=0.12.0"
+qqq-cli = "=0.14.0"
+rolldown_plugin_vite_resolve = "=1.3.0"

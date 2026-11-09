@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+canic-ic-registry = "=0.66.10"
+casper-client = "=5.0.1"
+casperlens-server = "=0.1.1"
+matrixpost-mcp = "=0.4.0"
+midnight-manual-server = "=0.14.0"
+nexa-v6-sdk = "=1.0.0"
+openfare = "=0.6.2"
+orbitcast = "=0.3.1"
+rama-tls-acme = "=0.4.0"
+steve = "=0.3.1"
+veles-casper-rust-sdk = "=0.4.0"

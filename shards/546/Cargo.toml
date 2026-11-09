@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+driftbrake-revm-backend = "=0.2.0"
+kithara-apple = "=0.0.1-alpha5"
+kithara-events = "=0.0.1-alpha5"
+kithara-platform = "=0.0.1-alpha5"
+saber-sw = "=1.4.0"

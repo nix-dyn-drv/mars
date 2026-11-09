@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+buntrail-engine = "=0.2.0"
+buntrail-ffi = "=0.1.0"
+buntrail-helper = "=0.2.0"
+buntrail-language = "=0.2.0"
+buntrail-protocol = "=0.2.0"
+buntrail-services = "=0.2.0"
+emurgo-cardano-message-signing = "=1.1.0"
+hide-cli = "=0.9.1"
+hide-ffi = "=0.9.1"
+hide-identity = "=0.9.1"
+hide-object = "=0.9.1"
+hide-sign = "=0.9.1"
+hide-transparency = "=0.9.1"
+lynn_tcp = "=2.6.0"
+re_data_store = "=0.17.0"
+screeps-local-visuals = "=0.1.2"
+screeps-room-regions = "=0.1.3"

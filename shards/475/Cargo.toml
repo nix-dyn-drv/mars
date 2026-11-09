@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cydonia = "=0.2.6"
+cydonia-gui = "=0.2.6"
+dokime-packaging = "=0.1.2"
+dokime-server = "=0.1.2"
+erinra = "=0.3.0"
+golem-cloud-cli = "=1.0.20"
+gpui-storybook-mcp = "=0.8.0"
+gpui-storybook-test = "=0.8.0"
+iron-shell = "=14.0.0"
+iron-shell-lsp = "=14.0.0"
+llms-from-scratch-rs = "=0.1.5"
+manta-cli = "=1.71.4"
+openlatch-client = "=0.6.24"
+pinakes = "=0.1.0"
+rgen-cli-lib = "=0.1.0"
+rgen-core = "=0.1.0"
+rgen-tool = "=0.1.0"
+sapphire-agent-server = "=0.13.0"
+scryer-cli = "=0.6.0"
+scryer-mcp = "=0.6.0"
+spherenet-badge-cli = "=0.8.2"

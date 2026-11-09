@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+argosy = "=0.8.1"
+blockwatch = "=0.18.0"
+catgirl-engine = "=0.14.44"
+cellix = "=0.6.0"
+gitplume = "=0.2.5"
+hashpipe = "=0.1.2"
+hisi-rf-link = "=0.1.0-alpha.26"
+jsona-lsp = "=0.4.0"
+jsona-util = "=0.4.0"
+parterre = "=1.0.0"
+q-periapt-backends = "=0.1.5"
+q-periapt-cli = "=0.1.5"
+q-periapt-ffi = "=0.1.5"
+q-periapt-rustls = "=0.1.5"
+q-periapt-wasm = "=0.1.5"
+semlith = "=0.51.1"
+spr-transaction = "=0.8.0"
+timeglyph = "=0.10.0"
+tree-sitter-mcp = "=0.1.0"
+tree-sitter-mcp-server = "=0.1.1"
+tree-sitter-playground = "=0.1.0"

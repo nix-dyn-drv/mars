@@ -1,0 +1,62 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+apollo-agent = "=0.8.0"
+asc_bin = "=2025.12.13"
+blit-cli = "=0.44.0"
+blit-gateway = "=0.44.0"
+blit-proxy = "=0.44.0"
+che-rest = "=0.3.4"
+composr = "=1.0.0"
+corky = "=0.29.0"
+dragonfly-client-storage = "=1.5.11"
+fdn = "=0.8.6"
+fetch_mediawiki_configuration = "=0.1.1"
+firstpass-proxy = "=0.10.0"
+hc-mail = "=0.1.1"
+hiqlite-macros = "=0.12.0"
+hopper-cli = "=0.5.0"
+klukai-agent = "=0.1.4"
+klukai-client = "=0.2.3"
+lair_keystore = "=0.7.1"
+literium = "=0.1.0"
+llama-rs = "=0.23.1"
+marky = "=0.9.0"
+mini-app-mcp = "=0.20.0"
+moshi-server = "=0.6.4"
+moshi-server-db = "=0.6.6"
+mxdx-secrets = "=1.1.0"
+osmdb-extract = "=0.2.3"
+paiml-mcp-agent-toolkit = "=0.26.4"
+pixi = "=0.15.2"
+printobserver = "=0.12.0"
+printobserver-server = "=0.12.0"
+rdbkp2 = "=2.1.7"
+repograph-core = "=0.6.0"
+runtara-agents = "=1.6.4"
+runtara-workflow-stdlib = "=1.6.4"
+sni-router = "=0.2.11"
+snyvi = "=1.59.0"
+storm = "=0.11.0"
+strand-tui = "=0.2.2"
+swh_graph_topology = "=14.0.1"
+tarweb = "=0.1.8"
+tcup = "=0.1.14"
+turbospark-catalog = "=0.7.1"
+twixter = "=0.2.0"
+unthinkclaw = "=0.2.2"
+webgraph-cli = "=0.5.0"
+yukina = "=0.20261028.0"

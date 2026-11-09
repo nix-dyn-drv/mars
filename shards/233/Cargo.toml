@@ -1,0 +1,60 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bao-browser = "=0.5.0"
+bao-core = "=0.3.14"
+bao-servo = "=0.5.29"
+bao-servo-constellation = "=0.5.30"
+bao-servo-devtools = "=0.5.34"
+bao-servo-layout = "=0.5.33"
+bao-servo-net = "=0.5.43"
+bao-servo-script = "=0.5.38"
+bao-servo-script-bindings = "=0.5.29"
+bao-servo-script-webgpu = "=0.5.33"
+cc-dm-stream = "=0.1.9"
+claude-hindsight = "=2.4.0"
+cntp_i18n_parlance_source = "=0.3.0"
+containerd-shim-wasm = "=1.0.1"
+crosslink = "=0.8.0"
+csvdb = "=0.2.19"
+dir-based-history = "=1.0.0-beta"
+ethers-signer-rs = "=0.1.0"
+ethers-types-rs = "=0.1.0"
+ethers-wallet-rs = "=0.1.0"
+fontspector-profile-universal = "=1.9.0"
+hookstat = "=0.4.0"
+keytui = "=0.1.0"
+libdd-live-debugger = "=1.0.0"
+libdd-tracer-flare = "=3.0.0"
+mdvault = "=0.7.2"
+molgfx = "=0.6.0"
+molgfx-command = "=0.6.0"
+molgfx-scene = "=0.6.0"
+molgfx-wasm = "=0.6.0"
+nym-kkt = "=2.0.0"
+nym-lp = "=2.0.0"
+post-push-party = "=0.1.13"
+provekit-common = "=1.0.3"
+provekit-gnark = "=1.0.3"
+provekit-r1cs-compiler = "=1.0.3"
+provekit-verifier = "=1.0.3"
+r4pm = "=0.6.2"
+siggy = "=1.15.0"
+taskmaster = "=0.1.1"
+tnj-tui = "=0.1.19"
+ucp-agent = "=0.1.18"
+ucp-api = "=0.1.18"
+ucp-codegraph = "=0.1.18"

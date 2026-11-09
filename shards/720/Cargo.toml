@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+got-ya-id = "=0.1.4"
+hermes-any-counterparty = "=0.1.0"
+hermes-celestia-test-components = "=0.1.0"
+hermes-cli-framework = "=0.1.0"
+hermes-cosmos-chain-components = "=0.1.0"
+hermes-cosmos-relayer = "=0.1.0"
+hermes-cosmos-test-components = "=0.1.0"
+hermes-wasm-client-components = "=0.1.0"
+hermes-wasm-test-components = "=0.1.0"
+signedby-sdk = "=0.1.0"
+thenewsapi = "=0.1.2"

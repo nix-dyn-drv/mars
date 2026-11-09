@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+brokk-bifrost = "=0.15.1"
+brokk-bifrost-analysis = "=0.15.1"
+brokk-bifrost-cpp-analysis = "=0.15.1"
+brokk-bifrost-csharp-analysis = "=0.15.1"
+brokk-bifrost-flow = "=0.15.1"
+brokk-bifrost-go-analysis = "=0.15.1"
+brokk-bifrost-js-ts-analysis = "=0.15.1"
+brokk-bifrost-jvm-analysis = "=0.15.1"
+brokk-bifrost-mcp = "=0.15.1"
+brokk-bifrost-php-analysis = "=0.15.1"
+brokk-bifrost-policy = "=0.15.1"
+brokk-bifrost-python-analysis = "=0.15.1"
+brokk-bifrost-rql = "=0.15.1"
+brokk-bifrost-ruby-analysis = "=0.15.1"
+brokk-bifrost-runtime = "=0.15.1"
+brokk-bifrost-rust-analysis = "=0.15.1"
+brokk-bifrost-semantic = "=0.15.1"
+brokk-bifrost-semantic-packs = "=0.15.1"
+brokk-bifrost-store = "=0.15.1"
+brokk-bifrost-tools = "=0.15.1"
+kcode-k1-chat = "=0.2.5"
+kcode-k1-chat-runtime = "=0.2.4"

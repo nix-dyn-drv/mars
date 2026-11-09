@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fastlio_rs = "=0.2.3"
+four-arms = "=0.1.1"
+jsmpi = "=0.1.0"
+leptos-arrow-grid = "=0.1.3"
+rustlio2 = "=0.2.3"

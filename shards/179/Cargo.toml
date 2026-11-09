@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ast-grep-napi = "=0.33.1"
+ast-grep-py = "=0.33.1"
+autd3capi-driver = "=35.0.1"
+maincopy-shared = "=0.1.7"
+oxml-pdf = "=0.14.4"
+rdocx-pdf = "=0.16.4"
+rougers = "=0.2.1"
+sauron = "=0.70.0"
+sauron-core = "=0.70.0"
+sauron-html-parser = "=0.70.0"
+sauron-macro = "=0.70.0"
+scrings = "=0.1.7"
+svgbob = "=0.7.6"
+uqa-libsqlite3-sys = "=0.37.3"
+wasi-shim = "=0.2.0"

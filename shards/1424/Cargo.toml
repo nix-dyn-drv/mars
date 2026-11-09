@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+swarmd = "=0.1.21"
+swarmd_local_runtime = "=0.0.5"
+wild-doc = "=0.104.14"
+wild-doc-script-deno = "=0.19.3"
+wild-doc-server = "=0.13.3"

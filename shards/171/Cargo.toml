@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+asc-sync = "=0.1.3"
+beads_viewer_rust = "=0.4.1"
+codebones = "=0.7.0"
+cp-graph = "=0.3.1"
+duc2pdf = "=4.1.1"
+ekphos = "=0.60.20"
+gravlax = "=0.2.3"
+hid-io = "=0.1.0-beta1"
+jouet-routines = "=0.0.3"
+ohx-addon-publish = "=0.0.1-preview"
+tascli = "=0.14.0"
+tizol = "=0.1.0"
+wonk = "=4.14.1"

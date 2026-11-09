@@ -1,0 +1,39 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ckb = "=0.210.0"
+ckb-bin = "=1.2.0"
+dsdk-facet-testcontainers = "=0.1.1"
+git-tree-viz = "=0.3.6"
+horizon-lattice = "=1.0.1"
+inapt = "=0.3.5"
+lance-context = "=0.6.3"
+lance-context-core = "=0.6.3"
+lance-graph = "=0.5.4"
+lite-orm-studio = "=0.1.2"
+moire-web = "=1.0.1"
+riga-server = "=0.1.14"
+ruve = "=0.1.0"
+scala-dep-scan = "=0.3.0"
+scp-node = "=0.1.0-beta.2"
+scp-relay = "=0.1.0-beta.2"
+topolog-embed = "=0.1.1"
+visor_engine = "=0.2.0"
+visor_plugin_log = "=0.2.0"
+visor_plugin_math = "=0.2.0"
+visor_plugin_midi = "=0.2.0"
+visor_plugin_state = "=0.2.0"
+visor_plugin_time = "=0.2.0"

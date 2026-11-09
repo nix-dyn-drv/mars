@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ggen-api = "=5.1.3"
+graph_fs = "=0.1.5"
+memvid-cli = "=2.0.140"
+qdrant-datafusion = "=0.1.1"
+relay-core-cli = "=0.15.0"
+selfware = "=0.9.14"
+sm_connect = "=1.7.0"
+syros = "=1.0.1"
+yazi-actor = "=26.5.6"
+yazi-binding = "=26.5.6"
+yazi-cli = "=26.5.6"
+yazi-core = "=26.5.6"
+yazi-dds = "=26.5.6"
+yazi-fm = "=26.5.6"
+yazi-parser = "=26.5.6"
+yazi-plugin = "=26.5.6"
+yazi-proxy = "=26.5.6"
+yazi-runner = "=26.5.6"
+yazi-scheduler = "=26.5.6"
+yazi-watcher = "=26.5.6"
+zellij = "=0.45.1"

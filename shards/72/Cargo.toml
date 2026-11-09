@@ -1,0 +1,48 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agentos-native-sidecar = "=0.4.7"
+agentos-sidecar = "=0.2.22"
+angulu-cli = "=0.4.0"
+boop-ping = "=0.1.0"
+ceph_usage = "=0.1.9"
+ckman-core = "=0.2.1"
+cuora-vault-cf = "=0.1.0"
+deduco-langs = "=0.1.2"
+deduco-tests = "=0.1.2"
+dynamite-orfs = "=1.1.1"
+headlamp = "=0.1.60"
+jxr-mpsgraph = "=0.5.0"
+knope-config = "=0.4.4"
+knope-versioning = "=0.8.1"
+noxy = "=0.0.7"
+observatory-observations = "=0.1.0"
+pliego-cssc = "=0.1.0-rc.2"
+pliego-pboc = "=0.4.0-beta.1"
+ps-compress = "=0.1.0-18"
+ps-cypher = "=0.1.0-30"
+rasterqc = "=0.1.0"
+rich-sdl2-rust = "=0.13.2"
+rich-sdl2-rust-sys = "=0.13.2"
+rocksolid = "=3.2.0"
+rust-librocksdb-sys = "=0.49.0+11.12.0"
+rust-rocksdb = "=0.54.0"
+slotlock = "=0.6.3"
+sshw = "=0.1.1"
+subor-rs = "=0.9.3"
+sysadmin-bindings = "=2.1.0"
+yuno = "=0.2.1"
+zplus = "=0.9.3-rc.1"

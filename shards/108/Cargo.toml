@@ -1,0 +1,42 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+allure-rs = "=0.1.9"
+amail-lambda-smtp-relay = "=0.1.0"
+b4ae = "=2.1.3"
+boda = "=0.2643.0"
+border-tch-agent = "=0.0.8"
+doodoo = "=0.1.1"
+env-schema = "=0.1.0"
+ghrs = "=0.1.3"
+gtld-data = "=0.4.1"
+idiomatic-sh-ryo-core = "=0.1.2"
+idiomatic-sh-ryo-css = "=0.1.2"
+idiomatic-sh-ryo-json = "=0.1.2"
+idiomatic-sh-ryo-sdk = "=0.1.2"
+krnlc = "=0.1.1"
+mw-analytics = "=0.2.0"
+mw-capi = "=0.2.0"
+mw-gate = "=0.2.0"
+mw-graph = "=0.2.0"
+surrealdb-rocksdb = "=0.24.0-surreal.5"
+tera-introspection = "=0.1.0"
+tg-labstatus = "=0.1.0"
+tla-cli = "=0.1.2"
+uqa-core = "=0.6.3"
+uqa-fdw = "=0.6.3"
+wakuchin = "=0.3.0"
+yacme-key = "=1.2.0"

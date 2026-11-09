@@ -1,0 +1,54 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cloud-disk-sync = "=0.1.0"
+code-repo-wiki = "=0.11.1"
+codemem-hooks = "=0.7.0"
+corvus = "=0.5.0"
+cp-arweave = "=0.3.1"
+cp-desktop = "=0.3.1"
+cp-query = "=0.3.1"
+cp-tor = "=0.3.1"
+cp-validator = "=0.3.1"
+fspulse = "=0.6.5"
+gg-github = "=0.2.8"
+gosh-dl-cli = "=0.6.3"
+introspect = "=0.1.0"
+jolt-tui = "=1.2.0"
+loci-mcp = "=0.2.3"
+memd = "=1.9.0"
+nestboxd = "=0.1.0"
+netgauze-collector = "=0.13.0"
+olaf = "=0.7.2"
+paceflow = "=0.3.0"
+packguard = "=0.6.5"
+rdf-fusion = "=0.3.1"
+rdf-fusion-execution = "=0.3.1"
+rdf-fusion-storage = "=0.3.1"
+rdf-fusion-wasm = "=0.3.1"
+rdf-fusion-web = "=0.3.1"
+rtimelogger = "=0.8.8"
+rustodo = "=2.26.0"
+shipd-cli = "=0.2.0"
+sol-trade-router-sdk = "=0.5.0"
+sol-trade-sdk = "=11.0.1"
+tftio-silent-critic = "=6.1.0"
+vasr-vad = "=0.1.0"
+vibe-coding-analytics = "=0.3.0"
+viceroy = "=0.22.0"
+viceroy-lib = "=0.22.0"
+wolfpack = "=0.3.1"
+zebrad = "=7.0.0"

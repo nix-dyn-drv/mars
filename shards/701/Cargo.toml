@@ -1,0 +1,26 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gitforge = "=0.2.0"
+gorba-token = "=1.0.0"
+snail = "=0.4.0"
+solana_libra_config = "=0.0.0"
+solana_libra_functional_tests = "=0.0.0-sol15"
+solana_libra_fuzzer = "=0.0.0"
+solana_libra_language_e2e_tests = "=0.0.0"
+solana_libra_vm_genesis = "=0.0.0"
+solana_libra_vm_runtime = "=0.0.0"
+tc-executor-wasmtime = "=0.8.0"

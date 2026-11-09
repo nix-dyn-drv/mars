@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+graph-generator-lib = "=0.1.10"
+grapl-config = "=0.0.2"
+lens-client = "=0.1.0"
+mini-film = "=23.2.1"
+morge = "=0.1.2"
+pbcli = "=2.10.0"
+sqs-lambda = "=0.21.1"
+tsunami = "=0.11.1"

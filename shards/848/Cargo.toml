@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+jito-relayer-protos = "=0.1.0"
+miraland-core = "=1.19.2"
+miraland-geyser-plugin-manager = "=1.19.2"
+miraland-gossip = "=1.19.2"
+miraland-ledger-tool = "=1.19.2"
+miraland-local-cluster = "=1.19.2"
+miraland-rpc = "=1.19.2"
+miraland-test-validator = "=1.19.2"
+miraland-turbine = "=1.19.2"
+miraland-validator = "=1.19.2"
+miraland-wen-restart = "=1.19.2"
+rush-ecs-cli = "=0.1.0"
+rush-ecs-sdk = "=0.2.3"
+shorust = "=1.0.3"
+wasmcloud-example-httpserver = "=0.1.2"
+wildkit_lib = "=0.1.0"

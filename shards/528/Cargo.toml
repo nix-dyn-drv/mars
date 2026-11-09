@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+didkit = "=0.4.0"
+didkit-cli = "=0.2.0"
+didkit-http = "=0.2.0"
+filite = "=0.3.0"
+humus = "=0.1.0"
+talos_rdkafka_utils = "=0.3.18"

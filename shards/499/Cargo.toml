@@ -1,0 +1,39 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+defter = "=0.8.7"
+devpage = "=0.3.2"
+episteme = "=0.3.16"
+fercord_bot = "=0.4.3"
+fercord_storage = "=0.3.9"
+forc-wallet = "=0.16.4"
+klaub = "=0.7.0"
+kyomi-connect = "=1.4.3"
+ordinary-extension = "=0.12.0"
+ordinary-server-utils = "=0.12.0"
+pinready = "=0.25.0"
+pscon = "=0.1.0"
+rayfish = "=0.1.5"
+refinery_cli = "=0.10.0"
+rightkit-remote-gateway = "=0.1.0"
+rsigma = "=0.26.0"
+rsigma-mcp = "=0.26.0"
+scico = "=0.7.0"
+snouty = "=0.9.1"
+victauri-plugin = "=0.10.4"
+vtcode = "=0.181.6"
+vtcode-acp = "=0.181.6"
+ytrs = "=0.1.4"

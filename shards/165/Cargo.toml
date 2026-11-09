@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+arm-cairn = "=0.0.2"
+arm-cairn-notification = "=0.0.2"
+ast-grep-wasm = "=0.1.5"
+canon-archive = "=0.7.0"
+class_group = "=0.6.1"
+dynamic-html = "=1.0.0"
+fleetcom = "=0.17.0"
+mdi-core = "=2.1.1"
+ochrepad-core = "=0.4.0"
+omikuji = "=0.5.1"
+qualityd = "=0.1.0-alpha.5"
+ruuid = "=0.1.6"
+tactus = "=0.1.1"
+tree-sitter-facade = "=0.9.0"
+tree-sitter-sg = "=0.27.0"
+upstroke = "=0.1.0"
+wasmbuild = "=0.0.3"
+web-tree-sitter-sys = "=1.3.0"
+wvq-bench = "=0.1.0-alpha.5"
+wvq-cli = "=0.1.0-alpha.5"
+wvq-command-bus = "=0.1.0-alpha.5"
+wvq-mcp = "=0.1.0-alpha.5"

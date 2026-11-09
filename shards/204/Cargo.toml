@@ -1,0 +1,47 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+auths-anchor = "=0.1.16"
+auths-index = "=0.1.16"
+auths-jwt = "=0.1.16"
+auths-keri = "=0.1.16"
+auths-policy = "=0.1.16"
+auths-rp = "=0.1.16"
+auths-scim = "=0.1.16"
+bevy_assets_bundler = "=0.6.0"
+bevy_birdsong = "=0.1.0-dev"
+bevy_bulletml = "=0.2.3"
+bevy_color_blindness = "=0.2.0"
+bevy_crt = "=0.1.3"
+bevy_follow_path = "=0.3.0"
+bevy_image_config = "=0.2.0"
+bevy_physimple = "=0.5.0"
+bevy_spinal = "=0.0.1"
+bevy_typewriter = "=0.2.0"
+cargo-cntp-i18n = "=0.3.0"
+desk-terminal = "=0.0.0"
+fluxcapacitor = "=0.6.5"
+fontspector-checkapi = "=1.9.0"
+fontspector-fontbakery-bridge = "=1.3.0"
+fontspector-profile-fontwerk = "=1.3.3"
+fontspector-profile-iso15008 = "=1.0.8"
+fontspector-profile-opentype = "=1.7.1"
+mozjs = "=0.26.14"
+mythic_charts = "=0.1.0"
+tbl-cli = "=0.1.1"
+tbl-core = "=0.1.1"
+timest = "=1.0.2"
+vince = "=0.4.6"

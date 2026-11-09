@@ -1,0 +1,39 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+codescout = "=0.15.0"
+coreason-meta-engineering = "=0.1.0"
+coreason-runtime = "=0.1.0"
+dbx-tools-model-proxy = "=0.9.18"
+gn183-waypoint-tui = "=0.1.1"
+igc-net-cli = "=0.3.0"
+omengrep = "=0.0.3"
+product-os-browser = "=0.0.39"
+product-os-crawler = "=0.0.18"
+rqmd = "=0.2.1"
+rqmd-mcp = "=0.2.1"
+search-semantically = "=0.4.0"
+submilli-build = "=0.6.1"
+submilli-durable = "=0.6.1"
+submilli-engine = "=0.6.1"
+submilli-shared = "=0.6.1"
+typ-app = "=0.4.6"
+typ-core = "=0.4.6"
+typ-editor = "=0.4.6"
+typ-panel-editor = "=0.4.6"
+typ-panel-tree = "=0.4.6"
+typ-picker = "=0.4.6"
+typ-registry = "=0.4.6"

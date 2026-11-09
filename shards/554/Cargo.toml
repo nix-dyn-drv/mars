@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+duscope = "=0.2.0"
+dynamo-kv-router = "=1.6.2"
+flight-network-planner = "=1.2.17"
+hapsigner = "=0.2.0"
+kvbm-logical = "=1.6.1"
+mutarust = "=0.2.1"

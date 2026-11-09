@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+benchmarker = "=0.9.0"
+csql = "=1.0.0"
+driftdb-worker = "=0.1.4"
+egui-keybinds = "=3.3.8"
+egui_clip_textedit = "=0.1.5"
+epomo = "=0.2.2"
+exers = "=0.2.0"
+gitscry = "=0.14.0"
+hacker-newsfeed = "=1.0.0"
+installer_lite = "=1.0.2"
+nwbview = "=0.2.6"
+openrr-gui = "=0.1.0"
+quillmark = "=0.136.0"
+quillmark-cli = "=0.136.0"
+quillmark-typst = "=0.136.0"
+raen = "=0.1.1"
+roosty_clock = "=0.1.0"
+source-demo-tool-crawler = "=0.8.2"
+sway_mm = "=0.1.0"
+sycamore-dnd = "=0.1.1"
+tether-egui = "=0.10.5"
+tether-lidar2d-consolidation = "=1.5.2"
+torch_timer = "=0.3.0"
+warp-contracts = "=0.1.3"
+warp-contracts-core = "=0.1.3"
+warp-contracts-macro = "=0.1.3"
+worker-cf-sentry = "=0.1.0"

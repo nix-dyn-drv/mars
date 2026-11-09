@@ -1,0 +1,28 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+brchd = "=0.1.0"
+colorls = "=1.0.11"
+dcc-decode = "=0.1.0"
+domino-program-dp = "=0.1.11"
+domino_program = "=0.1.2"
+estuary = "=0.1.1"
+fixity = "=0.0.1"
+manby = "=0.1.9"
+oc-http = "=0.1.1"
+rectangle-device-media = "=0.1.0"
+snowchains = "=0.7.0"
+wql-nom = "=0.1.0"

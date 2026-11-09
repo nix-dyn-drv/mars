@@ -1,0 +1,40 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+zksync_block_reverter = "=0.1.0"
+zksync_commitment_generator = "=0.1.0"
+zksync_consistency_checker = "=0.1.0"
+zksync_core_leftovers = "=0.1.0"
+zksync_default_da_clients = "=0.1.0"
+zksync_eth_sender = "=0.1.0"
+zksync_l1_contract_interface = "=0.1.0"
+zksync_merkle_tree = "=0.1.0"
+zksync_metadata_calculator = "=0.1.0"
+zksync_multivm = "=0.1.0"
+zksync_node_api_server = "=0.1.0"
+zksync_node_consensus = "=0.1.0"
+zksync_node_framework = "=0.1.0"
+zksync_node_genesis = "=0.1.0"
+zksync_node_storage_init = "=0.1.0"
+zksync_node_sync = "=0.1.0"
+zksync_node_test_utils = "=0.1.0"
+zksync_proof_data_handler = "=0.1.0"
+zksync_prover_interface = "=0.1.0"
+zksync_state_keeper = "=0.1.0"
+zksync_tee_verifier = "=0.1.0"
+zksync_tee_verifier_input_producer = "=0.1.0"
+zksync_vm_runner = "=0.1.0"
+zksync_vm_utils = "=0.1.0"

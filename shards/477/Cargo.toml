@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cyfs-base-meta = "=0.6.3"
+cyfs-bdt = "=0.7.3"
+cyfs-chunk-lib = "=0.6.4"
+cyfs-core = "=0.6.7"
+cyfs-debug = "=0.6.6"
+cyfs-dsg-client = "=0.6.6"
+cyfs-lib = "=0.8.3"
+cyfs-perf-base = "=0.6.4"
+cyfs-perf-client = "=0.6.3"
+dmc-dsg = "=0.1.4"
+m365 = "=0.1.1"
+nirs4all-io-dagml = "=0.2.14"
+rdme = "=0.2.0"
+requestr-cli = "=0.1.0"
+spawn-wasm-ecdsa = "=0.1.1"
+toluol-proto = "=2.0.0"

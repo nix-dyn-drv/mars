@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+auths-oidc-port = "=0.1.16"
+banyan-utils = "=0.10.1"
+cargo-unleash = "=1.0.0-alpha.dev"
+credit_portfolio_model = "=0.1.1"
+crypto-candlesticks-rust = "=0.1.5"
+domainforge-core = "=0.21.2"
+nabu = "=0.0.5"
+openbanking = "=0.1.0"
+pacman-bintrans-monitor = "=0.2.0"
+portail-claude-plugins = "=0.1.0"
+sarchive = "=0.16.0"
+wei-tray = "=0.2.8"
+zdict = "=0.1.3"

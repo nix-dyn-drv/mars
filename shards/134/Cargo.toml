@@ -1,0 +1,39 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+aphorme = "=0.2.0"
+asr-data = "=0.2.0"
+beam-network-sdk = "=0.9.0"
+chromiacast = "=0.3.1"
+datagen_gnss = "=0.1.9"
+datagen_network = "=0.1.4"
+datapool = "=0.1.4"
+git-together-ssh = "=0.2.1"
+kanidm_lib_crypto = "=1.11.2"
+libtwitch-rs = "=0.3.0"
+moebius-tools = "=0.1.2"
+mx20022-codegen = "=0.3.2"
+piecrust = "=0.32.2"
+reti = "=0.2.0"
+rnp = "=0.1.146"
+sic_testing = "=0.23.0"
+silero-vad-rs = "=0.1.2"
+splitmonic = "=0.1.0"
+system_token_generator = "=0.1.0"
+valistr = "=0.2.0"
+valistr_proc_macro = "=0.2.0"
+xdg-marid = "=0.4.1"
+xdgen = "=0.1.0"

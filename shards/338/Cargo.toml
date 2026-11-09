@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+c2pa-attacks = "=0.0.1"
+cargo-crev = "=0.27.1"
+dbgor = "=0.2.0"
+glass-dev = "=0.3.14"
+llmterm = "=0.2.3"
+martini-cli = "=0.1.2"
+onionize = "=0.1.2"
+opencode-cloud = "=25.1.3"
+opencode-cloud-core = "=25.1.3"
+rsqlite3 = "=1.1.0"
+service_conventions = "=0.0.42"
+shred-parsed = "=3.0.0"
+skillc = "=0.2.1"
+softseco-confidential-transfers = "=3.0.0"

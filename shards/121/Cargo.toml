@@ -1,0 +1,51 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+anoma-pa-evm-bindings = "=2.3.0"
+aocf_cli = "=0.1.21"
+buster = "=0.1.0"
+cargo-ferry = "=0.1.0"
+cargo-patch = "=0.3.2"
+cargo-scout-audit-soroban = "=0.2.2"
+datman = "=0.1.0"
+excavator = "=0.4.0"
+gerasdb = "=0.0.7-dev"
+ghost2zola = "=0.1.0"
+gitdentity = "=1.0.2"
+ipfs-embed-sqlite = "=0.11.0"
+isostatic = "=0.1.1"
+jami-cli = "=0.4.0"
+jami-rs = "=0.2.0"
+kcode-k1-codex-web-search-process = "=0.1.0"
+kindle_highlights = "=0.3.2"
+ods2sql = "=0.4.0"
+penum = "=0.1.30"
+quillmark-python = "=0.1.17"
+r2dbc-sqlite = "=0.0.1"
+redwood-wiki = "=0.1.0"
+rustferry-apple = "=0.1.0"
+seiri = "=2.0.12"
+sesters = "=0.3.2"
+shync = "=0.1.1"
+smime-tree = "=0.3.3"
+smo = "=0.1.3"
+spec-spine-core = "=0.32.0"
+statute-cli = "=0.3.2"
+tables-gtk = "=0.1.0"
+turbocafe = "=0.0.1"
+wasmtime-rust = "=0.27.0"
+writeme = "=0.2.1"
+yama = "=0.4.0"

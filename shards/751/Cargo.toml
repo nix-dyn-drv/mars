@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hbros-solana-client = "=1.18.23"
+hbros-solana-tpu-client = "=1.18.23"
+pslink = "=0.2.2"
+wealthineer-program-metadata = "=0.1.0"

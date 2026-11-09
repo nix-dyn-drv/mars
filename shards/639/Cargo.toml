@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+flowr = "=1.0.0"
+gmsol-decode = "=0.10.0"
+ibc-grpc-server = "=0.1.0"
+mosaica-config = "=0.2.0"
+mosaica-python = "=0.2.0"
+open-kioku-context = "=4.0.0"
+open-kioku-patch = "=4.0.0"
+open-kioku-plan = "=4.0.0"

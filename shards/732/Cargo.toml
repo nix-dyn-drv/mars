@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+grapheme-cli = "=0.7.2"
+grapheme-sdk = "=0.7.2"
+lit-node-core = "=2.0.1"
+lit-sdk = "=2.0.1"
+miasma = "=0.4.4"
+paigasus-helikon-cli = "=0.1.38"
+paigasus-helikon-sessions-postgres = "=0.1.7"
+rppd = "=0.2.19"
+swig-developer-sdk = "=0.1.0"
+sylphx-repomap = "=1.9.0"
+tanghole = "=0.2.0"
+tangled-cli = "=0.1.0"
+wasm-package-manager-migration = "=0.3.0"

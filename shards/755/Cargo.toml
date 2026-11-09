@@ -1,0 +1,19 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hc_cz_profile = "=0.2.3"
+hc_iz_membrane_manager = "=0.2.3"
+hc_iz_profile = "=0.2.3"

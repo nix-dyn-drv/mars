@@ -1,0 +1,44 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+brk_rolldown = "=0.8.0"
+brk_rolldown_common = "=0.8.0"
+brk_rolldown_dev_common = "=0.8.0"
+brk_rolldown_ecmascript = "=0.8.0"
+brk_rolldown_ecmascript_utils = "=0.8.0"
+brk_rolldown_error = "=0.8.0"
+brk_rolldown_filter_analyzer = "=0.8.0"
+brk_rolldown_fs_watcher = "=0.8.0"
+brk_rolldown_plugin = "=0.8.0"
+brk_rolldown_plugin_chunk_import_map = "=0.8.0"
+brk_rolldown_plugin_data_uri = "=0.8.0"
+brk_rolldown_plugin_esm_external_require = "=0.8.0"
+brk_rolldown_plugin_hmr = "=0.8.0"
+brk_rolldown_plugin_isolated_declaration = "=0.8.0"
+brk_rolldown_plugin_lazy_compilation = "=0.8.0"
+brk_rolldown_plugin_oxc_runtime = "=0.8.0"
+brk_rolldown_plugin_replace = "=0.8.0"
+brk_rolldown_plugin_utils = "=0.8.0"
+brk_rolldown_plugin_vite_css = "=0.8.0"
+brk_rolldown_plugin_vite_css_post = "=0.8.0"
+brk_rolldown_plugin_vite_html = "=0.8.0"
+brk_rolldown_plugin_vite_resolve = "=0.8.0"
+brk_rolldown_resolver = "=0.8.0"
+brk_rolldown_sourcemap = "=0.8.0"
+brk_rolldown_utils = "=0.8.0"
+cw-iper-test = "=0.1.1"
+fojin-cli = "=0.3.1"
+zaino-address = "=0.1.3"

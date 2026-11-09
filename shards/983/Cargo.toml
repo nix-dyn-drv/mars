@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+memrl = "=0.1.2"
+quokka = "=0.1.1"
+quokka-admin = "=0.1.0"
+rsclaw = "=2026.6.26"
+rsclaw-runtime = "=2026.6.26"
+starpod = "=0.3.1"

@@ -1,0 +1,64 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+auxloclaw = "=0.2.6"
+bits-collector = "=3.4.17"
+bitz = "=3.4.27"
+blueprint-webhooks = "=0.2.2"
+blueprint-x402 = "=0.2.2"
+clarinet-deployments = "=1.0.3"
+clarity-repl = "=2.0.0"
+clarity-vm = "=2.3.0"
+codelore = "=0.30.0"
+codelore-lib = "=0.30.0"
+datapackage_convert = "=0.6.1"
+gluesql = "=0.20.0"
+gunnar-build-thing = "=0.1.0"
+gutenberg-rs = "=0.1.4"
+hive-apollo-router-plugin = "=3.3.0"
+holger-build = "=0.1.0"
+holger-build-space = "=0.1.1"
+knut-build = "=0.1.6"
+kona-node = "=0.1.2"
+mezzo = "=0.2.7"
+nornir-buildspec-holger = "=0.1.3"
+nornir-warehouse-embed = "=0.1.2"
+nwr = "=0.9.2"
+pyth-lazer-agent = "=0.17.0"
+remote-ssl-renewal = "=0.1.0"
+rs-starter = "=1.0.3"
+sapiens_bot = "=0.8.1"
+sapiens_cli = "=0.9.2"
+sapiens_tools = "=0.10.2"
+stacks-codec = "=2.4.1"
+stacks-rpc-client = "=2.0.0"
+tgreddit = "=0.1.4"
+tutorials-chapter1 = "=0.1.0"
+wherry = "=0.1.1"
+zk-citadel-moat = "=0.1.1"
+zksync_da_client = "=0.1.0"
+zksync_eth_client = "=0.1.0"
+zksync_eth_signer = "=0.1.0"
+zksync_external_price_api = "=0.1.0"
+zksync_mempool = "=0.1.0"
+zksync_object_store = "=0.1.0"
+zksync_protobuf_config = "=0.1.0"
+zksync_test_account = "=0.1.0"
+zksync_types = "=0.1.0"
+zksync_web3_decl = "=0.1.0"
+zoi-plugins = "=1.29.12"
+zoi-project = "=1.29.12"
+zoi-resolver = "=1.29.12"

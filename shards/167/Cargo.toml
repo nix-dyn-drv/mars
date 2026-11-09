@@ -1,0 +1,55 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+arti-bench = "=0.8.6"
+aves = "=0.7.1"
+aves-corv = "=0.7.1"
+aves-kea = "=0.7.1"
+aves-tyto = "=0.7.1"
+bmap-rs = "=0.2.3"
+boarddown-server = "=0.1.5"
+goxoy-p2p = "=0.1.0"
+greggd = "=1.0.15"
+hotl-engine = "=0.31.0"
+hotl-mcp = "=0.31.0"
+hotl-retrieval = "=0.31.0"
+hotl-testkit = "=0.31.0"
+hotl-tools = "=0.31.0"
+jup-lend-sdk = "=0.2.20"
+linked-data-serde = "=0.1.0"
+linked-data-sparql = "=0.8.0"
+lumino-ui-core = "=0.2.0-crates-io-preview1"
+lumino-ui-editor = "=0.2.0-crates-io-preview1"
+moneyman = "=0.1.3"
+oom-tui = "=0.5.0"
+opentimestamps-cli = "=0.2.0"
+pax-codegen = "=0.39.1"
+pax-compiler = "=0.39.1"
+pax-designtime = "=0.39.1"
+pax-language-server = "=0.39.1"
+pax-macro = "=0.39.1"
+phoenix-rise = "=0.9.3"
+phoenix-rise-api = "=0.9.3"
+phoenix-rise-core = "=0.9.3"
+pijul-remote = "=1.0.0-beta.26"
+prest-npm = "=0.1.0"
+slacktus = "=0.1.5"
+slint-center-win = "=0.3.1"
+spl-associated-token-account-mollusk-harness = "=1.0.0"
+type-bridge-core-lib = "=2.3.3"
+type-bridge-orm-derive = "=2.3.3"
+type-bridge-toml-transpiler = "=2.3.3"
+visual-cortex-ocr-onnx = "=0.13.0"

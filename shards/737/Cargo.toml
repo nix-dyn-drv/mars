@@ -1,0 +1,26 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gridwork = "=0.0.3"
+koda-cli = "=0.6.0"
+nym-bandwidth-controller = "=2.0.0"
+nym-bandwidth-fetcher = "=2.0.0"
+nym-client-core-gateways-storage = "=2.0.0"
+nym-gateway-client = "=2.0.0"
+nym-id = "=2.0.0"
+rust-microservice = "=0.1.3"
+switchgear-server = "=0.1.29"
+zksync_tee_prover_interface = "=29.13.0-non-semver-compat"

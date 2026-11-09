@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+frostbow-sql = "=0.4.0"
+hustle-tracker = "=0.4.20"
+hxy = "=0.4.0"
+lance-context-server = "=0.6.3"
+linch_tech_desktop_core = "=0.3.0"
+npcrs = "=0.1.31"
+omnicli = "=2025.11.0"
+opsdeck = "=0.2.0"
+tauri-plugin-sql = "=2.6.0"
+tektra = "=0.2.3"
+uira-mcp-server = "=0.1.1"

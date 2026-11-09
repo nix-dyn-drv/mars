@@ -1,0 +1,45 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bubble = "=0.1.1"
+bubble-db = "=0.1.0"
+bubble-macro = "=0.1.5"
+burn_gekko_capture = "=0.3.0"
+catalysh = "=0.9.4"
+devimint = "=0.13.0"
+fedimint-dbtool = "=0.13.0"
+fedimint-recurringd = "=0.13.0"
+fedimintd = "=0.13.0"
+gnostr-asyncgit = "=971907.1844.75902"
+gnostr-crawler = "=971907.1844.75902"
+gnostr-js = "=971907.1844.75902"
+gnostr-legit = "=971907.1844.75902"
+gnostr-ngit = "=971907.1844.75902"
+gnostr-p2p = "=971907.1844.75902"
+gnostr-types = "=971907.1844.75902"
+headless-talk = "=0.6.1"
+lens-core = "=1.0.0"
+nips = "=971907.1844.75902"
+payjoin-cli = "=1.0.0"
+progit = "=0.11.0-alpha.1"
+provcheck-kit = "=1.5.2"
+resonance-explorer = "=0.1.1"
+rmcp-memex = "=0.5.0"
+rpawomaster = "=0.2.2"
+synchi = "=0.1.4"
+tape-peer-tls = "=0.5.0"
+taskchampion-lib = "=0.6.1"
+tusktsk = "=2.1.3"

@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fossic-tauri = "=1.8.3"
+ilp-node = "=0.6.0"
+interledger = "=0.6.0"
+interledger-store-redis = "=0.4.0"
+pcapsql-datafusion = "=0.3.1"
+samkhya-datafusion = "=1.2.3"

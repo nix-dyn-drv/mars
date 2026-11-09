@@ -1,0 +1,40 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+systemprompt-agent = "=0.79.1"
+systemprompt-agent-runs = "=0.79.1"
+systemprompt-ai = "=0.79.1"
+systemprompt-api = "=0.79.1"
+systemprompt-cli = "=0.79.1"
+systemprompt-cloud = "=0.79.1"
+systemprompt-content = "=0.79.1"
+systemprompt-engine-loro = "=0.76.0"
+systemprompt-files = "=0.79.1"
+systemprompt-gateway = "=0.79.1"
+systemprompt-generator = "=0.79.1"
+systemprompt-governance = "=0.79.1"
+systemprompt-loader = "=0.79.1"
+systemprompt-marketplace = "=0.79.1"
+systemprompt-mcp = "=0.79.1"
+systemprompt-oauth = "=0.79.1"
+systemprompt-oauth-issuance = "=0.79.1"
+systemprompt-runtime = "=0.79.1"
+systemprompt-scheduler = "=0.79.1"
+systemprompt-security = "=0.79.1"
+systemprompt-slack = "=0.79.1"
+systemprompt-teams = "=0.79.1"
+systemprompt-users = "=0.79.1"
+testtrim = "=0.14.11"

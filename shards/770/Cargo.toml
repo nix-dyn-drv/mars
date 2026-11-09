@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+heliosdb-nano = "=4.41.1"
+kbolt = "=0.1.8"
+kbolt-core = "=0.1.8"
+kbolt-mcp = "=0.1.8"
+proof-of-sql = "=0.131.2"
+zamsync = "=1.3.3"

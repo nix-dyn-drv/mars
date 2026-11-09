@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+antegen-ws = "=0.2.0"
+bindport = "=0.8.3"
+bindport-adapters = "=0.8.3"
+bindport-core = "=0.8.3"
+bindport-dashboard = "=0.8.3"
+bindport-registry = "=0.8.3"
+bindport-runner = "=0.8.3"
+canonrs-interactions = "=0.1.0"
+canonrs-interactions-content = "=0.1.0"
+canonrs-interactions-core = "=0.1.0"
+canonrs-interactions-data = "=0.1.0"
+canonrs-interactions-gesture = "=0.1.0"
+canonrs-interactions-init = "=0.1.0"
+canonrs-interactions-nav = "=0.1.0"
+canonrs-interactions-overlay = "=0.1.0"
+canonrs-interactions-selection = "=0.1.0"
+clvmr_chinilla = "=0.2.0"
+dcim = "=2.3.5"
+hx = "=0.7.1"
+qmachina = "=0.3.0"
+rayon-wasm = "=1.6.2"
+sjmp = "=0.2.1"
+splitmonic_bip39 = "=1.0.0"
+substance-framework = "=0.3.0-alpha"
+symjump-config = "=0.2.1"
+symjump-core = "=0.2.1"
+witcher = "=0.1.19"

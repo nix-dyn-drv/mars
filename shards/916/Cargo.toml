@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+laura-tui = "=0.18.1"
+ochrepad-fileio = "=0.4.0"
+sssync = "=0.1.1"
+yeetz-bedrock = "=0.7.0"

@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kcode-credential-vault = "=0.1.1"
+kcode-k1-daemon-cli = "=0.1.25"
+kcode-k1-daemon-lib = "=0.15.0"
+kcode-k1-daemon-vault-unlock = "=0.1.0"
+kcode-k1-vault = "=0.1.1"
+kcode-kennedy-bootstrap-secrets = "=0.1.0"

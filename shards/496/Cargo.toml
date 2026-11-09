@@ -1,0 +1,44 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+deepwell = "=2024.5.12"
+erc20_payment_lib = "=0.5.1"
+erc20_payment_lib_common = "=0.5.1"
+erc20_payment_lib_extra = "=0.5.1"
+erc20_payment_lib_test = "=0.4.1"
+erc20_processor = "=0.5.1"
+erc20_rpc_pool = "=0.5.1"
+flashy = "=0.1.0"
+fluix = "=0.1.25"
+gftp = "=0.4.1"
+llm-governance-database = "=1.0.0"
+open-gpui-platform = "=0.2.0"
+open-gpui-web = "=0.2.0"
+open-gpui-wgpu = "=0.2.0"
+rokit = "=0.2.5"
+rudric = "=0.1.7"
+rxqlite = "=0.1.24"
+vs-app = "=0.0.4"
+web3_test_proxy_client = "=0.4.1"
+wick-cli = "=0.16.2"
+wick-host = "=0.6.2"
+wick-runtime = "=0.24.1"
+wick-trigger = "=0.1.0"
+wick-trigger-cli = "=0.1.0"
+wick-trigger-http = "=0.1.1"
+wick-trigger-time = "=0.1.0"
+wick-trigger-wasm-command = "=0.1.1"
+ya-core-model = "=0.10.0"

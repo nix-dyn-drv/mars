@@ -1,0 +1,44 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+alopex-cli = "=0.8.16"
+alopex-cluster = "=0.8.16"
+alopex-embedded = "=0.8.16"
+alopex-server = "=0.8.16"
+alopex-sql = "=0.8.16"
+aquadoggo = "=0.9.1"
+bigbytes-driver = "=0.25.4"
+bigbytes-driver-core = "=0.25.4"
+dag-ml-data-arrow = "=0.2.16"
+git-ignore-cli = "=2.0.0"
+gpio-utils = "=0.4.1"
+highlight-ez = "=0.2.6"
+icebox-py = "=1.0.0-beta"
+in3 = "=0.1.8"
+kyma-storage = "=0.0.1"
+mail4agent-grok = "=0.4.8"
+mecomp-analysis = "=0.8.1"
+meld-config-manager = "=0.1.0"
+noetl-arrow-flight-client = "=0.5.0"
+pensieve-core = "=0.1.0"
+pensieve-index-vector = "=0.1.0"
+pensieve-kql = "=0.1.0"
+pensieve-plan = "=0.1.0"
+pensieve-queue = "=0.1.0"
+pensieve-storage = "=0.1.0"
+sergent-rs = "=0.1.3"
+sergent-rs-providers = "=0.1.3"
+snpguest = "=0.11.0"

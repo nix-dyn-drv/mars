@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+automl = "=0.3.1"
+cashaccount = "=0.1.0"
+cross_usb_versionbump = "=0.4.1"
+monacoin = "=0.23.0"
+move-it = "=0.2.4"
+pdfrum-crypt = "=0.5.3"
+pdfrum-parser = "=0.5.3"
+sbpf-coverage = "=0.2.12"
+sentc-crypto-std-keys = "=0.15.0"
+timmy = "=0.3.0"
+tinyquant-bruteforce = "=1.1.0"
+tinyquant-py = "=0.0.0"
+witnet-vanity = "=0.1.0"

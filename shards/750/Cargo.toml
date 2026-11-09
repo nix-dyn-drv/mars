@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hayashi-lang = "=0.2.9"
+hc_prefix_index = "=0.15.0"
+hdk = "=0.7.1"
+holochain_cli_bundle = "=0.7.1"
+holochain_test_wasm_common = "=0.7.1"
+holochain_types = "=0.7.1"
+holochain_wasm_test_utils = "=0.7.1"
+holochain_websocket = "=0.7.1"
+holochain_zome_types = "=0.7.1"
+matchcorr = "=0.1.4"
+rave_engine = "=0.15.0"

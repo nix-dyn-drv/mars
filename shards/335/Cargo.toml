@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bvh_anim_parser = "=1.0.1"
+chamber-cli = "=0.2.0"
+chamber-core = "=0.2.0"
+dashtool = "=0.1.0"
+eventify-primitives = "=0.0.2-beta"
+evm-amm-state = "=0.3.0"
+evm-fork-cache = "=0.4.1"
+evm-oracle-state = "=0.3.0"
+iggy-cli = "=0.15.0"
+lunarbase-pmm-v2-source-arbitrum = "=0.4.1"
+lunarbase-pmm-v2-source-evm = "=0.4.1"
+lunarbase-pmm-v2-source-monad = "=0.3.1"
+murali = "=0.3.0"
+prometheus-parking-lot-iggy = "=0.4.0"
+publish-action-p = "=0.2.5"
+ripgrep_all = "=0.10.10"
+scidataflow = "=0.8.11"
+siin = "=0.1.0"
+ssh-mcp-rs = "=5.3.0"
+tempo-cli = "=0.4.0"
+timeline-service = "=0.0.3"
+topiary-cli = "=0.8.0"
+topiary-config = "=0.8.0"
+varve = "=0.46.0"
+varve-core = "=0.46.0"
+zkevm_test_harness = "=0.153.12"
+zksync-wrapper-prover = "=0.156.2"

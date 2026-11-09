@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+xstack-circuit = "=0.2.17"
+xstack-dnsaddr = "=0.2.17"
+xstack-quic = "=0.2.17"
+xstack-tcp = "=0.2.17"
+xstack-tls = "=0.2.17"
+xstack-x509 = "=0.2.17"

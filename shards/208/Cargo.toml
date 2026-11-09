@@ -1,0 +1,36 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+autogpt = "=0.4.5"
+babbage = "=0.1.1"
+cartograph = "=0.1.2"
+clu = "=0.0.2"
+cowbird = "=0.1.1"
+dam = "=0.1.3"
+datadoghq = "=0.2.2"
+diffuse = "=0.1.1"
+fuel-tx = "=0.66.4"
+git-explore = "=0.1.3"
+jenkinsfile = "=0.2.1"
+klondike-rs = "=1.1.0"
+localnative_cli = "=0.3.7"
+localnative_core = "=0.3.7"
+localnative_ssb = "=0.3.7"
+mcrt = "=0.3.0"
+pokey_logger = "=0.3.3"
+python_comm = "=0.4.2"
+sdivi-core = "=0.2.52"
+taskforge = "=0.2.0"

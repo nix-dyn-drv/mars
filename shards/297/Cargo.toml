@@ -1,0 +1,46 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bobbin-ai = "=0.36.0"
+brokk-mj-controller = "=2.69.0"
+brokk-mj-worker = "=2.69.0"
+brokk-mjolnir = "=2.69.0"
+client-core = "=0.1.8"
+colony-utils = "=0.3.0"
+diavlos = "=2.1.1"
+i-self = "=0.4.3"
+lazyxrp = "=0.10.1"
+lockbook-server = "=26.11.5"
+marina = "=0.5.4"
+mcp-stdio-proxy = "=0.2.10"
+navidog-connection = "=0.0.1"
+navidog-db = "=0.0.1"
+nuwax-cli = "=1.0.123"
+ocserve = "=0.7.0"
+ocserve-http = "=0.7.0"
+papers-cli = "=0.3.1"
+papers-mcp = "=0.3.1"
+papers-rag = "=0.3.1"
+polars-python = "=0.55.2"
+polyc-query = "=2026.11.1"
+repartee = "=2.2.1"
+rocky-sdk = "=0.1.0-nightly.20261103"
+rustpower = "=0.5.4"
+ryu-spaces = "=0.1.14"
+sol-parser-sdk = "=0.11.0"
+solana-streamer-sdk = "=6.0.0"
+spiresql = "=0.1.3"
+whipplescript = "=0.11.0"

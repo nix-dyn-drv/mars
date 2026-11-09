@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+dynamo-backend-common = "=1.6.2"
+dynamo-llm = "=1.6.2"
+dynamo-rl = "=1.6.2"
+dynamo-runtime = "=1.6.2"
+dynamo-sglang-sidecar = "=1.6.2"
+dynamo-sidecar-common = "=1.6.2"
+dynamo-trtllm-sidecar = "=1.6.2"
+dynamo-vllm-sidecar = "=1.6.2"
+infigraph-confluence = "=2.0.0"
+infigraph-core = "=2.0.0"
+infigraph-docs = "=2.0.0"
+infigraph-grammar-plugin = "=2.0.0"
+radicle-feed = "=0.5.3"
+wumpus-hunter = "=0.2.0"

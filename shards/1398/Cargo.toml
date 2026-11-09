@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+stellar-agent-defindex = "=0.1.0-alpha.13"
+stellar-agent-dex = "=0.1.0-alpha.13"
+stellar-agent-smart-account = "=0.1.0-alpha.13"
+stellar-agent-webauthn-bridge = "=0.1.0-alpha.13"

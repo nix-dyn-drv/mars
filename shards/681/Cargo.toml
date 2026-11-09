@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gadget-sdk = "=0.6.2"
+mem-yaml = "=0.1.0-alpha"
+solidb = "=2.8.0"
+whoah-cli = "=0.1.1"
+zombie-bite = "=0.6.5"
+zombie-bite-core = "=0.6.5"

@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-local-registry = "=0.2.12"
+cargo-tree-tui = "=0.1.0"
+daemon_rs = "=0.1.1"
+gibbername = "=0.1.1"
+melprot = "=0.13.10"
+pangea-client = "=0.3.14"
+rusted_pipe = "=0.0.2"
+sofie-postgres = "=0.3.0"
+twgpu-tools = "=0.5.1"

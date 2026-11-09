@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hook0-api = "=0.1.0"
+lopi-agent = "=0.22.0"
+lopi-orchestrator = "=0.22.0"
+lopi-remote = "=0.22.0"
+lopi-webhook = "=0.22.0"
+mesh-api = "=0.65.1"
+netwatch-tui = "=0.40.0"
+rgb-lib = "=0.2.2"
+stelae = "=0.6.9"

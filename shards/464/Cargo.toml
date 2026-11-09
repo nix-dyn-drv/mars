@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+crucibled = "=0.3.0"
+factoriauth = "=1.0.0"
+forgepress-core = "=0.1.0"
+greentic-dev = "=1.2.0"
+greentic-dev-dev = "=1.2.42363416861"
+greentic-dw-authoring = "=1.2.0"

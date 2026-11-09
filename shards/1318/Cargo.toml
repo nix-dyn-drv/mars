@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+skill-cli = "=0.3.0"
+skill-http = "=0.3.0"
+streamling = "=0.5.0"
+streamling-connectors = "=0.5.0"
+streamling-core = "=0.5.0"
+tome-mcp = "=0.7.18"
+vein = "=0.4.0"
+vein-admin = "=0.3.0"

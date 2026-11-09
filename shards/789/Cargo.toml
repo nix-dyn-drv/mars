@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+holochain_persistence_api = "=0.0.18"
+holochain_persistence_file = "=0.0.18"
+holochain_persistence_mem = "=0.0.18"
+holochain_persistence_pickle = "=0.0.18"
+lib3h_p2p_protocol = "=0.0.42"
+lib3h_zombie_actor = "=0.0.42"

@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+blazen-cabi = "=0.5.4"
+blazen-uniffi = "=0.5.4"
+chzzk-lib = "=0.0.1"
+dig2browser = "=0.5.6"
+dig2browser-runtime-lightweight = "=0.5.3"
+dig2browser-station = "=0.5.3"
+emergent-time-wasm = "=0.1.1"
+fc-core = "=0.1.0"
+fc-grid = "=0.1.0"
+fc-model = "=0.1.0"
+fc-rich-text = "=0.1.0"
+quad-image = "=0.2.0"
+signstar-yubihsm2 = "=0.2.1"
+waking-git-core = "=0.1.2"

@@ -1,0 +1,45 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+afi-cli = "=0.24.2"
+bitcoin-parser = "=0.1.0"
+bmp_rs = "=0.0.9"
+cute-sqlite-kv = "=0.1.0"
+dharitri-sc-meta-lib = "=1.19.0"
+diesel_pg_hstore = "=0.2.0"
+fandhe-ai = "=0.14.0"
+fandhe-ai-onnx-interop = "=0.14.0"
+hfc-abi = "=1.0.0"
+libosmium = "=0.3.1"
+llvm_profparser = "=0.15.0"
+lndups = "=0.2.0"
+opaque-string = "=0.1.1"
+paigasus-helikon = "=0.6.9"
+paigasus-helikon-core = "=0.5.20"
+pheasa = "=0.1.0"
+polygl-adapter-perl = "=0.2.1"
+polygl-adapter-treesitter-util = "=0.2.1"
+proof-forge-solana-client = "=0.1.0"
+redact-secret = "=0.1.0-beta.15"
+redact-secret-cli = "=0.1.0-beta.15"
+restrictive-usernames = "=0.5.1"
+theseus-mlua-sys = "=0.8.6"
+threemd = "=2.2.1"
+topiary-tree-sitter-facade = "=0.8.0"
+vthread = "=0.1.0"
+vthread-stack = "=0.1.0"
+vthreads = "=0.1.0"
+woven-server = "=0.4.0"

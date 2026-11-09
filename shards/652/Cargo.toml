@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fnox-core = "=1.47.0"
+load_lpp = "=12.0.0"
+pi-oxidized = "=0.1.1"
+pi-rusty = "=0.1.1"
+polyc-tui = "=2026.11.1"
+vtcode-tui = "=0.123.10"

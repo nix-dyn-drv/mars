@@ -1,0 +1,40 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+browser-automation-cli = "=0.2.0"
+bund = "=0.21.0"
+fuel-core-p2p = "=0.48.4"
+git_leviathan = "=0.3.0"
+magicsvm = "=0.2.1"
+mdkb = "=2.2.1"
+medulla = "=0.2.0"
+openkoi = "=2026.3.14"
+pico-store-desktop = "=0.1.2"
+pmat = "=3.43.0"
+quiver-web = "=0.1.3"
+rustant-mcp = "=1.0.1"
+rustant-tools = "=1.0.1"
+sciscraper = "=0.3.3"
+smelt-api = "=0.1.0"
+smelt-cli = "=0.1.0"
+smelt-core = "=0.1.0"
+smelt-mcp = "=0.1.1"
+smelt-memory = "=0.1.0"
+smelt-validator = "=0.1.0"
+sugo = "=0.0.1"
+symworx-tui = "=0.6.0"
+tidepool = "=0.1.0"
+townos-desktop = "=0.0.3"

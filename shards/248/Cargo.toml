@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+beet_router_parser = "=0.0.5"
+bhwi = "=0.1.0"
+bhwi-async = "=0.1.0"
+browserkit = "=0.4.4"
+etdl-wasm = "=0.3.1"
+hejpics-api = "=0.5.0"
+indy-sdk = "=0.1.1"
+miniml = "=26.10.11"
+ochrepad-syntax = "=0.4.0"
+sovrin-client = "=0.1.1-15"
+sweet_fs = "=0.4.1"
+sweet_utils = "=0.4.1"
+sweet_web = "=0.4.1"

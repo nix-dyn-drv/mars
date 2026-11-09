@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+dilithia-stark = "=0.5.0"
+docker-lens = "=0.1.0"
+doh-client = "=3.1.3"
+fastboop-fastboot-webusb = "=0.0.1-rc.21"
+leakscope-capture = "=0.2.0-rc.1"
+ranged_bitmap = "=1.4.0"
+statsig-wasm = "=0.2.3"
+svm-replay-protocol = "=0.2.0"

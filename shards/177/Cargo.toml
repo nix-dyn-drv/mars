@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+assaydb = "=0.1.0-alpha.2"
+pdfrum-doc = "=0.5.3"
+pdfrum-font = "=0.5.3"
+pdfrum-form = "=0.5.3"
+pdfrum-markdown = "=0.5.3"
+pdfrum-page = "=0.5.3"
+pdfrum-raster-agg = "=0.5.3"
+pdfrum-raster-tinyskia = "=0.5.3"
+pdfrum-raster-vello-cpu = "=0.5.3"
+pdfrum-render = "=0.5.3"
+pdfrum-svg = "=0.5.3"
+pdfrum-text = "=0.5.3"
+sqlite3-provider = "=0.1.0"
+unitforge = "=0.6.0"

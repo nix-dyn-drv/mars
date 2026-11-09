@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+boxology-cli = "=0.2.2"
+check-implementation = "=0.2.2"
+classifier-implementation = "=0.2.2"
+pbc-ffi = "=0.1.0"

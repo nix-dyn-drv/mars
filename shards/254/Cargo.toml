@@ -1,0 +1,65 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bevy_burn_depth = "=0.1.1"
+bevy_burn_dino = "=0.3.0"
+buaa-cli = "=0.2.0"
+bunsen-cache = "=0.21.3"
+bunsen-onnx-gen = "=0.30.1"
+bunsen-preview-chat-dataloader = "=0.30.1"
+burn-npu = "=0.4.0"
+burn_dinov3 = "=0.1.7"
+cctop = "=0.42.0"
+cctop-core = "=0.47.0"
+cctop-serve = "=0.33.13"
+cctop-ui = "=0.45.1"
+cebolla = "=0.3.0"
+cua-daemon = "=0.10.1"
+cua-sdk = "=0.10.1"
+cua-spaces = "=0.10.1"
+gam = "=0.3.157"
+gam-config = "=0.3.157"
+gam-inference = "=0.3.157"
+gam-predict = "=0.3.157"
+general-mcmc = "=0.10.0"
+hel-cli = "=0.2.0"
+hel-core = "=0.2.0"
+hel-tui = "=0.2.0"
+hjkl = "=0.45.1"
+hrdr = "=0.18.0"
+hrdr-tui = "=0.18.0"
+iris-cv = "=0.0.0"
+klukai = "=0.1.4"
+lichen-cli = "=0.5.229"
+lockdocs-core = "=0.7.5"
+maryml-burn = "=0.21.0"
+muonts = "=0.2.0"
+nu_plugin_vulkan_matrix = "=0.1.2"
+oxigaf-cli = "=0.1.2"
+pixtuoid = "=0.22.0"
+plugins-rs = "=0.1.2"
+puppyeyes = "=0.1.0"
+r2l-gym = "=0.0.3"
+reqfile = "=0.4.0"
+rosed = "=0.11.0"
+solana-keygen = "=4.4.1"
+steel-memory = "=0.1.3"
+torsh-cli = "=0.2.0"
+typptx = "=0.1.0"
+vigilante = "=0.3.2"
+volant = "=0.1.0-alpha.13"
+yantrikdb-server = "=0.20.0"
+zecd = "=0.9.0"

@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ftp2mfs = "=0.3.1"
+gosh-database = "=0.2.1"
+hpl-nectar-staking = "=0.1.51"
+reason-shell = "=0.3.10"

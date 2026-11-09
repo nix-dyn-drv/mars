@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+menger = "=0.7.1"
+miden-multisig-client = "=0.18.3"
+outline-mcp = "=0.15.3"
+outline-mcp-rmcp = "=0.15.3"
+parity-publish = "=0.10.18"
+plexus-ui-service = "=0.2.1"
+repograph = "=0.6.0"
+ruskel = "=0.0.11"
+ruskel-mcp = "=0.0.11"
+tastyrock_auth_light = "=0.0.11"
+vagus = "=0.4.0"

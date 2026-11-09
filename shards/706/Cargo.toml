@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gnostr-blossom-tui = "=948363.1875.7190"
+invoicepilot = "=0.1.24"
+kdex = "=1.0.1"
+miden-watch = "=0.14.1"
+quorum-cli = "=0.3.3"

@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+imp-cli = "=0.2.0"
+imp-tui = "=0.2.0"
+lemurclaw-core = "=0.0.1"
+lemurclaw-extensions = "=0.0.1"
+lemurclaw-server = "=0.0.1"
+mineral = "=0.6.0"
+mineral-cli = "=0.6.0"
+proton-drive-sdk = "=0.5.1"
+radiant-hubble = "=0.11.1"
+sylvia-iot-coremgr = "=0.4.7"
+sylvia-iot-data = "=0.4.7"

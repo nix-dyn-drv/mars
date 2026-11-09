@@ -1,0 +1,28 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+askit-cozodb-agents = "=0.5.0"
+async-google-apis-common = "=0.4.0"
+auths-pairing-protocol = "=0.1.16"
+auths-transparency = "=0.1.16"
+auths-verifier = "=0.1.16"
+cunw = "=0.3.0"
+discord-flows = "=0.6.3"
+karabiner-rcmd-binder = "=0.6.2"
+maylib = "=0.3.4"
+parquet-py = "=0.2.1-beta"
+soma-ctf = "=0.1.0-alpha"
+willbooster-tree-sitter = "=18.0.2"

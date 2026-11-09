@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ocsp-server = "=0.2.0"
+re_space_view_text = "=0.8.2"
+re_space_view_text_box = "=0.8.2"
+tgcli = "=0.3.7"

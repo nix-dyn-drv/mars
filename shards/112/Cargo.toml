@@ -1,0 +1,48 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+amail = "=0.0.0"
+autoview = "=0.1.1"
+azure-rust = "=0.4.0"
+azure_rs = "=0.3.0"
+boxdb = "=0.7.0"
+cargo-skyline-octocrab = "=0.16.0"
+earthbucks_lib = "=0.8.5"
+gene-extractor = "=0.1.0"
+gha-toolkit = "=0.3.1"
+hjkl-editor-tui = "=0.45.1"
+hjkl-engine-tui = "=0.45.1"
+hjkl-picker-tui = "=0.45.1"
+hjkl-prompt-tui = "=0.45.1"
+hjkl-syntax-tui = "=0.45.1"
+hjkl-vim-tui = "=0.45.1"
+hjkl-which-key-tui = "=0.45.1"
+hrdr-editor = "=0.18.0"
+hubcaps-ex = "=0.6.2"
+hyperex = "=0.1.1"
+myte = "=0.6.4"
+ocular = "=0.1.0"
+opaquebind = "=0.3.6"
+remitano-api = "=0.0.3"
+seismic = "=0.2.1"
+snowdrop_index_client = "=0.4.0"
+snowflake_index_client = "=0.2.0"
+sonic-server = "=1.10.2"
+tch-ext = "=0.2.0"
+tide-github = "=0.3.0"
+tmxr-cli = "=0.9.0"
+tmxr-server = "=0.9.0"
+twgame = "=0.11.0"

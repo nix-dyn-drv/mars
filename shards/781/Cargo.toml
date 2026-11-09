@@ -1,0 +1,28 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hitbox = "=0.2.4"
+hitbox-backend = "=0.2.2"
+hitbox-feoxdb = "=0.2.2"
+hitbox-fn = "=0.2.1"
+hitbox-http = "=0.2.1"
+hitbox-moka = "=0.2.0"
+hitbox-redis = "=0.2.1"
+hitbox-reqwest = "=0.2.0"
+hitbox-tower = "=0.2.0"
+mini-forum = "=0.6.0"
+soanm = "=0.1.3"
+telemetric-analytics = "=0.1.0"

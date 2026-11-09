@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+brokk-bifrost-lsp = "=0.12.0"
+cf-types-registry-sdk = "=0.2.2"
+kcode-k1-chat-compaction-testkit = "=0.1.2"
+kcode-k1-chat-k1-log = "=0.1.5"
+kcode-k1-chat-scenarios-testkit = "=0.2.2"
+lq = "=0.16.0"

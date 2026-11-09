@@ -1,0 +1,52 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agntcy-agentbridge = "=0.5.0"
+agntcy-agentbridge-cli = "=0.3.0"
+agntcy-shadi-a2a = "=0.4.0"
+agntcy-shadi-agent-transport-slim = "=0.5.0"
+agntcy-shadi-identity = "=0.4.0"
+agntcy-shadi-mas = "=0.6.0"
+agntcy-slim = "=3.4.6"
+agntcy-slim-bindings = "=3.4.6"
+agntcy-slim-bindings-ffi = "=3.3.9"
+agntcy-slim-mcp-proxy = "=0.3.1"
+agntcy-slimctl = "=3.4.6"
+api-subway = "=0.1.0"
+api-subway-analyzers = "=0.1.0"
+cloacina-server = "=0.12.0"
+crabmos = "=0.1.1"
+deathframe = "=0.5.1"
+dlin = "=0.2.3"
+dlin-core = "=0.2.3"
+dotslash = "=0.5.7"
+evalt = "=0.1.0"
+grafen = "=0.9.1"
+hyperfine = "=2.0.0"
+img4avif = "=0.7.0"
+jelven-rustdx-cli = "=2.0.4"
+kdash = "=2.1.1"
+kube-portforward = "=0.5.0"
+kuberic-controller = "=0.0.1"
+markdown-checker = "=0.1.2"
+prolly-store-rocksdb = "=0.5.1"
+rxgraph = "=0.17.0"
+sidereon = "=3.0.6"
+sidereon-core = "=3.0.6"
+tch-plus = "=0.18.3"
+upperadd = "=0.0.2"
+vtcode-battery-pack = "=0.135.14"
+vtcode-theme = "=0.123.10"

@@ -1,0 +1,48 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cf-account-management = "=0.1.1"
+cf-account-management-sdk = "=0.1.1"
+cf-api-gateway = "=0.2.7"
+cf-authn-resolver = "=0.2.16"
+cf-authn-resolver-sdk = "=0.3.16"
+cf-authz-resolver = "=0.1.23"
+cf-authz-resolver-sdk = "=0.3.6"
+cf-credstore = "=0.1.22"
+cf-credstore-sdk = "=0.1.24"
+cf-file-parser = "=0.1.26"
+cf-grpc-hub = "=0.2.6"
+cf-mini-chat = "=0.1.31"
+cf-mini-chat-sdk = "=0.10.6"
+cf-modkit = "=0.6.10"
+cf-module-orchestrator = "=0.1.25"
+cf-nodes-registry = "=0.1.25"
+cf-oagw = "=0.2.25"
+cf-resource-group = "=0.1.3"
+cf-resource-group-sdk = "=0.1.3"
+cf-rg-tr-plugin = "=0.1.3"
+cf-single-tenant-tr-plugin = "=0.1.22"
+cf-static-authn-plugin = "=0.3.0"
+cf-static-authz-plugin = "=0.1.20"
+cf-static-credstore-plugin = "=0.1.18"
+cf-static-tr-plugin = "=0.1.21"
+cf-tenant-resolver = "=0.1.21"
+cf-tenant-resolver-sdk = "=0.3.6"
+cf-tr-authz-plugin = "=0.1.3"
+cf-types-registry = "=0.1.22"
+ferrule = "=0.2.0-alpha"
+ferrule-core = "=0.2.0-alpha"
+pr-bro = "=0.5.1"

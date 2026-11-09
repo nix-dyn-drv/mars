@@ -1,0 +1,66 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bendsql = "=0.34.3"
+bureau = "=0.2.1"
+cargo-information = "=0.7.0"
+cargo-proc-debug = "=0.1.5"
+cargo-scout-audit = "=0.3.17"
+catbus = "=0.1.0"
+charms = "=15.0.0"
+cskk = "=3.1.4"
+cw-orch-cli = "=0.2.3"
+fluentbase-sdk = "=1.5.1"
+hirnd = "=0.1.0"
+li_rudof_mcp = "=0.2.14"
+linera-bridge = "=0.15.15"
+linera-ethereum = "=0.15.23"
+lmrc-cli = "=0.3.16"
+monerochan = "=5.2.12"
+monerochan-build = "=5.2.12"
+monerochan-cuda = "=5.2.12"
+monerochan-eval = "=5.2.8"
+monerochan-helper = "=5.2.12"
+monerochan-prover = "=5.2.12"
+monerochan-sdk = "=5.2.5"
+necessist-frameworks = "=0.5.1"
+popgetter-py = "=0.2.2"
+publish-action = "=0.4.0"
+rocketmq-controller = "=1.0.0"
+rsaber_android = "=0.7.0"
+runmat-aot = "=0.6.2"
+runmat-core = "=0.6.2"
+runmat-execution-runner-native = "=0.6.2"
+runmat-lsp = "=0.6.2"
+runmat-static-analysis = "=0.6.2"
+runmat-test-runner-native = "=0.6.2"
+runmat-vm = "=0.6.2"
+runmat-wasm = "=0.6.2"
+sp1-cuda = "=6.10.0"
+sp1-eval = "=5.2.4"
+sp1-gpu-prover = "=6.10.0"
+sp1-gpu-server = "=6.10.0"
+sp1-prover = "=6.10.0"
+sp1-prover-types = "=6.10.0"
+sp1-sdk = "=6.10.0"
+splint = "=1.1.0"
+tesser-backtester = "=0.9.1"
+uselesskey-axum = "=0.10.0"
+wifi-densepose-cli = "=0.3.1"
+wifi-densepose-mat = "=0.3.2"
+winux-ai = "=1.0.0"
+xcodeai = "=2.1.0"
+zeus-eth = "=0.1.4"

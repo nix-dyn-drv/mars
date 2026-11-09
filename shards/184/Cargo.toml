@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+aster-mcp = "=0.11.0"
+coderlib = "=0.1.0"
+dharitri-sc-scenario = "=1.19.0"
+mcp-tools = "=0.1.0"
+mx-core = "=0.1.0"
+wayland-ptt = "=0.1.1"
+xkbcommon-rs = "=0.1.2"

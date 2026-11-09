@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+enigmatick = "=0.4.1"
+helm-coordination = "=0.2.1"
+helm-governed-jobs = "=0.2.1"
+helm-operator-control = "=0.2.1"
+helm-truth-execution = "=0.2.1"
+miden-node-validator = "=0.14.11"
+printnanny-edge-db = "=0.2.1"
+saasexpress = "=0.2.0"
+satelle = "=0.1.44"
+soar-cli = "=0.14.0"
+soar-operations = "=0.7.0"
+solana-wen-restart = "=3.1.12"
+stackify = "=0.1.0"
+stalwart-lite = "=0.16.0"

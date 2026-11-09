@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cmdhub-cli = "=0.1.6"
+cmdhub-mcp = "=0.1.6"
+ctx-engine = "=0.2.0"
+ddddocr-tract = "=0.1.0"
+gpp-cli = "=0.2.2"
+gpp-sdk = "=0.2.2"
+gpp-tui = "=0.2.2"
+hxedit = "=0.5.0"
+near-lan = "=0.1.1"
+ruvector-onnx-embeddings-wasm = "=0.1.2"
+senka-tui = "=0.1.3"
+talos_metrics = "=0.3.18"
+tempus-ddb = "=0.5.4"
+upki-ffi = "=0.1.0"

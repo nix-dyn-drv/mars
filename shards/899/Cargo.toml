@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kohaku-tor-rpc = "=0.0.1"
+mail4agent-server = "=0.4.31"
+mail4agent-server-bin = "=0.4.31"
+nazara = "=0.2.1"
+pop-common = "=0.14.0"
+pop-contracts = "=0.12.1"
+revery-onion = "=0.1.0"

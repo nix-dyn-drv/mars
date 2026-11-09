@@ -1,0 +1,46 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bevy_buttplug = "=0.1.0"
+bevy_ethers = "=0.1.0"
+bevy_wasm = "=0.10.1"
+bevy_wasm_scripting = "=0.2.0"
+br-addon = "=0.2.21"
+br-db = "=1.8.72"
+chicago-tdd-lsp = "=26.7.1"
+eryon-net = "=0.0.2"
+hlbc-gui = "=0.3.0"
+libmrot = "=0.1.1"
+link-cfg = "=0.13.4"
+lsp-max = "=26.7.3"
+ncmmiao = "=3.14.0"
+pyella = "=0.1.5"
+radicle = "=0.25.1"
+radicle-artifact-client = "=0.23.3"
+radicle-artifact-core = "=0.23.3"
+radicle-ci-adapter = "=0.1.1"
+radicle-fetch = "=0.21.1"
+radicle-node = "=0.21.1"
+radicle-protocol = "=0.9.1"
+radicle-schemars = "=0.9.1"
+retia = "=0.2.1"
+rumk = "=0.1.0"
+rust-rpa = "=0.1.0"
+tenzro-consensus = "=0.2.0"
+tenzro-crypto = "=0.2.0"
+tenzro-token = "=0.2.0"
+vstorage = "=0.12.0"
+xmpp-http-upload = "=0.6.0"

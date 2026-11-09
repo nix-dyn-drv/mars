@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+miden-note-transport-node = "=0.4.1"
+miden-note-transport-node-bin = "=0.4.1"
+mimirs = "=2.0.0-alpha.4"
+node-builder = "=0.12.0"
+pop-fork = "=0.14.0"
+subskribinto = "=0.2.3"
+vectordb = "=0.4.10"

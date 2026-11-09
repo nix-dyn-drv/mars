@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+corty = "=0.1.0"
+dtn7 = "=0.21.0"
+revault_key_server = "=0.0.53"
+seetrex-verifier = "=0.3.9"
+specdiff = "=0.21.8"

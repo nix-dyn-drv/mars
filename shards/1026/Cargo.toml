@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+music-player = "=0.2.0"
+music-player-graphql = "=0.2.0"
+music-player-webui = "=0.2.0"
+ns-inscriber = "=0.6.0"
+seaography-discoverer = "=0.3.0"
+uniko-api = "=0.3.0"
+uniko-cortex = "=0.3.0"
+uniko-extract = "=0.3.0"
+uniko-memory = "=0.3.0"
+uniko-pipes = "=0.3.0"
+uniko-store = "=0.3.0"

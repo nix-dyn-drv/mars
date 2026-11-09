@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+archivista = "=0.1.0"
+ayame-spell = "=0.4.0"
+cdbc-sqlite = "=0.1.23"
+fontfinder = "=1.5.0"
+gears-cli = "=0.1.1"
+invar-webtools = "=0.1.0-beta.1"
+m2-ls = "=2.6.0"
+minidx-core = "=0.1.10"
+mssql-pool = "=0.1.1"
+nym-sphinx-params = "=2.0.0"
+quaint-forked = "=0.1.2"
+revaultd = "=0.4.0"
+rln = "=3.0.0"
+system_uri = "=0.4.0"
+tiberius-derive = "=0.0.2"
+webrtc-direct-server = "=0.2.1"
+zap-cli = "=0.1.0"

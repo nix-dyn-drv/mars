@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kcode-telegram-native-media = "=0.1.1"
+kcode-telegram-request-policy = "=0.1.1"
+kcode-telegram-text-delivery = "=0.1.1"
+msym-cli = "=0.3.1"
+owasm-vm = "=0.3.2"
+tinystore = "=0.7.1"

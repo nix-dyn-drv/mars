@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+juper_swap_api = "=0.1.22"
+mpl-gumdrop = "=0.1.1"
+safecoin-banks-client = "=1.14.17"
+solana-farm-client = "=1.1.3"
+solana-farm-ctrl = "=1.1.3"
+vpl-relying-party-cli = "=0.1.2"
+waffles-solana-banks-client = "=1.16.0-alpha.10"

@@ -1,0 +1,47 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+async-sea-orm-session = "=0.4.0"
+balancer_sdk = "=0.1.16-alpha"
+bunnycli = "=0.1.3"
+comment_app_frontend = "=0.1.3"
+convergence-dynamodb = "=0.3.1"
+cucco = "=4.1.0"
+distant-lua = "=0.15.1"
+grin_p2p = "=5.5.2"
+http-pipe = "=0.2.0"
+iso8583_rs = "=0.1.10"
+melnet2 = "=0.3.3"
+monoverse = "=0.1.9"
+mukae-greeter = "=0.1.37"
+mukae-native = "=0.1.37"
+mukae-seat = "=0.1.0"
+musi_lili = "=0.3.0"
+operator = "=0.6.6"
+oyo = "=0.1.72"
+proxyboi = "=0.5.0"
+routee-compass-powertrain = "=0.19.5"
+sa-token-plugin-tide = "=0.2.1"
+spriters = "=1.0.0"
+stocker = "=0.2.0"
+swanling = "=0.0.0"
+tab = "=0.5.4"
+tab-command = "=0.5.7"
+tab-daemon = "=0.5.4"
+tab-pty = "=0.5.3"
+uwupdater = "=0.1.3"
+zerostash-files = "=0.6.0"
+zs-filecrawler = "=0.1.1"

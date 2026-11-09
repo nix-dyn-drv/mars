@@ -1,0 +1,34 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+anypost = "=2.1.0"
+bach = "=0.2.0"
+bismark-coverage2cytosine = "=1.0.0"
+boarddown = "=0.1.5"
+boarddown-db = "=0.1.5"
+bolero = "=0.13.7"
+bolero-generator = "=0.13.6"
+bolero-generator-hydro = "=0.13.6"
+bolero-hydro = "=0.13.8"
+ceph-rbd = "=0.3.2"
+cord = "=2.0.0"
+cursive-flexi-logger-view = "=0.6.0"
+kaiv = "=0.15.0"
+kaiv-lsp = "=0.1.4"
+overgraph = "=0.18.0"
+rusty_diary = "=0.1.4"
+thorax-core = "=1.1.0"
+thorax-store = "=1.1.0"

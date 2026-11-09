@@ -1,0 +1,41 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+aphrody-web = "=1.4.7"
+apiforge = "=0.4.0"
+bitcoin-blockchain-query = "=0.1.7"
+bun_browser_crawl = "=1.4.8"
+devpulse-cli = "=0.1.0"
+ghciwatch = "=1.4.2"
+given = "=0.1.6"
+image-rider = "=0.10.3"
+image-rider-fat = "=0.5.3"
+liquid-transpiler = "=0.1.4"
+lsys = "=0.3.1"
+metty = "=2024.7.0"
+miden-node-persistence = "=0.18.2"
+moonramp-gateway = "=0.1.22"
+mpdpopm = "=0.3.6"
+opensearch-client = "=0.3.2"
+qbak = "=1.5.1"
+qoqo-aqt = "=0.8.0"
+retz = "=0.1.2"
+rustfm-scraper = "=0.2.23"
+sizing-cli = "=2.0.0"
+sizing-watch = "=2.0.0"
+tarnished = "=0.4.0"
+trauma = "=3.0.0"
+wg-socks = "=0.1.1"

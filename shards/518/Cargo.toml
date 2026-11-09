@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+depyler = "=4.1.1"
+depyler-corpus = "=4.1.1"
+depyler-knowledge = "=4.1.1"
+depyler-oracle = "=4.1.1"
+depyler-quality = "=4.1.1"
+depyler-wasm = "=3.19.20"
+veilocity-core = "=0.1.4"
+veilocity-prover = "=0.1.4"

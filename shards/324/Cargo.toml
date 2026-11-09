@@ -1,0 +1,39 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bulwark-cli = "=0.6.0"
+bulwark-ext-processor = "=0.6.0"
+bulwark-host = "=0.6.0"
+coraline = "=0.18.0"
+exon-py = "=0.11.0"
+graphr = "=0.8.2"
+grundschutz-oscal-viewer = "=1.6.69"
+jouet-graph = "=0.0.3"
+lockyard = "=0.0.1"
+lockyard-cloud-client = "=0.0.1"
+maplibre-native-next = "=0.0.6"
+mln-rs = "=0.0.10"
+mln-rs-map = "=0.0.10"
+mln-rs-platform-default = "=0.0.10"
+mln-rs-render-test = "=0.0.10"
+mln-rs-renderer = "=0.0.10"
+mln-rs-storage-offline = "=0.0.10"
+mln-rs-style = "=0.0.10"
+rsigma-runtime = "=0.26.0"
+scythe-cli = "=0.20.2"
+scythe-inspect = "=0.20.2"
+slide-core = "=0.7.0"
+tessera-doc = "=0.3.1"

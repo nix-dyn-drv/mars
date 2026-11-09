@@ -1,0 +1,41 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+git-branchless = "=0.11.1"
+git-branchless-hook = "=0.11.1"
+git-branchless-init = "=0.11.1"
+git-branchless-invoke = "=0.11.1"
+git-branchless-lib = "=0.11.1"
+git-branchless-move = "=0.11.1"
+git-branchless-navigation = "=0.11.1"
+git-branchless-opts = "=0.11.1"
+git-branchless-query = "=0.11.1"
+git-branchless-record = "=0.11.1"
+git-branchless-revset = "=0.11.1"
+git-branchless-reword = "=0.11.1"
+git-branchless-smartlog = "=0.11.1"
+git-branchless-submit = "=0.11.1"
+git-branchless-test = "=0.11.1"
+git-branchless-undo = "=0.11.1"
+gittr = "=0.1.1"
+hpl-buzz-guild = "=0.0.1"
+hpl-character-manager = "=0.0.77"
+hpl-currency-manager = "=0.0.83"
+hpl-nectar-missions = "=0.1.44"
+hpl-payment-manager = "=0.0.5"
+hpl-utils = "=0.1.12"
+rapiddoc-office = "=0.1.1"
+zffmetareader = "=0.10.1"

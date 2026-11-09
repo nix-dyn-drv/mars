@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+eif_build = "=0.2.1"
+ferrus = "=0.6.0-alpha.1"
+fuel-core-compression-service = "=0.48.4"
+fuel-core-consensus-module = "=0.48.4"
+fuel-core-importer = "=0.48.4"
+fuel-core-parallel-executor = "=0.48.4"
+fuel-core-poa = "=0.48.4"
+fuel-core-producer = "=0.48.4"
+fuel-core-tx-status-manager = "=0.48.4"
+fuel-core-txpool = "=0.48.4"
+physme = "=0.2.4"
+swayscan = "=0.2.9"
+terminal-commander-mcp = "=0.3.17"
+thoth-cli = "=0.1.89"

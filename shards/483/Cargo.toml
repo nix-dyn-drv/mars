@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+dadk = "=0.4.0"
+dadk-user = "=0.4.0"
+fmc_example_mod = "=0.1.1"
+lexa-core = "=0.1.1"
+supercode-codex-frontend = "=0.5.150"
+supercode-core = "=0.4.88"
+supercode-frontend-model = "=0.5.150"
+supercode-harness = "=0.5.150"
+supercode-opencode-frontend = "=0.5.150"
+svmscope = "=0.6.0"
+talk-cli = "=0.3.0"
+tape-git-remote = "=0.1.1"
+tape-peer-http = "=0.5.0"
+tape-peer-manager = "=0.5.0"
+tape-protocol = "=0.5.0"
+tape-rpc = "=0.5.0"
+tape-rpc-client = "=0.5.0"
+tape-rpc-solana = "=0.5.0"
+tape-sdk = "=0.5.0"

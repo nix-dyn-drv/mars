@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fleet_apiserver = "=0.3.6"
+mmtickets-common = "=0.9.12"
+plane-cli = "=0.3.0"
+plane-controller = "=0.3.0"
+plane-core = "=0.3.0"
+printnanny-gst-pipelines = "=0.2.1"
+printnanny-gst-plugin = "=0.6.1"
+printnanny-nats-client = "=0.33.1"
+repo-search = "=0.0.5"
+rgps-daemon = "=0.2.6"
+x-server-stats = "=0.1.2"

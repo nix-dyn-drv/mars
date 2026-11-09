@@ -1,0 +1,47 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+earl = "=0.6.4"
+gitgrip = "=1.6.0"
+glaciers = "=2.0.1"
+jackdaw-cli = "=0.2.4"
+kodegen_candle_agent = "=0.10.11"
+kodegen_tools_reasoner = "=0.10.9"
+lenso-support-sla-postgres-plugin = "=0.1.0"
+melodium-mcp = "=0.11.1"
+otc-rfq = "=0.2.0"
+quercus-engine = "=0.6.1"
+quercus-engine-rs = "=0.6.1"
+quercus-storage = "=0.6.0"
+repl-cli = "=3.0.0"
+repl-core = "=3.0.0"
+repl-lsp = "=3.0.0"
+riir-gui-battery-pack = "=0.1.0"
+runique = "=4.0.0"
+sealzone-control = "=0.2.10"
+smg = "=1.14.0"
+sp1-cli = "=6.10.0"
+symbi-runtime = "=3.0.0"
+symbi-shell = "=3.0.0"
+synode = "=0.8.0"
+tokeira-engine = "=0.7.0"
+zeph-index = "=0.22.5"
+zeph-mcp = "=0.22.5"
+zeph-orchestration = "=0.22.5"
+zeph-plugins = "=0.22.5"
+zeph-subagent = "=0.22.5"
+zeph-tools = "=0.22.5"
+zontologize = "=1.1.0"

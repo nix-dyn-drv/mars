@@ -1,0 +1,45 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+aumate = "=0.2.8"
+auths = "=0.1.16"
+auths-api = "=0.1.16"
+auths-core = "=0.1.16"
+auths-evidence = "=0.1.16"
+auths-id = "=0.1.16"
+auths-infra-git = "=0.1.16"
+auths-infra-http = "=0.1.16"
+auths-infra-rekor = "=0.1.16"
+auths-mcp-core = "=0.1.16"
+auths-mcp-gateway = "=0.1.16"
+auths-mcp-server = "=0.1.16"
+auths-pairing-daemon = "=0.1.16"
+auths-receipts = "=0.1.16"
+auths-scim-server = "=0.1.16"
+auths-sdk = "=0.1.16"
+auths-storage = "=0.1.16"
+datafusion-remote-table = "=0.26.0"
+gpui-wry = "=0.7.3"
+gpui_ce_components_webview = "=0.3.0"
+lumino-ui-settings = "=0.2.0-crates-io-preview1"
+mdbook-infisearch = "=0.10.1"
+mdbook-morsels = "=0.7.3"
+mrepl = "=0.31.0"
+polint = "=0.5.0"
+tauri-plugin-state = "=0.1.0"
+v-common = "=0.25.5"
+v-common-v8 = "=0.2.0"
+winrm-pentest = "=0.1.0"

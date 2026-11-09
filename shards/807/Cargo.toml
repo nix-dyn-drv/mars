@@ -1,0 +1,28 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hyperscan-async = "=0.0.6"
+hyperscan-async-sys = "=0.0.5"
+isb = "=3.6.0"
+libpexl = "=0.0.1"
+libpexl-sys = "=0.0.1"
+pdfluent = "=1.3.0"
+pdfluent-cli = "=1.3.0"
+re2 = "=0.0.11"
+re2-sys = "=0.0.9"
+spack-rs = "=0.0.8"
+vectorscan-async = "=0.0.4"
+vectorscan-sys = "=0.0.3"

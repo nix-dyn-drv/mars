@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+egui-dataframe = "=0.3.3"
+egui-dataframe-sample = "=0.3.10"
+mbc = "=0.1.0"
+pchain-world-state = "=0.4.2"

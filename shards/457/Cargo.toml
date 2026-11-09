@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+crawlrs = "=0.1.0"
+fuel-core-chain-config = "=0.48.4"
+fuel-core-compression = "=0.48.4"
+fuel-core-database = "=0.48.4"
+fuel-core-executor = "=0.48.4"
+fuel-core-keygen = "=0.48.4"
+fuel-core-keygen-bin = "=0.48.4"
+fuel-core-storage = "=0.48.4"
+fuel-core-upgradable-executor = "=0.48.4"
+fuel-core-wasm-executor = "=0.48.4"
+o2-api-types = "=0.4.8"
+sway-core = "=0.72.1"
+sway-features = "=0.72.1"
+sway-ir = "=0.72.1"
+sway-parse = "=0.72.1"
+swayfmt = "=0.72.1"

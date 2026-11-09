@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+benthic_ui = "=0.3.4"
+bsky-cli = "=0.1.38"
+cft = "=0.1.0"
+chainlib = "=0.1.1"
+class_group_0_5_2 = "=0.5.2"
+cs_epic_wallet_libwallet = "=1.0.1"
+dvc = "=0.1.0"
+npos-config = "=0.0.3"
+paigasus-helikon-sessions-sqlite = "=0.1.26"
+pallet-example-kitchensink = "=9.0.0"
+pallet-nicks = "=27.0.0"
+restapi = "=1.1.14"
+rust-playground-top-crates = "=0.1.7"
+static-dh-ecdh = "=0.1.1"
+taskito-workflows = "=0.22.0"
+teloxide-fork = "=0.18.0"
+teloxide-fork-core = "=0.14.0"
+tideline = "=0.1.1"
+tideline-seaorm = "=0.1.1"

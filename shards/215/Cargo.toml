@@ -1,0 +1,36 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+av-mesh = "=0.1.0"
+bitcoin-keymetadata = "=0.1.12-alpha.0"
+bitcoin-keypool = "=0.1.12-alpha.0"
+bivia = "=1.0.0"
+bundle_repo = "=0.9.0"
+datafusion-materialized-views = "=0.2.0"
+dotenvx-primitives = "=4.4.0"
+elasticube-core = "=1.1.1"
+gnostique = "=0.1.0-alpha.1"
+liquid-cache-client = "=0.1.10"
+liquid-cache-storage = "=0.1.10"
+mdfried = "=0.22.8"
+pq-bridge-core = "=0.0.1"
+rdf-fusion-model = "=0.1.0"
+swh-graph = "=13.0.1"
+tview = "=0.1.1"
+yummy-delta = "=0.0.8"
+zk402-groth16 = "=0.1.1"
+zk402-prover = "=0.1.1"
+zk402-wasm = "=0.1.0"

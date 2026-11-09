@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+zksync_eth_proof_manager = "=29.13.0-non-semver-compat"
+zksync_external_proof_integration_api = "=29.13.0-non-semver-compat"
+zksync_tee_proof_data_handler = "=29.13.0-non-semver-compat"
+zksync_vm_executor = "=29.13.0-non-semver-compat"

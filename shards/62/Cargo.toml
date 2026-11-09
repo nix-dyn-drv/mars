@@ -1,0 +1,67 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agent-trace = "=0.1.0"
+agentctl-protocols = "=0.3.0"
+agentctl-runtime = "=0.3.0"
+ambient-fs-server = "=0.1.1"
+apeireth-tools-canonical = "=2.0.0-rc.5"
+async_batis = "=0.1.1"
+atefs = "=1.10.0"
+atoxide-parts = "=0.1.3"
+bedrock-gateway-rust = "=0.18.2"
+braid-blob = "=0.1.4"
+cameo = "=0.2.0"
+ckg-mcp = "=1.3.1"
+ckg-query = "=1.3.1"
+consul-client = "=0.2.0-alpha.0"
+corro-api-types = "=0.2.0-alpha.0"
+corro-client = "=0.2.0-alpha.0"
+dockrtui = "=0.1.3"
+easy-db = "=0.2.2"
+ed25519-dalek-v2 = "=2.1.1"
+fensu-policy = "=0.29.2"
+frostbite-formats = "=0.3.0"
+garage_model = "=2.5.0"
+gollum-kb-oc = "=0.4.0"
+hana-vault = "=3.0.0"
+huiyu-db-mapper-sqlite = "=0.1.4"
+iocage-provision = "=0.2.0"
+jeff-sdk = "=1.4.1"
+katzenpost_thin_client = "=0.0.25"
+kryoptic = "=1.5.4"
+kryoptic-lib = "=1.5.4"
+kuh-handel-lib = "=1.0.0"
+libredefender = "=0.6.0"
+lmrc-pipeline = "=0.3.16"
+mcp-google-ads = "=0.13.0"
+mini-sqlite-dump = "=0.1.2"
+omry-db = "=0.22.0"
+questdb-rs = "=7.2.1"
+rbdc-sqlite = "=4.9.5"
+redshank-core = "=0.2.2"
+reloop = "=1.8.0"
+reloop-email = "=0.1.3"
+rsvim_core = "=0.1.2"
+sea-orm-sync = "=2.0.4"
+simple_kv_store = "=0.3.2"
+snuggle = "=0.4.0-alpha"
+socksx = "=0.1.1"
+solar_sonar_dev = "=0.1.2"
+sqlite-pool = "=0.1.0-alpha.0"
+swc-react-remove-properties-visitor = "=0.1.4"
+theseus-mlua = "=0.11.7"
+titan-client = "=1.3.3"

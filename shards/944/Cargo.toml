@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+llama-cpp-bindings-build = "=0.28.0"
+llama-cpp-bindings-sys = "=0.28.0"
+llama-cpp-fault-injection = "=0.28.0"
+llama-cpp-ffi-status = "=0.28.0"
+llama-cpp-gbnf = "=0.28.0"
+paddler_messaging = "=4.1.0"

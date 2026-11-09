@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+catpaw = "=0.2.1"
+catpaw-engine = "=0.2.1"
+catpaw-server = "=0.2.1"
+conxian_compliance = "=0.1.4"
+korvin = "=0.2.1"
+korvin-core = "=0.2.1"
+obeli-sk-wasm-workers = "=0.41.5"
+outl-exec = "=0.13.0"
+rdocx = "=0.16.4"
+rdocx-cli = "=0.16.4"
+rpptx = "=0.14.4"
+rpptx-cli = "=0.14.4"
+zmanager-ffi = "=2.0.1"

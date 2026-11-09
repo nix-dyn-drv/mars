@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hc_crud_ceps = "=0.80.0"
+hc_devhub_sdk = "=0.1.0"
+hc_zome_file_storage_coordinator = "=0.2.0"
+hc_zome_file_storage_integrity = "=0.2.0"
+hc_zome_peer_status_coordinator = "=0.2.0"
+hc_zome_profiles_coordinator = "=0.2.0"
+hc_zome_profiles_integrity = "=0.2.0"
+holochain-app-ws-tester = "=0.1.1"
+lair-keystore-socket-tester = "=0.1.3"

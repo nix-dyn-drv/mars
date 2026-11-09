@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+novax = "=0.2.12"
+novax-account = "=0.2.12"
+novax-caching = "=0.2.12"
+novax-data = "=0.2.12"
+novax-executor = "=0.2.12"
+novax-mocking = "=0.2.12"
+novax-multisig = "=0.2.12"
+novax-token = "=0.2.12"

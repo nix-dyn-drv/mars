@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+forc-client = "=0.71.6"
+forc-node = "=0.71.3"
+forge-agent-core = "=2.12.1"
+forge-agent-index = "=2.12.1"
+forge-agent-provider = "=2.12.1"
+forge-agent-tools = "=2.12.1"
+lore-docs = "=0.1.1"
+octofhir-sof-cli = "=0.3.5"
+rprobe = "=0.10.0"
+tsift = "=0.1.110"
+tsift-cli = "=0.1.110"
+tsift-digest = "=0.1.110"
+tsift-search = "=0.1.110"
+tsift-status = "=0.1.110"
+tsift-summarize = "=0.1.110"
+typepress = "=0.4.0"

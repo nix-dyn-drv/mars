@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+compass-core = "=0.1.0-alpha.1"
+compass-ffi = "=0.1.0-alpha.1"
+compass-mcp = "=0.1.0-alpha.1"
+compassctl = "=0.1.0-alpha.1"
+compassd = "=0.1.0-alpha.1"
+crusty-core = "=0.82.0"
+lldap_auth = "=0.3.0"

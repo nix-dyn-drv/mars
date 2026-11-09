@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+sablier-network-program = "=1.2.1"
+sablier-sdk = "=1.2.1"
+sablier-thread-program = "=1.2.1"
+snocat = "=0.7.0"
+snocat-cli = "=0.7.0"
+wakuchin_cli = "=0.3.0"

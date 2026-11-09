@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kopuz = "=0.16.0"
+kopuz-components = "=0.16.0"
+kopuz-pages = "=0.16.0"
+sol-shred-sdk = "=7.0.0"

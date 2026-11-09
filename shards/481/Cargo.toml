@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+da-image-measurement-tool = "=0.1.1"
+ddoresolver-rs = "=0.4.5"
+didcomm-rs = "=0.7.2"
+kanidm = "=0.1.1"
+oath-authenticator = "=0.1.0"
+png2lvgl = "=0.3.12"
+ts-bookkeeping = "=0.1.0"
+tsproto = "=0.2.0"
+tsproto-types = "=0.1.0"

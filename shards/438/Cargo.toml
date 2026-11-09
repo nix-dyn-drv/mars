@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+configure-semantic-release-assets = "=1.1.57"
+configure-semantic-release-manifest = "=1.0.67"
+fuel-core-sync = "=0.48.4"
+fuel-core-syscall = "=0.48.4"
+fuel-core-types = "=0.48.4"
+hemx-wasm = "=0.2.0"
+tola-image = "=0.8.1"

@@ -1,0 +1,66 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+blazehash = "=0.2.5"
+burn-modules = "=0.1.1"
+cascade-agent = "=0.1.1"
+colony-daemon = "=0.1.2"
+cora-code = "=0.20.0"
+ferrimock-cli = "=0.11.0"
+golem-wasm-rpc-stubgen = "=1.2.1"
+gpui-webview = "=0.9.0"
+graphify-rs = "=0.8.1"
+graphify-watch = "=0.8.0"
+hashtree-cashu-cli = "=0.3.0"
+heat-sdk = "=0.1.0"
+heat-sdk-cli = "=0.1.0"
+kam = "=0.6.14"
+korg = "=0.1.0"
+loam-cli = "=0.14.4"
+lore-cli = "=0.2.0"
+macho-workflow = "=0.5.6"
+mutant-daemon = "=0.6.2"
+neuburn = "=0.1.0"
+normalize-semantic = "=0.3.2"
+parry-guard = "=0.1.8"
+parry-guard-hook = "=0.1.8"
+pkg6depotd = "=1.0.1"
+pyontoenv = "=0.3.0"
+re_agent_panel = "=0.42.0"
+re_redap_tests = "=0.42.0"
+re_view_map = "=0.42.0"
+rerun_c = "=0.42.0"
+reveal = "=0.5.0"
+revive-benchmarks = "=1.2.0"
+revive-integration = "=1.5.0"
+revive-runner = "=1.4.0"
+rnacos = "=0.8.8"
+rustnmap-api = "=1.0.0"
+rustnmap-cli = "=1.0.0"
+scra-mirach-model = "=1.0.0"
+scra-mirach-model-r1 = "=1.1.0"
+semcode = "=0.1.1"
+shadow-stealth = "=0.1.1"
+sn-testnet-deploy = "=0.7.0"
+sof-solana-gossip = "=3.1.11-sof.9"
+solidity-language-server = "=0.1.38"
+taguru = "=0.9.7"
+tbr = "=2.4.3"
+triglav = "=0.2.0"
+viroencoder = "=0.1.0"
+whisrs = "=0.2.0"
+winux-cloud = "=1.0.0"
+winux-connect = "=1.0.0"

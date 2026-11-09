@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ore-bar = "=0.0.7-alpha.9"
+timeris = "=0.1.1"
+timerys = "=0.1.1"
+wasma-legacy-platform = "=1.3.0-beta"
+wasma-sys = "=1.3.0-beta-stable2"
+wasma-windows-platform = "=1.3.0-beta"
+wasma-windows-platform-wasma-sys = "=1.3.0-beta"
+wasma-windows-platform-xf86 = "=1.3.0-beta"

@@ -1,0 +1,68 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ateweb = "=1.2.0"
+aws-nitro-enclaves-attestation = "=0.1.0"
+aws-nitro-enclaves-attestation-ffi = "=0.1.0"
+blackbox-tool = "=0.1.0"
+bmail = "=0.1.0"
+brevdash = "=0.2.2"
+cadelo = "=0.0.1"
+cargo-dephell = "=0.5.1"
+cyndikator = "=0.2.2"
+cyndikator-dispatch = "=0.1.1"
+epitls-pi = "=1.5.2"
+fc-blackbox = "=0.2.0"
+hassh = "=0.1.0"
+json-gen = "=0.2.3"
+json-generator-rand = "=0.2.0"
+kerbeiros = "=0.2.3"
+kerberos_ccache = "=0.0.8"
+live-view = "=0.0.8"
+mailme = "=0.1.1"
+misfin-client = "=0.1.2"
+mpdnd = "=1.0.3"
+nachricht-nq = "=0.4.0"
+orientdb-client = "=0.6.0"
+pact_matching_ffi = "=0.0.5"
+pact_mock_server_ffi = "=0.1.1"
+panorama = "=0.0.1"
+panorama-imap = "=0.0.4"
+pdf_structure_viewer = "=0.1.0"
+protonvpn = "=0.2.0"
+rgb-std = "=0.10.9"
+rgb-wallet = "=0.10.9"
+rolodex = "=0.1.2"
+rusty_pdf = "=0.21.0"
+samotop-delivery = "=0.13.1"
+samotop-server = "=1.2.2"
+short = "=0.3.6"
+skyrim-cell-dump = "=0.4.2"
+smtp-dump = "=0.1.0"
+smtpbis = "=0.1.7"
+softmount = "=0.1.0"
+sonde = "=0.1.2"
+sshcerts = "=0.15.4"
+sttt = "=0.2.0"
+suricata-ipc = "=0.19.0"
+tg-rcore-tutorial-games-ch8-doom-kernel = "=0.1.1-preview.1"
+vimwiki = "=0.1.0"
+vimwiki-core = "=0.1.0"
+vimwiki-server = "=0.1.0"
+vimwiki-wasm = "=0.1.0"
+vimwiki_macros = "=0.1.0"
+weathernoaa = "=0.2.0"
+ytop-rs = "=0.8.0"

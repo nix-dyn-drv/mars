@@ -1,0 +1,64 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bitmask-core = "=0.4.4"
+dsfb-battery = "=0.1.0"
+gitnook = "=1.0.0"
+golem-ai-embed = "=0.5.5"
+golem-ai-embed-cohere = "=0.5.5"
+golem-ai-embed-hugging-face = "=0.5.5"
+golem-ai-embed-openai = "=0.5.5"
+golem-ai-embed-voyageai = "=0.5.5"
+golem-ai-graph-arangodb = "=0.5.5"
+golem-ai-graph-janusgraph = "=0.5.5"
+golem-ai-graph-neo4j = "=0.5.5"
+golem-ai-llm = "=0.5.5"
+golem-ai-llm-anthropic = "=0.5.5"
+golem-ai-llm-grok = "=0.5.5"
+golem-ai-llm-ollama = "=0.5.5"
+golem-ai-llm-openai = "=0.5.5"
+golem-ai-llm-openrouter = "=0.5.5"
+golem-ai-search = "=0.5.5"
+golem-ai-search-algolia = "=0.5.5"
+golem-ai-search-elasticsearch = "=0.5.5"
+golem-ai-search-meilisearch = "=0.5.5"
+golem-ai-search-opensearch = "=0.5.5"
+golem-ai-search-typesense = "=0.5.5"
+golem-ai-stt = "=0.5.5"
+golem-ai-stt-azure = "=0.5.5"
+golem-ai-stt-deepgram = "=0.5.5"
+golem-ai-stt-whisper = "=0.5.5"
+golem-ai-tts = "=0.5.5"
+golem-ai-tts-deepgram = "=0.5.5"
+golem-ai-tts-elevenlabs = "=0.5.5"
+golem-ai-tts-google = "=0.5.5"
+golem-ai-vector-milvus = "=0.5.5"
+golem-ai-vector-pinecone = "=0.5.5"
+golem-ai-vector-qdrant = "=0.5.5"
+golem-ai-video = "=0.5.5"
+golem-ai-video-kling = "=0.5.5"
+golem-ai-video-runway = "=0.5.5"
+golem-ai-video-stability = "=0.5.5"
+golem-ai-web-search = "=0.5.5"
+golem-ai-web-search-brave = "=0.5.5"
+golem-ai-web-search-google = "=0.5.5"
+golem-ai-web-search-serper = "=0.5.5"
+golem-ai-web-search-tavily = "=0.5.5"
+key_value_service = "=0.1.10"
+pcap-toolkit = "=0.5.0"
+rust-docx = "=0.2.17"
+rust-docx-wasm = "=0.2.17"
+twgame-get = "=0.0.1"

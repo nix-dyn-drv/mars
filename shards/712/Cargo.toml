@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+golem-cli = "=1.3.1"
+memrecd = "=0.11.0"
+mr-ability = "=0.11.0"
+remoted = "=0.2.0"
+saya-connectors = "=0.4.1"
+saya-harness = "=0.4.1"

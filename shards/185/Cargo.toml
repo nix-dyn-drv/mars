@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+astrelis-platform-winit = "=0.3.0-rc.1"
+bao_cdp = "=0.5.0"
+bao_cdp_client = "=0.6.0"
+bao_engine = "=0.3.8"
+bao_stealth = "=0.4.5"
+bench_scraper = "=0.4.1"
+bicmath-wasm = "=0.1.1"
+btwallet = "=4.1.0"
+bun_sm = "=0.4.0"
+curvy-wasm = "=0.1.5"
+dittolive-ditto-base = "=5.2.0"
+ifc-lite-wasm = "=28.2.0"
+lemma-engine = "=0.10.2"
+lemma-openapi = "=0.10.2"
+pipecircuit-persistence = "=0.0.13"
+pliego-adapters = "=0.0.2"
+regxml = "=0.1.1"
+tsr_wasm = "=0.4.0"
+xcodeproj = "=0.3.0"

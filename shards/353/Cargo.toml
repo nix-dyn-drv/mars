@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-gears = "=0.0.10"
+cargo-gears-core = "=0.0.10"
+iot_center = "=0.0.1"
+smp-pqc-cli = "=1.0.0"

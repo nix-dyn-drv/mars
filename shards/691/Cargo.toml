@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gh-auditor = "=0.1.0"
+kael_share = "=0.4.1"
+llmix-rs = "=2.1.0"
+nnrp-runtime = "=1.0.0-preview.4.26"
+nnrp-transport-ipc = "=1.0.0-preview.4.26"
+nnrp-wasm = "=1.0.0-preview.4.26"
+snapper-box = "=0.0.4"
+snoai-mda-config = "=1.1.2"

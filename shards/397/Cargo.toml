@@ -1,0 +1,34 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+chimes-rust = "=0.1.0"
+cloud-scanner-cli = "=3.2.0"
+cyfs-task-manager = "=0.6.4"
+datx = "=0.1.1"
+gobang = "=0.1.0-alpha.5"
+gridworld-rl = "=0.1.2"
+laminar-connectors = "=0.33.0"
+laminar-db = "=0.33.0"
+mlmdquery = "=0.2.0"
+models-cli = "=0.1.1"
+mog = "=0.0.0"
+music-player-playback = "=0.2.0"
+slotstrike = "=1.0.0"
+speki = "=0.4.8"
+test_utils_anchor = "=0.2.0"
+toothpaste = "=0.3.3"
+vesperi = "=0.2.0"
+weih = "=0.0.8"

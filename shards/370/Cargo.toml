@@ -1,0 +1,19 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-tangle = "=0.7.0"
+incredible-squaring-blueprint-lib = "=0.2.0-alpha.9"
+irox-raymarine-sonar = "=0.7.0"

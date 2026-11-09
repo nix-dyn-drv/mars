@@ -1,0 +1,17 @@
+[package]
+name = "index-select"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+# Stand alone, so no other Cargo.toml is ever treated as this crate's workspace root.
+[workspace]
+
+[dependencies]
+anyhow = "1"
+cargo = "0.99"
+# Cargo takes its shell from this crate without re-exporting it.
+cargo-util-terminal = "0.1"
+futures = "0.3"
+tempfile = "3"
+walkdir = "2"

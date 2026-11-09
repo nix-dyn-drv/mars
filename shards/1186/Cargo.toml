@@ -1,0 +1,19 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+pyro-daemon = "=0.2.6"
+pyro-gui = "=0.2.6"
+xoev-xwasser = "=101.0.1+1.0.1"

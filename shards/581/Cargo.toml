@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+epic-wallet-rust-python = "=0.2.0"
+epic_wallet_rust_lib = "=0.2.0"
+fpm = "=0.1.10"
+malakal = "=0.1.9"
+melminter = "=0.9.0"
+numbagoup = "=0.9.0"
+polkadot-runtime = "=3.0.0"
+releasr = "=0.1.0"
+stack_test_epic_wallet_api = "=3.0.2"
+stack_test_epic_wallet_controller = "=3.0.2"
+stack_test_epic_wallet_impls = "=3.0.5"
+staging-kusama-runtime = "=3.0.0"
+zenoh-router = "=0.5.0-beta.7"

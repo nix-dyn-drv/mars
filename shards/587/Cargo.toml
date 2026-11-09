@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+erpc-sdk = "=0.11.0"
+gommage-audit = "=0.8.1-alpha.1"
+gommage-cli = "=0.52.1-beta.1"
+gommage-core = "=0.19.1-alpha.1"
+gommage-daemon = "=0.11.1-alpha.1"
+gommage-mcp = "=0.12.3-alpha.1"
+thaler = "=0.1.0"

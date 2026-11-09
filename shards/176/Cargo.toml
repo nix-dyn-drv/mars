@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+assay-lua = "=0.20.21"
+bgutil-ytdlp-pot-provider = "=0.8.1"
+bit-twiddler = "=0.2.1"
+celo-alloy-network = "=0.1.0-alpha.1"
+celo-alloy-rpc-types = "=0.1.0-alpha.1"
+clara-api = "=0.0.0-reserved"
+download_caretaker = "=0.1.3"
+fast-down-gui = "=0.1.45"
+ironhide = "=1.1.2"
+limit-tldr = "=0.0.40"
+loggerhead = "=3.0.1"
+lutra-cli = "=0.6.2"
+lutra-runner-duckdb = "=0.6.2"
+lutra-tui = "=0.6.2"
+oxigraph-cli = "=0.5.13"
+pite = "=0.3.0"
+pite-editor = "=0.3.0"
+rustypipe-botguard = "=0.1.2"
+sapio-cli = "=0.2.0"
+sensexpansion-driver = "=0.1.0"
+shaker = "=0.8.3"
+taceo-oprf-key-gen = "=0.12.0"
+tauri-plugin-keygen-rs2 = "=0.16.0"
+tauri-plugin-todesktop = "=0.1.1"
+trackone-gateway-svc = "=0.2.0-beta.2"
+ubx2rinex = "=0.4.1"
+wasmer-napi = "=0.705.0"

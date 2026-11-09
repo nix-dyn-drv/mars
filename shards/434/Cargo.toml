@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+comindly = "=0.4.0"
+conxian_api = "=0.1.4"
+conxian_engine = "=0.1.4"
+hallouminate = "=0.11.1"
+hallouminate-adapters = "=0.11.1"
+hallouminate-daemon = "=0.11.1"
+nebulus = "=0.1.40"

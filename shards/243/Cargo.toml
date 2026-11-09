@@ -1,0 +1,55 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bcode_cli = "=0.0.1-alpha.0"
+bcode_docs_site = "=0.0.1-alpha.0"
+bcode_docs_site_ui = "=0.0.1-alpha.0"
+bcode_loop_plugin = "=0.0.1-alpha.0"
+bcode_models_site = "=0.0.1-alpha.0"
+bcode_server = "=0.0.1-alpha.0"
+bcode_tui = "=0.0.1-alpha.0"
+bmux_docs_site = "=0.0.1-alpha.4"
+cedrus = "=0.2.0"
+codanna = "=0.16.0"
+entrenar = "=0.8.1"
+entrenar-lora = "=0.3.0"
+evlib = "=0.13.2"
+gpui-fast-platform = "=0.1.13"
+hanzo-fs = "=1.1.23"
+hanzo-hmm = "=0.1.2"
+hanzo-llm = "=1.1.11"
+hyperchad = "=0.5.0"
+hyperchad_docs_site = "=0.5.0"
+hyperchad_simulator = "=0.5.0"
+inspektr = "=0.1.9"
+inspektr_cli = "=0.1.9"
+ktstr = "=0.50.0"
+llm-wiki-engine = "=1.0.1"
+moosicbox_app_state = "=0.5.0"
+moosicbox_marketing_site = "=0.5.0"
+moosicbox_player = "=0.5.0"
+moosicbox_server_simulator = "=0.5.0"
+moosicbox_simulator_harness = "=0.1.1"
+pacode = "=1.1.0"
+pacode-core = "=1.1.0"
+pacode-daemon = "=1.1.0"
+pyanndata = "=0.6.0"
+salvor-cli = "=0.10.0"
+salvor-server = "=0.10.0"
+simvar = "=0.5.0"
+simvar_harness = "=0.5.0"
+tylertoo = "=0.8.0"
+whis-cli = "=0.7.2"

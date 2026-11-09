@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+coal-cli = "=2.9.2"
+crymap = "=2.0.1"
+phoenix-sdk-core = "=0.8.0"
+ryzan = "=1.3.0"
+shadow-drive-py = "=0.6.2"
+squads-multisig-cli = "=0.1.7"
+ux-components = "=0.1.3"
+ux-framework = "=0.1.1"

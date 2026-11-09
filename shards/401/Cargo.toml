@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+citadeldb-mcp = "=2.7.0"
+cratesio-dbdump-csvtab = "=0.2.2"
+dossiers = "=0.7.0"
+lt = "=0.0.14"
+mrsf = "=0.1.1"
+pacman-bintrans-sign = "=0.4.0"
+sn0int = "=0.26.1"
+ztk = "=0.5.2"

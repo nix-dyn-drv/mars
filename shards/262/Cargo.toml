@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bing-rs = "=0.0.4"
+dodb-server = "=0.1.0"
+givme = "=0.1.1"
+pfs-ms = "=0.0.8"
+softcore-asm-macro = "=0.3.1"
+softcore-asm-rv64 = "=0.3.1"

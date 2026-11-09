@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-gpu = "=0.11.0"
+cargo-leptos = "=0.3.11"
+cargo-odra = "=0.2.0"
+console-totp = "=0.1.0"
+ed-agent = "=1.4.1"
+mistralrs-cli = "=0.8.1"
+onde = "=1.3.5"
+provekit-cli = "=1.0.3"
+provekit-prover = "=1.0.3"
+rgrow = "=0.23.0"
+sigit = "=1.7.10"
+smaxd = "=0.1.1"
+smaxd-api = "=0.1.1"
+smaxd-core = "=0.1.1"
+smaxd-scheduler = "=0.1.1"
+sqlx-plus = "=0.3.0"

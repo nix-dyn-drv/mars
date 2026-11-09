@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+infigraph-cli = "=2.0.0"
+infigraph-languages = "=2.0.0"
+infigraph-mcp = "=2.0.0"
+mashin_sdk = "=0.1.11"

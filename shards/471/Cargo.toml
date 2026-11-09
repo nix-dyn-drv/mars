@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cutman = "=0.0.1"
+datapress = "=0.8.7"
+deltalake-aws = "=1.0.0"
+lake-pulse = "=0.3.2"
+robot_master = "=0.1.0"
+robot_master_game = "=0.1.0"
+samyama-cli = "=1.14.0"
+solana-verify-test = "=0.4.17"

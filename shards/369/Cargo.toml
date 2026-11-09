@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-sideload = "=0.8.1"
+hive_memo = "=0.1.2"
+syncfast = "=0.2.0"
+xandikos = "=0.2.10"

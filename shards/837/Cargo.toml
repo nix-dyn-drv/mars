@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+iroh-nym-transport = "=0.1.0"
+nym-authenticator-client = "=1.21.6"
+nym-cli-commands = "=1.21.6"
+nym-client-core = "=2.0.0"
+nym-client-core-surb-storage = "=2.0.0"
+nym-cpp-ffi = "=1.21.6"
+nym-credential-storage = "=2.0.0"
+nym-ffi-shared = "=1.21.6"
+nym-go-ffi = "=1.21.6"
+nym-ip-packet-client = "=1.21.6"
+nym-registration-client = "=1.21.6"
+nym-sdk = "=1.21.6"
+nym-sdk-session = "=1.21.6"
+nym-service-providers-common = "=2.0.0"
+nym-smoldvpn = "=1.21.6"
+nym-smolmix = "=1.21.6"
+nym-socks5-client-core = "=2.0.0"
+nym-socks5-proxy-helpers = "=2.0.0"
+nym-socks5-requests = "=2.0.0"
+nym-wasm-client-core = "=1.21.6"
+subatomic-server = "=1.1.4"
+tari_transaction_key_manager = "=6.2.0"

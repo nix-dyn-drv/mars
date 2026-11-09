@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+datapress-datafusion = "=0.8.7"
+dedcore = "=0.1.0"
+deltalake-catalog-unity = "=1.0.0"
+dev-tool = "=0.1.12"
+inexor-rgf-plugin-http = "=0.9.1"
+meowlog = "=0.1.2"
+mrot-test-utils = "=0.1.1"
+quilkin-network-conditioner = "=0.1.0"
+rdf-fusion-cli = "=0.3.1"
+sillydb = "=0.1.2"
+wordgick = "=1.0.0"

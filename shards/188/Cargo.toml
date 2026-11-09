@@ -1,0 +1,52 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+async-geotiff = "=0.13.0"
+axiom-circuit = "=0.1.1"
+axiom-query = "=2.0.17"
+axiom-sdk = "=0.1.1"
+core-processor = "=2.0.0"
+coreason-engine = "=0.1.0"
+forest_runtime = "=0.2.2"
+gear-core-backend = "=2.0.0"
+gear-sandbox = "=2.0.0"
+gpui_ce_components = "=0.3.0"
+gtest = "=2.0.0"
+hjkl-app = "=0.45.1"
+loopers = "=0.2.0"
+loopers-gui = "=0.2.0"
+magiclink-server-wallets-api = "=0.1.6"
+margaret_access_token_minter = "=0.1.0"
+margaret_bearer_token_verification = "=0.5.0"
+margaret_token_introspection = "=0.5.0"
+menger-docs = "=0.7.1"
+menger-media = "=0.7.1"
+menger-quota = "=0.7.1"
+menger-tickets-api = "=0.7.1"
+ochat-iced = "=0.5.1"
+op-stages = "=0.1.0"
+pigeon_telemetry = "=0.3.0"
+pkg6dev = "=0.1.1"
+polkadot-runtime-releaser-lib = "=0.2.0"
+rust_tui_coder = "=1.0.0"
+rustolio = "=0.1.0"
+rustolio-db = "=0.1.0"
+rustolio-rpc = "=0.1.0"
+rustolio-server = "=0.1.0"
+rustolio-server-router = "=0.1.0"
+rustolio-web = "=0.1.0"
+termnews = "=0.1.1"
+tochka_sdk = "=0.2.1"

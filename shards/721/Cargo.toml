@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gradatum = "=2.5.0"
+gradatum-acl-auth = "=2.5.0"
+gradatum-acl-policy = "=2.5.0"
+gradatum-cache = "=2.5.0"
+gradatum-chat = "=2.5.0"
+gradatum-core = "=2.5.0"
+gradatum-curator = "=2.5.0"
+gradatum-db-sqlite = "=2.5.0"
+gradatum-distill = "=2.5.0"
+gradatum-dto = "=2.5.0"
+gradatum-embed = "=2.5.0"
+gradatum-engine = "=2.5.0"
+gradatum-heartbeat = "=2.5.0"
+gradatum-index = "=2.5.0"
+gradatum-ingest = "=2.5.0"
+gradatum-markdown = "=2.5.0"
+gradatum-privacy = "=2.5.0"
+gradatum-queue = "=2.5.0"
+gradatum-search = "=2.5.0"
+gradatum-storage = "=2.5.0"
+gradatum-vault = "=2.5.0"
+taraba-cli = "=0.2.1"

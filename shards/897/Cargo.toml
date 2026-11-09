@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+knishio-cli = "=0.2.8"
+kopuz-hooks = "=0.16.0"
+kopuz-server = "=0.16.0"
+open-kioku-cli = "=4.0.0"
+open-kioku-mcp = "=4.0.0"
+open-kioku-watch = "=4.0.0"
+rusticity = "=0.1.12"
+rusticity-term = "=0.1.12"
+securegit = "=0.8.5"

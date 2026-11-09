@@ -1,0 +1,53 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-zisk = "=1.4.0-alpha"
+chaindexer = "=0.1.1"
+comindly-core = "=0.4.0"
+comindly-server = "=0.4.0"
+crow-memory = "=0.1.31"
+dwarves = "=0.1.6"
+hackmd = "=0.1.0"
+minsync = "=0.7.3"
+nisshi = "=0.8.2"
+nisshi-auth = "=0.8.2"
+nisshi-broker = "=0.8.2"
+nisshi-cat = "=0.8.2"
+nisshi-cli = "=0.8.2"
+nisshi-client = "=0.8.2"
+nisshi-generator = "=0.8.2"
+nisshi-perf = "=0.8.2"
+nisshi-proxy = "=0.8.2"
+nisshi-service = "=0.8.2"
+nisshi-storage = "=0.8.2"
+nisshi-storage-dynostore = "=0.8.2"
+nisshi-storage-null = "=0.8.2"
+nisshi-storage-slatedb = "=0.8.2"
+nisshi-storage-sql = "=0.8.2"
+nisshi-topic = "=0.8.2"
+nowdocs = "=0.2.0"
+opencloudtiles = "=0.1.11"
+rama-cli = "=0.4.0"
+runifold-mcp = "=0.10.9"
+solana-tpu-tools-common = "=0.1.0"
+solana-transaction-bench = "=0.1.0"
+trusted-router = "=0.5.1"
+wyrd-cli = "=0.4.1"
+zisk-executor = "=1.4.0-alpha"
+zisk-prover-backend = "=1.4.0-alpha"
+zisk-sdk = "=1.4.0-alpha"
+zisk-sm-main = "=1.4.0-alpha"
+ziskemu = "=1.4.0-alpha"

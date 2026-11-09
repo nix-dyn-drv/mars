@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+camera-intrinsic-calibration = "=0.12.0"
+lemma = "=0.10.2"
+lemma-lsp = "=0.10.2"
+mdroots = "=0.4.0"
+mdroots-cli = "=0.4.0"
+mdroots-index = "=0.4.0"
+mdroots-lsp = "=0.4.0"
+orbital-base-components = "=0.1.4"
+orbital-charts = "=0.1.4"
+orbital-core-components = "=0.1.4"
+orbital-datatable = "=0.1.4"
+orbital-date-pickers = "=0.1.4"
+orbital-discussion = "=0.1.4"
+orbital-history = "=0.1.4"
+orbital-motion = "=0.1.4"
+orbital-primitives = "=0.1.4"
+orbital-scheduler = "=0.1.4"
+orbital-shell = "=0.1.4"
+orbital-tree = "=0.1.4"
+orbital-ui = "=0.1.4"
+pliego-ssg = "=0.0.2"
+research-domain = "=2.4.0"
+selfie-enrollment-client = "=0.1.0"
+shojiku-wasm = "=0.3.0"
+tokn-hub-client-core = "=0.1.1"
+tritium-wasm = "=1.1.0-rc.2"
+wcmp = "=0.1.2"

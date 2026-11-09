@@ -1,0 +1,64 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+brokk-mj-desktop = "=2.69.0"
+claude-history = "=0.1.83"
+claudy = "=0.9.3"
+datui = "=0.4.15"
+datui-lib = "=0.4.15"
+fdev = "=0.3.317"
+fnox = "=1.47.0"
+freenet = "=0.2.155"
+gmessages-tui = "=1.3.6"
+karak-cli = "=0.2.5"
+kiln-app = "=0.1.5"
+lumino-rs = "=0.2.0-crates-io-preview1"
+memvault-mcp = "=0.7.0"
+memvault-proxy = "=0.7.0"
+mise-daemons = "=2026.11.4"
+mise-oci = "=2026.11.4"
+mise-system = "=2026.11.4"
+mise-system-config = "=2026.10.0"
+mise-system-packages = "=2026.11.4"
+mise-ui = "=2026.11.4"
+mise-util = "=2026.11.4"
+ncn-cli = "=0.6.0-40200"
+ncn-ledger = "=0.6.0-40200"
+omp-app = "=0.1.0"
+omp-llm = "=0.1.0"
+ordinary-studio = "=0.10.0"
+origin-tauri = "=0.2.1"
+pytauri = "=0.8.0"
+pytauri-core = "=0.8.0"
+rearview = "=0.6.1"
+redtab = "=0.1.0"
+rgpui-platform = "=1.7.0"
+robost-cli = "=0.1.2"
+rugst-mcp = "=0.1.0"
+rushdb-server = "=3.0.6"
+scone-cli = "=0.2.1"
+scone-core = "=0.2.1"
+scone-ffi = "=0.2.1"
+sema-lang = "=2.0.0"
+seyk = "=0.2.0"
+seyk-stt = "=0.2.0"
+simple-tauri = "=0.3.0"
+tauri-plugin-gpui = "=0.1.0"
+tauri-plugin-pytauri = "=0.8.0"
+tauri-plugin-rusqlite2 = "=2.2.8"
+tauri-plugin-syncular = "=0.57.0"
+turboprop = "=0.1.2"
+wvwasi = "=0.2.0"

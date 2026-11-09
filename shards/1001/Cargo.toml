@@ -1,0 +1,19 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+mkit-cli = "=0.5.0"
+nostr-rs-relay = "=0.8.12"
+onehis = "=0.3.0"

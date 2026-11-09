@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+artifacthub-mcp = "=0.2.12"
+glog = "=0.1.0"
+gpudeflate = "=0.1.4"
+mbutiles = "=0.1.1"
+pnet_macros_bandwhich_fork = "=0.23.0"
+renew-core = "=0.1.0"
+trigramkit = "=0.1.4"
+worktree-guard = "=0.1.5"

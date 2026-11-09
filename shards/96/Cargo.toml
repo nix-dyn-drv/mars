@@ -1,0 +1,52 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+airs-mcp-client = "=8.2.0"
+airs-runtime-core = "=8.2.0"
+amdguid-wayland = "=1.0.13"
+attack-data = "=1.0.0"
+boxdb-rusqlite = "=0.7.0"
+boxdb-sqlite-sys = "=0.7.0"
+capec-data = "=1.0.0"
+cc-me = "=0.2.0"
+crs = "=0.1.0"
+cwe-data = "=1.0.0"
+devimg-core = "=0.2.7"
+disk-capture = "=0.1.1"
+geen = "=0.0.7"
+git-snapshot = "=0.1.1"
+gtree = "=1.0.1"
+gwdiff = "=1.0.0"
+heim-net = "=0.0.11"
+hotl-minify = "=0.31.0"
+jsonwatch = "=0.11.0"
+kite-x402-axum = "=0.1.0"
+kmns-validate = "=0.4.0"
+moonramp-core = "=0.1.22"
+moonramp-lunar = "=0.1.22"
+moonramp-lunar-core = "=0.1.22"
+moonramp-wallet = "=0.1.22"
+novax-request = "=0.2.12"
+pretty_backtrace = "=0.1.2"
+pyforge-core = "=0.3.0"
+pyforge-django = "=0.3.0"
+raqm = "=0.1.0"
+sail-daemon = "=0.2.0"
+sail-runtime = "=0.2.0"
+sail-solve = "=0.2.0"
+wht_corulix_languages = "=0.1.0-alpha.2"
+wht_corulix_syntax = "=1.0.0"
+zakura-librocksdb-sys = "=0.17.7+10.4.2"

@@ -1,0 +1,52 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+baffle-proxy = "=2.2.0"
+bevy-remote-devtools-plugin = "=0.2.0"
+bnn-code = "=0.1.3"
+cartunes = "=0.3.0"
+dingusim = "=0.1.0"
+frame-mesh = "=0.1.0"
+gpp-graphex = "=0.2.2"
+gpp-relay = "=0.2.2"
+gpp-sync = "=0.2.2"
+grite = "=0.5.3"
+gumshoe = "=0.0.5-beta"
+lapsoss = "=0.2.0"
+littlegraph = "=0.2.1"
+mothership = "=0.0.100"
+nepali-core = "=0.1.0"
+nisshi-sans-io = "=0.8.2"
+openipc-uplink = "=0.1.40"
+point-and-click = "=0.0.0"
+rama-tls-boring = "=0.4.0"
+rama-x-ruma = "=0.1.0"
+rama-x-threejs = "=0.1.0"
+sjqchatapp = "=0.1.0"
+solana-hbase-writer = "=3.1.8"
+srs2dge = "=0.2.0"
+srs2dge-core = "=0.2.0"
+srs2dge-ecs = "=0.2.0"
+srs2dge-gizmos = "=0.2.0"
+srs2dge-link-dynamic = "=0.2.0"
+srs2dge-link-static = "=0.2.0"
+srs2dge-presets = "=0.2.0"
+srs2dge-res = "=0.2.0"
+srs2dge-text = "=0.2.0"
+tesser-journal = "=0.9.1"
+tesser-rpc = "=0.8.1"
+vld-rama = "=0.7.0"
+wolfengine = "=3.0.2"

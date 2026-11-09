@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+chunkshop-rs = "=0.9.1"
+cosmian_cli = "=1.9.0"
+cosmian_findex_cli = "=0.4.14"
+cosmian_findex_client = "=0.4.14"
+cosmian_kms_client = "=5.28.0"
+cosmian_kms_crypto = "=5.28.0"
+cosmian_kms_csi_provider = "=5.28.0"
+cosmian_kms_k8s_operator = "=5.28.0"
+cosmian_kms_k8s_plugin = "=5.28.0"
+garmin-cli = "=2.2.0"
+gdelt = "=0.1.0"
+keel-cli = "=0.4.2"
+portascript = "=0.1.0"
+portascript-cli = "=0.1.0"
+qmdb-revm = "=0.1.0"
+smolder-cli = "=0.2.0"
+squill-cli = "=0.9.4"

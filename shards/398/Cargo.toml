@@ -1,0 +1,28 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+chuchi-ssr = "=0.1.1"
+coralogix-cli = "=0.1.31"
+dinky = "=0.2.1"
+fire-ssr = "=0.2.0-alpha.1"
+handoffkit = "=1.20.0"
+handoffkit-cli = "=1.20.0"
+handoffkit-transport = "=1.20.0"
+numcodecs-fourier-network = "=0.3.0"
+orama-js-pool = "=0.4.3"
+router-bridge = "=0.5.23+v2.8.0-alpha.0"
+zintl = "=0.0.1-alpha.1"
+zintl-run = "=0.0.1-alpha.1"

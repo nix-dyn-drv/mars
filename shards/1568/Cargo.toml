@@ -1,0 +1,50 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+waterpump-solana-core = "=0.1.0"
+waterpump-solana-meteora-dlmm-client = "=0.1.0"
+waterpump-solana-meteora-dlmm-sdk = "=0.1.0"
+waterpump-solana-orca-whirlpool-client = "=0.1.0"
+waterpump-solana-orca-whirlpool-sdk = "=0.1.0"
+waterpump-solana-pool-traits = "=0.1.0"
+waterpump-solana-raydium-clmm-client = "=0.1.0"
+waterpump-solana-raydium-clmm-sdk = "=0.1.0"
+wp-solana-jupiter-lend-core = "=0.1.2"
+wp-solana-jupiter-lend-sdk = "=0.1.2"
+wp-solana-jupiter-lending-client = "=0.1.2"
+wp-solana-jupiter-lending-rewards-client = "=0.1.2"
+wp-solana-jupiter-liquidity-client = "=0.1.2"
+wp-solana-jupiter-oracle-client = "=0.1.2"
+wp-solana-jupiter-vaults-client = "=0.1.2"
+wp-solana-kamino-klend-client = "=0.1.2"
+wp-solana-kamino-klend-core = "=0.1.2"
+wp-solana-kamino-klend-sdk = "=0.1.2"
+wp-solana-kamino-kvault-client = "=0.1.2"
+wp-solana-kamino-kvault-core = "=0.1.2"
+wp-solana-kamino-kvault-sdk = "=0.1.2"
+wp-solana-meteora-dlmm-client = "=0.1.2"
+wp-solana-meteora-dlmm-core = "=0.1.2"
+wp-solana-meteora-dlmm-sdk = "=0.1.2"
+wp-solana-orca-whirlpool-client = "=0.1.2"
+wp-solana-orca-whirlpool-core = "=0.1.2"
+wp-solana-orca-whirlpool-sdk = "=0.1.2"
+wp-solana-pool-traits = "=0.1.2"
+wp-solana-raydium-clmm-client = "=0.1.2"
+wp-solana-raydium-clmm-core = "=0.1.2"
+wp-solana-raydium-clmm-sdk = "=0.1.2"
+wp-solana-rpc = "=0.1.2"
+wp-solana-test-core = "=0.1.2"
+wp-solana-test-utils = "=0.1.2"

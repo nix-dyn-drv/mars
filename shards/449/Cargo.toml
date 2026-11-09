@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+coursers = "=0.1.0"
+cruxai-script = "=0.2.1"
+cruxx-agentic = "=0.2.6"
+cruxx-improve = "=0.2.6"
+cruxx-planner = "=0.2.6"
+cruxx-plugin = "=0.2.6"
+cruxx-script = "=0.2.6"
+forgejo-cli-plus = "=1.1.0"
+lexi = "=0.4.1"
+mdbook-najan = "=0.4.0"
+mudroom = "=0.1.3"
+oatf = "=0.4.0"
+reqmd_app = "=0.2.1"
+reqmd_cli = "=0.2.1"
+reqmd_tui = "=0.2.1"
+rubyfast = "=2.1.1"
+soflare = "=0.1.0"
+thoughtjack = "=0.6.0"
+virke = "=0.4.0"

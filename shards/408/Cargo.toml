@@ -1,0 +1,53 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+clean-signals-frust = "=0.6.5"
+d2-rs = "=0.1.1"
+d2-rs-export = "=0.1.1"
+d2-rs-isometric = "=0.1.1"
+d2-rs-scenebuild = "=0.1.1"
+d2-rs-wasm = "=0.1.1"
+frust-beui = "=0.6.5"
+frust-camera = "=0.6.5"
+frust-cupertino = "=0.6.5"
+frust-glyph = "=0.6.5"
+frust-i18n = "=0.6.5"
+frust-material = "=0.6.5"
+frust-material-i18n = "=0.6.5"
+frust-native-widgets = "=0.6.5"
+frust-network-image = "=0.6.5"
+frust-qr = "=0.6.5"
+frust-shadcn = "=0.6.5"
+frust-shell-web = "=0.6.5"
+frust-ui = "=0.6.5"
+frust-video-player = "=0.6.5"
+ibc = "=0.57.0"
+ibc-app-nft-transfer = "=0.57.0"
+ibc-app-nft-transfer-types = "=0.57.0"
+ibc-app-transfer = "=0.57.0"
+ibc-app-transfer-types = "=0.57.0"
+ibc-apps = "=0.57.0"
+ibc-client-cw = "=0.57.0"
+ibc-client-tendermint-cw = "=0.57.0"
+ibc-data-types = "=0.57.0"
+ibc-middleware-module = "=0.2.0"
+ibc-middleware-overflow-receive = "=0.5.0"
+ibc-query = "=0.57.0"
+ibc-testkit = "=0.57.0"
+keyhive_wasm = "=0.6.0"
+mi = "=0.1.2-alpha.0"
+thyper = "=0.1.2"
+virial = "=0.2.0"

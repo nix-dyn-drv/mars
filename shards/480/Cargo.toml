@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cza = "=2.4.1"
+degenbot-arbitrage = "=0.6.0-alpha.18"
+degenbot-batch-executor = "=0.6.0-alpha.18"
+degenbot-simulation = "=0.6.0-alpha.18"
+degenbot-strategy = "=0.6.0-alpha.18"
+degenbot-submission = "=0.6.0-alpha.18"
+knock-verifier = "=0.1.0"

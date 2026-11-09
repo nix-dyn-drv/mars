@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+heddle-api = "=0.30.0"
+modelplease = "=0.1.1"
+typesayer-types = "=0.1.2"
+wasm-bindgen-webidl = "=0.2.75"

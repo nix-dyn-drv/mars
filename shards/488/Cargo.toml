@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+datatui = "=0.3.0"
+kyomi-datasource = "=1.6.2"
+murshid = "=0.1.0"
+polyfill-rs = "=0.4.3"
+rgdb = "=0.1.6"

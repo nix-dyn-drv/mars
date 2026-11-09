@@ -1,0 +1,36 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bharatlink = "=0.2.2"
+bharatlink-core = "=0.2.2"
+bitcoin-muhash = "=0.1.20"
+caretta-framework = "=0.0.3"
+corrator = "=1.4.1"
+dssh = "=0.1.0"
+eq-common = "=0.1.13"
+eq-sdk = "=0.1.13"
+frust-shell-macos = "=0.6.5"
+frust-shell-windows = "=0.6.5"
+iroh-holochain = "=0.95.1"
+jujube = "=0.1.1"
+jujube-lib = "=0.1.1"
+pigglet = "=0.7.3"
+piggui = "=0.7.3"
+schultz = "=0.1.1"
+stac-duckdb = "=0.3.14"
+webassembly-test-runner = "=0.1.0"
+zel_core = "=0.5.0"
+zkevm-assembly = "=0.153.12"

@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+basejmp = "=0.1.0"
+crabture = "=0.4.1"
+latticearc = "=0.15.1"
+mdbookshelf = "=0.1.2"
+term_keep = "=1.2.1"
+v8vm = "=0.0.1"
+wd2sql = "=0.1.0"

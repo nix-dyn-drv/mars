@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+axond = "=0.7.0"
+createos = "=0.1.1"
+folca = "=0.1.0"
+herdr-ahp = "=0.1.2"
+ldf = "=0.6.0"
+ldf-data = "=0.6.0"
+ldf-mcp = "=0.6.0"
+ldf-select = "=0.6.0"
+nice_prompt = "=0.1.1"

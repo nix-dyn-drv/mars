@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+deno_flash = "=0.34.0"
+denog_webgpu = "=0.7.3"
+denog_wsi = "=0.7.3"
+mashin_core = "=0.1.6"
+ms-learn-md-parser = "=0.0.1"
+trace-index = "=0.3.3"
+wakflo-funx = "=0.0.1"

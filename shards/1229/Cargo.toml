@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+reifydb-test-harness = "=0.10.1"
+reifydb-testing-flow = "=0.10.1"
+reifydb-wasi-bridge = "=0.10.1"
+reifydb-webassembly = "=0.10.1"

@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+nemo-relay-cli = "=0.11.1"
+newslookout = "=1.0.0"
+rag-rat-core = "=0.24.1"
+rag-rat-dream = "=0.24.1"
+rag-rat-oplog = "=0.24.1"
+rag-rat-query = "=0.24.1"
+rag-rat-setup = "=0.24.1"
+rag-rat-sync = "=0.24.1"

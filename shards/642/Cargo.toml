@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+flusso-cli = "=0.15.1"
+gauge-client = "=0.3.1"
+tape-program = "=0.1.9"
+zenoh-backend-s3 = "=1.10.2"

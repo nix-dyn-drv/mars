@@ -1,0 +1,26 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+chainhook-sdk = "=0.12.10"
+context7-cli = "=0.5.2"
+ferrum-engine = "=0.18.5"
+ferrum-models = "=0.18.5"
+lux-lib = "=0.72.1"
+lux-lsp = "=0.53.3"
+qso-graph-trust = "=0.1.5"
+soly = "=0.1.1"
+type-bridge-typedb-runtime = "=2.3.3"
+zmanager-cli = "=2.0.1"

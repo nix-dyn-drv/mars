@@ -1,0 +1,66 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agent-commander = "=0.5.0"
+alaqsam = "=0.1.0"
+azac = "=0.2.6"
+blinc_gpu = "=0.6.0"
+blinc_platform_ios = "=0.6.0"
+cargo-liner = "=0.11.0"
+cargo-propagate-features = "=1.0.11"
+command-stream = "=1.13.0"
+cw-dex-astroport = "=0.2.0"
+cw-dex-osmosis = "=0.2.0"
+cw20-factory-osmosis = "=0.1.0"
+dao-voting-cw721-staked = "=2.6.0"
+dao-voting-onft-staked = "=2.6.0"
+gymnasium-rs = "=0.1.1"
+hash_rstar = "=0.1.0"
+identity_did = "=1.5.1"
+identity_document = "=1.5.1"
+identity_ecdsa_verifier = "=1.5.1"
+identity_eddsa_verifier = "=1.5.1"
+identity_jose = "=1.5.1"
+identity_storage = "=1.5.1"
+identity_verification = "=1.5.1"
+iron-middleware-mysql = "=0.0.2"
+lustre_collector = "=0.12.1"
+meta-language = "=1.0.0"
+oat_python = "=0.1.1"
+ohos-nj-core = "=6.0.2"
+ohos-node-bindgen = "=6.0.3"
+opensource = "=0.1.1"
+osmosis-liquidity-helper = "=0.4.0"
+pdf-extract-temporary-mitigation-panic = "=0.7.1"
+pqrascv-cli = "=1.0.0-rc.8"
+provenance-porcelain = "=0.3.2"
+pryzm-utils = "=0.4.0"
+pyluwen = "=0.5.2"
+pymedusa-zip = "=0.0.9"
+quad-svg = "=0.1.2"
+rpi-tools = "=0.21.1"
+rustolio-build-utils = "=0.1.0"
+rustolio-utils = "=0.1.0"
+sei-cosmwasm = "=0.4.15"
+trackone-evidence = "=0.2.0-beta.2"
+trackone-rfc3161 = "=0.2.0-beta.2"
+ubt-cli = "=1.1.0"
+weft-boardchecker = "=0.0.2"
+white-whale-std = "=1.2.6"
+wio_terminal = "=0.9.0"
+yass-2 = "=2.0.0"
+yew-date-range = "=0.2.2"
+yew-toastify = "=0.2.0"

@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+equs-oid4vci = "=0.1.0"
+termusic = "=0.12.1"
+termusic-lib = "=0.12.1"
+termusic-playback = "=0.12.1"
+termusic-server = "=0.12.1"

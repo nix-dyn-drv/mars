@@ -1,0 +1,36 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gossan-checkpoint = "=0.3.3"
+gossan-classify = "=0.3.3"
+gossan-cloud = "=0.3.3"
+gossan-core = "=0.3.3"
+gossan-correlation = "=0.3.3"
+gossan-dns = "=0.3.3"
+gossan-engine = "=0.3.3"
+gossan-graph = "=0.3.3"
+gossan-hidden = "=0.3.3"
+gossan-horizontal = "=0.3.3"
+gossan-intel = "=0.3.3"
+gossan-origin = "=0.3.3"
+gossan-portscan = "=0.3.3"
+gossan-subdomain = "=0.3.3"
+guise = "=0.1.8"
+guise-echo = "=0.1.8"
+scanclient = "=0.2.4"
+unmask = "=0.1.0"
+wafrift-fingerprint = "=0.3.1"
+wafrift-recon = "=0.3.1"

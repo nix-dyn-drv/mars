@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+drawbar = "=0.10.0"
+ffai-argus-wasm = "=0.4.0"
+ffai-carmenta-wasm = "=0.5.0"
+ffai-mercury-wasm = "=0.4.0"
+ffai-wasm = "=0.5.1"
+hs-predict-wasm = "=0.5.3"
+kv-rs = "=0.0.6"
+mavryk-smart-rollup-installer = "=0.2.2"
+slidx_wasm = "=0.3.0"
+sqlite2dir = "=0.2.0"
+tezos-smart-rollup-installer = "=0.2.2"
+void-layer-codec = "=0.1.0"
+wasmio-aws-types = "=0.0.2"

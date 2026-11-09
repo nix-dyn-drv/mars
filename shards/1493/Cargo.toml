@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+tui-do = "=1.0.1"
+tui-do-ui = "=1.0.1"
+zaino-serve = "=0.9.1"
+zaino-source-zebra = "=0.2.3"
+zaino-state = "=0.11.0"
+zainod = "=0.10.2"

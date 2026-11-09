@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+clust = "=0.9.0"
+cuj = "=0.4.0"
+cuj-tui = "=0.1.0"
+graftpress = "=0.1.1"
+graftpress_core = "=0.1.1"
+okami = "=0.2.0"
+rusotp = "=0.5.0"

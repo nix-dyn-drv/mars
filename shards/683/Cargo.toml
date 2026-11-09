@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gemachain-account-decoder = "=1.8.2"
+gemachain-cli-output = "=1.8.2"
+gemachain-client = "=1.8.2"
+gemachain-transaction-status = "=1.8.2"
+gpl-token-cli = "=2.0.15"
+medal = "=1.23.0"
+tentacli = "=15.3.2"

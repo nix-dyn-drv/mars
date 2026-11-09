@@ -1,0 +1,59 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+almond = "=0.2.0"
+apeireth-ui = "=2.0.0-rc.5"
+apeireth-ui-gpu = "=2.0.0-rc.5"
+askama_iron = "=0.10.0"
+assembly-data = "=0.3.0"
+cargo-matrix-plus = "=0.1.4"
+ceph-async = "=4.0.5"
+coverall = "=0.12.0"
+cumin = "=0.9.13"
+curve25519-entropic = "=3.2.1"
+diesel_schema_parser = "=0.1.3"
+duster = "=0.1.1"
+esp8266-at-driver = "=0.4.0"
+esp8266-wifi-serial = "=0.1.3"
+fapolicy-rules = "=0.4.1"
+gemini = "=0.0.5"
+haproxy-stats = "=0.1.0"
+haproxy-stats-socket = "=0.1.0"
+hip_validator = "=1.0.0"
+hostsmod = "=0.2.2"
+kserd = "=0.5.0"
+ktest-parser = "=0.1.1"
+libsip = "=0.2.6"
+luthien-sass = "=0.1.0"
+mdx = "=0.0.4"
+neu = "=0.0.0"
+orthrus-core = "=0.3.1"
+orthrus-ncompress = "=0.2.2"
+parser4curls = "=0.1.1"
+pngprism = "=0.6.0"
+pointblitz-web = "=0.3.0"
+psutil = "=5.4.0"
+rak811-at-driver = "=0.2.0"
+rayon-futures = "=0.1.1"
+rectangle-device-player = "=0.1.0"
+rsipfix = "=0.1.4"
+simple-plot = "=0.1.2"
+sway-conf = "=0.3.0"
+tg-rcore-tutorial-games-ch5-pingpong-kernel = "=0.1.1-preview.1"
+vue_convert = "=0.1.1"
+weather = "=0.1.2"
+wfst4str = "=1.0.4"
+yatima-core = "=0.1.1"

@@ -1,0 +1,54 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+reifydb-auth = "=0.10.1"
+reifydb-catalog = "=0.10.1"
+reifydb-cdc = "=0.10.1"
+reifydb-core = "=0.10.1"
+reifydb-engine = "=0.10.1"
+reifydb-evaluate = "=0.10.1"
+reifydb-export = "=0.10.1"
+reifydb-extension = "=0.10.1"
+reifydb-filter = "=0.10.1"
+reifydb-flow = "=0.10.1"
+reifydb-flow-async = "=0.10.1"
+reifydb-flow-sync = "=0.10.1"
+reifydb-policy = "=0.10.1"
+reifydb-profiler = "=0.10.1"
+reifydb-routine-abi = "=0.10.1"
+reifydb-rql = "=0.10.1"
+reifydb-rql-graphql = "=0.10.1"
+reifydb-sdk = "=0.10.1"
+reifydb-store = "=0.10.1"
+reifydb-store-cdc = "=0.10.1"
+reifydb-store-column = "=0.10.1"
+reifydb-store-commit = "=0.10.1"
+reifydb-store-multi = "=0.10.1"
+reifydb-store-operator = "=0.10.1"
+reifydb-store-single = "=0.10.1"
+reifydb-sub-api = "=0.10.1"
+reifydb-sub-core = "=0.10.1"
+reifydb-sub-flow = "=0.10.1"
+reifydb-sub-lifecycle = "=0.10.1"
+reifydb-sub-server-admin = "=0.10.1"
+reifydb-sub-store = "=0.10.1"
+reifydb-sub-subscription = "=0.10.1"
+reifydb-sub-task = "=0.10.1"
+reifydb-sub-tracing = "=0.10.1"
+reifydb-subscription = "=0.10.1"
+reifydb-testing = "=0.10.1"
+reifydb-testing-sdk = "=0.10.1"
+reifydb-transaction = "=0.10.1"

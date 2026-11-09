@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+crates-info = "=1.0.9"
+cronos-anchor-spl = "=0.24.2"
+fmc = "=0.0.5"
+fmc_173 = "=0.1.0"
+fmc_vanilla = "=0.1.2"
+foundry-local = "=0.1.0"
+hpl-reward-center = "=0.2.4"
+lib_deno_resolver = "=0.11.0"
+lib_node_resolver = "=0.17.4"
+mpl-listing-rewards = "=0.1.1"
+mpl-nft-packs = "=0.1.0"
+mpl-reward-center = "=0.1.1"
+mpl_token_metadata_extended_uri = "=0.1.7"
+nft-metadata = "=1.1.0"
+oysterpack = "=0.2.2"
+oysterpack_log = "=0.1.0"
+picoslon = "=0.1.0"
+sol_nft_metadata = "=1.2.4"
+steganography-online-codec = "=1.0.2"
+ywpl-auction = "=0.0.2"
+ywpl-token-vault = "=0.1.1"

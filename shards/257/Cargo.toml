@@ -1,0 +1,34 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bevy_dragon = "=0.4.0"
+boot-core = "=0.10.0"
+burn_dragon_bevy = "=0.4.0"
+casper-cli = "=0.5.0"
+delta-sharing = "=0.2.0"
+gitlab-timelogs = "=0.7.1"
+keylease-rpc = "=0.2.1"
+keylease-service = "=0.2.1"
+mvs_cli = "=0.7.2"
+onionRush = "=1.2.0"
+paigasus-helikon-mcp = "=0.1.23"
+paigasus-helikon-runtime-agentcore = "=0.2.12"
+paigasus-helikon-runtime-temporal = "=0.5.2"
+relayrl_algorithms = "=0.6.0"
+rshub = "=0.1.6"
+scaff = "=0.1.3"
+tenzro-wallet = "=0.2.0"
+the-code-graph-eval = "=0.1.2"

@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+archelon = "=0.7.1"
+archelon-core = "=0.7.1"
+cargo-csc = "=0.2.0"
+emissary-util = "=0.4.0"
+lunes = "=0.7.1"
+lynceus = "=0.5.3"
+mailjet_client = "=0.4.0"
+okx-client = "=0.1.2"
+pachinko = "=0.7.0"
+popgres = "=0.5.0"
+rust-zero-gateway = "=0.1.0-alpha.1"
+rust-zero-rest = "=0.1.0-alpha.1"
+s3req = "=1.3.4"
+silo-s3-client = "=0.1.1"
+test-ed25519-dalek = "=2.0.0-pre.3"
+trusted-signing-cli = "=0.11.0"

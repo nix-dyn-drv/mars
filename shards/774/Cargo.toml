@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hermes-celestia-integration-tests = "=0.1.0"
+hermes-cli = "=0.1.0"
+hermes-cosmos-integration-tests = "=0.1.0"
+hermes-cosmos-wasm-relayer = "=0.1.0"
+hlin = "=0.1.1"
+lazyrss = "=1.0.0"
+tinty = "=0.35.0"

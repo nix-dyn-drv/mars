@@ -1,0 +1,49 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+geph4-exit = "=0.11.3"
+geph4-vpn-helper = "=0.2.4"
+gmsol-solana-utils = "=0.10.0"
+node-rpc-client = "=2.0.0"
+ppdioo = "=1.0.1"
+qualinvest = "=0.2.1"
+rgb121 = "=0.2.0"
+rgb20 = "=0.9.0"
+rpm-rs = "=0.8.1"
+rust-tunnel = "=1.0.36"
+solana_libra_bytecode_verifier = "=0.0.0"
+solana_libra_compiler = "=0.0.0"
+solana_libra_invalid_mutations = "=0.0.0"
+solana_libra_ir_to_bytecode = "=0.0.0"
+solana_libra_ir_to_bytecode_syntax = "=0.0.0"
+solana_libra_move_ir_natives = "=0.0.0"
+solana_libra_state_view = "=0.0.0"
+solana_libra_stdlib = "=0.0.0"
+solana_libra_transaction_builder = "=0.0.0"
+solana_libra_types = "=0.0.0"
+solana_libra_vm = "=0.0.0"
+sosistab = "=0.5.43"
+starsign = "=0.1.4"
+tc-basic-authorship = "=0.8.0"
+tc-consensus-aura = "=0.8.0"
+tc-consensus-babe = "=0.8.0"
+tc-consensus-babe-rpc = "=0.8.0"
+tc-consensus-manual-seal = "=0.8.1"
+tc-consensus-slots = "=0.8.0"
+tc-rpc = "=2.0.0"
+tendermint-light-node = "=0.19.0"
+tetcore-subxt = "=0.13.0"
+wasmcloud = "=0.18.2"

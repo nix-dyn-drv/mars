@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+graphannis-webservice = "=4.3.0"
+latent-core = "=0.1.0"
+latent-session = "=0.1.0"
+puniyu_builder = "=0.4.1"
+puniyu_event_bus = "=0.4.1"
+puniyu_matcher = "=0.4.1"
+rshelp = "=0.1.9"

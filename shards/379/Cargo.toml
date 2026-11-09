@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+catscope-edge-generator = "=0.1.0"
+clone-solana-faucet = "=2.2.12"
+clone-solana-rpc-client = "=2.2.12"
+clone-solana-tpu-client = "=2.2.12"
+cortexo = "=0.2.0"
+data-anchor-api = "=0.4.6"
+depi = "=0.1.0"
+grafbase = "=0.19.2"
+grafbase-local-backend = "=0.19.2"
+http-sense = "=0.1.10"
+icepipe-cat = "=0.5.0"
+keysync = "=4.0.0"
+mds = "=0.19.2"
+mozwire = "=0.8.1"
+rk-dashboard-webapi = "=0.0.2"
+rusty_tasks = "=0.2.2"
+simple-syrup = "=0.6.5"
+sjmb = "=1.0.0"
+solana-sol = "=0.1.0"
+solpm = "=0.1.0"
+spotflow = "=0.8.1"
+sqlite2mongo = "=0.3.0"
+stablebond-events = "=3.0.20"
+tea-wasm-client-actor-utils = "=0.2.0-dev.4"
+trezor-crypto-lib = "=0.1.1"
+yao = "=0.1.4"
+yayi = "=0.1.3"

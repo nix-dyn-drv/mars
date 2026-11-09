@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+tinyetl = "=0.10.0"
+vls-cli = "=0.14.0"
+vls-proxy = "=0.14.0"
+vlsd = "=0.14.0"

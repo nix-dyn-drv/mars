@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+etwin_cli = "=0.12.5"
+mirishita_info_bot = "=0.3.0"
+rend3-framework = "=0.3.0"
+scene-viewer = "=0.3.0"
+thinkthen = "=0.1.2"

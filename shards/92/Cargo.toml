@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+aingle_wasmer_common = "=0.0.1"
+aingle_wasmer_guest = "=0.0.1"
+aliu = "=0.1.22"
+beet_rsx_parser = "=0.0.5"
+blue_hal = "=1.1.0"
+brokk-tree-sitter-kotlin = "=0.4.9"
+conversions_rs = "=1.2.1"
+dbus-message-parser = "=4.3.1"
+ggbasm = "=0.3.0"
+hyperx = "=1.4.0"
+libpcode = "=0.1.8"
+libsqlite3-sys-le = "=0.21.0"
+pcode = "=0.1.3"
+storagevec = "=0.2.1"
+tg-rcore-tutorial-games-ch1-tangram-kernel = "=0.1.0-preview.2"
+tg-rcore-tutorial-games-ch3-snake-kernel = "=0.1.0-preview.1"
+tg-rcore-tutorial-games-ch4-tetris-kernel = "=0.1.0-preview.2"

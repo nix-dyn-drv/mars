@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fuckmemory = "=1.1.2"
+fynd = "=0.122.0"
+fynd-bench-harness = "=0.122.0"
+fynd-core = "=0.122.0"
+fynd-nexus = "=0.122.0"
+fynd-rpc = "=0.122.0"
+fynd-test-fixtures = "=0.122.0"
+fynd-tools-common = "=0.122.0"
+hypercall-hyperliquid = "=0.4.0"
+hypercall-liquidator = "=0.4.0"
+owx-cli = "=0.6.0"
+owx-swap = "=0.6.0"
+qmd = "=0.6.0"
+tycho-simulation = "=0.502.3"
+zsuite-agent = "=0.2.0"

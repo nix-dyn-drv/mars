@@ -1,0 +1,52 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-docs = "=0.1.35"
+cargo-duplicates = "=0.9.0"
+cargo-geiger = "=0.14.0"
+cargo-udeps = "=0.1.61"
+chargrid_graphical = "=0.7.2"
+crsp = "=0.2.0"
+dashing = "=0.0.2"
+dotrix = "=0.5.2"
+dotrix_core = "=0.5.2"
+dotrix_egui = "=0.5.0"
+dotrix_overlay = "=0.1.0"
+dotrix_pbr = "=0.2.0"
+dotrix_sky = "=0.1.0"
+dotrix_terrain = "=0.5.0"
+emu_driver = "=0.1.0"
+eww = "=0.0.1-alpha.2"
+image-convolution = "=0.1.0"
+juNa = "=0.0.1"
+md-mage = "=0.1.0"
+mterm = "=0.1.1"
+nestadia-wgpu = "=0.1.0"
+peach = "=0.4.0"
+powerio-matrix = "=0.11.9"
+powerio-prob = "=0.11.9"
+powerio-tnd = "=0.11.9"
+priime-types = "=3.0.1"
+ray_tracing_show_image = "=0.1.1"
+redact-api = "=0.12.7"
+redact-cli = "=0.12.7"
+redact-ner = "=0.12.7"
+sofie-billing = "=0.3.0"
+sofie-client = "=0.3.0"
+sofie-notify = "=0.3.0"
+tellegen = "=0.6.2"
+test_ci_crate = "=0.1.1"
+wavs-types = "=2.8.0"

@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+appwrite = "=0.22.0"
+awol2005ex3-kerbeiros = "=0.4.3"
+awol2005ex3-kerberos-crypto = "=0.4.2"
+awol2005ex3-kinit-kt = "=0.1.1"
+codix = "=0.1.0"
+dag-ml = "=0.3.44"
+dag-ml-capi = "=0.3.44"
+dag-ml-core = "=0.3.44"
+dag-ml-wasm = "=0.3.44"
+gitall = "=0.6.0"
+hive_sasl_client = "=0.1.4"
+hybrid-version = "=0.1.0"
+l10n_embed_derive = "=0.2.0"
+nirs4all-preflight = "=0.1.6"
+nirs4all-preflight-capi = "=0.1.6"
+nirs4all-preflight-cli = "=0.1.6"
+oxikey = "=0.0.0"
+plato-matrix-bridge = "=0.1.0"
+regxml-dict = "=0.1.1"
+talos_common_utils = "=0.3.18"
+teensy4-selfrebootor = "=0.2.0"
+tesserae = "=0.3.1"

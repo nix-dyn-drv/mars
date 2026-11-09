@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+forgekit-agent = "=0.5.0"
+forgekit-core = "=0.5.0"
+forgekit-runtime = "=0.5.0"
+furnace-mcp = "=0.8.0"
+gtm = "=0.2.97"
+gtmd = "=0.2.96"
+irohds-daemon = "=0.3.12"
+llmgrep = "=3.11.2"
+looprs-cli = "=0.5.4"
+looprs-tui = "=0.5.4"
+magellan = "=4.17.0"
+mirage-analyzer = "=1.12.1"
+mysticeti = "=0.0.1"
+netsky = "=0.2.0"
+netsky-channels = "=0.2.0"
+netsky-io = "=0.2.0"
+pomodorust = "=0.2.1"
+splice = "=3.1.1"
+supercode-cli = "=0.5.150"
+supercode-frontend-tui = "=0.5.150"
+tee-hee = "=0.5.3"

@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+antegen-client = "=6.3.0"
+dictcc-cli = "=0.2.0"
+grizzly = "=0.0.5"
+kontrak-sqlite = "=0.1.4"
+mepple = "=0.2.0"
+raton = "=0.1.0-alpha.9"
+renegades_sqlite = "=0.1.3"
+rsqlite = "=1.0.0"
+sqlite3 = "=0.24.0"
+variant-ssl = "=0.18.3"
+variant-ssl-sys = "=0.18.3"

@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+arbiter-derive = "=0.1.3"
+bitcoin-chain = "=0.3.1"
+drt-chain-vm = "=0.0.3"
+fidx = "=0.1.3"
+flow-abi = "=0.1.0"
+hyper_sardine = "=0.2.3"
+incise-cli = "=0.5.0"
+json_derive = "=0.0.1-alpha1"
+kuknos-soroban-builtin-sdk-macros-tmp = "=20.0.5"
+lib3h_persistence_api = "=0.0.1-alpha2"
+lib3h_persistence_derive = "=0.0.1-alpha1"
+openassets = "=0.1.0"
+syscoin = "=4.16.1"

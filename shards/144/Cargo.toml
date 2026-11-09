@@ -1,0 +1,34 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+aralez = "=0.95.4"
+cf-k8s-cluster-plugin = "=0.1.5"
+cmz = "=0.3.0"
+cursus = "=0.9.3"
+forest_crypto = "=0.5.3"
+forest_message = "=0.7.2"
+git-cf = "=0.1.2"
+nym-contract-attestation = "=2.0.0"
+nym-directory-attestation = "=1.22.2"
+pipedash-core = "=0.12.0"
+pipedash-web = "=0.12.0"
+rdx-py = "=0.1.2"
+sigma-compiler = "=0.2.3"
+superstac-cli = "=0.3.0"
+termosaic-tree-sitter = "=0.2.1"
+tonic-lb-k8s = "=0.2.0"
+xfpl = "=0.1.1"
+zkevm_opcode_defs = "=0.153.13"

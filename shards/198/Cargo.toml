@@ -1,0 +1,36 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+auditor-kubernetes-collector = "=0.11.2"
+brokk-bifrost-nlp = "=0.10.6"
+cfgd = "=0.12.0"
+cfgd-core = "=0.11.2"
+cfgd-operator = "=0.11.0"
+dirscan = "=1.4.1"
+haz-cli = "=0.2.0"
+k8sbackup-rs = "=0.1.2"
+kaniop-data-mover = "=0.21.1"
+krishiv-operator = "=0.1.0-nightly.202609050147"
+planetary-api = "=0.2.0"
+planetary-monitor = "=0.2.0"
+planetary-orchestrator = "=0.2.0"
+polyc-agent-catalog = "=2026.11.1"
+polyc-controller = "=2026.11.1"
+secretspec = "=0.21.1"
+telelog-server = "=0.3.1"
+uklid = "=0.3.0"
+voli-core = "=0.7.1"
+volscan = "=0.1.3"

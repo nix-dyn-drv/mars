@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bismark-io = "=1.0.0"
+bitcoin-cash-ecc = "=0.2.1"
+bitcoin_client = "=0.0.2"
+bitsign = "=0.1.1"
+crypto-wallet-gen = "=2.3.0"
+ensicoin-simon = "=0.1.0"
+iron_safety = "=0.3.0"
+liquid-rpc = "=0.2.0"
+liquid-rpc-json = "=0.2.0"
+murmel = "=0.2.1"
+secs-camilla = "=0.22.0"
+secs-export = "=0.22.0"
+secs-filters = "=0.22.0"
+shesek-bitcoincore-rpc = "=0.11.0"
+shesek-bitcoincore-rpc-json = "=0.11.0"
+titanium = "=0.1.1"
+wagyu-bitcoin = "=0.6.3"
+wagyu-ethereum = "=0.6.3"
+wagyu-model = "=0.6.3"
+wedpr_s_hierarchical_deterministic_key = "=1.3.0"
+whosly = "=0.1.8"

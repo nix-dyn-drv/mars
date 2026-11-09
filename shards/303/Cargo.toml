@@ -1,0 +1,28 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+boot-abstract = "=0.2.0-beta.3"
+boot-plus = "=0.1.1"
+claude-sessions = "=1.2.37"
+desub = "=0.1.0"
+desub-common = "=0.1.0"
+desub-current = "=0.1.0"
+desub-json-resolver = "=0.0.1"
+desub-legacy = "=0.1.0"
+donkey = "=0.0.1"
+idiomatic-sh-ryo-go = "=0.1.2"
+langenv = "=0.0.2"
+plato-kernel = "=0.1.0"

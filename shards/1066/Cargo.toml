@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+noetl = "=5.5.0"
+noetl-executor = "=0.13.3"
+noetl-tools = "=4.4.0"
+polite = "=0.1.3"
+polite-cli = "=0.1.3"

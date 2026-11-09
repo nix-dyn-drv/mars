@@ -1,0 +1,39 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+argui-android = "=0.3.2"
+argui-ios = "=0.3.2"
+argui-platform = "=0.4.0"
+cable-tunnel-server-backend = "=0.1.0"
+cable-tunnel-server-common = "=0.1.0"
+cable-tunnel-server-frontend = "=0.1.0"
+crowsi-credential-authority-contracts = "=0.10.0"
+crowsi-credential-broker = "=0.1.2"
+crowsi-windows-custody-provider = "=0.10.3"
+crowsi-windows-operation-contracts = "=0.1.0"
+csv-query-cli = "=0.4.1"
+desk-exec = "=1.0.2"
+dprint-plugin-pug = "=0.1.12"
+ibc-core-commitment-types = "=0.57.0"
+incurs-openai-mcp-protocol = "=0.1.0"
+kafka-driver = "=0.1.0-rc.8"
+p101_enc = "=0.11.0"
+prenatal-tools = "=0.1.0"
+prenatal-tools-ontology = "=0.1.0"
+sqlite-requests = "=0.0.2"
+telar-platform-web = "=0.2.2"
+telar-renderer-dom = "=0.2.2"
+zixcel-owner-recovery = "=0.10.0"

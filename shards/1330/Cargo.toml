@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+sn_auditor = "=0.3.5"
+sn_cli = "=0.95.3"
+sn_client = "=0.110.4"
+sn_faucet = "=0.5.3"
+taurifest = "=0.1.0"
+yrba = "=3.0.0"

@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+girlfriend = "=0.3.1"
+sim-lib-mcp-http = "=0.2.0"
+sim-mcp-server = "=0.1.5"
+tightbeam-rs = "=0.18.0"

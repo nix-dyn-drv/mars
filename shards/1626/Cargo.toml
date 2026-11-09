@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+zksync_base_token_adjuster = "=0.1.0"
+zksync_circuit_breaker = "=0.1.0"
+zksync_contract_verification_server = "=0.1.0"
+zksync_contract_verifier_lib = "=0.1.0"
+zksync_da_dispatcher = "=0.1.0"
+zksync_dal = "=0.1.0"
+zksync_eth_watch = "=0.1.0"
+zksync_house_keeper = "=0.1.0"
+zksync_node_db_pruner = "=0.1.0"
+zksync_node_fee_model = "=0.1.0"
+zksync_reorg_detector = "=0.1.0"
+zksync_shared_metrics = "=0.1.0"
+zksync_snapshots_applier = "=0.1.0"
+zksync_state = "=0.1.0"

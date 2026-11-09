@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+core-lib = "=0.2.0"
+corulix = "=1.1.0"
+feventbus = "=0.3.1"
+hdk_unit_testing = "=0.1.4"
+nats-aflowt = "=0.16.105"
+nightly-async-nats = "=0.27.1"
+testeventbus = "=0.1.0"
+unirate-axum = "=0.1.0"
+wht_corulix_config = "=1.1.0"
+wht_corulix_engine = "=1.1.0"
+wht_corulix_formatter = "=1.0.0"
+wht_corulix_lsp = "=1.0.0"
+wht_corulix_mcp = "=1.1.0"
+wht_corulix_mutation = "=1.0.0"
+wht_corulix_search = "=1.0.0"
+wht_corulix_tooling = "=1.0.0"
+wht_corulix_workspace = "=1.1.0"

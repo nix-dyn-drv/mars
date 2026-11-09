@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+holochain = "=0.7.1"
+holochain-conductor-runtime = "=0.1.0"
+holochain_cascade = "=0.7.1"
+holochain_cli = "=0.7.1"
+holochain_cli_client = "=0.7.1"
+holochain_p2p = "=0.7.1"
+tauri-plugin-hc = "=0.1.0"

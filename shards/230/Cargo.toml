@@ -1,0 +1,45 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+baizekit-cli = "=0.1.27"
+bolic-network = "=0.0.1"
+cargo-advent = "=0.2.0"
+cargo-gpui = "=0.1.3"
+flusso-design = "=0.15.1"
+flusso-sources-postgres = "=0.15.1"
+gerust = "=0.0.6"
+gwa = "=0.1.4"
+harbor-framework = "=0.5.0"
+hatchery-fed = "=0.2.104"
+holochain_deterministic_integrity = "=0.0.13"
+lyquor-network = "=0.0.1"
+mirage-control-plane = "=0.1.1"
+mirage-core = "=0.1.1"
+mirage-perimeter = "=0.1.1"
+mirage-protocol = "=0.1.1"
+mirage-shared-types = "=0.1.1"
+mirage-subscriber-gate = "=0.1.1"
+mirage-vpn = "=0.1.1"
+mirage-vpn-cli = "=0.1.1"
+mirage-vpn-mesh = "=0.1.1"
+mirage-wire-http-client = "=0.1.1"
+puerto = "=0.20.0"
+sol-safekey = "=0.1.8"
+taskito = "=0.22.0"
+taskito-core = "=0.22.0"
+taskito-mesh = "=0.22.0"
+whatsapp-rust = "=0.7.0"
+whatsapp-rust-sqlite-storage = "=0.7.0"

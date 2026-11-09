@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+codemem-cli = "=0.6.2"
+codemem-mcp = "=0.7.0"
+dharitri-sc-meta = "=1.19.0"
+gwipt = "=0.5.0"
+mimlys = "=0.8.0"
+nalcos = "=2.0.0-alpha.3"
+oma-pm = "=0.65.0"
+portier_broker = "=0.15.1"
+rust_hero = "=0.5.2"
+sipp-so = "=0.1.5"
+tenzro-tee = "=0.2.0"
+version-lsp = "=0.4.0"
+xtool = "=0.0.16"

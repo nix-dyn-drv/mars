@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hirust-mapper-runtime = "=0.4.0"
+markdown_wasi = "=0.1.2"
+odra-casper-test-env = "=0.7.1"
+similarity-ts = "=0.5.0"

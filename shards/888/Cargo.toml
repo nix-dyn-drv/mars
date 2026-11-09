@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kimun-notes = "=0.24.7"
+kimun_core = "=0.6.0"
+leindex = "=2.1.5"
+oxigeo-gateway = "=0.2.4"
+pipeline-analyzer = "=0.8.0"
+scirs2-python = "=0.6.5"
+taceo-oprf-test-utils = "=0.14.0"

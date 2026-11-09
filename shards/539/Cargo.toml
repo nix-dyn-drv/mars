@@ -1,0 +1,28 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+distrans = "=0.3.1"
+distrans_cli = "=0.3.19"
+distrans_peer = "=0.3.19"
+gear-program = "=0.1.4"
+kilt-api-client = "=1.6.2"
+omnicat = "=0.10.0"
+open-gpui = "=0.2.0"
+open-gpui-macos = "=0.2.0"
+open-gpui-windows = "=0.2.0"
+parquet-cat = "=0.1.1"
+tsk-ai = "=0.10.9"
+velnet = "=0.1.0"

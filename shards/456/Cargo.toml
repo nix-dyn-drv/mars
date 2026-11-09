@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+crawlingo = "=0.1.2"
+deno_simple_runtime = "=0.64.1"
+prov-cosmwasm-vm = "=1.0.0-provbeta3"
+scaffy = "=0.1.3"
+tokio-console = "=0.1.14"

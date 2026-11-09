@@ -1,0 +1,68 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+atac = "=0.24.0"
+bitcoin-addr = "=0.1.16-alpha.0"
+bitcoin-addrman = "=0.1.16-alpha.0"
+bitcoin-banman = "=0.1.16-alpha.0"
+bitcoin-bdb = "=0.1.16-alpha.0"
+bitcoin-blockman = "=0.1.16-alpha.0"
+bitcoin-blockpolicy = "=0.1.16-alpha.0"
+bitcoin-bloom = "=0.1.16-alpha.0"
+bitcoin-chacha = "=0.1.19"
+bitcoin-coinsview = "=0.1.16-alpha.0"
+bitcoin-db = "=0.1.16-alpha.0"
+bitcoin-dns = "=0.1.16-alpha.0"
+bitcoin-fees = "=0.1.21"
+bitcoin-merkle = "=0.1.16-alpha.0"
+bitcoin-net = "=0.1.16-alpha.0"
+bitcoin-netpermissions = "=0.1.16-alpha.0"
+bitcoin-packages = "=0.1.16-alpha.0"
+bitcoin-policy = "=0.1.16-alpha.0"
+bitcoin-proxy = "=0.1.16-alpha.0"
+bitcoin-psbt = "=0.1.16-alpha.0"
+bitcoin-random = "=0.1.21"
+bitcoin-rbf = "=0.1.16-alpha.0"
+bitcoin-remote = "=0.1.22"
+bitcoin-sam = "=0.1.16-alpha.0"
+bitcoin-scriptpubkeyman = "=0.1.16-alpha.0"
+bitcoin-service = "=0.1.16-alpha.0"
+bitcoin-signingprovider = "=0.1.16-alpha.0"
+bitcoin-sqlite = "=0.1.16-alpha.0"
+bitcoin-tor = "=0.1.16-alpha.0"
+bitcoin-walletdb = "=0.1.16-alpha.0"
+bitcoinchain-params = "=0.1.16-alpha.0"
+bitcoinnode-stats = "=0.1.16-alpha.0"
+bitcoinnode-txrelay = "=0.1.16-alpha.0"
+bitcoinrpc-server = "=0.1.16-alpha.0"
+bitcoinrpc-util = "=0.1.16-alpha.0"
+bitcoinwallet-feature = "=0.1.16-alpha.0"
+bitcoinwallet-interface = "=0.1.16-alpha.0"
+effectcraft-host = "=0.9.2"
+fuck-ai-comments = "=0.3.1"
+hd-keys-curves-wasm = "=1.0.5"
+interscript = "=0.1.0"
+lit-frost = "=0.4.0"
+lit-rust-crypto = "=0.6.0"
+lunarbase-pmm-v2-math = "=0.4.1"
+ps-boa-runtime = "=1.1.4"
+rdedup = "=3.2.1"
+smc_scan = "=0.3.1"
+southstar = "=1.0.8"
+southstar-engine = "=1.0.8"
+southstar-runtime = "=1.0.8"
+southstar-shell = "=1.0.8"
+southstar-text = "=1.0.8"

@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bokken = "=0.1.1"
+clashctl-tui = "=0.4.1"
+dw-datastore = "=0.1.0"
+dw-query = "=0.1.0"
+gptrust_cli = "=0.1.4"
+krile = "=0.5.7"
+molasses = "=0.1.0"
+nemo-flow-adaptive = "=0.2.0"
+nemo-relay-worker = "=0.11.1"
+rossete-rdf = "=0.1.1"
+rsure = "=0.9.4"
+rush-ecs-svm = "=0.1.0"
+safecoin-remote-wallet = "=1.14.17"
+solarti-name-service = "=0.2.1"
+solarti-record = "=0.1.1"
+solarti-shared-memory = "=2.0.7"
+solarti-token-lending = "=0.2.0"
+spectra-core = "=0.14.1"
+waffles-solana-remote-wallet = "=1.16.0"

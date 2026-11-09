@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cairo-language-server = "=2.21.0"
+dojo-cairo-macros = "=1.7.0"
+ghostdep = "=0.1.0"
+rplexfmtr = "=1.0.6"
+scoper = "=0.1.2"
+similarity-css = "=0.5.0"
+similarity-elixir = "=0.5.0"
+similarity-generic = "=0.5.0"
+similarity-php = "=0.5.0"
+similarity-py = "=0.5.0"
+similarity-rs = "=0.5.0"
+statisk = "=0.3.0"
+sweetpaste = "=0.1.0"
+tiny-docs-se = "=0.1.0"
+zorath-env = "=0.4.0"

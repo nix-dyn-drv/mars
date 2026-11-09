@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+diesel-libsql = "=0.1.4"
+eggress-python = "=1.0.12"
+keel-hoist = "=0.4.1"
+nuance = "=0.3.2"
+unllm = "=0.0.1"
+unllm-anthropic = "=0.0.1"
+unllm-core = "=0.0.1"
+unllm-gemini = "=0.0.1"
+unllm-openai = "=0.0.1"

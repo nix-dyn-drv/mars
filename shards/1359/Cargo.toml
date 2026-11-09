@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+solders-transaction-return-data = "=0.19.0"
+solders-transaction-status = "=0.19.0"
+solders-transaction-status-struct = "=0.19.0"
+tx-terminal = "=0.1.0"
+waffles-solana-pubsub-client = "=1.16.0"
+waffles-solana-rpc-client-api = "=1.16.0"
+waffles-solana-thin-client = "=1.16.0"
+waffles-solana-transaction-status = "=1.16.0"

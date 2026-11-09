@@ -1,0 +1,3 @@
+# Per-crate resolution cache and log of gen-crates; the shard manifests and locks are kept.
+/shards/resolved.tsv
+/gen-crates.log

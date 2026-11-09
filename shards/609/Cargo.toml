@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+faculties = "=0.21.0"
+faculties-migrations = "=0.1.0"
+fluxweir = "=0.1.0"
+issuerd = "=0.2.3"
+issuerd-admin-api = "=0.2.3"
+issuerd-server = "=0.2.3"
+kellnr-test-db = "=7.0.0"
+lean-ctx = "=3.12.2"
+lean-ctx-engine = "=3.12.2"
+lean-ctx-server = "=3.12.2"
+project-portfolio-management = "=0.1.0"
+rivet-cli = "=0.32.2"
+shardline = "=1.13.0"
+slate-cli = "=0.6.0"
+solana-gossip-cli = "=4.4.1"
+sunbeam-g2v = "=0.6.1"
+trible = "=0.47.0"
+turbospark-server = "=0.7.1"
+wordval-agent = "=1.0.7"

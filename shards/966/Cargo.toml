@@ -1,0 +1,41 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+mango-feeds-connector = "=0.3.0"
+plerkle = "=1.3.4"
+scemadex-settle = "=0.1.3"
+scematica-dashboard = "=1.28.0"
+scematica-suite = "=1.28.0"
+secure-squads = "=0.1.5"
+serum-crank = "=0.4.7"
+solana-archiver-utils = "=1.1.23"
+solana-cargo-registry = "=1.18.26"
+solana-chacha = "=1.1.23"
+solana-chacha-cuda = "=1.1.13"
+solana-ledger-tool = "=1.18.26"
+solana-ramp-tps = "=1.6.0"
+solana-validator = "=1.18.26"
+solana_toolbox_anchor = "=0.4.5-solana-1.18.26-anchor-0.30.1"
+solders-transaction-confirmation-status = "=0.21.0"
+solders-transaction-status-enums = "=0.21.0"
+waffles-solana-cli-output = "=1.16.0-alpha.10"
+waffles-solana-client = "=1.16.0-alpha.10"
+waffles-solana-geyser-plugin-interface = "=1.16.0-alpha.10"
+waffles-solana-install = "=1.16.0-alpha.10"
+waffles-solana-storage-bigtable = "=1.16.0-alpha.10"
+waffles-solana-storage-proto = "=1.16.0-alpha.10"
+waffles-solana-watchtower = "=1.16.0-alpha.10"
+wapm-cli = "=0.5.9"

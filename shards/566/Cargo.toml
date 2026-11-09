@@ -1,0 +1,47 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+edgecrab-acp = "=0.4.1"
+edgecrab-cli = "=0.4.1"
+edgecrab-core = "=0.4.1"
+edgecrab-gateway = "=0.4.1"
+edgecrab-lsp = "=0.4.1"
+edgecrab-plugins = "=0.4.1"
+edgecrab-tools = "=0.4.1"
+faucet-cli = "=1.17.0"
+forge-core-db = "=0.8.7-rc.39"
+forge-core-deployment = "=0.8.7-rc.39"
+forge-core-executors = "=0.8.7-rc.39"
+forge-core-local-deployment = "=0.8.7-rc.39"
+forge-core-server = "=0.8.7-rc.39"
+forge-core-services = "=0.8.7-rc.39"
+gaze-cli = "=0.17.0"
+ir-search = "=0.19.1"
+lariv-rs = "=0.1.0"
+lific = "=2.11.1"
+mq-bridge-faucet = "=0.2.0"
+newton-cli = "=0.1.38"
+newton-data-provider = "=0.1.38"
+newton-prover-rpc = "=0.1.29"
+oy-code-cli = "=0.8.1"
+oy-tui = "=0.8.1"
+pleme-io-sui = "=0.1.239"
+prompt-store = "=0.1.2"
+remem-ai = "=0.7.0"
+smos = "=0.8.0"
+solana-stream-indexer = "=0.1.0"
+stormchaser-runner-docker = "=1.5.1"
+udb = "=0.6.12"

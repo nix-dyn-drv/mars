@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+falsegreen-ui = "=0.1.0"
+falsegreen-ui-core = "=0.1.0"
+falsegreen-ui-dioxus = "=0.1.0"
+falsegreen-ui-evidence = "=0.1.0"
+falsegreen-ui-harness = "=0.1.0"
+falsegreen-ui-layout = "=0.1.0"
+falsegreen-ui-render = "=0.1.0"
+kcp-ovo = "=0.9.0"

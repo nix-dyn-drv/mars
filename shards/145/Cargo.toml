@@ -1,0 +1,48 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+aranet-cli = "=0.2.1"
+aranet-service = "=0.2.1"
+ashdl = "=0.2.5"
+bevy_dioxus_messages = "=0.1.0"
+bevy_dioxus_render = "=0.1.0"
+bevy_dioxus_sync = "=0.1.0"
+burncloud = "=0.1.17"
+burncloud-client = "=0.1.4"
+ck-engine = "=0.8.1"
+dbusify_hyper = "=0.1.0"
+device_status = "=0.1.2"
+domo_pitchfork = "=1.4.1"
+easy-install = "=1.3.11"
+gsof_protocol = "=0.1.23"
+ironrdp-viewer = "=0.1.0"
+ispot = "=0.3.0"
+mho = "=0.1.0"
+mistletoe = "=0.1.2"
+ossa-dioxus = "=0.0.1"
+p2-models-rs = "=0.1.0"
+polyblade = "=0.4.4"
+ranbumfy = "=0.1.1"
+rspotify_hyper = "=0.2.0"
+rss-update = "=0.1.1"
+shredstream = "=3.0.0"
+spotify-retro = "=0.2.0"
+spotify_downloader = "=0.1.1"
+spotifyctl = "=0.3.0"
+td-client = "=0.9.0"
+teapot_tools = "=0.4.3"
+vinylify = "=0.1.1"
+wasmcloud-provider-blobstore-s3 = "=0.12.1"

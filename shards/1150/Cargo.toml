@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+pi_mqtt = "=0.8.3"
+pi_mqtt_proxy = "=0.8.1"
+pi_ws = "=0.9.1"
+relux = "=0.8.3"
+relux-runtime = "=0.8.3"
+solana_kit_native = "=0.2.0"

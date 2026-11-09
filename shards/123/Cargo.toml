@@ -1,0 +1,44 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+anomapay-erc20-forwarder-bindings = "=2.3.0"
+argentum_notification_business = "=0.3.1"
+argentum_standard_business = "=0.3.1"
+argentum_standard_infrastructure = "=0.3.1"
+argentum_user_account_business = "=0.3.1"
+argentum_user_business = "=0.3.1"
+c3p0_pool_sqlite = "=0.11.0"
+cargo-update = "=22.1.1"
+circuit_definitions = "=0.153.12"
+circuit_sequencer_api = "=0.153.12"
+dinner = "=0.1.1"
+fluentbase-crypto = "=1.5.1"
+fluentbase-runtime = "=1.5.1"
+hal-elements = "=0.2.1"
+imgest = "=0.3.0"
+libreda-structural-verilog = "=0.0.5"
+lifiswap-evm = "=0.4.1"
+monerochan-core-executor = "=5.2.12"
+monerochan-core-machine = "=5.2.12"
+monerochan-curves = "=5.2.12"
+moss-bounty-x402-client = "=0.1.5"
+pdb-bindgen-codegen = "=0.1.0"
+shielded-swap-contract-bindings = "=0.1.1"
+shivini = "=0.156.2"
+sp1-curves = "=6.10.0"
+tycho-execution = "=0.502.3"
+uselesskey-jose-openid = "=0.7.1"
+wikitext_table_parser = "=0.3.1"

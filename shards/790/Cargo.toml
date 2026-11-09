@@ -1,0 +1,19 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+holochain_persistence_lmdb = "=0.0.10"
+nnrp-transport-tcp = "=1.0.0-preview.4.26"
+nnrp-transport-websocket = "=1.0.0-preview.4.26"

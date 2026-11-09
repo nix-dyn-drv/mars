@@ -1,0 +1,50 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+beet = "=0.0.8"
+beet-cli = "=0.0.8"
+beet_agent = "=0.0.8"
+beet_build = "=0.0.8"
+beet_clanker = "=0.0.9-rc.1"
+beet_core = "=0.0.8"
+beet_design = "=0.0.8"
+beet_dom = "=0.0.8"
+beet_examples = "=0.0.8"
+beet_flow = "=0.0.8"
+beet_ml = "=0.0.8"
+beet_net = "=0.0.8"
+beet_parse = "=0.0.8"
+beet_router = "=0.0.8"
+beet_rsx = "=0.0.8"
+beet_rsx_macros = "=0.0.8"
+beet_spatial = "=0.0.8"
+eon-ai = "=0.1.0"
+eon-astro = "=0.1.2"
+eon-data = "=0.1.2"
+eon-human-design = "=0.1.2"
+eon-saju = "=0.1.2"
+eon-service = "=0.1.1"
+eon-vedic = "=0.1.2"
+eon-western = "=0.1.2"
+eon-zwds = "=0.1.2"
+favlist = "=2.0.0"
+fedimint-client-wasm = "=0.13.0"
+jsondepnet = "=0.2.0"
+lsh-rs = "=0.4.0"
+machine-check-gui = "=0.7.1"
+makeclean = "=1.3.0"
+mutie = "=0.1.0"
+viscosity-wasm = "=0.0.1"

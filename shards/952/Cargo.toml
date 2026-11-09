@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+lopi = "=0.22.0"
+lopi-ui = "=0.22.0"
+newton-aggregator = "=0.7.6"
+newton-chain-watcher = "=0.7.6"
+newton-chainio = "=0.7.6"
+newton-core = "=0.7.6"
+newton-delegation = "=0.7.6"
+newton-eigenda-client = "=0.5.2"
+newton-enclave = "=0.7.6"
+newton-metric = "=0.7.6"
+newton-prover-aggregator-bin = "=0.1.28"
+newton-prover-core = "=0.1.38"
+newton-prover-transporter = "=0.1.38"
+newton-task-submission = "=0.7.6"
+newton-transporter = "=0.7.6"
+octopod = "=0.1.0"
+solang = "=0.3.5"
+spire-ai = "=0.1.3"
+tx2-cli = "=0.1.0"

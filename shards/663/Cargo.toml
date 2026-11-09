@@ -1,0 +1,41 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fortress-cli = "=1.0.4"
+fortress-db = "=1.0.2"
+golem-common = "=1.3.1"
+groundtruth = "=0.2.0"
+grow-rs = "=3.0.0"
+knowdit = "=2.0.1"
+knowdit-agents = "=2.0.1"
+knowdit-audit = "=2.0.1"
+knowdit-kg = "=2.0.1"
+llmy = "=1.6.1"
+llmy-cli = "=1.6.1"
+mika-agent = "=0.3.0"
+ocloud = "=0.1.3"
+reinhardt-rest = "=0.3.25"
+reposcry-cli = "=0.1.3"
+robson-gateway-webhook = "=0.1.0"
+robson-plugin-chat = "=0.1.0"
+robson-plugin-implementation-workflow = "=0.1.0"
+routa-cli = "=0.16.0"
+smgrep = "=0.6.0"
+stormchaser-api = "=1.5.1"
+stormchaser-query = "=1.5.1"
+surfpool-core = "=1.7.0"
+switchy_schema_cli = "=0.5.0"
+zlayer-agent = "=0.14.3"

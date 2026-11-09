@@ -1,0 +1,48 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bonsol = "=0.4.5"
+bsac-cli = "=1.3.0"
+causeway-cpi = "=0.1.0-alpha.4"
+cinema_feed = "=0.1.4"
+dd-merkle-tree = "=0.1.0"
+drift-idl = "=2.92.0"
+eclipse_bridge_multisig = "=0.0.1"
+folderify = "=4.1.4"
+ic_siws = "=0.0.2"
+jupiter_interface = "=0.2.1"
+left_utils = "=0.1.3"
+moth = "=1.0.0"
+ng-gateway-connector = "=0.0.1"
+oculi = "=1.0.1"
+pump-cpi = "=0.1.0"
+pumpdotfunn-sdk = "=1.0.0"
+pumpfun-cpi = "=2.0.1"
+pumpfun-sdk = "=1.0.0"
+pyonear = "=0.2.0"
+qt_ritual = "=0.0.0"
+rgb-contracts = "=0.10.2"
+rss-watch = "=0.1.0"
+sbt_rating = "=0.1.0"
+sized-data = "=0.1.1"
+solana-gateway-anchor = "=0.1.3"
+soltrace = "=0.1.1"
+speed-levels-rs = "=0.2.5"
+sqrt_program_cpi = "=0.1.1"
+switchboard-solana = "=0.30.4"
+task_cli = "=0.2.0"
+tenset_merkletree = "=0.1.1"
+universal-address = "=0.1.0"

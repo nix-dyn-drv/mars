@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hone-cli = "=0.1.0"
+hone-tui = "=0.1.0"
+hyli-bonsai-runner = "=0.15.0"
+llm-optimizer = "=0.1.1"
+llm-optimizer-api-grpc = "=0.1.1"
+llm-optimizer-api-tests = "=0.1.1"
+rinne = "=0.1.9"
+srr = "=0.1.0"

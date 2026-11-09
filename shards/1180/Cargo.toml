@@ -1,0 +1,18 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+provekit_nargo_cli = "=1.0.0-beta.20-alpha.1"
+provekit_noir_lsp = "=1.0.0-beta.20-alpha.1"

@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bamts-verification = "=0.1.0"
+blogtato = "=0.1.27"
+devscout-rs = "=0.10.0"
+dodb-client = "=0.1.0"
+forklaunch-billing-base = "=0.2.5"
+forklaunch-billing-interface = "=0.2.5"
+forklaunch-cac-base = "=0.2.5"
+forklaunch-cac-interface = "=0.2.5"
+forklaunch-ecommerce-interface = "=0.2.5"
+forklaunch-iam-interface = "=0.2.5"
+forklaunch-testing = "=0.2.5"
+forklaunch-worker-database = "=0.2.5"
+forklaunch-worker-interface = "=0.2.5"
+forklaunch-worker-kafka = "=0.2.5"
+forklaunch-worker-redis = "=0.2.5"
+forklaunch-ws = "=0.2.5"
+htlk-analyzer = "=0.1.0"
+htlk-compiler = "=0.1.0"
+incurs-openapi = "=0.2.0"
+ochrepad-lsp = "=0.4.0"
+pico-cdc = "=1.0.2"
+stack-engine = "=0.9.1"
+synctato = "=0.1.14"
+vlajmaji = "=0.2.0"
+vlajmaji-cli = "=0.2.0"
+vlajmaji-search = "=0.2.0"
+vlajmaji-store = "=0.2.0"

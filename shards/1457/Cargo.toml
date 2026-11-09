@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+tensor-amm = "=1.0.0"
+tensor-escrow = "=0.1.1"
+tensor-price-lock = "=0.2.0"
+tensor-whitelist = "=0.2.0"
+xensec-internal-tools = "=0.1.0"

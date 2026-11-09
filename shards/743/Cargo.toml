@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hai = "=0.1.0"
+imessage-chatlab = "=0.2.1"
+pdf-xfa = "=2.0.0"
+sdivi-snapshot = "=0.2.52"

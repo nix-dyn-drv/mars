@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+mald = "=0.5.7"
+mvsep-gui = "=1.2.1"
+peleka = "=0.1.2"
+to_markdown_gui = "=0.6.4"

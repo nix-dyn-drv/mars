@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+firebrick-daemon = "=0.11.0"
+forest-filecoin = "=0.39.0"
+grin-vanity = "=0.1.0"
+grin_wallet = "=5.5.1"
+grin_wallet_api = "=5.5.1"
+grin_wallet_controller = "=5.5.1"
+grin_wallet_impls = "=5.5.1"
+huddle-gui = "=2.2.1"
+koompi-kesa = "=0.3.0"
+liboxen = "=0.67.0"
+loki-ai = "=0.5.0"
+loong-app = "=0.1.2-alpha.1"
+mediarium-providers = "=0.1.3"
+microsandbox-cli = "=0.7.14"
+mq-bridge-app = "=1.4.0"
+octomind = "=0.70.1"
+oxen-cli = "=0.67.0"
+oxen-server = "=0.67.0"
+rauto = "=0.5.3"
+seher-cli = "=0.0.59"
+seher-sdk = "=0.0.59"
+sprocket = "=0.33.0"
+sps-core = "=0.1.56"
+surtgis = "=1.8.1"
+vl-cli = "=1.2.78"
+vl-web = "=1.2.78"
+wordval = "=1.0.10"

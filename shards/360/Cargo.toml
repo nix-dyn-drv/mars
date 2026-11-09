@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-mobile2 = "=0.22.5"
+codex-extra-memory-mcp = "=0.1.0-ci.9.45b7b51"
+dusk-rusk = "=1.7.0"
+dusk-vm = "=1.7.0"
+fakehub = "=0.0.10"
+fakehub-server = "=0.0.10"
+finite_light_gpu = "=0.1.2"
+poet = "=0.8.0"
+rustlio = "=0.4.3"
+smb = "=0.12.1"
+sso = "=0.10.2"
+sysd-manager = "=2.24.5"
+tauri-cli = "=2.12.4"

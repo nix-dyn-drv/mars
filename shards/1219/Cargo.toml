@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+redgold = "=0.1.48"
+redgold-ci = "=0.1.48"
+redgold-cli = "=0.1.48"
+redgold-daq = "=0.1.48"
+redgold-data = "=0.1.48"
+redgold-node-core = "=0.1.48"
+redgold-ops = "=0.1.48"
+webfind = "=0.5.0"

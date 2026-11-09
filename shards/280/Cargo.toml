@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+blend-interfaces = "=0.0.1"
+dummy-contract = "=0.0.9"
+dummy-increment-contract = "=0.0.1"
+hello-soroban-kit = "=0.1.11"
+kuknos-soroban-env-common-tmp = "=20.0.5"
+kuknos-soroban-env-guest-tmp = "=20.0.5"
+kuknos-soroban-env-macros-tmp = "=20.0.5"
+litemint-auction-contract = "=0.1.7"
+litemint-royalty-contract = "=0.1.7"
+oracle-soroban-kit = "=0.1.11"
+raumfi_library = "=0.1.7"
+rs-zephyr-sdk = "=0.1.1"
+rust_to_dtr = "=0.16.0"
+soroban-env-common-zephyr = "=21.2.2"
+soroban-env-macros-zephyr = "=21.2.2"
+soroban-kit = "=0.1.11"
+soroban-macros = "=0.1.11"
+soroban-snooker = "=0.1.4"
+soroban-tools = "=0.1.11"

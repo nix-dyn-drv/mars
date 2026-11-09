@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kittens = "=0.3.0"
+logviewer = "=0.11.0"
+qmd-cli = "=0.6.0"
+safehell = "=0.6.1"
+tui-do-core = "=1.0.1"

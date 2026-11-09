@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+covert = "=0.1.3"
+dtbh-cli = "=0.1.0"
+ferrum-cli = "=0.18.5"
+ferrum-server = "=0.18.5"
+lux-cli = "=0.53.3"
+open-guardian = "=0.6.1"
+plane-drone = "=0.3.0"
+quick_fetcher = "=0.4.3"
+substrate-hub = "=0.2.5"
+typeduck-codex-execpolicy = "=0.17.0"
+uhg-custom-appollo-roouter = "=1.61.10"

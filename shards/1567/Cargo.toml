@@ -1,0 +1,47 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+waterpump-evm-algebra-blackhole-client = "=0.1.0"
+waterpump-evm-algebra-client = "=0.1.0"
+waterpump-evm-core = "=0.1.0"
+waterpump-evm-lifi-client = "=0.1.0"
+waterpump-evm-pancakeswap-api-client = "=0.1.0"
+waterpump-evm-pancakeswap-client = "=0.1.0"
+waterpump-evm-pool-sdk = "=0.1.0"
+waterpump-evm-shadow-client = "=0.1.0"
+waterpump-evm-slipstream-client = "=0.1.0"
+waterpump-evm-slipstream-sugar-client = "=0.1.0"
+waterpump-evm-uniswap-api-client = "=0.1.0"
+waterpump-evm-uniswap-subgraph-client = "=0.1.0"
+waterpump-evm-uniswap-v3-client = "=0.1.0"
+waterpump-evm-uniswap-v4-client = "=0.1.0"
+waterpump-evm-zerox-client = "=0.1.0"
+wp-evm-aerodrome = "=0.1.14"
+wp-evm-algebra-provider = "=0.1.14"
+wp-evm-blackhole = "=0.1.14"
+wp-evm-execute = "=0.1.14"
+wp-evm-pancake-v3 = "=0.1.14"
+wp-evm-prjx = "=0.1.14"
+wp-evm-quickswap = "=0.1.14"
+wp-evm-ramses-provider = "=0.1.14"
+wp-evm-shadow = "=0.1.14"
+wp-evm-slipstream = "=0.1.14"
+wp-evm-sushi-v3 = "=0.1.14"
+wp-evm-test-support = "=0.1.14"
+wp-evm-uniswap-v3 = "=0.1.14"
+wp-evm-uniswap-v4 = "=0.1.14"
+wp-evm-v3-provider = "=0.1.14"
+wp-evm-v4-provider = "=0.1.14"

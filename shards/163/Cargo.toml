@@ -1,0 +1,68 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+arkecosystem-crypto = "=0.1.0"
+bismark-dedup = "=1.2.1"
+btc-cli = "=0.1.1"
+casper-erc20-crate = "=0.1.3"
+casper_event = "=0.1.0"
+casperlabs-cep47 = "=0.2.1"
+casperlabs-contract-utils = "=0.2.2"
+casperlabs-curve-token-utils = "=0.1.1"
+casperlabs-dragon-lair-utils = "=0.1.1"
+casperlabs-erc20 = "=2.0.3"
+casperlabs-i-reward-distribution-recipient = "=0.1.0"
+casperlabs-lp-token-wrapper = "=0.2.0"
+casperlabs-ownable = "=0.2.0"
+casperlabs-owned = "=0.1.0"
+casperlabs-pausable = "=0.1.0"
+casperlabs-reentrancy-guard = "=0.2.0"
+casperlabs-staking-rewards-utils = "=0.1.1"
+cometd-client = "=0.3.6"
+compound-casper-erc20 = "=0.1.0"
+compound-erc20 = "=0.1.0"
+contract-utils = "=0.1.0"
+crv20 = "=0.1.0"
+curve-casper-erc20 = "=0.1.0"
+cw-erc20 = "=0.10.0"
+cw-escrow = "=0.10.0"
+cw-nameservice = "=0.10.0"
+cw-voting = "=0.10.0"
+dragon_lair_utils = "=0.1.0"
+droplinked-contract = "=0.1.0"
+dual_rewards_distribution_recipient_crate = "=0.2.0"
+eqiora = "=0.1.5"
+erc20-crate = "=0.2.0"
+erc20-secure = "=0.1.1"
+ethkey = "=0.2.5"
+flo_anim_sqlite = "=0.1.0"
+fswallet = "=0.1.0-alpha.0"
+hobo_core = "=0.2.1"
+iron_rusqlite_middleware = "=0.1.2"
+jot = "=0.1.0"
+loterra-staking-contract = "=2.0.2"
+odra-casper-backend = "=0.7.1"
+odra-casper-codegen = "=0.7.1"
+odra-casper-shared = "=0.7.1"
+odra-test-env-wrapper = "=0.1.0"
+odra-types = "=0.7.1"
+poolsim-core = "=0.4.0"
+sale = "=0.1.0"
+something-for-tests = "=0.1.0"
+sv = "=0.2.2"
+textwallet = "=0.1.0-alpha.0"
+trezorlib = "=0.0.2"
+uniswap-erc20 = "=0.3.0"

@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+coal-pool-client = "=3.1.0"
+grits-cli = "=3.2.0"
+hashpoo-cli = "=0.8.5"
+lnpbp_nodes = "=0.8.0-rc.1"
+otter-support = "=1.2.1"
+rhwp-pdf-import-backend = "=0.3.78-rhwp.1"

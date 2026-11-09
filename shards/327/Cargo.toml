@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bunny-wesley = "=0.6.0"
+cargo-generate-minijinja = "=0.23.5"
+convkit-core = "=0.7.1"
+fchat = "=3.0.0"
+fharness = "=3.0.0"
+fmemory = "=3.0.0"
+fobserve = "=3.0.0"
+fprovider = "=3.0.0"
+ftooling = "=3.0.0"
+ninelives = "=0.2.0"
+notebook_rs = "=0.5.3"
+powerio-synth = "=0.11.9"
+powerio-tx = "=0.11.9"
+velo-queue = "=0.1.0"
+wesley-cli = "=0.2.0"
+wesley-core = "=0.2.0"
+wesley-emit-codec = "=0.2.0"
+wesley-emit-rust = "=0.2.0"
+wesley-emit-typescript = "=0.2.0"

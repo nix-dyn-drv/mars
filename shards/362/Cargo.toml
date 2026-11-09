@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-outdated = "=0.19.0"
+dbdriver = "=0.1.1"
+ic-bn-lib-common = "=0.2.4"
+mdbook-svgbob = "=0.3.1"
+papyrus = "=0.17.2"
+rede = "=0.3.1"
+simple-rlp = "=0.1.0"
+svgbob_cli = "=0.7.6"
+waterui-cli = "=0.4.3"

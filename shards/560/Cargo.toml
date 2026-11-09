@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+earendil = "=0.5.12"
+earendil-gui = "=0.5.12"
+gpui_ce_platform = "=0.3.0"
+hellstone = "=0.1.1"
+ipv6sync = "=0.1.1"
+lexa-framework = "=0.2.8"
+pyoxidizer = "=0.24.0"
+urlx-cli = "=0.2.2"

@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+casper-devnet = "=0.11.0"
+cooklang-sync-server = "=0.3.2"
+ethexe-consensus = "=2.0.0"
+ethexe-db = "=2.0.0"
+ethexe-node-wrapper = "=2.0.0"
+ethexe-observer = "=2.0.0"
+ethexe-prometheus = "=2.0.0"
+ethexe-rpc = "=2.0.0"
+ethexe-runtime-common = "=2.0.0"
+ethexe-sdk = "=2.0.0"
+ic-oss-cli = "=1.3.3"
+nil-server = "=0.8.5"
+phos-data-network = "=0.1.3"
+wally = "=0.3.2"
+ytdlr = "=0.12.0"

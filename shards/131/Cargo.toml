@@ -1,0 +1,47 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ap-relay = "=0.3.131"
+bajan = "=0.1.0"
+brk_bundler = "=0.0.111"
+crossbundle = "=0.2.3"
+crossbundle-tools = "=0.2.3"
+ddevmem = "=0.5.1"
+dinja-core = "=0.5.0"
+dioprism-assets = "=0.2.0-alpha.1"
+esp-wifi-provisioning = "=0.1.1"
+gci = "=0.1.0"
+grapheme-lsp = "=0.7.2"
+minhtml = "=0.18.1"
+minify-html = "=0.18.1"
+minify-html-onepass = "=0.18.1"
+pleme-linker = "=0.3.3"
+rusty-handlebars = "=0.3.0"
+rusty-handlebars-derive = "=0.3.0"
+rusty-handlebars-parser = "=0.3.0"
+ruttle = "=0.3.0"
+sailfish-minify = "=0.11.6"
+skarn = "=1.0.1"
+skarn-gateway = "=1.0.1"
+slurp-compiler = "=0.1.1"
+smp-pqc-core = "=1.0.0"
+spec-spine-cli = "=0.32.0"
+statica = "=0.51.3"
+statica-cli = "=0.51.3"
+svm-unit-test = "=0.1.11"
+tower-minify-html = "=0.2.0"
+untwist-cli = "=0.3.0"
+weebill = "=0.4.0"

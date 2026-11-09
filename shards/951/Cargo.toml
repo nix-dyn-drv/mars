@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+looqlog = "=0.3.0"
+pks = "=0.2.40"
+room-cli = "=3.6.1"
+room-daemon = "=3.6.1"

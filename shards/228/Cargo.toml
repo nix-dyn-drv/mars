@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+baibot = "=1.6.0"
+desk-exec-bin = "=1.0.2"
+lsd = "=1.2.0"
+luciene_sl = "=0.0.1"
+metadata-backup = "=0.1.0"
+p101_sys = "=0.17.1"
+rgb-schemata = "=0.10.1"
+termpad = "=1.2.0"

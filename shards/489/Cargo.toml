@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+dawnsearch = "=0.2.0"
+drift-pubsub-client = "=0.1.1"
+eejit = "=0.2.1"
+forester-utils = "=2.0.0"
+light-circuitlib-rs = "=0.1.4"
+solana-address-lookup-table-program = "=2.2.20"
+solana-config-program = "=2.2.20"
+solana-rpc-get-stake-activation = "=0.1.0"
+solana-simulate = "=0.1.0"
+talos-tui = "=0.10.1"
+ttv-fixed-point = "=1.0.0"
+vanity-address = "=0.7.0"
+wicrs_server = "=0.13.1"

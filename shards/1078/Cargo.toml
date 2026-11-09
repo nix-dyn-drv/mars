@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+nu_plugin_cloud = "=0.2.11+0.110.0"
+printnanny-cli = "=0.33.1"
+printnanny-nats = "=0.33.0"
+printnanny-nats-apps = "=0.33.1"
+printnanny-services = "=0.33.1"
+supac = "=0.5.3"

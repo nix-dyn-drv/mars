@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fuel-streams = "=0.0.28"
+fuel-streams-store = "=0.0.28"
+pedronauck-streams-store = "=0.0.27"
+pedronauck-streams-types = "=0.0.27"
+tidk = "=0.3.2"

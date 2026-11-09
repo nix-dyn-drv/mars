@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bitwarden = "=2.1.0"
+bws = "=2.1.0"
+eulumdat-plugin = "=0.7.0"
+eulumdat-wasm-templates = "=0.7.0"
+gldf-rs-wasm = "=0.4.0"
+locket = "=0.17.3"
+secretx-bitwarden = "=0.5.1"
+vault-conductor = "=0.3.1"

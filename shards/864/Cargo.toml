@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kanidm-ipa-sync = "=1.7.4"
+kanidm-ldap-sync = "=1.7.4"
+kanidmd_lib = "=1.7.4"
+migrate-matrix = "=0.1.0"
+subgraph-mock = "=0.3.0"

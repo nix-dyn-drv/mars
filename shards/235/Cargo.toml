@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+baobab = "=1.2.2"
+bark-cln-rpc = "=0.2.0+cln.25.09-hold.0.3.2.patched"
+conxian-core = "=0.1.4"
+crush-lang-js = "=0.11.2"
+crush-lang-sdk = "=0.11.2"
+crush-pkg = "=0.11.2"
+crush-squeeze = "=0.2.0"
+grit-core = "=0.5.0"
+healthmd-cli = "=0.1.0-alpha.6"
+healthmd-client = "=0.1.0-alpha.6"
+hprof-analyzer = "=0.3.2"
+kak-tree-sitter = "=3.2.2"
+kcode-telegram-polling-cursor = "=0.1.0"
+macroforge_ts = "=0.5.0"
+nacre-core = "=0.4.0"
+ps-blitz-script = "=0.6.5"
+relayrl_types = "=0.9.2"
+rsql = "=0.4.3"
+rsql-rs = "=0.2.0"

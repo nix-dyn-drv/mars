@@ -1,0 +1,61 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+arch_validation_core = "=0.2.6"
+bot-metric = "=1.3.0"
+cargo-aprz = "=1.2.2"
+cargo-aprz-lib = "=1.2.2"
+cargo-archtest-cli = "=0.2.6"
+cargo-modfmt = "=0.2.0"
+cargo-modules = "=0.28.0"
+codehelion-backend-rust = "=0.9.0"
+expandem = "=0.4.2"
+flize = "=4.2.3"
+git-box = "=0.2.0"
+gneiss = "=0.6.0"
+gneiss-macros = "=0.6.0"
+lena-adapter-rust = "=0.1.6"
+omnicoach = "=0.3.0"
+plene = "=0.3.0"
+plene-core = "=0.3.0"
+plene-gui = "=0.3.0"
+ra-jit-hir-def = "=0.1.0"
+ra_ap_base_db = "=0.0.360"
+ra_ap_hir = "=0.0.358"
+ra_ap_hir_def = "=0.0.360"
+ra_ap_hir_expand = "=0.0.360"
+ra_ap_hir_ty = "=0.0.358"
+ra_ap_ide = "=0.0.358"
+ra_ap_ide_assists = "=0.0.358"
+ra_ap_ide_completion = "=0.0.358"
+ra_ap_ide_db = "=0.0.358"
+ra_ap_ide_diagnostics = "=0.0.358"
+ra_ap_ide_ssr = "=0.0.358"
+ra_ap_load-cargo = "=0.0.358"
+ra_ap_mbe = "=0.0.360"
+ra_ap_rust-analyzer = "=0.0.358"
+ra_ap_span = "=0.0.360"
+ra_ap_syntax = "=0.0.360"
+ra_ap_syntax-bridge = "=0.0.360"
+ra_ap_tt = "=0.0.360"
+rezel-lang-go = "=0.0.0"
+rezel-lang-java = "=0.0.0"
+rezel-lang-kotlin = "=0.0.0"
+rezel-lang-rust = "=0.0.0"
+rezel-lang-swift = "=0.0.0"
+rusty_ally = "=0.2.2"
+samlinter = "=0.1.6"
+skim-rs = "=0.0.3"

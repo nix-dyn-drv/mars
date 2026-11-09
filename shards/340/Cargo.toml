@@ -1,0 +1,46 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cacaos = "=0.1.0"
+comment_app_backend = "=0.1.3"
+crypto_key_master = "=0.1.2"
+deqp-runner = "=0.24.0"
+ethers-fireblocks = "=0.1.1"
+find_latest_nav_site = "=0.1.4"
+flow-rust-sdk = "=4.0.2"
+gelato-sdk = "=0.1.0-alpha"
+geomapper = "=0.7.0"
+geomapper-desktop = "=0.1.0"
+gns = "=0.1.0"
+guidon-cli = "=0.4.4"
+keri = "=0.8.2"
+leptonic = "=0.5.0"
+login_app_2 = "=0.1.0"
+multi-party-ecdsa = "=0.8.1"
+my-iot = "=0.96.10"
+nash-mpc = "=1.2.4"
+nash-native-client = "=0.3.0"
+nash-protocol = "=0.3.0"
+nomad-xyz-configuration = "=0.1.0-rc.1"
+nzcp = "=1.0.2"
+openlimits = "=0.3.0"
+openlimits-nash = "=0.3.0"
+radicle-keystore = "=0.2.0"
+secure-survey = "=0.1.2"
+terrand = "=3.2.2"
+tookey-libtss = "=1.2.1"
+tookey-libtss-ethereum = "=1.2.4"
+xdomain = "=0.1.0"

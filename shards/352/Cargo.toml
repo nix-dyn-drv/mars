@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-forkdep = "=0.1.1"
+cargo-skyline = "=3.5.0"
+front-api = "=0.0.2"
+get-cookie = "=0.2.0"
+gh-action-trace = "=0.2.0"
+git_flow = "=0.0.6"
+litegis = "=0.0.8"
+na_rust = "=0.1.0"
+octomate = "=0.1.0"
+octosurfer = "=0.2.0"
+octx = "=0.6.2"
+opencc-jieba-rs = "=0.8.1"
+optopodi = "=0.1.0"
+qinpel-wiz = "=0.1.0"
+relnotes = "=0.1.2"
+sgit = "=0.1.2"
+stack_test_epic_chain = "=3.0.3"
+stack_test_epic_core = "=3.0.3"
+stack_test_epic_p2p = "=3.0.3"
+stack_test_epic_pool = "=3.0.3"
+stack_test_epic_store = "=3.0.3"

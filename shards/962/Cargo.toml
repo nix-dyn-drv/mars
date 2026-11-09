@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+mail4agent-messenger-shell = "=0.4.31"
+nanocodex = "=0.6.7"
+nanocodex-agent = "=0.6.7"
+nanocodex-claude = "=0.6.7"
+nanocodex-durability = "=0.6.7"
+nanocodex-managed = "=0.6.7"
+nanocodex-oai-api = "=0.6.7"
+nanocodex-oai-tools = "=0.6.7"
+nanocodex-subagents = "=0.6.7"
+nanocodex-tools = "=0.6.6"
+nanocodex-voice = "=0.6.7"
+neser = "=1.2.0"
+roboplc-cli = "=0.6.5"
+tact-subagents = "=0.8.3"

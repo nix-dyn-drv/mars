@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+allenap-unison-confgen = "=0.3.0"
+ansivault = "=0.1.1"
+barc = "=2.2.2"
+bjorn = "=0.2.0"
+body-image = "=2.2.3"
+body-image-futio = "=2.2.2"
+cargo-thx-lint = "=0.2.0"
+cve-rs = "=0.7.0"
+dash2html = "=1.1.0"
+decds-lib = "=0.2.0"
+herbie-lint = "=1.0.7"
+joa_lampela_todo_cli = "=0.1.0"
+ostn02_phf = "=0.1.13"
+p256-cortex-m4 = "=0.1.0-alpha.6"
+repa = "=0.1.5"
+riscu = "=0.5.0"
+sabertooth = "=0.4.0"
+shy = "=0.1.10"
+smpte-klv = "=0.1.1"
+smpte-mxf = "=0.1.1"
+smpte-types = "=0.1.1"

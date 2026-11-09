@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+my-app = "=0.1.0"
+sofie-content = "=0.3.0"
+sofie-framework = "=0.3.0"
+sofie-tenancy = "=0.3.0"
+sofie-testing = "=0.3.0"
+sylphx-keel-pack = "=0.1.6166"

@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+argentum_rest_generator_app = "=0.3.1"
+argentum_rest_infrastructure = "=0.3.1"
+argentum_user_account_infrastructure = "=0.3.1"
+argentum_user_account_rest = "=0.3.1"
+argentum_user_account_ui = "=0.3.1"
+argentum_user_infrastructure = "=0.3.1"
+argentum_user_rest = "=0.3.1"
+argentum_user_ui = "=0.3.1"
+gauge-auth = "=0.3.1"
+gnu-sort = "=1.0.5"
+grebedb-tool = "=1.0.0"
+icydb-config = "=0.216.5"
+metabeam = "=0.1.0"
+pilegit = "=0.1.16"
+shtola = "=0.4.4"
+trove-core = "=0.24.0"

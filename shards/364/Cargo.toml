@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-playdate = "=0.5.8"
+clique-cli = "=0.1.13"
+exponent-amm-exchange-rate = "=0.1.1"
+gpp-remote = "=0.2.2"
+lfsx-server = "=1.26.51"
+quilkin = "=0.10.0"
+tga-cli = "=0.1.0"
+tga-collect = "=0.1.0"

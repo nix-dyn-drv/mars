@@ -1,0 +1,51 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kcode-agent-runtime = "=0.3.1"
+kcode-audio-transcribe = "=0.1.1"
+kcode-gemini-3-1-pro = "=0.1.4"
+kcode-gemini-api = "=0.4.5"
+kcode-intelligence-chatend = "=0.2.0"
+kcode-intelligence-router = "=0.2.9"
+kcode-k1-access-full-audio = "=0.10.0"
+kcode-k1-access-full-audio-fragment-fixture = "=0.2.2"
+kcode-k1-access-full-audio-fragment-testkit = "=0.10.0"
+kcode-k1-access-full-audio-fragments = "=0.5.0"
+kcode-k1-access-full-audio-testkit = "=0.8.0"
+kcode-k1-access-full-audio-testkit-contract = "=0.4.3"
+kcode-k1-audio-classification = "=0.6.0"
+kcode-k1-audio-classification-coordinator = "=0.3.0"
+kcode-k1-audio-classification-driver = "=0.3.3"
+kcode-k1-audio-classification-engine = "=0.1.0"
+kcode-k1-audio-classification-resume-engine = "=0.1.1"
+kcode-k1-audio-classification-test-adapter = "=0.2.6"
+kcode-k1-audio-fragment-resume-runner = "=0.1.1"
+kcode-k1-audio-fragment-runner = "=0.4.4"
+kcode-k1-daemon-audio-lifetime = "=0.1.0"
+kcode-k1-daemon-http-composition = "=0.3.0"
+kcode-k1-full-audio = "=0.4.0"
+kcode-k1-full-audio-submit = "=0.2.0"
+kcode-k1-http-audio = "=0.4.0"
+kcode-k1-http-audio-artifacts = "=0.4.0"
+kcode-k1-http-audio-upload = "=0.2.0"
+kcode-k1-http-audio-wire = "=0.2.0"
+kcode-kennedy-subagent-context = "=0.2.1"
+kcode-openai-api = "=0.2.3"
+kcode-speaker-v3-gemini-analysis = "=0.2.1"
+liminal-cli = "=0.7.0"
+raphtory = "=0.17.0"
+stellar-agent-sep10 = "=0.1.0-alpha.13"
+stellar-agent-sep45 = "=0.1.0-alpha.13"

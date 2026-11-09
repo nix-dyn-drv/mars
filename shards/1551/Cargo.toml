@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+vyre-aot = "=0.7.1"
+vyre-driver = "=0.7.2"
+vyre-driver-metal = "=0.7.2"
+vyre-driver-reference = "=0.7.1"
+vyre-driver-spirv = "=0.7.1"
+vyre-driver-wgpu = "=0.7.2"
+vyre-emit-metal = "=0.7.2"
+vyre-emit-naga = "=0.7.2"
+vyre-emit-ptx = "=0.7.2"
+vyre-emit-spirv = "=0.7.2"
+vyre-foundation = "=0.7.2"
+vyre-intrinsics = "=0.7.1"
+vyre-libs = "=0.7.2"
+vyre-lower = "=0.7.2"
+vyre-megakernel = "=0.7.2"
+vyre-reference = "=0.7.2"
+vyre-self-substrate = "=0.7.2"

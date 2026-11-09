@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+extdet = "=0.1.0"
+frenchrs = "=0.1.3"
+gossan-fleet = "=0.3.3"
+greeners = "=2.0.1"
+greeners-bayesian = "=2.0.1"
+greeners-causal = "=2.0.1"
+greeners-core = "=2.0.1"
+greeners-diagnostics = "=2.0.1"
+greeners-glm = "=2.0.1"
+greeners-imputation = "=2.0.1"
+greeners-ml = "=2.0.1"
+greeners-ols = "=2.0.1"
+greeners-panel = "=2.0.1"
+greeners-spatial = "=2.0.1"
+greeners-survival = "=2.0.1"
+greeners-timeseries = "=2.0.1"
+openpack = "=0.2.7"
+proxywire = "=0.2.5"
+qorechain-qoreseal = "=0.1.0"

@@ -1,0 +1,44 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+chaz = "=0.3.0"
+cheminee = "=0.1.52"
+cmtrace-open = "=1.5.0"
+geph4-client = "=4.99.32"
+hyper-scripter = "=0.7.8"
+kern-code = "=0.4.2"
+koharu = "=0.10.1"
+lsor = "=0.1.0"
+lsor-core = "=0.1.0"
+mbr-markdown-browser = "=0.7.1"
+navactor = "=0.5.3"
+nix-data = "=0.0.3"
+pgml = "=1.1.1"
+pib-editor = "=0.23.0"
+pib-studio = "=0.27.0"
+pokem = "=1.1.0"
+promad = "=0.1.2"
+rumraisin = "=0.2.0"
+ruskit = "=0.1.5"
+rustcast-player = "=0.0.3"
+rustploy-gui = "=0.1.46"
+ruvector-memopt = "=0.5.0"
+scrybe = "=2.3.1"
+synthdb = "=0.1.3"
+tauri-plugin-persistence = "=0.2.1"
+tauri-plugin-polodb = "=0.1.0"
+tisq = "=0.0.4"
+utils-cli = "=1.1.1"

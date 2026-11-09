@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+inkhaven = "=3.18.0"
+ironclad-ai-agent = "=0.6.19"
+mantra = "=0.9.0"
+mika-cli = "=0.3.0"
+omnivore-cli = "=0.2.0"
+reflex-search = "=2.3.1"
+roboticus = "=0.11.4"
+space_trav_lr_rust = "=1.3.0"
+spacetravlr = "=1.3.0"
+thescavenger = "=0.2.0"
+torrust-index = "=3.0.0"
+vifu = "=0.1.13"
+zavora-cli = "=2.1.1"
+zlayer-builder = "=0.14.3"

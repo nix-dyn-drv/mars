@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+burn_telemetry = "=0.1.0"
+chat-tui = "=0.1.0"
+ember-rl = "=0.3.4"
+examination = "=0.2.0"
+inindexer = "=8.0.0"
+koan-debugger = "=0.0.1"
+leetcode-tui-auth = "=0.6.1"
+modder_tui = "=0.1.5"
+msr-player-tui = "=0.1.0"
+nethsm = "=0.12.1"
+nethsm-config = "=0.5.1"
+nostui = "=0.1.1"
+openapi-tui = "=0.10.2"
+polars-mongo = "=0.2.0"
+script = "=0.5.0"
+tfpl = "=0.2.0"
+time-tracker-app = "=0.1.2"
+ttydash = "=0.2.5"
+tui-slides = "=0.1.4"
+vault-tasks-tui = "=2.0.3"
+voice-bird-cli = "=0.4.0"
+wdym = "=0.1.1"

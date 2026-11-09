@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+blkar = "=7.2.7"
+blvm-primitives = "=0.1.33"
+heim = "=0.1.0-rc.1"
+heim-host = "=0.1.0-rc.1"
+hide-keyring = "=0.9.1"
+phantom-btls = "=0.5.6-phantom.19"
+phantom-tokio-btls = "=0.5.6-phantom.19"
+rave_rtp = "=0.1.2"
+revenq = "=0.4.1"

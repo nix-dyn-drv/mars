@@ -1,0 +1,34 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+butido = "=0.3.0"
+cargo_crev_reviews = "=2022.125.1258"
+custom-ray-inst = "=0.1.6"
+dbmigrate = "=0.4.0"
+dbmigrate-lib = "=0.2.0"
+gemachain-banks-server = "=1.8.2"
+gemachain-program-test = "=1.8.2"
+gemachain-runtime = "=1.8.2"
+gemachain-send-transaction-service = "=1.8.2"
+geph4-protocol = "=0.18.0"
+gpl-governance-test-sdk = "=0.1.0"
+longboard = "=0.0.7"
+mdal = "=0.8.0"
+qcow-cli = "=0.3.1"
+rain_core = "=0.4.0"
+rain_task = "=0.4.0"
+rtq = "=0.1.0"
+svg2excal = "=0.1.0"

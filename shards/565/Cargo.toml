@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ed-agent-tauri = "=1.4.1"
+freecycle = "=2.0.1"
+greentic-bundle = "=1.2.1"
+greentic-bundle-dev = "=1.2.42464300791"
+greentic-deployer = "=1.2.0"
+greentic-deployer-dev = "=1.2.42464992153"
+mcpr-proxy = "=0.5.44"
+solrcopy = "=0.9.2"

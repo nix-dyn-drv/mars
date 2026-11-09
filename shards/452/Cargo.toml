@@ -1,0 +1,41 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cqs = "=1.54.0"
+diffler = "=0.21.1"
+gitty-cli = "=0.2.0"
+gitty-highlight = "=0.2.0"
+mnml-rs = "=0.2.22"
+project-map-cli-rust = "=0.4.1"
+rdump = "=0.1.11"
+rdump-mcp = "=0.1.0"
+ripvec = "=4.1.15"
+ripvec-core = "=4.1.15"
+ripvec-mcp = "=4.1.15"
+roteiro = "=6.2.0"
+rto-exec = "=6.2.0"
+rto-faithful = "=6.2.0"
+rto-graph = "=6.2.0"
+rto-remote = "=6.2.0"
+rto-render = "=6.2.0"
+rto-spec = "=6.2.0"
+sqry-lsp = "=33.0.1"
+tokensave = "=7.16.0"
+tracedecay = "=0.0.68"
+tree-tui = "=0.3.1"
+trouve-search = "=4.13.0"
+yolop = "=0.23.3"
+zeph-tui = "=0.22.5"

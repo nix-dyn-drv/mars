@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+waffles-solana-core = "=1.16.0-alpha.10"
+waffles-solana-geyser-plugin-manager = "=1.16.0-alpha.10"
+waffles-solana-ledger-tool = "=1.16.0-alpha.10"
+waffles-solana-local-cluster = "=1.16.0-alpha.10"
+waffles-solana-program-test = "=1.16.0-alpha.10"
+waffles-solana-rpc = "=1.16.0-alpha.10"
+waffles-solana-test-validator = "=1.16.0-alpha.10"
+waffles-solana-validator = "=1.16.0-alpha.10"

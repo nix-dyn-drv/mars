@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cartog = "=0.35.0"
+cartog-mcp = "=0.35.0"
+cartog-watch = "=0.35.0"
+convkit = "=0.7.1"
+epoch-journal = "=0.1.1"
+kaput-cli = "=2.7.0"
+langfuse-ergonomic = "=0.10.0"
+lxmf = "=0.16.1"
+lxmf-cli = "=0.16.1"
+lxmf-sdk = "=0.16.1"
+oma-refresh = "=0.57.0"
+pg-embed-setup-unpriv = "=0.7.0"
+powerio = "=0.11.9"
+qres_daemon = "=21.0.0"
+smaug-bin = "=0.5.0"

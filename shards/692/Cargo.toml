@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+gh-label-conductor = "=0.1.1"
+git-release = "=0.1.1"
+github_submodule_hook = "=0.1.1"
+mnestic = "=0.18.0"
+renote = "=0.1.1"
+repofetch = "=0.3.3"
+snowdrop = "=0.1.1"
+star-scraper = "=0.1.5"

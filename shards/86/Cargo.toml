@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ai-stp-cli = "=0.3.0"
+ambient_unity_parser = "=0.2.1"
+ark-lib = "=0.8.1"
+bark-bitcoin-ext = "=0.8.1"
+bip321 = "=0.4.0"
+credx = "=0.2.1"
+fstore = "=0.1.0"
+gennaro-dkg = "=1.0.0-rc6"
+gerb = "=0.0.1-alpha+2023-04-27"
+git-whence = "=0.4.0"
+merman-lsp = "=0.9.3"
+mito-protocol = "=0.2.7-fixed-docs"
+nym-group-contract-common = "=2.0.0"
+qbice = "=0.7.0"
+renderling_forward = "=0.2.5"
+rhei-cdc-rocksdb = "=2.0.0"
+sergent-rs-runtime = "=0.1.3"
+tagteam-cc = "=20261031.2215.0"
+tokio-tongsuo = "=0.6.5"
+tongsuo = "=0.10.62"
+tongsuo-sys = "=0.9.98"
+voc-perturb = "=0.1.2"

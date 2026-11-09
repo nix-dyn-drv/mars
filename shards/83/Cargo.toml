@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agz-rust-mcp = "=0.5.0"
+bulwark-sdk = "=0.6.0"
+evenflow = "=0.3.1"
+gigsift-store = "=0.2.3"
+kiibohd-usb = "=0.1.6"
+prisma_auth = "=0.2.1"
+spacepacket = "=0.1.2"
+ted = "=0.7.0"
+tramlines = "=0.3.1"

@@ -1,0 +1,19 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+solana-budget-program = "=1.7.0"
+solarti-stake-pool-cli = "=0.7.1"
+solarti-token-lending-cli = "=0.2.0"

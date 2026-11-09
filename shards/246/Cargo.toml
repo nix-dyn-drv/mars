@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+beebo = "=0.1.2"
+birli = "=0.21.0"
+cargo-markdown = "=1.0.3"
+chai-framework = "=2.1.0"
+codeix = "=0.5.0"
+demoscene = "=0.1.3"
+ferrissh = "=0.5.0"
+flowc = "=1.0.0"
+flowedit = "=1.0.0"
+flowstdlib = "=1.0.0"
+gitrub = "=1.1.13"
+gitway = "=1.0.4"
+kaiv-cli = "=0.15.0"
+marlu = "=0.19.0"
+mwa_hyperbeam = "=0.13.1"
+mwa_hyperdrive = "=0.9.0"
+neomacs-display-runtime = "=0.0.2"
+netconf-rust = "=0.5.0"
+rustssh2 = "=9.0.0"
+ssh-keyonly = "=0.1.3"
+twapi = "=0.7.0"

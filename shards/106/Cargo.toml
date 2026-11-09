@@ -1,0 +1,54 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+alloyx-cpi = "=0.0.3"
+amadeus-commoncrawl = "=0.4.3"
+bao-mozjs = "=0.24.5"
+bao-mozjs-collator-glue = "=153.3.0"
+bao-mozjs-normalizer-glue = "=153.3.0"
+bao-mozjs-sys = "=153.3.0-5"
+bao_workflow_host = "=0.2.1"
+bijux-gnss = "=0.1.0"
+bkm = "=0.2.2"
+centerdevice = "=0.5.1"
+finish-it = "=0.1.0"
+flow-cli = "=0.1.1"
+gh_actions = "=0.0.3"
+glabel = "=0.0.6"
+glabellib = "=0.0.6"
+hera = "=0.1.0"
+hightide = "=0.1.3"
+hubcaps = "=0.6.2"
+idup = "=1.1.0"
+kanga-rpm-rs = "=0.7.0"
+llmcc-bindings = "=0.2.65"
+monger = "=0.14.0"
+monger-core = "=0.14.0"
+notmuch-more = "=0.0.0"
+palettize = "=0.2.0"
+palettize-cli = "=0.2.0"
+photodedupe = "=1.0.6"
+qr-tester = "=0.5.6"
+rdedup-lib = "=3.2.0"
+reqwest_resume = "=0.3.2"
+rpm-rs-temporary = "=0.6.1"
+rxing = "=0.9.4"
+rxing-cli = "=0.3.4"
+solana_libra_crypto = "=0.0.0"
+solana_libra_nextgen_crypto = "=0.0.0"
+surrealdb-librocksdb-sys = "=0.18.3+11.0.0-4"
+uxd-cpi = "=9.0.0"
+www-authenticate = "=0.4.0"

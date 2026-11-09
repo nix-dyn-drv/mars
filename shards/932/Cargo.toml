@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+libmarathon = "=0.1.2"
+marathonctl = "=0.1.2"
+rustpatcher = "=0.2.2"
+snapfire_fsr_ir = "=0.20.0"
+snapfire_fsr_plan = "=0.19.1"
+tauri-plugin-hasgard = "=0.6.6"
+xaeroflux = "=1.0.0"

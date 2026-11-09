@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+attest-rs = "=1.7.0"
+py-rustitude = "=0.10.3"
+rustitude = "=0.10.3"
+rustitude-core = "=9.0.0"
+rustitude-gluex = "=0.6.2"
+vex-anchor = "=1.7.0"
+vex-chora = "=1.7.0"
+vex-core = "=1.7.0"
+vex-hardware = "=1.7.0"
+vex-persist = "=1.7.0"
+xchecker-lock = "=1.2.0"

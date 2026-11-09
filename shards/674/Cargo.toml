@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+fuel-core-bin = "=0.48.4"
+fuel-core-e2e-client = "=0.41.10"
+latitude = "=0.0.1"
+qualinvest_cli = "=0.1.4"
+qualinvest_core = "=0.1.5"
+storage_encoded = "=0.1.1"
+vouch = "=0.3.2"

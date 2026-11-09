@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+dipper = "=0.5.3"
+ivar = "=0.18.0"
+modi = "=0.1.1"
+myotel = "=0.2.3"
+shoal = "=0.1.0"
+shoal-core = "=0.1.0"
+shoal-derive = "=0.1.0"
+skillfile = "=1.9.2"
+vitrine = "=0.1.29"

@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+argon2-kdf = "=1.7.3"
+argui-host = "=0.4.0"
+argui-schema = "=0.4.0"
+awswap = "=0.4.3"
+csv-query = "=0.5.0"
+dark-crystal-web3-core = "=0.1.1"
+dbus-async = "=2.3.1"
+konomanoasa-tree-sitter-bash = "=0.9.0"
+konomanoasa-tree-sitter-diagnostic-sh = "=0.8.1"
+nifki-js = "=0.1.0"
+petite_http = "=1.0.0"
+picvec = "=1.0.1"
+potluckdb = "=0.1.0"
+table-editor = "=0.9.1"
+toolbelt = "=0.0.6"
+tree-sitter-angular-html = "=1.0.0"
+tree-sitter-aspx = "=1.0.0"
+tree-sitter-css-strict = "=0.1.3"
+tree-sitter-dataweave = "=0.1.2"
+tree-sitter-raml = "=0.1.2"
+tree-sitter-razor-modern = "=0.1.2"
+tree-sitter-scss-modern = "=0.1.1"
+tree-sitter-snowflake = "=0.3.0"
+unrepresentable = "=0.0.3-alpha.1"
+zeno-fcis-adapter = "=1.1.0"
+zeno-fcis-adapter-zenodex = "=1.1.0"
+zeno-fcis-formal-tools = "=1.1.0"

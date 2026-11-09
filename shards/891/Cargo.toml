@@ -1,0 +1,36 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kithara-analysis = "=0.0.1-alpha5"
+kithara-audio = "=0.0.1-alpha5"
+kithara-broadcast = "=0.0.1-alpha5"
+kithara-decode = "=0.0.1-alpha5"
+kithara-download = "=0.0.1-alpha5"
+kithara-effects = "=0.0.1-alpha5"
+kithara-encode = "=0.0.1-alpha5"
+kithara-file = "=0.0.1-alpha5"
+kithara-hls = "=0.0.1-alpha5"
+kithara-net = "=0.0.1-alpha5"
+kithara-play = "=0.0.1-alpha5"
+kithara-queue = "=0.0.1-alpha5"
+kithara-record = "=0.0.1-alpha5"
+kithara-stream = "=0.0.1-alpha5"
+kithara-stretch = "=0.0.1-alpha5"
+kithara-ui = "=0.0.1-alpha5"
+luct = "=0.2.2"
+luct-extension = "=0.2.2"
+luct-otlsp = "=0.2.2"
+otlsp-client = "=0.2.2"

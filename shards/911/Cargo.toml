@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kyma-memory = "=0.0.1"
+noetl-worker = "=5.52.0"
+pensieve-artifact-graph = "=0.1.0"
+pensieve-memory = "=0.1.0"
+sig_runtime = "=0.1.0"
+sigc = "=0.1.0"
+tp-lib-cli = "=0.0.1"
+tp-lib-core = "=0.0.6"
+tp-lib-py = "=0.0.6"

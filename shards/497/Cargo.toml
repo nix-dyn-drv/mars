@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+defios = "=0.1.0"
+deno_fake_http = "=0.1.0"
+df_st_api = "=0.3.0-development-2"
+labhub = "=0.1.10"
+llama-core = "=0.35.0"
+weather_helpers = "=0.1.3"

@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bss-ledger-sdk = "=0.1.2"
+bss-rate-provider = "=0.1.2"
+bss-rate-provider-ecb-plugin = "=0.1.2"
+bss-rate-provider-http-json-plugin = "=0.1.2"
+bss-rate-provider-sdk = "=0.1.2"
+mdbook-aquascope = "=0.4.0"

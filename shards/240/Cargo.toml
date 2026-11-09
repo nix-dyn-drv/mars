@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+baru = "=0.4.0"
+cargo-stm32bs = "=0.0.5"
+fluvio-smartstream-executor = "=0.1.0"
+loadstone_config = "=1.0.0"
+mfqe = "=0.5.0"
+oysterpack_app_metadata = "=0.3.1"
+oysterpack_app_metadata_macros = "=0.1.0"
+runng_thrift = "=0.1.0"
+xnn = "=0.2.0"

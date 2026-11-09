@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+heddle-ci-engine = "=0.31.3"
+heddle-crypto = "=0.31.3"
+heddle-env-store = "=0.31.3"
+heddle-fs-prims = "=0.31.3"
+heddle-git-serialize = "=0.31.3"
+heddle-merge = "=0.31.3"
+heddle-object-model = "=0.31.3"
+heddle-objects = "=0.31.3"
+heddle-oplog = "=0.31.3"
+heddle-pack = "=0.31.3"
+heddle-refs = "=0.31.3"
+heddle-semantic = "=0.31.3"
+heddle-semantic-recovery = "=0.31.3"
+heddle-wire = "=0.31.3"
+weft-client = "=0.31.3"

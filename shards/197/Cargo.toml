@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+aube = "=2.9.0"
+aube-linker = "=2.9.0"
+aube-registry = "=2.9.0"
+aube-resolver = "=2.9.0"
+aube-store = "=2.9.0"
+build-graph = "=0.2.2"
+decmpfs = "=0.1.5"
+flexaudio = "=0.8.1"
+flexaudio-os-macos = "=0.8.1"
+iris-chat = "=0.1.62"
+jettison = "=0.1.0"

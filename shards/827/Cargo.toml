@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ins = "=0.14.24"
+kade-sql = "=0.1.0"
+lwc = "=0.19.5"
+nautilus-cli = "=0.67.0"
+pdcli = "=0.5.1"
+pgbutler = "=0.10.0"
+saad = "=0.2.0"
+scouter-drift = "=0.25.0"
+scouter-events = "=0.25.0"
+scouter-sql = "=0.25.0"
+shannon-nu-command = "=0.111.3"
+wasm-package-manager = "=0.3.0"
+yellowstone-vixen-jetstream-source = "=0.7.0"
+zeph-acp = "=0.22.5"
+zeph-bench = "=0.22.5"
+zeph-channels = "=0.22.5"
+zeph-core = "=0.22.5"

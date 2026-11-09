@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hcterm = "=0.7.1"
+holochain_chc = "=0.3.3"
+holochain_cli_sandbox = "=0.7.1"
+holochain_client = "=0.9.1"
+holochain_conductor_api = "=0.7.1"
+holochain_conductor_config = "=0.7.1"
+holochain_http_gateway = "=0.4.1"
+holochain_keystore = "=0.7.1"

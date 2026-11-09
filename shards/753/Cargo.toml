@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hc_coop_content_sdk = "=0.8.1"
+hc_coop_content_types = "=0.7.1"
+hc_crud_caps = "=0.19.0"
+hc_portal_sdk = "=0.9.1"
+hc_portal_types = "=0.17.1"
+pi_world = "=0.2.18"
+runar-lang = "=0.4.6"
+whi_hdi_extensions = "=0.14.0"
+whi_hdk_extensions = "=0.14.0"

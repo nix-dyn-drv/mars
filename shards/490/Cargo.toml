@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+dbui-client = "=0.0.64"
+dictx-parser = "=0.1.1"
+file_api = "=0.6.6"
+js-sys-futures = "=0.3.4"
+lawn = "=0.5.0"
+pcf-debug = "=0.0.8"
+pcf-sig = "=0.0.9"
+rustimate-client = "=0.1.0"
+solitaire-client = "=0.0.1"
+vscode-sys = "=0.1.0"
+zhtw = "=4.5.0"

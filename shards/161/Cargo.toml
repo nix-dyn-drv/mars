@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+argui-webview = "=0.4.0"
+axum-cometd = "=0.9.4"
+cargo-mirage = "=0.2.0"
+chipbreaker = "=0.1.1"
+csusage = "=0.4.25"
+google-admin2_email_migration = "=0.1.11+20150303"
+google-audit1 = "=0.1.11+20150419"
+google-container1_beta1 = "=0.1.11+20151005"
+google-datastore1_beta2 = "=0.1.13+20160314"
+google-freebase1_sandbox = "=0.1.11+20150715"
+google-logging1_beta3 = "=0.1.11+20151007"
+google-mapsengine1 = "=0.1.11+20151202"
+json-sort = "=1.1.6"
+lenso-workers-driver = "=0.1.2"
+linfb = "=0.2.1"
+maidsafe_utilities = "=0.19.0"
+pred-recdec = "=0.2.1"
+retroglyph-wgpu = "=0.2.1"
+telar-renderer-hardware = "=0.2.2"
+telar-renderer-web = "=0.2.2"
+zoterofs = "=0.1.0"

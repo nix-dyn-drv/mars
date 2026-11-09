@@ -1,0 +1,29 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ggsql-cli = "=0.5.2"
+ggsql-jupyter = "=0.5.2"
+hpmq_cli = "=0.3.1"
+otter = "=1.2.1"
+otter-api-tests = "=1.2.1"
+otter-cli = "=1.2.1"
+otter-daemon = "=1.2.1"
+otter-nodejs-tests = "=1.2.1"
+otter-webdriver-tests = "=1.2.1"
+regview = "=0.5.2"
+serve-mar = "=0.1.1"
+versionstore-operator = "=0.1.1"
+zotero-mcp = "=0.3.2"

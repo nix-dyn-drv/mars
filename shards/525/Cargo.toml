@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+df_st_cli = "=0.3.0-development-2"
+df_storyteller = "=0.3.0-development-2"
+ferrox = "=0.1.0"
+lares = "=0.2.2"
+melwallet-cli = "=0.8.4"
+miraland-genesis = "=1.19.2"
+miraland-ledger = "=1.19.2"
+miraland-poh = "=1.19.2"
+miraland-unified-scheduler-pool = "=1.19.2"
+movine = "=0.11.4"
+mrsbfh = "=0.4.1"
+replicante_agent = "=0.5.0"
+serum-common = "=0.4.7"
+solana-vote-signer = "=1.4.28"
+solders = "=0.14.3"
+sui-rust-operator = "=0.1.10"
+tc-rpc-server = "=2.0.0"
+trident-syscall-stubs-v1 = "=0.0.1"
+wormhole-cctp-solana = "=0.3.0-alpha.0"

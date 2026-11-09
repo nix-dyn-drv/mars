@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+artifacthub-client = "=0.0.7"
+claria-core = "=0.36.1"
+claria-docx = "=0.36.1"
+claria-docx-cli = "=0.36.1"
+drywall = "=0.1.3"
+fakemail-cli = "=1.2.0"
+juju = "=1.0.0"
+melo = "=0.1.0"
+percepthash = "=0.1.3"
+perception = "=0.1.0"
+perception_backend_cpu = "=0.1.0"
+perception_metric = "=0.1.0"
+portail-plugin-sdk = "=3.0.0"
+portail-vaked = "=3.0.0"
+resistor-calc = "=0.1.0"
+rthrift = "=0.11.0"

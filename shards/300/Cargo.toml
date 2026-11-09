@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bonding_curve = "=0.1.0"
+chloe_todo_tui = "=0.1.0"
+clockwork-network-program = "=2.0.19"
+clockwork-sdk = "=2.0.19"
+clockwork-thread-program = "=2.0.19"
+clockwork-webhook-program = "=2.0.19"
+ferrant = "=0.1.10"
+hdwallet_rs = "=0.1.0"
+hermodapi = "=0.1.0"
+lb_clmm = "=0.1.1"
+lb_clmm_fork = "=0.5.2"
+miraplex-redrop = "=0.1.1"
+rclone-crypt = "=0.1.5"
+repo-search-coreml = "=0.0.4"
+repo-search-server = "=0.0.4"
+substrate-deps = "=0.2.0"
+typeman = "=1.0.1"

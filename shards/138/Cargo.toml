@@ -1,0 +1,54 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+apiplant = "=0.10.0"
+apiplant-server = "=0.10.0"
+blut-dsl = "=0.2.0-alpha.1"
+brigid-mcp = "=2.1.0"
+cargo-lambda-watch = "=1.9.2"
+ckb-rich-indexer = "=1.1.4"
+cocogitto = "=7.0.0"
+cx-cli = "=0.7.4"
+flatland3-gfx = "=0.2.237"
+git-local-review = "=0.1.1"
+ironrdp-agent = "=0.1.0"
+ironrdp-client = "=0.1.0"
+ironrdp-server = "=0.13.0"
+junkanoo = "=1.2.3"
+kitsune_p2p_fetch = "=0.4.4"
+kitsune_p2p_proxy = "=0.4.4"
+kitsune_p2p_types = "=0.4.4"
+marg-server = "=0.1.5"
+msrpce-smb = "=0.1.0"
+multistore-oidc-provider = "=0.8.0"
+multistore-sts = "=0.8.0"
+nrc = "=0.1.4"
+oma-fetch = "=0.40.0"
+papr-tui = "=0.1.2"
+pkgsmith = "=0.1.1"
+postgresql_archive = "=0.22.0"
+postgresql_embedded = "=0.22.0"
+postgresql_extensions = "=0.22.0"
+qollage = "=0.10.1"
+rat-rdp-blocking = "=0.2.0"
+rat-rdp-connector = "=0.2.0"
+rat_rdp_lite = "=0.2.0"
+salvor = "=0.10.0"
+salvor-engine = "=0.10.0"
+salvor-runtime = "=0.10.0"
+smbcloud-cli = "=1.1.1"
+smolcode = "=0.1.0"
+teststack = "=0.1.0"

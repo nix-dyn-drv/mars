@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+arbit = "=0.18.0"
+arbitus = "=0.19.1"
+armory_cli = "=0.4.0"
+armory_lib = "=0.4.1"
+bevy_websocket_adapter = "=0.1.5"
+blink-trade-sdk = "=0.1.0"
+cargo-armory = "=0.4.1"
+cbq = "=1.1.0"
+ferrijs-cli = "=0.8.0"
+gpui-fast-web = "=0.1.13"
+gpui-web-gpui-unofficial = "=1.27.0"
+lc-gpx-utils = "=0.1.4"
+limit-agent = "=0.0.46"
+microcad-viewer = "=0.5.1"
+mucad-viewer = "=0.6.2"
+palette-arcade = "=1.4.5"
+pite-player = "=0.3.0"
+pite-runtime = "=0.3.0"
+pite-script = "=0.3.0"
+secure_authz = "=0.4.0"
+servicepoint-simulator = "=0.2.4"
+xgpui-web = "=2.0.3"

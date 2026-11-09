@@ -1,0 +1,55 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+autumn-cli = "=0.10.0"
+burn_dragon_core = "=0.21.0"
+burn_dragon_kernel = "=0.21.0"
+burn_dragon_language = "=0.21.0"
+burn_dragon_train = "=0.21.0"
+canisend = "=1.0.0-beta.12"
+canisend-mcp = "=1.0.0-beta.12"
+car-browser = "=0.60.0"
+car-desktop = "=0.60.0"
+cargo-tarpaulin = "=0.37.6"
+cersei = "=0.2.6"
+cersei_rs = "=0.1.2"
+cloacina = "=0.12.0"
+cloacina-agent = "=0.12.0"
+cloacina-python = "=0.12.0"
+cloacinactl = "=0.12.0"
+fedimint-recoverytool = "=0.13.0"
+fedimint-testing-core = "=0.13.0"
+filetool = "=0.6.5"
+hlx = "=1.2.5"
+icepick = "=0.4.1"
+leetctl = "=0.4.0"
+litesvm_client = "=0.1.2"
+mail-cli = "=0.1.1"
+matrix-bridge-wechat = "=0.1.0"
+mboxshell = "=1.3.0"
+nova-multisig = "=0.2.0"
+p3ak-vault = "=0.1.0"
+p3ak-vault-core = "=0.1.0"
+quillwright = "=0.6.0"
+rbox = "=0.3.0"
+rex-tui = "=0.4.0"
+rinkaku = "=0.6.27"
+rpgpie-certificate-store = "=0.4.1"
+rwkv-tts-rs = "=0.2.5"
+secubot = "=2.9.0"
+shadowforge = "=0.3.5"
+souprune = "=0.5.1"
+valin = "=0.26.0"

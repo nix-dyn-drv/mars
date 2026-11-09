@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+deltadefi = "=1.1.4"
+ic-radix-signer = "=0.1.0"
+radix-engine-interface = "=1.4.0"
+radix-native-sdk = "=1.4.0"
+radix-transactions = "=1.4.0"
+satrush-staking-client = "=0.1.3"
+scrypto = "=1.4.0"
+scrypto-derive = "=1.4.0"
+seecrets = "=3.0.1"
+vex-verify = "=0.1.4"
+whisky-wallet = "=1.0.25"

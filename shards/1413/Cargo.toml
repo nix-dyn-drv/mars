@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+substrate-keybase-keystore = "=0.2.0"
+sunshine-core = "=0.2.0"
+sunshine-faucet-cli = "=0.2.1"
+tinyquant-cli = "=1.1.0"

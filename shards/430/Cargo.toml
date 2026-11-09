@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+codescope-mcp = "=0.1.3"
+ergo-lib = "=0.28.0"
+ergo-lib-c = "=0.28.0"
+ergo-lib-c-core = "=0.28.0"
+ergo-lib-jni = "=0.28.0"
+ergo-lib-wasm = "=0.28.0"
+ergo-rest = "=0.13.0"
+ergotree-interpreter = "=0.28.0"
+ics06-solomachine = "=0.1.2"
+rolodex-tui = "=1.0.0"
+tui-syntax = "=0.7.0"

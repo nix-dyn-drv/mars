@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+dekopon-provider-pledge = "=0.3.0"
+demiurg-app = "=0.13.0"
+demiurg-view = "=0.13.0"
+forkctl = "=0.0.48"
+mavryk-smart-rollup = "=0.2.2"
+mavryk-smart-rollup-encoding = "=0.2.2"
+mavryk-smart-rollup-host = "=0.2.2"
+mavryk-smart-rollup-installer-config = "=0.2.2"
+mavryk-smart-rollup-mock = "=0.2.2"
+mavryk-smart-rollup-storage = "=0.2.2"
+mavryk_crypto_rs = "=0.6.0"
+roxlap-render = "=0.32.0"
+tezos-smart-rollup = "=0.2.2"
+tezos-smart-rollup-encoding = "=0.2.2"
+tezos-smart-rollup-host = "=0.2.2"
+tezos-smart-rollup-installer-config = "=0.2.2"
+tezos-smart-rollup-mock = "=0.2.2"
+tezos-smart-rollup-storage = "=0.2.2"
+tezos_crypto_rs = "=0.6.0"

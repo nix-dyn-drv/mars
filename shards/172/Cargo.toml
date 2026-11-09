@@ -1,0 +1,42 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+asched = "=0.2.0"
+asched-core = "=0.2.0"
+comlink-sys = "=0.0.1"
+konomanoasa-tree-sitter-awk = "=0.15.0"
+konomanoasa-tree-sitter-editorconfig = "=0.9.1"
+konomanoasa-tree-sitter-gitattributes = "=0.8.1"
+konomanoasa-tree-sitter-gitconfig = "=0.7.1"
+konomanoasa-tree-sitter-gitignore = "=0.7.1"
+konomanoasa-tree-sitter-gyp = "=0.2.1"
+konomanoasa-tree-sitter-json = "=0.6.1"
+konomanoasa-tree-sitter-mailmap = "=0.6.1"
+konomanoasa-tree-sitter-posix-awk = "=0.24.0"
+konomanoasa-tree-sitter-posix-sed = "=0.7.1"
+konomanoasa-tree-sitter-query = "=0.6.1"
+konomanoasa-tree-sitter-regex = "=0.14.1"
+konomanoasa-tree-sitter-toml = "=0.11.2"
+konomanoasa-tree-sitter-yaml = "=0.11.3"
+konomanoasa-tree-sitter-zsh = "=0.8.0"
+rusqlite-le = "=0.24.2"
+shrewnit = "=0.2.1"
+simple-agent-type = "=0.5.2"
+simple-agents-healing = "=0.5.2"
+ssb_parser = "=0.4.0"
+tree-sitter-dash = "=0.6.1"
+tree-sitter-sed = "=0.26.0"
+tree-sitter-sh = "=0.29.1"

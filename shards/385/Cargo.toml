@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+centralcore = "=1.0.2"
+cozo-ce = "=0.7.12"
+cozo-ce-bin = "=0.7.12"
+cu-bevymon-demo = "=0.14.0"
+inexor-rgf-rt = "=0.9.1"
+inexor-rgf-rt-standalone = "=0.9.1"
+layfetch = "=1.0.0"
+rstask = "=0.3.0"

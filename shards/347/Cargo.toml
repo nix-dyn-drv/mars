@@ -1,0 +1,60 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cantrip-vtt = "=0.2.1"
+caretta-sync = "=0.0.2"
+caretta-sync-bevy = "=0.0.2"
+caretta-sync-cli = "=0.0.2"
+caretta-sync-core = "=0.0.2"
+ckb-rpc-gen = "=1.0.0"
+codelens-tui = "=1.13.10"
+exit-anywhere = "=0.1.2"
+ghtool = "=0.10.6"
+hang-cli = "=0.7.5"
+hypecli = "=0.1.7"
+iroh-content-discovery = "=0.3.0"
+iroh-lan = "=0.1.1"
+jax-bucket = "=0.1.6"
+jax-common = "=0.1.11"
+jax-daemon = "=0.1.17"
+jax-object-store = "=0.1.4"
+jax-service = "=0.1.2"
+jetstream_iroh = "=16.0.0"
+kitsune_client_instrumented = "=0.7.1"
+kitsune_wind_tunnel_runner = "=0.7.1"
+kulfi-utils = "=0.1.3"
+noetl-gateway = "=2.9.1"
+rdzobot = "=0.1.0"
+rjango = "=0.1.1"
+rjango-cli = "=0.1.1"
+rjango-contrib-admin = "=0.1.1"
+rjango-contrib-admindocs = "=0.1.1"
+rjango-contrib-auth = "=0.1.1"
+rjango-contrib-contenttypes = "=0.1.1"
+rjango-contrib-flatpages = "=0.1.1"
+rjango-contrib-gis = "=0.1.1"
+rjango-contrib-humanize = "=0.1.1"
+rjango-contrib-messages = "=0.1.1"
+rjango-contrib-postgres = "=0.1.1"
+rjango-contrib-redirects = "=0.1.1"
+rjango-contrib-sessions = "=0.1.1"
+rjango-contrib-sitemaps = "=0.1.1"
+rjango-contrib-sites = "=0.1.1"
+rjango-contrib-staticfiles = "=0.1.1"
+rjango-contrib-syndication = "=0.1.1"
+s5_cli = "=1.0.0-beta.1"
+samplekit = "=1.0.0-rc.2"
+secrets-sync = "=0.1.1"

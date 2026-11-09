@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+mat-clockwork-plugin-utils = "=2.0.42"
+slint-kit = "=0.7.1"
+slint-kit-slint = "=0.7.1"
+watchword = "=0.4.0"
+watchword-yew023 = "=0.4.0"

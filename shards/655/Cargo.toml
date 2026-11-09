@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+forge-agent = "=2.0.0"
+kache = "=2.0.0"
+minot = "=0.14.1"
+ozma = "=0.1.1"
+pizen-lynx = "=0.2.1"
+pizen-lynx-core = "=0.2.1"
+pizen-lynx-mcp = "=0.2.1"
+resurrect-node = "=0.6.0"
+stolas = "=0.1.0"
+swh-osv = "=0.8.0"
+sys1 = "=0.0.3"
+ult-gpui-app = "=3.0.0-alpha.0"
+ult-gpui-host = "=3.0.0-alpha.0"
+ult-platform-gpui = "=3.0.0-alpha.0"
+yellowstone-vixen-solana-snapshot-source = "=0.7.0"

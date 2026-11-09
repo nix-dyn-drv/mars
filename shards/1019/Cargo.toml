@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+mpl-barista-interface = "=0.1.0-alpha.0"
+opendatasoft-explore-api = "=0.1.0"
+rllvm = "=0.8.0"
+rllvm-query = "=0.10.0"

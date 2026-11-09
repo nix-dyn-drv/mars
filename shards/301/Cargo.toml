@@ -1,0 +1,36 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bones_bevy_renderer = "=0.4.0"
+cargo-authors = "=0.5.6"
+cargo-clone = "=1.2.4"
+cargo-clone-core = "=0.2.4"
+cargo-depsize = "=1.0.4"
+graphforge-api = "=0.5.2"
+graphforge-cli = "=0.5.2"
+graphforge-search = "=0.5.2"
+katabastird = "=1.6.1"
+lavagna = "=2.1.9"
+mati = "=0.1.6"
+mqcat = "=0.3.0"
+optima = "=0.0.4"
+patch-crate = "=0.1.13"
+poketex = "=1.17.0"
+scrapling-cli = "=0.2.0"
+scrapling-fetch = "=0.2.0"
+scrapling-mcp = "=0.2.0"
+spacebull = "=0.0.1"
+zenoh-backend-filesystem = "=1.10.2"

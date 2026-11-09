@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agent-float-term = "=0.3.5"
+ankidb = "=0.5.1"
+apeireth-ui-dom = "=2.0.0-rc.5"
+apeireth-ui-kit = "=2.0.0-rc.5"
+bamts-node = "=0.1.0"
+claim = "=0.5.0"
+getfrompass = "=0.2.1"
+goxoy-key-value = "=0.1.2"
+gwz-sspi = "=0.1.1"
+lemurclaw-ansi-to-tui = "=7.0.0"
+libgreat = "=0.2.2"
+makinist-gif = "=0.1.0"
+naming_clt_lib = "=0.2.0"
+naming_lib = "=0.1.4"
+openssl2-sys = "=1.0.0"
+rabbithole-derive = "=0.3.1"
+serde_agaby = "=1.0.217"
+smolusb = "=0.2.2"
+versioned-egraphs = "=0.1.0"
+yetlet-browser = "=0.9.0-alpha.6"
+zeno-fcis-secret = "=1.1.0"

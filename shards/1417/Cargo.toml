@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+sunshine-faucet-client = "=0.2.0"
+sunshine-identity-cli = "=0.2.2"
+sunshine-identity-client = "=0.2.3"
+sunshine-identity-ffi = "=0.2.3"
+vldpipe = "=0.1.4"

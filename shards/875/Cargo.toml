@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kcode-k1-audio-classification-coordinator-isolation-testkit = "=0.1.1"
+kcode-k1-audio-classification-testkit = "=0.5.0"
+mdlc = "=0.8.1"
+trace-lang-agent = "=0.2.2"
+trace-lang-core = "=0.2.2"
+trace-lang-task = "=0.2.2"

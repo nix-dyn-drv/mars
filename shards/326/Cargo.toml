@@ -1,0 +1,44 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+bundvm = "=1.0.0"
+caisin = "=0.1.57"
+caisin-macros = "=0.1.1"
+clarinet-files = "=2.0.1"
+diap-rs-sdk = "=0.2.17"
+fedimint-arti-client = "=0.20.0"
+fedimint-tor-dirmgr = "=0.20.0"
+ferrocad = "=0.1.4"
+ferrocad_gpui = "=0.1.4"
+gpui-platform-gpui-unofficial = "=1.27.0"
+igc-net = "=0.3.0"
+libp2p-iroh = "=0.1.3"
+my-sqweel = "=0.5.1"
+myceliums-core = "=0.3.2"
+myceliums-cypher = "=0.3.2"
+myceliums-http = "=0.3.2"
+myceliums-mcp = "=0.3.2"
+mysticeti-net = "=0.0.1"
+plow_cli = "=0.5.2"
+plow_linter = "=0.2.9"
+plow_package_management = "=0.3.4"
+sevctl = "=0.6.2"
+tang-mesh = "=0.1.0"
+tapfs = "=0.1.0"
+tirami-net = "=0.3.0"
+token-acl-gate-cli = "=0.3.0"
+xgpui-platform = "=2.0.3"
+zbusdg = "=0.9.0"

@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+solana-farm-sdk = "=1.1.3"
+solana-fund = "=1.1.3"
+solana-router-main = "=1.1.3"
+solana-router-orca = "=1.1.3"
+solana-router-raydium = "=1.1.3"
+solana-router-saber = "=1.1.3"
+solana-vaults = "=1.1.3"
+starship-gitlab = "=0.1.4"

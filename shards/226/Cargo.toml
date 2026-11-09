@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+baedeker = "=0.1.9"
+chainql = "=0.4.12"
+comlink = "=0.0.1"
+dbcat = "=0.1.5"
+deppatcher = "=0.1.3"
+fulgur-chart-cli = "=0.1.21"
+jrsonnet = "=0.5.0-pre98"
+jrsonnet-cli = "=0.5.0-pre98"
+jrsonnet-deps = "=0.5.0-pre98"
+kundli-rs = "=0.2.0"
+marksonnet = "=0.1.1"
+panchangam = "=0.2.1"
+sqlsonnet = "=0.1.14"
+swiss-eph = "=0.2.1"
+swisseph-wasm = "=0.1.5"

@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cw-optimizoor = "=0.10.1"
+evnet = "=0.1.0-rc8"
+ic-bn-lib = "=0.10.1"
+ic-custom-domains-backend = "=0.2.6"
+ic-custom-domains-base = "=0.2.6"
+ic-custom-domains-canister-client = "=0.2.6"
+lilguy = "=0.1.2"
+miden-benchmark = "=0.18.2"
+miden-network-monitor = "=0.18.2"
+miden-node-proto = "=0.18.2"
+miden-node-utils = "=0.18.2"
+miden-remote-prover = "=0.18.2"
+move = "=0.12.7"
+mrchantey_beetmash_sewb = "=0.0.1-rc.4"
+scrapling-browser = "=0.2.0"
+scrapling-spider = "=0.2.0"
+solana-validator-optimizer = "=2.3.0"
+solana-validator-optimizer-cli = "=2.3.0"
+tape-network = "=0.1.9"
+tapedrive-cli = "=0.1.9"
+trusty-analyzer = "=0.1.1"

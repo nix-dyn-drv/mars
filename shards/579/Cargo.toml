@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+entanglement-core = "=0.7.0"
+entanglement-provider = "=0.7.0"
+entanglement-runtime = "=0.7.0"
+ferrograph = "=2.0.0"
+rq-core = "=0.2.1"
+sqlmap-rs = "=0.3.4"
+susbot = "=2.2.1"
+susbot-cli = "=2.2.1"
+tcproxy = "=0.1.1"

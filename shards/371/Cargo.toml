@@ -1,0 +1,34 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-upgrade-deps = "=0.2.0"
+dbmcp-mysql = "=0.17.0"
+dbx-tools-service = "=0.9.18"
+eilmeldung = "=1.10.0"
+evm-fork-cache-hypersync = "=0.1.0-alpha.1"
+hpx-cli = "=2.6.1"
+kellnr = "=7.0.0"
+kellnr-docgen = "=7.0.0"
+knowdit-sol = "=2.0.1"
+lenso-scim-provisioning-postgres-plugin = "=0.1.0"
+martin = "=1.16.1"
+martin-core = "=0.16.0"
+martin-tilegen = "=0.2.0"
+mineral-server = "=0.6.0"
+mlt = "=0.6.1"
+mnemo-postgres = "=0.5.29"
+pgmt = "=0.6.5"
+speccoder-web = "=0.14.0"

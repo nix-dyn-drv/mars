@@ -1,0 +1,26 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+hypabolic-trajectory = "=0.1.4"
+hypabolic-trajectory-ahp = "=0.1.4"
+hypabolic-trajectory-hermes = "=0.1.4"
+hypabolic-trajectory-io = "=0.1.4"
+hypabolic-trajectory-opentelemetry = "=0.1.4"
+rend3-list = "=0.0.5"
+turbojev-calibration = "=0.34.0"
+turbojev-model = "=0.34.0"
+turbojev-projection = "=0.34.0"
+turbojev-runtime-qualification = "=0.34.0"

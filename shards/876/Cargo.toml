@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kcode-k1-chat-thread-main-mailbox = "=0.2.0"
+kcode-k1-chat-thread-main-replies = "=0.1.0"
+kcode-k1-chat-thread-main-runtime = "=0.1.0"
+kcode-k1-chat-thread-search-registry = "=0.1.1"
+kcode-k1-codex-web-search-testkit = "=0.1.0"
+plot_interface = "=0.1.3"
+wplot = "=0.1.7"

@@ -1,0 +1,47 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agentkit-acp = "=0.12.0"
+agentkit-acp-sdk = "=3.6.0"
+bivy = "=0.4.3"
+bulwark-decision = "=0.6.0"
+code-parser = "=0.1.0"
+cplx = "=0.3.3"
+deslite = "=0.1.1"
+dumo = "=0.1.1"
+libreal = "=0.14.1"
+linea = "=0.9.6"
+nacfahi = "=0.6.0"
+objld = "=0.5.0"
+opencolorio-rs = "=1.0.0+ocio.2.5.2"
+opencolorio-rs-formats = "=1.0.0+ocio.2.5.2"
+opencolorio-rs-gpu = "=1.0.0+ocio.2.5.2"
+opencolorio-rs-ops = "=1.0.0+ocio.2.5.2"
+physical-quantity = "=0.0.5"
+rave_ops = "=0.1.2"
+rave_rtsp = "=0.1.2"
+rave_types = "=0.1.2"
+ravelib = "=0.1.1"
+rialo-telemetry = "=0.18.1"
+rustify-style-wasm = "=0.2.1"
+samd-dma = "=0.3.0"
+secwords = "=2.1.1"
+solana_kit_browser = "=0.2.0"
+typearrays = "=0.1.0"
+unit-proc = "=0.0.3"
+unitage = "=0.0.2"
+vep = "=2.1.0"
+xenon = "=0.1.0"

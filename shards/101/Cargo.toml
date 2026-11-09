@@ -1,0 +1,32 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+alder-bundle = "=0.5.1"
+alder-cli = "=0.7.0"
+alder-runtime = "=0.4.0"
+bagsakan = "=0.1.9"
+bath = "=0.4.1"
+devsync = "=0.3.2"
+diedeadcode = "=0.1.0"
+gitcc-cli = "=0.5.0"
+jigc = "=1.0.0-rc.24"
+proto_seeder = "=0.0.8"
+rngpui-craby-cli = "=0.2.2"
+rngpui-craby-codegen = "=0.2.2"
+sc-observability-py = "=1.5.0"
+sfzhou-rocksdb = "=0.23.0"
+skarn-codemode = "=1.0.1"
+tokf-filter = "=0.2.54"

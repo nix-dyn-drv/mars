@@ -1,0 +1,39 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ast-index = "=3.56.0"
+astrelis-ui-host = "=0.3.0-rc.1"
+binvim = "=0.8.5"
+cless = "=0.0.9"
+code2graph = "=0.0.0-beta.17"
+collectxyz-nft-contract = "=0.2.2"
+dbgflow = "=0.4.0"
+fastly-kv-preview = "=0.9.6"
+gigagraph = "=0.9.0"
+m1nd-ingest = "=1.6.5"
+norgolith-tree-sitter-highlight = "=0.6.0"
+oxabl_wasm = "=1.0.8"
+pliego-dom = "=0.0.2"
+pliego-resume = "=0.0.2"
+repomap-core = "=0.1.0"
+rs-rich-lumis = "=0.0.9"
+sem-core = "=0.29.0"
+tuika-codeformatters = "=0.7.0"
+wcmp-wasm-core-web = "=0.1.2"
+weave-certify = "=0.7.0"
+weave-core = "=0.7.0"
+weave-crdt = "=0.7.0"
+weave-driver = "=0.7.0"

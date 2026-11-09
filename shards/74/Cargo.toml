@@ -1,0 +1,49 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agents-lab-neo = "=0.1.0"
+amfnbatch = "=0.3.5"
+amfnengine = "=0.3.5"
+amfnwasm = "=0.3.8"
+batpak = "=0.10.0"
+bitcoin-hd-keys = "=0.1.23"
+bitcoin-utils = "=0.1.3"
+bvisor = "=0.10.0"
+earthbucks_k256 = "=0.8.2"
+electrs-query = "=0.1.2"
+electrs-request = "=0.1.3"
+flow-lang-value = "=0.1.0"
+flutter-plugin-sdk = "=0.1.0"
+gist = "=0.9.3"
+gpp-git-bridge = "=0.2.2"
+hook-rs = "=0.0.0"
+hostbat = "=0.10.0"
+morpheusicons = "=0.1.2"
+netbat = "=0.10.0"
+rgbd = "=0.2.1"
+ruststartracker = "=0.2.10"
+sdivi-config = "=0.2.52"
+sdivi-detection = "=0.2.52"
+serum-borsh-derive = "=0.7.2+serum.1"
+serum-borsh-derive-internal = "=0.7.2+serum.1"
+serum-borsh-schema-derive-internal = "=0.7.2+serum.1"
+siege-editor = "=0.1.2"
+ssh2-rsl = "=0.1.0"
+susydev-rocksdb = "=0.5.0"
+susydev-rocksdb-sys = "=0.5.5"
+syncbat = "=0.10.0"
+teamy-embed-resource = "=0.1.0"
+teamy-facet-toml = "=0.50.0-rc.7"

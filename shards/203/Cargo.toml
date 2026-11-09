@@ -1,0 +1,44 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+authotron = "=0.3.7"
+bitcoin-chainman = "=0.1.16-alpha.0"
+bitcoin-connman = "=0.1.16-alpha.0"
+bitcoin-http = "=0.1.16-alpha.0"
+bitcoin-node = "=0.1.16-alpha.0"
+bitcoin-system = "=0.1.16-alpha.0"
+bitcoin-txmempool = "=0.1.16-alpha.0"
+bitcoinchain-interface = "=0.1.16-alpha.0"
+bitcoinchain-notifications = "=0.1.16-alpha.0"
+bitcoinnode-interface = "=0.1.16-alpha.0"
+bitcoinwallet-client = "=0.1.16-alpha.0"
+bitcoinwallet-context = "=0.1.16-alpha.0"
+dbdump = "=0.2.1"
+drux = "=0.7.8"
+ensync = "=1.0.2"
+gfaas = "=0.3.0"
+indexmenow = "=0.1.4"
+kanatoko = "=29.0.0"
+librashader-cli = "=0.12.1"
+paxforth = "=0.1.0"
+rusty_hogs = "=1.0.1"
+rusty_pandas = "=0.0.2"
+shotwellvfs = "=0.1.0"
+soroban-fuzzer = "=0.1.0"
+termbook = "=1.4.2"
+termbook-cli = "=1.4.6"
+tree-sitter-stack-graphs-java = "=0.5.0"
+tree-sitter-stack-graphs-python = "=0.3.0"

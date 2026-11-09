@@ -1,0 +1,34 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+kcode-http-api = "=0.4.2"
+kcode-kennedy-app = "=0.5.14"
+kcode-kennedy-orchestration = "=0.3.3"
+kcode-kennedy-roots = "=0.1.2"
+kcode-kennedy-session-ingress = "=0.1.2"
+kcode-kennedy-session-objects = "=0.1.1"
+kcode-kennedy-session-services = "=0.2.1"
+kcode-kennedy-session-tool-contracts = "=0.1.4"
+kcode-kennedy-session-tool-presentation = "=0.1.0"
+kcode-kennedy-sessions = "=0.2.9"
+kcode-kennedy-stepped-turn-runtime = "=0.1.1"
+kcode-kennedy-telegram-delivery = "=0.1.1"
+kcode-kennedy-telegram-runtime = "=0.3.3"
+kcode-kennedy-turn-admission = "=0.1.0"
+kcode-telegram-identity = "=0.1.8"
+kcode-telegram-session-coordinator = "=0.1.0"
+kcode-telegram-transport-state = "=0.1.4"
+kcode-tg-kennedy-bot = "=0.5.9"

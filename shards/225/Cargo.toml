@@ -1,0 +1,38 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+ayb = "=0.1.13"
+cardchapter = "=0.1.28"
+chimes-utils = "=0.1.0"
+chord-cli = "=0.1.21"
+commiter = "=5.0.0"
+cynthiaweb = "=3.0.0-alpha"
+gonk-core = "=0.0.9"
+hstdb = "=2.1.0"
+jlq = "=0.1.0"
+lightyear = "=0.31.0"
+lightyear_examples_common = "=0.31.0"
+lightyear_tests = "=0.31.0"
+lobstercove-lichen-core = "=0.5.229"
+osmogrep = "=0.3.0"
+pq-parquet = "=1.0.8"
+proef = "=0.18.0"
+rocs = "=1.0.21"
+seen = "=0.1.0-alpha.1"
+starrytoy-rs = "=0.0.4"
+torrust-index-backend = "=2.0.0-alpha.3"
+vps_bench = "=0.2.0"
+yatt = "=0.12.0"

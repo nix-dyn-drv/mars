@@ -1,0 +1,37 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+everruns-serve-agentcore = "=0.51.0"
+everruns-serve-celld = "=0.48.0"
+evm_testnet = "=0.1.4"
+nomograph-synthesist = "=2.5.2"
+nomograph-workflow = "=0.3.0"
+parquet2json = "=4.4.0"
+seshat-graph = "=0.8.0"
+seshat-mcp = "=0.8.0"
+seshat-watcher = "=0.8.0"
+sn_evm = "=0.1.4"
+sn_networking = "=0.19.5"
+sn_node = "=0.112.6"
+sn_node_rpc_client = "=0.6.36"
+sn_peers_acquisition = "=0.5.7"
+sn_protocol = "=0.17.15"
+sn_service_management = "=0.4.3"
+sn_transfers = "=0.20.3"
+teo-generator = "=0.3.9"
+teo-mongodb-connector = "=0.3.5"
+teo-runtime = "=0.3.8"
+ucelofka = "=0.3.0"

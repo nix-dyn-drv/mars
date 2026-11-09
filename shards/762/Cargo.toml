@@ -1,0 +1,31 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+heddle-agent-relay = "=0.31.3"
+heddle-ci-config = "=0.31.3"
+heddle-cli-args = "=0.31.3"
+heddle-cli-contract = "=0.31.3"
+heddle-cli-render = "=0.31.3"
+heddle-config = "=0.31.3"
+heddle-git-projection = "=0.31.3"
+heddle-hosted-client = "=0.31.3"
+heddle-ingest = "=0.31.3"
+heddle-mount = "=0.31.3"
+heddle-repo = "=0.31.3"
+heddle-state-review = "=0.31.3"
+heddle-thread-api = "=0.31.3"
+heddle-verbs = "=0.31.3"
+heddleco-capability-verifier = "=0.31.3"

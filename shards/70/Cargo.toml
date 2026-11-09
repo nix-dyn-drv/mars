@@ -1,0 +1,59 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agentmesh-mcp = "=5.0.0"
+almostsql = "=0.1.0"
+amdguid = "=1.0.12"
+amdguid-glium = "=1.0.13"
+amdguid-glow = "=1.0.13"
+argui-inspect = "=0.4.0"
+cargo-git = "=0.7.0"
+cdby = "=0.0.2"
+changelog = "=0.3.4"
+crassipes = "=0.2.1"
+crs-bind = "=0.1.5"
+dharitri-chain-vm = "=1.19.0"
+forklaunch-validator = "=0.2.5"
+htlk-executable = "=0.1.0"
+hyli-uuid-tld = "=0.15.0"
+lgtmd = "=0.3.0"
+livestock-rs = "=0.12.0"
+llmenv-util = "=3.13.0"
+nginx-src = "=1.28.5+1.28.3"
+nymph = "=0.1.2"
+observatory-core = "=0.2.0"
+observatory-xliff12 = "=0.1.0"
+pish = "=0.3.0"
+pliego-router = "=0.4.0-beta.1"
+prj = "=0.1.0"
+quarters-core = "=0.1.0-alpha.2"
+revi = "=0.0.0-beta-2"
+revi-core = "=0.0.0-beta-2"
+spatialite-rs = "=0.1.6"
+sqlite = "=0.37.4"
+sqlite3-src = "=0.7.1"
+sqlite3-sys = "=0.18.2"
+stainless-ffmpeg-sys = "=4.2.3"
+supergit = "=0.2.1"
+susy-rocksdb = "=0.5.0"
+susy-rocksdb-sys = "=0.5.5"
+torch-sys-plus = "=0.18.2"
+vehc = "=0.0.0"
+vlajmaji-lexicon = "=0.2.0"
+weavatrix = "=1.17.5"
+weavatrix-rust = "=2.17.5"
+winpty = "=0.2.0"
+xdice = "=0.1.0"

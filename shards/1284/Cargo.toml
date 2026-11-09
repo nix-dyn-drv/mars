@@ -1,0 +1,20 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+sbod-staging = "=0.1.2"
+sbod_staging2 = "=0.1.3"
+sbod_staging3 = "=0.1.3"
+sbod_staging4 = "=0.1.5"

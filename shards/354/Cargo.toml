@@ -1,0 +1,21 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-generate = "=0.26.0"
+charlie = "=1.0.1"
+panoptes = "=0.0.2"
+rxer = "=0.2.0"
+xrc_cli = "=2.0.0"

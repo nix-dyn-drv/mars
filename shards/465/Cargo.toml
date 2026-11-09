@@ -1,0 +1,50 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+crustly = "=0.5.3"
+dexter-sentinel = "=1.3.0"
+dragon_db = "=0.10.1"
+edgelord = "=0.0.6"
+essh = "=0.3.2"
+golem-cloud-client = "=1.2.5"
+hitdns = "=0.6.9"
+jammi-engine = "=0.5.9"
+legion-rs = "=0.1.0"
+mcp-warden = "=0.6.0"
+omnivore-core = "=0.1.1"
+rainfrog = "=0.4.6"
+ruwebframe = "=0.3.17"
+spherenet-admin = "=0.7.1"
+stormchaser-engine = "=1.5.1"
+stormchaser-tui = "=1.5.1"
+tansu = "=0.6.0"
+tansu-auth = "=0.6.0"
+tansu-broker = "=0.6.0"
+tansu-cat = "=0.6.0"
+tansu-cli = "=0.6.0"
+tansu-client = "=0.6.0"
+tansu-generator = "=0.6.0"
+tansu-perf = "=0.6.0"
+tansu-proxy = "=0.6.0"
+tansu-service = "=0.6.0"
+tansu-storage = "=0.6.0"
+tansu-topic = "=0.6.0"
+tidepool-rpc = "=0.4.1"
+vvva_cli = "=2.13.0"
+webhttp = "=0.1.12"
+zino-actix = "=0.20.3"
+zino-dioxus = "=0.27.3"
+zino-ntex = "=0.19.0"

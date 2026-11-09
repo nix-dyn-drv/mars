@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-override = "=0.0.8"
+cargo-zb = "=0.1.0"
+cosmian_kms_server = "=5.28.0"
+debcargo = "=2.8.4"
+evm-amm-search = "=0.2.0"
+gitfetch-rs = "=0.1.4"
+libruskel = "=0.0.11"
+n3gb-rs = "=0.2.3"
+shp2geojson-cesium = "=0.1.4"
+tapedrive = "=0.1.6"
+test_kms_server = "=5.28.0"

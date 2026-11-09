@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+clmm-cli = "=0.1.39"
+clmm-common = "=0.1.39"
+clmm-mine = "=0.1.13"
+clmm-mint-wrapper = "=0.1.13"
+crema-cli = "=0.1.0"
+dango-core = "=0.1.1"
+git-req = "=2.5.0"
+trdelnik-client = "=0.5.0"

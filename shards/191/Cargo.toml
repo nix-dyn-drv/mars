@@ -1,0 +1,53 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+atari-env = "=0.1.1"
+bevy_combat = "=0.1.0"
+cargo-about = "=0.9.3"
+cargo-deny = "=0.20.2"
+context-smith = "=0.4.1"
+dotrix_ui = "=0.1.0"
+erbium-net = "=1.0.8"
+gyms = "=0.1.0"
+ibc-client-tendermint = "=0.57.0"
+ibc-client-tendermint-types = "=0.57.0"
+ibc-client-wasm-types = "=0.57.0"
+ibc-clients = "=0.57.0"
+ibc-core = "=0.57.0"
+ibc-core-channel = "=0.57.0"
+ibc-core-channel-types = "=0.57.0"
+ibc-core-client = "=0.57.0"
+ibc-core-client-context = "=0.57.0"
+ibc-core-client-types = "=0.57.0"
+ibc-core-connection = "=0.57.0"
+ibc-core-connection-types = "=0.57.0"
+ibc-core-handler = "=0.57.0"
+ibc-core-handler-types = "=0.57.0"
+ibc-core-host = "=0.57.0"
+ibc-core-host-cosmos = "=0.57.0"
+ibc-core-router = "=0.57.0"
+ibc-core-router-types = "=0.57.0"
+iced-tic-tac-toe = "=0.1.0"
+iced_focus = "=0.1.1"
+module-info = "=0.5.1"
+notalawyer-build = "=0.3.0"
+notepad-rs = "=0.0.0"
+pakr = "=0.1.0"
+secs-project = "=0.22.0"
+ts-crypto = "=0.4.0"
+ts-token = "=0.8.0"
+versatilist = "=0.1.0"
+wgpu-conveyor = "=0.2.0"

@@ -1,0 +1,35 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+burn_dragon_p2p = "=0.21.0"
+cargo-hot = "=0.1.1"
+cargo-pinstall = "=0.1.0"
+computer-says-no = "=0.2.3"
+kyu-visualizer = "=0.4.0"
+merutable = "=0.0.1"
+objectiveai-api = "=2.2.16"
+parquet_aramid = "=0.3.0"
+pcapforge = "=0.0.1"
+pcapforge-core = "=0.0.1"
+ruchy-notebook = "=1.95.1"
+searchdeadcode = "=0.21.0"
+shekere = "=0.13.0"
+stac-cli = "=0.5.4"
+steam-cli = "=0.1.0"
+swh-provenance = "=0.5.0"
+swh-provenance-db-build = "=0.5.0"
+upki-cli = "=1.0.0"
+wryme = "=1.11.0"

@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+barracuda = "=0.1.0"
+broodkruimel = "=0.2.0"
+clockwork-bench = "=1.1.4"
+cs_mwc = "=5.3.9"
+fanta-gpui = "=0.5.0"
+fanta-gpui-components = "=0.5.0"
+jito-geyser-protos = "=0.0.2"
+mpl-hydra = "=0.4.2"
+mwc = "=5.3.9"
+pfetch = "=3.1.1"
+quixotic-plecostomus-foundations = "=0.11.3"
+riker-ngs = "=0.5.0"
+rocketfetch = "=0.7.5"
+sftp-filesystem = "=0.1.0"
+sftp-server = "=0.1.0"
+solana-transaction-crawler = "=0.1.0"
+turdle-explorer = "=0.1.0"

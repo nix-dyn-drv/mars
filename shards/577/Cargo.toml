@@ -1,0 +1,24 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+enclume = "=1.1.0"
+geodb-wasm = "=0.1.6"
+lumis = "=0.19.3"
+rushdown-lumis = "=0.1.0"
+sirraya-crypto = "=0.1.3"
+sonai = "=0.5.0"
+sqruff-cli-lib = "=0.44.0"
+sqruff-lsp = "=0.44.0"

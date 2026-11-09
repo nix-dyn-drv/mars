@@ -1,0 +1,25 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+authjar = "=0.2.7"
+erroracle = "=0.2.5"
+hyperion-vpn-cli-common = "=0.2.1"
+manifestkit = "=0.1.3"
+mpn = "=0.3.0"
+reportkit = "=0.1.4"
+santh-ctlog = "=0.1.6"
+vulnir = "=0.1.3"
+wasm-zip-stream = "=0.1.0"

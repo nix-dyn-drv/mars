@@ -1,0 +1,27 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+argui-cli = "=0.4.0"
+csv_fish = "=0.2.4"
+data-classification = "=0.4.0"
+finalfusion-utils = "=0.14.1"
+idiomatic-sh-ryo-javascript = "=0.1.2"
+idiomatic-sh-ryo-markdown = "=0.1.2"
+idiomatic-sh-ryo-python = "=0.1.2"
+idiomatic-sh-ryo-toml = "=0.1.2"
+idiomatic-sh-ryo-typescript = "=0.1.2"
+quarters = "=0.1.0-alpha.2"
+remap = "=0.1.0"

@@ -1,0 +1,23 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+loop-state-manager = "=3.0.0"
+pkg-ctx = "=0.1.0"
+playbooks-adapter-sdk = "=0.1.0"
+playbooks-export = "=0.1.0"
+playbooks-model = "=0.1.0"
+playbooks-operation-api = "=0.1.0"
+playbooks-schema = "=0.1.0"

@@ -1,0 +1,56 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+apeireth-runtime-assembly = "=2.0.0-rc.5"
+argyph = "=1.0.4"
+argyph-cli = "=1.0.4"
+argyph-core = "=1.0.4"
+argyph-locate = "=1.0.4"
+argyph-mcp = "=1.0.4"
+atman-daemon = "=1.18.0"
+atman-runtime = "=1.18.0"
+awiki-im-core = "=0.1.13"
+bsv-wallet-toolbox = "=0.11.0"
+code-buster = "=0.14.1"
+dijo = "=0.2.4"
+envgen = "=1.0.6"
+forge-bevy-assets = "=0.2.2"
+gauge-telemetry = "=0.3.1"
+helmsman = "=0.5.2"
+labcoat-test = "=0.1.0"
+libdd-http-client = "=2.0.0"
+libprosic = "=0.7.3"
+littlegraph-mcp = "=0.2.1"
+littlegraph-python = "=0.2.1"
+loadpace-rama = "=0.1.0-rc.3"
+mandex = "=0.1.10"
+mcp-guest = "=0.15.0"
+mcp-host = "=0.23.0"
+mnm-telemetry = "=0.14.0"
+okf-http = "=0.4.4"
+rama = "=0.4.0"
+rama-crypto = "=0.4.0"
+rama-tls = "=0.4.0"
+rama-tls-rustls = "=0.4.0"
+solana-storage-reader = "=3.1.8"
+surrealguard-rs = "=0.5.3"
+xgboost = "=0.1.4"
+zakura = "=1.8.5"
+zakura-consensus = "=16.0.0"
+zakura-rpc = "=16.0.0"
+zakura-state = "=15.0.0"
+zbar-rs = "=0.2.7"
+zbars = "=0.2.0"

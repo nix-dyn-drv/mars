@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+cargo-kt = "=0.0.12"
+ergo-chain-types = "=0.15.0"
+ergo-merkle-tree = "=0.15.0"
+ergo-nipopow = "=0.15.0"
+ergoscript-compiler = "=0.24.0"
+ergotree-ir = "=0.28.0"

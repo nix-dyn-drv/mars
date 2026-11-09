@@ -1,0 +1,43 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+frankensearch-fsfs = "=1.12.3"
+hatchery-server = "=0.2.49"
+heimdall-egress = "=0.1.5"
+wabot = "=0.2.0"
+wabot-addon-async-in-memory = "=0.2.0"
+wabot-addon-auth-api-key = "=0.2.0"
+wabot-addon-auth-jwt = "=0.2.0"
+wabot-addon-chat-bot-anthropic = "=0.2.0"
+wabot-addon-chat-bot-deepseek = "=0.2.0"
+wabot-addon-chat-bot-google = "=0.2.0"
+wabot-addon-chat-bot-openai = "=0.2.0"
+wabot-addon-chat-bot-openrouter = "=0.2.0"
+wabot-addon-chat-bot-wabot = "=0.2.0"
+wabot-addon-chat-controller-cmd = "=0.2.0"
+wabot-addon-chat-controller-telegram = "=0.2.0"
+wabot-addon-ui-hypertext = "=0.2.0"
+wabot-addon-ui-maud = "=0.2.0"
+wabot-core = "=0.2.0"
+wabot-feature-agent = "=0.2.0"
+wabot-feature-async = "=0.2.0"
+wabot-feature-chat-bot = "=0.2.0"
+wabot-feature-chat-controller = "=0.2.0"
+wabot-feature-mindset = "=0.2.0"
+wabot-feature-rest-controller = "=0.2.2"
+wabot-feature-tool = "=0.2.0"
+wabot-feature-ui-controller = "=0.2.1"
+wabot-testing = "=0.2.0"

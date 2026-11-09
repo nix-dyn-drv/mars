@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+beads_rust = "=0.7.6"
+bevy_modloader = "=0.1.2"
+bevy_simplenet_events = "=0.5.0"
+boarddown-cli = "=0.1.5"
+cdk-phoenixd = "=0.7.1"
+cdk-rexie = "=0.11.0"
+cdk-strike = "=0.7.1"
+fandhe-browser-core = "=0.1.1"
+moneyman_cli = "=0.1.3"
+poolsim-web = "=0.4.0"
+spr-client = "=0.8.0"
+spr-gnark-ffi-prover = "=0.8.0"
+what-bump = "=1.2.0"
+xidl-api-discord = "=0.87.0"
+xidl-api-github = "=0.87.0"
+xidl-api-keycloak = "=0.87.0"
+xidl-api-reddit = "=0.87.0"

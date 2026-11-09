@@ -1,0 +1,49 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+agentmesh = "=4.0.0"
+baryon-core = "=0.1.0"
+bismark-bedgraph = "=1.0.0"
+boringdb = "=0.4.1"
+costroid-power = "=0.7.0"
+cosys-plugin-conversations = "=0.1.0"
+fandhe-browser-profile = "=0.1.1"
+haveibeenpwnd = "=0.2.0"
+km = "=0.1.0"
+libpng-vendored-sys = "=0.1.2"
+llmenv-git = "=3.13.0"
+llmenv-paths = "=3.13.0"
+lockstitch = "=0.29.0"
+lzcomplexity-core = "=3.0.0"
+mdgl = "=0.4.0"
+owoof = "=0.2.0"
+partmgr = "=0.1.2"
+qp-plonky2-field = "=1.6.0"
+r2d2_sqlite_neonphog = "=0.18.0"
+rosbag2_image_loader = "=0.1.2"
+rs-modbus = "=2.0.0"
+rulekit = "=0.2.4"
+rusthesia = "=0.1.21"
+s-rocksdb = "=0.5.0"
+s-rocksdb-sys = "=0.5.5"
+sdlang = "=0.0.1"
+secure-reliable-transport = "=0.2.1"
+termtaco = "=0.2.0"
+uor-addr = "=0.2.0"
+uor-prism = "=0.4.0"
+uor-prism-crypto = "=0.4.0"
+uor-prism-verify = "=0.4.0"
+virtdisk = "=0.3.1"

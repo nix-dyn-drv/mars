@@ -1,0 +1,33 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+blocktop = "=0.2.0"
+cargo-ninety-nine = "=0.4.3"
+chrome-remote-interface = "=0.1.0-alpha.8"
+fisco-bcos-cli = "=0.4.0"
+gemserv = "=0.6.6"
+huak = "=0.0.8-alpha.2"
+myd-tui = "=1.8.1"
+nym-credential-proxy-requests = "=1.21.6"
+nym-credentials = "=2.0.0"
+nym-gateway-requests = "=2.0.0"
+nym-types = "=1.21.6"
+nym-verloc = "=1.21.6"
+openpaw-tools = "=0.1.0"
+routee-compass = "=0.19.5"
+routee-compass-py = "=0.19.5"
+soroban-test = "=22.5.0"
+zeus-userop-kit = "=0.1.0"

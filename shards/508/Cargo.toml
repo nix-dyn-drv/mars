@@ -1,0 +1,22 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+deno_kv = "=0.168.0"
+griz = "=0.6.4"
+nsql = "=0.1.14"
+piu_kv = "=0.167.0"
+sweepx-cli = "=0.0.1"
+sweepx-core = "=0.0.1"

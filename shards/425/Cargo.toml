@@ -1,0 +1,30 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+codeatlas = "=0.3.0"
+codeatlas-core = "=0.3.0"
+codeatlas-mcp = "=0.3.0"
+concurrent_tor = "=1.0.0"
+desktop-design-system = "=0.3.1"
+geam = "=0.2.3"
+geam-cli = "=0.2.3"
+geam-json = "=0.2.3"
+geam-stdlib = "=0.2.3"
+geam-time = "=0.2.3"
+progscrape = "=0.0.3"
+progscrape-application = "=0.0.3"
+quake = "=0.5.0"
+tenzro-events = "=0.2.0"

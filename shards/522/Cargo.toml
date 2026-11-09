@@ -1,0 +1,26 @@
+[package]
+name = "MARS"
+version = "0.0.0"
+autobins = false
+autolibs = false
+autotests = false
+autobenches = false
+autoexamples = false
+
+[[bin]]
+name = "dummy"
+path = "/dev/null"
+
+[workspace]
+
+[dependencies]
+devops-armory = "=0.7.9"
+duende-observe = "=0.2.0"
+fzf-make = "=0.76.0"
+geometric-langlands-cli = "=0.2.0"
+juglans = "=0.2.23"
+sgr-agent-tui = "=0.4.8"
+terapi = "=0.10.18"
+tgv = "=0.4.0"
+tidepool-cli = "=0.4.1"
+tidepool-server = "=0.4.1"
