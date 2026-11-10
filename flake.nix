@@ -7,9 +7,13 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    cargo-dyndrv = {
+      url = "github:obsidiansystems/cargo-dyndrv";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, rust-overlay, ... }:
+  outputs = { self, nixpkgs, rust-overlay, cargo-dyndrv, ... }:
     let
       eachDefaultSystem = overlays: function:
         nixpkgs.lib.genAttrs [
@@ -21,6 +25,28 @@
             pkgs = import nixpkgs { inherit system overlays; };
           in function pkgs system);
     in {
+
+      packages = eachDefaultSystem [ (import rust-overlay) (cargo-dyndrv.overlays.default) ] (pkgs: system: 
+	  let
+	    dir = builtins.readDir ./shards;
+	    d = builtins.mapAttrs (n: v: 
+	      pkgs.buildDynamicCrate {
+	          pname = "shard-${n}";
+	          version = "unstable";
+		  src = ./shards + "/${n}";
+		  cargoLock.lockFile = ./shards + "/${n}/Cargo.lock";
+		  outputs = ["shard"];
+	      }) dir;
+	  in
+	    d
+	/*
+      {
+	  pname = "ffmpeg-sys-next";
+	} ;
+      }
+      */
+      );
+
       devShells = eachDefaultSystem [ (import rust-overlay) ] (pkgs: system: {
         default = pkgs.mkShell.override { stdenv = pkgs.clangStdenv; } {
           packages = with pkgs; [
