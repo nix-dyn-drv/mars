@@ -56,5 +56,6 @@ Could not run `PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags
 - targets with several crate types (`["cdylib", "rlib"]`) build as `lib` instead of bailing with "unexpected crate types"
 - `CARGO_MANIFEST_LINKS` is set for build scripts of `links` packages (ring's build.rs unwraps it)
 - `extern` entries may be keyed by bare crate name (`"openssl-sys"`) as well as the exact package id
+- `PROFILE`, `DEBUG` and `NUM_JOBS` are set for build scripts (the `built` and `cmake` crates and many hand-written build.rs files unwrap `PROFILE`)
 
 `externFor` in `flake.nix` is the default extern map (pkg-config for the common `-sys` crates); per-shard `overrides` are merged on top.

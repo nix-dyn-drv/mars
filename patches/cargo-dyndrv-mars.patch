@@ -1,5 +1,5 @@
 diff --git a/cargo-dyndrv/src/main.rs b/cargo-dyndrv/src/main.rs
-index e00b10c..d7a0794 100644
+index e00b10c..78b6633 100644
 --- a/cargo-dyndrv/src/main.rs
 +++ b/cargo-dyndrv/src/main.rs
 @@ -95,6 +95,27 @@ fn add_feature(args: &mut VecDeque<bytes::Bytes>, feature: &str) {
@@ -68,7 +68,31 @@ index e00b10c..d7a0794 100644
                  eprintln!("Handling external config for {}", unit.pkg_id);
                  for extra_input in &extern_config.inputs {
                      let store_path = StorePath::from_store_dir_str(&store_dir, extra_input)
-@@ -466,14 +500,7 @@ async fn main() -> eyre::Result<()> {
+@@ -431,6 +465,23 @@ async fn main() -> eyre::Result<()> {
+             }
+ 
+             env.insert("OPT_LEVEL".into(), unit.profile.opt_level.clone().into());
++            // cargo sets these for every build script; `built`, `cmake`, cc-based and many
++            // hand-written build.rs files unwrap them. NUM_JOBS is fixed so the derivation
++            // stays reproducible.
++            env.insert(
++                "PROFILE".into(),
++                (if unit.profile.name == "release" || unit.profile.name == "bench" {
++                    "release"
++                } else {
++                    "debug"
++                })
++                .into(),
++            );
++            env.insert(
++                "DEBUG".into(),
++                (if unit.profile.debuginfo != 0 { "true" } else { "false" }).into(),
++            );
++            env.insert("NUM_JOBS".into(), "8".into());
+             env.insert("PATH".into(), path.into());
+             (
+                 Derivation {
+@@ -466,14 +517,7 @@ async fn main() -> eyre::Result<()> {
                  },
              )
          } else {
@@ -84,7 +108,7 @@ index e00b10c..d7a0794 100644
  
              // nix derivation args start at argv[1], but we put rustc in here anyway.
              // It's easier to add the wrapper if needed
-@@ -500,7 +527,12 @@ async fn main() -> eyre::Result<()> {
+@@ -500,7 +544,12 @@ async fn main() -> eyre::Result<()> {
              add_long(&mut args, "crate-name", &crate_name);
              env.insert("CARGO_CRATE_NAME".into(), crate_name.into());
              add_long(&mut args, "edition", &unit.target.edition);

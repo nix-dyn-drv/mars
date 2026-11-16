@@ -38,7 +38,8 @@
         pkgs:
         let
           lib = pkgs.lib;
-          pcDirs = lib.concatMapStringsSep ":" (p: "${lib.getDev p}/lib/pkgconfig") (
+          # nixpkgs puts .pc files in lib/pkgconfig or share/pkgconfig (zlib uses the latter)
+          pcDirs = lib.concatMapStringsSep ":" (p: "${lib.getDev p}/lib/pkgconfig:${lib.getDev p}/share/pkgconfig") (
             with pkgs;
             [
               openssl
