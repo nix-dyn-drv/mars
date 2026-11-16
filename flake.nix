@@ -13,73 +13,125 @@
     };
   };
 
-  outputs = { self, nixpkgs, rust-overlay, cargo-dyndrv, ... }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      rust-overlay,
+      cargo-dyndrv,
+      ...
+    }:
     let
-      eachDefaultSystem = overlays: function:
-        nixpkgs.lib.genAttrs [
-          "x86_64-linux"
-          "aarch64-linux"
-          "aarch64-darwin"
-        ] (system:
-          let
-            pkgs = import nixpkgs { inherit system overlays; };
-          in function pkgs system);
-    in {
+      eachDefaultSystem =
+        overlays: function:
+        nixpkgs.lib.genAttrs
+          [
+            "x86_64-linux"
+            "aarch64-linux"
+            "aarch64-darwin"
+          ]
+          (
+            system:
+            let
+              pkgs = import nixpkgs { inherit system overlays; };
+            in
+            function pkgs system
+          );
+    in
+    {
+      overrides = {
+        "700" = pkgs: {
+          extern = {
+            "registry+https://github.com/rust-lang/crates.io-index#libssh2-sys@0.3.4" = {
+              path = [ "${pkgs.lib.getBin pkgs.buildPackages.pkg-config}/bin" ];
+              env = {
+                PKG_CONFIG_PATH = "${pkgs.lib.getDev pkgs.libssh2}/lib/pkgconfig";
+                PKG_CONFIG = pkgs.lib.getExe pkgs.buildPackages.pkg-config;
+		PROFILE = "default";
+              };
+            };
+            "registry+https://github.com/rust-lang/crates.io-index#ring@0.17.14" = {
+              env = {
+                CARGO_MANIFEST_LINKS = "ring_core_0_17_14_";
+              };
+            };
+            "registry+https://github.com/rust-lang/crates.io-index#openssl-sys@0.9.118" = {
+              path = [ "${pkgs.lib.getBin pkgs.buildPackages.pkg-config}/bin" ];
+              env = {
+                PKG_CONFIG_PATH = "${pkgs.lib.getDev pkgs.openssl}/lib/pkgconfig";
+                PKG_CONFIG = pkgs.lib.getExe pkgs.buildPackages.pkg-config;
+              };
+            };
+          };
+        };
+      };
 
-      packages = eachDefaultSystem [ (import rust-overlay) (cargo-dyndrv.overlays.default) ] (pkgs: system: 
-	  let
-	    dir = builtins.readDir ./shards;
-	    d = builtins.mapAttrs (n: v: 
-	      pkgs.buildDynamicCrate {
-	          pname = "shard-${n}";
-	          version = "unstable";
-		  src = builtins.path {
-		    name = "src";
-		    path =./shards + "/${n}";
-		  };
-		  preBuild = ''
-                     cp ${./src}/main.rs ./src
-                     sed -i 's#/dev/null#./src#' Cargo.toml
-                     cat Cargo.toml
-                  '';
-		  # env.RUSTFLAGS = "-D warnings -A mismatched_lifetime_syntaxes";
-		  cargoLock.lockFile = ./shards + "/${n}/Cargo.lock";
-		  outputs = ["dummy"];
-	      }) dir;
-	  in
-	    d
+      packages = eachDefaultSystem [ (import rust-overlay) (cargo-dyndrv.overlays.default) ] (
+        pkgs: system:
+        let
+          dir = builtins.readDir ./shards;
+          d = builtins.mapAttrs (
+            n: v:
+            pkgs.buildDynamicCrate (
+              {
+                pname = "shard-${n}";
+                version = "unstable";
+                src = builtins.path {
+                  name = "src";
+                  path = ./shards + "/${n}";
+                };
+                preBuild = ''
+                  cp ${./src}/main.rs ./src
+                  sed -i 's#/dev/null#./src#' Cargo.toml
+                  cat Cargo.toml
+                '';
+                # env.RUSTFLAGS = "-D warnings -A mismatched_lifetime_syntaxes";
+                cargoLock.lockFile = ./shards + "/${n}/Cargo.lock";
+                outputs = [ "dummy" ];
+              }
+              // (self.overrides."${n}" or (x: { }) pkgs)
+            )
+          ) dir;
+        in
+        d
       );
 
-      devShells = eachDefaultSystem [ (import rust-overlay) ] (pkgs: system: {
-        default = pkgs.mkShell.override { stdenv = pkgs.clangStdenv; } {
-          packages = with pkgs; [
-            openssl
-            pkg-config
-            parallel
-            findutils
-            flock
-            jq
-            rust-bin.stable.latest.default
-            (rustPlatform.buildRustPackage {
-              pname = "index-select";
-              version = "0.1.0";
-              src = ./tools/index-select;
-              cargoLock.lockFile = ./tools/index-select/Cargo.lock;
-              # The cargo crate links these; nixpkgs disallows vendoring them.
-              nativeBuildInputs = [ pkg-config ];
-              buildInputs = [ openssl libgit2 libssh2 sqlite zlib ];
-            })
-            (
-              writeShellScriptBin "gen-crates" ''
+      devShells = eachDefaultSystem [ (import rust-overlay) ] (
+        pkgs: system: {
+          default = pkgs.mkShell.override { stdenv = pkgs.clangStdenv; } {
+            packages = with pkgs; [
+              openssl
+              pkg-config
+              parallel
+              findutils
+              flock
+              jq
+              rust-bin.stable.latest.default
+              (rustPlatform.buildRustPackage {
+                pname = "index-select";
+                version = "0.1.0";
+                src = ./tools/index-select;
+                cargoLock.lockFile = ./tools/index-select/Cargo.lock;
+                # The cargo crate links these; nixpkgs disallows vendoring them.
+                nativeBuildInputs = [ pkg-config ];
+                buildInputs = [
+                  openssl
+                  libgit2
+                  libssh2
+                  sqlite
+                  zlib
+                ];
+              })
+              (writeShellScriptBin "gen-crates" ''
                 set -euo pipefail
 
                 # One package per shard, each with its own Cargo.lock; see tools/index-select.
                 # shards/resolved.tsv caches the per-crate resolutions; delete it after updating the index.
                 index-select crates.io-index shards
-              ''
-            )
-          ];
-        };
-      });
+              '')
+            ];
+          };
+        }
+      );
     };
 }
