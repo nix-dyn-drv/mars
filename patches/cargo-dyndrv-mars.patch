@@ -1,5 +1,5 @@
 diff --git a/cargo-dyndrv/src/main.rs b/cargo-dyndrv/src/main.rs
-index e00b10c..78b6633 100644
+index e00b10c..3464821 100644
 --- a/cargo-dyndrv/src/main.rs
 +++ b/cargo-dyndrv/src/main.rs
 @@ -95,6 +95,27 @@ fn add_feature(args: &mut VecDeque<bytes::Bytes>, feature: &str) {
@@ -49,7 +49,7 @@ index e00b10c..78b6633 100644
  
          env.insert(
              "CARGO_MANIFEST_DIR".into(),
-@@ -407,7 +431,17 @@ async fn main() -> eyre::Result<()> {
+@@ -407,7 +431,22 @@ async fn main() -> eyre::Result<()> {
                  script.into_bytes()
              });
  
@@ -60,15 +60,20 @@ index e00b10c..78b6633 100644
 +                .pkg_id
 +                .rsplit_once('#')
 +                .map(|(_, nv)| nv.split('@').next().unwrap_or(nv).to_string());
-+            if let Some(extern_config) = all_extern_config.get(&unit.pkg_id).or_else(|| {
-+                extern_name_key
-+                    .as_deref()
-+                    .and_then(|k| all_extern_config.get(k))
-+            }) {
++            // the "*" entry (if any) applies to every unit without a more specific one
++            if let Some(extern_config) = all_extern_config
++                .get(&unit.pkg_id)
++                .or_else(|| {
++                    extern_name_key
++                        .as_deref()
++                        .and_then(|k| all_extern_config.get(k))
++                })
++                .or_else(|| all_extern_config.get("*"))
++            {
                  eprintln!("Handling external config for {}", unit.pkg_id);
                  for extra_input in &extern_config.inputs {
                      let store_path = StorePath::from_store_dir_str(&store_dir, extra_input)
-@@ -431,6 +465,23 @@ async fn main() -> eyre::Result<()> {
+@@ -431,6 +470,34 @@ async fn main() -> eyre::Result<()> {
              }
  
              env.insert("OPT_LEVEL".into(), unit.profile.opt_level.clone().into());
@@ -89,10 +94,21 @@ index e00b10c..78b6633 100644
 +                (if unit.profile.debuginfo != 0 { "true" } else { "false" }).into(),
 +            );
 +            env.insert("NUM_JOBS".into(), "8".into());
++            // `built` unwraps RUSTDOC; av-scenechange and friends unwrap CARGO_ENCODED_RUSTFLAGS
++            // (cargo always sets it, empty when there are no extra flags)
++            {
++                use std::os::unix::ffi::OsStrExt as _;
++                let rustdoc = tools.rustc.real_path.with_file_name("rustdoc");
++                env.insert(
++                    "RUSTDOC".into(),
++                    rustdoc.as_os_str().as_bytes().to_vec().into(),
++                );
++            }
++            env.insert("CARGO_ENCODED_RUSTFLAGS".into(), "".into());
              env.insert("PATH".into(), path.into());
              (
                  Derivation {
-@@ -466,14 +517,7 @@ async fn main() -> eyre::Result<()> {
+@@ -466,14 +533,7 @@ async fn main() -> eyre::Result<()> {
                  },
              )
          } else {
@@ -108,7 +124,7 @@ index e00b10c..78b6633 100644
  
              // nix derivation args start at argv[1], but we put rustc in here anyway.
              // It's easier to add the wrapper if needed
-@@ -500,7 +544,12 @@ async fn main() -> eyre::Result<()> {
+@@ -500,7 +560,12 @@ async fn main() -> eyre::Result<()> {
              add_long(&mut args, "crate-name", &crate_name);
              env.insert("CARGO_CRATE_NAME".into(), crate_name.into());
              add_long(&mut args, "edition", &unit.target.edition);

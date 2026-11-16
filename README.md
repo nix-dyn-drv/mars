@@ -57,5 +57,7 @@ Could not run `PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags
 - `CARGO_MANIFEST_LINKS` is set for build scripts of `links` packages (ring's build.rs unwraps it)
 - `extern` entries may be keyed by bare crate name (`"openssl-sys"`) as well as the exact package id
 - `PROFILE`, `DEBUG` and `NUM_JOBS` are set for build scripts (the `built` and `cmake` crates and many hand-written build.rs files unwrap `PROFILE`)
+- `RUSTDOC` and `CARGO_ENCODED_RUSTFLAGS` are set for build scripts (`built` reads `RUSTDOC`, av-scenechange's build.rs unwraps the rustflags)
+- an `extern` entry keyed `"*"` applies to every unit that has no more specific entry
 
-`externFor` in `flake.nix` is the default extern map (pkg-config for the common `-sys` crates); per-shard `overrides` are merged on top.
+`externFor` in `flake.nix` is the default extern map (pkg-config for the common `-sys` crates, plus a `"*"` entry that gives every build script pkg-config, cmake, protoc, python3, make, autotools, nasm and clang on `PATH` and sets `PKG_CONFIG_PATH`, `PROTOC` and `LIBCLANG_PATH`); per-shard `overrides` are merged on top.

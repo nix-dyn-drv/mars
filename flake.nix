@@ -100,6 +100,32 @@
               OPENSSL_NO_VENDOR = "1";
             };
           };
+          # "*" applies to every unit without a more specific entry (cargo-dyndrv
+          # wildcard fix): the common build-script tools and the variables their
+          # crates read (protoc, libclang for bindgen, cmake, pkg-config).
+          "*" = {
+            path = map (p: "${lib.getBin p}/bin") (
+              with pkgs.buildPackages;
+              [
+                pkg-config
+                cmake
+                protobuf
+                python3
+                gnumake
+                autoconf
+                automake
+                libtool
+                nasm
+                clang
+              ]
+            );
+            env = {
+              PKG_CONFIG_PATH = pcDirs;
+              PKG_CONFIG = "${pkgs.buildPackages.pkg-config}/bin/pkg-config";
+              PROTOC = "${pkgs.buildPackages.protobuf}/bin/protoc";
+              LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
+            };
+          };
         };
 
       eachDefaultSystem =
