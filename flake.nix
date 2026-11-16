@@ -2,13 +2,13 @@
   description = "MARS - Massive Assortment of Rust Stuff";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     cargo-dyndrv = {
-      url = "github:obsidiansystems/cargo-dyndrv";
+      url = "github:obsidiansystems/cargo-dyndrv/refs/pull/4/head";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -33,18 +33,23 @@
 	      pkgs.buildDynamicCrate {
 	          pname = "shard-${n}";
 	          version = "unstable";
-		  src = ./shards + "/${n}";
+		  src = builtins.path {
+		    name = "src";
+		    path =./shards + "/${n}";
+		  };
+		  postUnpack = ''
+		    ls -alh
+		  '';
+		  sourceRoot = "./src";
+		  preBuild = ''
+		     cp ${./src}/main.rs ./src
+		     sed -i 's#/dev/null#./src#' Cargo.toml
+		  '';
 		  cargoLock.lockFile = ./shards + "/${n}/Cargo.lock";
-		  outputs = ["shard"];
+		  outputs = ["dummy"];
 	      }) dir;
 	  in
 	    d
-	/*
-      {
-	  pname = "ffmpeg-sys-next";
-	} ;
-      }
-      */
       );
 
       devShells = eachDefaultSystem [ (import rust-overlay) ] (pkgs: system: {

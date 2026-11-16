@@ -7,30 +7,32 @@
         ]
       },
       "locked": {
-        "lastModified": 1789594638,
-        "narHash": "sha256-/c+ZhXCAyalEZoVld0qnA86hnLS9UqE3FJFAMKW2DZ4=",
+        "lastModified": 1790413835,
+        "narHash": "sha256-zTjxJO6lKWmvHxcD3Go3cwtuig0pt8Zb3Dd4RDO4bow=",
         "owner": "obsidiansystems",
         "repo": "cargo-dyndrv",
-        "rev": "d5245b85f82627fcaf041e2c57c8aeb7d57d20fe",
+        "rev": "06c7f971419145ad2d84880e07c9a9986e3206c5",
         "type": "github"
       },
       "original": {
         "owner": "obsidiansystems",
+        "ref": "refs/pull/4/head",
         "repo": "cargo-dyndrv",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794185010,
-        "narHash": "sha256-QolvHozCShj+AJ6i7tS8ALWVmtTQoFggTqbVzaEHiJE=",
+        "lastModified": 1794644783,
+        "narHash": "sha256-3GnIGIy15bMduoS9RnWqKTmsJLWThla42UFtm0S7+us=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "19a79667db9488d50eba4e15e8fecf188eb75336",
+        "rev": "5d2b81a7a3be3e2f832879028e4d60abbf58e9a0",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
