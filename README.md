@@ -11,6 +11,18 @@ Massive Assortment of Rust Stuff
 - Reach out to help with design and to set up the project.
 - Provide infrastructure + cache + funding.
 
+- Build a shard `.#SOME_NUMBER` and deal with the errors
+
+### Unexpected crate type
+```
+unit registry+https://github.com/rust-lang/crates.io-index#solana-program@2.3.0 has unexpected crate types, ["cdylib", "rlib"]
+```
+
+### pkg-config
+```
+Could not run `PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags
+```
+
 ## Idea / Roadmap
 - Collect all crate metadata from crates.io.
 - Bucket them into non-conflicting shards; no more than 50k members per shard.

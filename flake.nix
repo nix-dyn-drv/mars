@@ -37,14 +37,12 @@
 		    name = "src";
 		    path =./shards + "/${n}";
 		  };
-		  postUnpack = ''
-		    ls -alh
-		  '';
-		  sourceRoot = "./src";
 		  preBuild = ''
-		     cp ${./src}/main.rs ./src
-		     sed -i 's#/dev/null#./src#' Cargo.toml
-		  '';
+                     cp ${./src}/main.rs ./src
+                     sed -i 's#/dev/null#./src#' Cargo.toml
+                     cat Cargo.toml
+                  '';
+		  # env.RUSTFLAGS = "-D warnings -A mismatched_lifetime_syntaxes";
 		  cargoLock.lockFile = ./shards + "/${n}/Cargo.lock";
 		  outputs = ["dummy"];
 	      }) dir;
