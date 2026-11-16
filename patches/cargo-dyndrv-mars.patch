@@ -1,0 +1,100 @@
+diff --git a/cargo-dyndrv/src/main.rs b/cargo-dyndrv/src/main.rs
+index e00b10c..d7a0794 100644
+--- a/cargo-dyndrv/src/main.rs
++++ b/cargo-dyndrv/src/main.rs
+@@ -95,6 +95,27 @@ fn add_feature(args: &mut VecDeque<bytes::Bytes>, feature: &str) {
+     args.push_back(format!("feature=\"{}\"", feature).into());
+ }
+ 
++/// Cargo builds every crate type of a target in one rustc invocation; a derivation
++/// produces one. Dependents only ever link the rlib, so prefer `lib`/`rlib` (as `lib`),
++/// then `proc-macro`, else the single declared type.
++fn pick_crate_type(unit: &Unit) -> eyre::Result<&str> {
++    let types = &unit.target.crate_types;
++    if types.iter().any(|t| t == "lib" || t == "rlib") {
++        return Ok("lib");
++    }
++    if types.iter().any(|t| t == "proc-macro") {
++        return Ok("proc-macro");
++    }
++    match types.as_slice() {
++        [single] => Ok(single.as_str()),
++        _ => eyre::bail!(
++            "unit {} has unexpected crate types, {:?}",
++            unit.pkg_id,
++            types
++        ),
++    }
++}
++
+ fn add_metadata_env(
+     env: &mut BTreeMap<bytes::Bytes, bytes::Bytes>,
+     meta: &cargo_metadata::Package,
+@@ -170,7 +191,7 @@ fn extern_declaration(
+     dep_base_name: &str,
+     dep: &Unit,
+ ) -> eyre::Result<String> {
+-    let dep_crate_type = &dep.target.crate_types[0];
++    let dep_crate_type = pick_crate_type(dep)?;
+     let needs_rlib = crate_type == "bin" || crate_type == "proc-macro";
+     let extension = if dep_crate_type == "lib" || dep_crate_type == "rlib" {
+         if needs_rlib { ".rlib" } else { ".rmeta" }
+@@ -291,6 +312,9 @@ async fn main() -> eyre::Result<()> {
+         let mut env = base_env.clone();
+         // TODO: more cargo env vars not from cargo metadata
+         add_metadata_env(&mut env, unit_meta);
++        if let Some(links) = &unit_meta.links {
++            env.insert("CARGO_MANIFEST_LINKS".into(), links.to_string().into());
++        }
+ 
+         env.insert(
+             "CARGO_MANIFEST_DIR".into(),
+@@ -407,7 +431,17 @@ async fn main() -> eyre::Result<()> {
+                 script.into_bytes()
+             });
+ 
+-            if let Some(extern_config) = all_extern_config.get(&unit.pkg_id) {
++            // match on the exact package id first, then on the bare crate name
++            // (e.g. "openssl-sys") so one entry covers every version in a lock file
++            let extern_name_key = unit
++                .pkg_id
++                .rsplit_once('#')
++                .map(|(_, nv)| nv.split('@').next().unwrap_or(nv).to_string());
++            if let Some(extern_config) = all_extern_config.get(&unit.pkg_id).or_else(|| {
++                extern_name_key
++                    .as_deref()
++                    .and_then(|k| all_extern_config.get(k))
++            }) {
+                 eprintln!("Handling external config for {}", unit.pkg_id);
+                 for extra_input in &extern_config.inputs {
+                     let store_path = StorePath::from_store_dir_str(&store_dir, extra_input)
+@@ -466,14 +500,7 @@ async fn main() -> eyre::Result<()> {
+                 },
+             )
+         } else {
+-            if unit.target.crate_types.len() != 1 {
+-                eyre::bail!(
+-                    "unit {} has unexpected crate types, {:?}",
+-                    unit.pkg_id,
+-                    unit.target.crate_types
+-                );
+-            }
+-            let crate_type = &unit.target.crate_types[0];
++            let crate_type = pick_crate_type(unit)?;
+ 
+             // nix derivation args start at argv[1], but we put rustc in here anyway.
+             // It's easier to add the wrapper if needed
+@@ -500,7 +527,12 @@ async fn main() -> eyre::Result<()> {
+             add_long(&mut args, "crate-name", &crate_name);
+             env.insert("CARGO_CRATE_NAME".into(), crate_name.into());
+             add_long(&mut args, "edition", &unit.target.edition);
+-            add_long(&mut args, "crate-type", crate_type);
++            add_long(&mut args, "crate-type", &crate_type);
++            // cargo passes `--cap-lints allow` to every non-path dependency so that
++            // `#![deny(warnings)]` in a registry crate cannot fail a build on a newer rustc
++            if !unit.pkg_id.starts_with("path+") {
++                add_long(&mut args, "cap-lints", &"allow");
++            }
+ 
+             if unit.mode == CompileMode::Check {
+                 add_long(&mut args, "emit", &"metadata");
