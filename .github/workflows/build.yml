@@ -139,7 +139,9 @@ jobs:
         run: |
           set -euo pipefail
           nix build "$NSH_FLAKE#nix-scheduler-hook" --out-link /tmp/nsh
-          plugin=$(ls /tmp/nsh/lib/nix/plugins/*.so | head -1)
+          # The package installs the plugin as lib/nsh.so (nix/package.nix in the nsh repo).
+          plugin=/tmp/nsh/lib/nsh.so
+          test -e "$plugin" || { echo "::error::no nsh plugin at $plugin"; ls -R /tmp/nsh/lib; exit 1; }
           # Builds run as root through the daemon, so the key and nsh.conf live in root's home / /etc/nix.
           sudo install -d -m 700 /root/.ssh
           printf '%s\n' "$NSH_SSH_KEY" | sudo install -m 600 /dev/stdin /root/.ssh/id_ed25519
