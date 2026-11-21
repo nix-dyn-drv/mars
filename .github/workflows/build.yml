@@ -177,12 +177,11 @@ jobs:
           ssh-user = root
           systems = x86_64-linux aarch64-linux
           system-features = builder-rpc-v0 big-parallel benchmark
-          # Build over ssh-ng with the job as the reservation. The whole-graph flow (`--store nsh://`)
-          # refuses floating content-addressed derivations (run 44924562144) and the job-script flow
-          # realises as the job's user, which cannot write the pod's root-owned store (run
-          # 44925291521), so the shards go through the build-machine flow below, one scheduler job
-          # per derivation, where nsh copies the CA realisations back.
-          remote-building = true
+          # The shards are floating content-addressed (dynamic) derivations, which nsh's whole-graph
+          # planner under remote-building refuses ("not supported in the whole-graph flow", run
+          # 44924562144). The job-script flow builds the shard on the node and copies the
+          # realisations back, so each shard is one reservation that the node builds end to end.
+          remote-building = false
           slurm-system-params = {"x86_64-linux": {"partition": "x86"}, "aarch64-linux": {"partition": "arm"}}
           EOF
           sudo chmod 600 /etc/nix/nsh.conf
@@ -208,13 +207,7 @@ jobs:
           echo "building ${#targets[@]} shard(s): $SHARDS"
           # --keep-going: one failing shard must not stop the chunk; the summary below lists failures.
           set +e
-          # Build-machine flow: nix's own scheduler walks the graph, substitutes what the caches have
-          # and hands each remaining derivation to the nsh build hook (its own scheduler job). The
-          # local store is opened directly (root) so the hook is this nix, with the plugin, not the
-          # installer's daemon. MAX_JOBS caps the concurrent remote builds (the machine's max-jobs).
-          sudo /tmp/nsh-nix/bin/nix build --store local --max-jobs 0 \
-            --builders "nsh:// x86_64-linux,aarch64-linux - $MAX_JOBS 1 big-parallel,benchmark,builder-rpc-v0" \
-            --keep-going --no-link --print-out-paths \
+          sudo /tmp/nsh-nix/bin/nix build --store nsh:// --keep-going --max-jobs "$MAX_JOBS" --no-link --print-out-paths \
             "${targets[@]}" 2>&1 | tee build.log
           rc=${PIPESTATUS[0]}
           set -e
