@@ -185,6 +185,10 @@ jobs:
           # `plugin-files` is not an extra-able list (nix warns "unknown setting 'extra-plugin-files'"
           # and the plugin never loads); set it outright, the same way raven's nix.custom.conf does.
           echo "plugin-files = $plugin" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+          # The shards are content-addressed dynamic derivations (cargo-dyndrv): the client that
+          # evaluates and schedules them needs both experimental features, the same set the raven
+          # sweep ran with (nix-command flakes ca-derivations dynamic-derivations).
+          echo "extra-experimental-features = ca-derivations dynamic-derivations" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
           sudo systemctl restart nix-daemon
           # Root reads /etc/nix/nsh.conf and /root/.ssh directly, no daemon round trip.
           sudo /tmp/nsh-nix/bin/nix store info --store nsh:// >/dev/null && echo "nsh store answers"
