@@ -7,16 +7,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1790413835,
-        "narHash": "sha256-zTjxJO6lKWmvHxcD3Go3cwtuig0pt8Zb3Dd4RDO4bow=",
-        "owner": "obsidiansystems",
+        "lastModified": 1795240659,
+        "narHash": "sha256-bZHij2/nAiuuYWGjNX3Cz6My1WwTljA2EKNLccpHlyQ=",
+        "owner": "lisanna-dettwyler",
         "repo": "cargo-dyndrv",
-        "rev": "06c7f971419145ad2d84880e07c9a9986e3206c5",
+        "rev": "a69fc88dcf3de7178823f4f2cafe32fbb901611f",
         "type": "github"
       },
       "original": {
-        "owner": "obsidiansystems",
-        "ref": "refs/pull/4/head",
+        "owner": "lisanna-dettwyler",
+        "ref": "mars",
         "repo": "cargo-dyndrv",
         "type": "github"
       }

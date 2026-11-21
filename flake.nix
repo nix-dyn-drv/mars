@@ -8,7 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     cargo-dyndrv = {
-      url = "github:obsidiansystems/cargo-dyndrv/refs/pull/4/head";
+      # Lisanna's fork, branch `mars`: upstream PR 4 plus the shard fixes and the `crates.drv`
+      # output (`exposeCrates`); its overlay provides buildDynamicCrate.
+      url = "github:lisanna-dettwyler/cargo-dyndrv/mars";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -22,19 +24,6 @@
       ...
     }:
     let
-      # Fixes for cargo-dyndrv (PR 4 head) found while building the shards, carried as a patch until they
-      # land upstream (plus the `crates.drv` output behind `exposeCrates`): `--cap-lints allow` for registry crates, one crate type per unit,
-      # CARGO_MANIFEST_LINKS for build scripts, extern entries matched by bare crate name.
-      marsOverlay = final: prev: {
-        cargo-dyndrv = prev.cargo-dyndrv.overrideAttrs (o: {
-          patches = (o.patches or [ ]) ++ [ ./patches/cargo-dyndrv-mars.patch ];
-        });
-        # nix/build-crate.nix is the upstream builder plus `exposeCrates` (the `crates.drv`
-        # output the patch above fills); carried as a copy because the input's overlay cannot be
-        # patched without import-from-derivation. Drop both with the patch once upstream has them.
-        buildDynamicCrate = final.callPackage ./nix/build-crate.nix { };
-      };
-
       # Default extern map: system libraries for the -sys crates seen so far, found through pkg-config
       # inside the sandbox. Keys are bare crate names (extern-by-name fix above), so one entry covers
       # every version in a lock file; per-shard `overrides` (exact package ids) are merged on top.
@@ -176,12 +165,9 @@
         };
       };
 
-      overlays.default = nixpkgs.lib.composeManyExtensions [
-        cargo-dyndrv.overlays.default
-        marsOverlay
-      ];
+      overlays.default = cargo-dyndrv.overlays.default;
 
-      packages = eachDefaultSystem [ (import rust-overlay) (cargo-dyndrv.overlays.default) marsOverlay ] (
+      packages = eachDefaultSystem [ (import rust-overlay) cargo-dyndrv.overlays.default ] (
         pkgs: system:
         let
           dir = builtins.readDir ./shards;
