@@ -6,7 +6,9 @@
 # slurm-ci image's post-build hook, so nothing has to be uploaded from here.
 #
 # Repository secrets (settings → secrets and variables → actions):
-#   MARS_WG_CONF      a wg-quick client config issued by the mars WireGuard gateway (wireguard-ui)
+#   MARS_WG_CONF_0..7 wg-quick client configs issued by the mars WireGuard gateway (wireguard-ui),
+#                     one peer per parallel chunk: a WireGuard peer carries one live session, so
+#                     chunk N always uses peer N and the pool caps the parallelism at 8
 #   MARS_NSH_JWT      a Slurm JWT for slurmrestd (scontrol token username=<user> lifespan=...)
 #   MARS_NSH_SSH_KEY  the private key nsh uses to reach the workers' sshd (port 2222)
 # Repository variables:
@@ -77,7 +79,7 @@ jobs:
           esac
           python3 - "$CHUNKS" <<<"$list" <<'PY'
           import json, os, sys
-          chunks = max(1, int(sys.argv[1]))
+          chunks = min(8, max(1, int(sys.argv[1])))  # one WireGuard peer per chunk, see the header
           shards = [s for s in sys.stdin.read().split() if os.path.isdir(f"shards/{s}")]
           per = -(-len(shards) // chunks) if shards else 0
           matrix = [{"id": i, "shards": " ".join(shards[i*per:(i+1)*per])}
@@ -94,6 +96,7 @@ jobs:
     timeout-minutes: 350
     strategy:
       fail-fast: false
+      max-parallel: 8 # the WireGuard peer pool
       matrix:
         include: ${{ fromJson(needs.plan.outputs.matrix) }}
     name: build (chunk ${{ matrix.id }})
@@ -114,11 +117,11 @@ jobs:
 
       - name: Tunnel to the mars cluster
         env:
-          WG_CONF: ${{ secrets.MARS_WG_CONF }}
+          WG_CONF: ${{ secrets[format('MARS_WG_CONF_{0}', matrix.id)] }}
           NSH_JWT: ${{ secrets.MARS_NSH_JWT }}
         run: |
           set -euo pipefail
-          [ -n "$WG_CONF" ] || { echo "::error::MARS_WG_CONF is not set"; exit 1; }
+          [ -n "$WG_CONF" ] || { echo "::error::MARS_WG_CONF_${{ matrix.id }} is not set"; exit 1; }
           sudo apt-get update -qq && sudo apt-get install -y -qq wireguard-tools >/dev/null
           printf '%s\n' "$WG_CONF" | sudo install -m 600 /dev/stdin /etc/wireguard/wg0.conf
           sudo wg-quick up wg0
