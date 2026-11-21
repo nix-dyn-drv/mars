@@ -180,6 +180,10 @@ jobs:
           # same derivation as /tmp/nsh-nix here), so no store path needs seeding on the node.
           ssh-user = nsh
           remote-nix-bin-dir = /bin
+          # Make the login's `nix-daemon --stdio` forward to the pod's daemon: nix resolves the
+          # default `auto` store to "local" when /nix/var/nix is writable by the user (it is, in
+          # the CI image), and the unprivileged login then dies on the db lock (run 44963866329).
+          remote-store = daemon
           systems = x86_64-linux aarch64-linux
           system-features = builder-rpc-v0 big-parallel benchmark
           remote-building = true
