@@ -1,0 +1,184 @@
+# Build shards on the mars cluster from a GitHub-hosted runner.
+#
+# The runner only evaluates and drives: every derivation is submitted to the mars Slurm cluster
+# through nsh (`--store nsh://`, remote building over ssh port 2222), reached over a WireGuard
+# tunnel to the cluster's gateway. Workers push their outputs to the niks3 cache through the
+# slurm-ci image's post-build hook, so nothing has to be uploaded from here.
+#
+# Repository secrets (settings → secrets and variables → actions):
+#   MARS_WG_CONF      a wg-quick client config issued by the mars WireGuard gateway (wireguard-ui)
+#   MARS_NSH_JWT      a Slurm JWT for slurmrestd (scontrol token username=<user> lifespan=...)
+#   MARS_NSH_SSH_KEY  the private key nsh uses to reach the workers' sshd (port 2222)
+# Repository variables:
+#   MARS_SLURM_API_HOST  the restapi load balancer's DNS name (internal, inside the tunnel)
+#   MARS_NSH_FLAKE       nsh flake ref, default git+https://codeberg.org/lisanna/nix-scheduler-hook?ref=dev-saronic
+#
+# `shards`: "changed" (shards whose Cargo.lock changed in the pushed range, the default), "all",
+# or an explicit space-separated list. The list is split into `chunks` parallel jobs; each job has
+# GitHub's 6 h ceiling, so keep chunks small enough for that (the cluster keeps the finished
+# derivations either way, a rerun only submits what is missing).
+name: build
+
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: 'changed | all | space-separated shard numbers'
+        default: changed
+      chunks:
+        description: parallel jobs to split the shard list across
+        default: "8"
+      max_jobs:
+        description: concurrent submissions per job (nix --max-jobs)
+        default: "16"
+  push:
+    branches: [main]
+    paths:
+      - shards/**
+      - flake.nix
+      - flake.lock
+      - patches/**
+      - .github/workflows/build.yml
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      count: ${{ steps.plan.outputs.count }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - id: plan
+        env:
+          MODE: ${{ inputs.shards || 'changed' }}
+          CHUNKS: ${{ inputs.chunks || '8' }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          case "$MODE" in
+            all)
+              list=$(ls -d shards/*/ | xargs -n1 basename) ;;
+            changed)
+              base="$BEFORE"
+              if [ -z "$base" ] || [ "$base" = "0000000000000000000000000000000000000000" ] \
+                 || ! git cat-file -e "$base" 2>/dev/null; then base=HEAD~1; fi
+              list=$(git diff --name-only "$base" HEAD -- 'shards/*/Cargo.lock' | cut -d/ -f2 | sort -u) ;;
+            *)
+              list=$(tr ' ,' '\n\n' <<<"$MODE" | sed '/^$/d') ;;
+          esac
+          python3 - "$CHUNKS" <<<"$list" <<'PY'
+          import json, os, sys
+          chunks = max(1, int(sys.argv[1]))
+          shards = [s for s in sys.stdin.read().split() if os.path.isdir(f"shards/{s}")]
+          per = -(-len(shards) // chunks) if shards else 0
+          matrix = [{"id": i, "shards": " ".join(shards[i*per:(i+1)*per])}
+                    for i in range(chunks) if shards[i*per:(i+1)*per]]
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"matrix={json.dumps(matrix)}\ncount={len(shards)}\n")
+          print(f"{len(shards)} shard(s) in {len(matrix)} chunk(s)")
+          PY
+
+  build:
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJson(needs.plan.outputs.matrix) }}
+    name: build (chunk ${{ matrix.id }})
+    env:
+      NSH_FLAKE: ${{ vars.MARS_NSH_FLAKE || 'git+https://codeberg.org/lisanna/nix-scheduler-hook?ref=dev-saronic' }}
+      SLURM_API_HOST: ${{ vars.MARS_SLURM_API_HOST }}
+    steps:
+      - uses: actions/checkout@v5
+
+      # The nsh plugin is built against the Determinate Nix pinned in the nsh flake; the installed
+      # nix has to be the same major/minor for the plugin to load. Pin `determinate-nix-version`
+      # here when the nsh flake's lock moves.
+      - uses: DeterminateSystems/nix-installer-action@v16
+        with:
+          determinate: true
+      - uses: DeterminateSystems/flakehub-cache-action@v2
+        continue-on-error: true
+
+      - name: Tunnel to the mars cluster
+        env:
+          WG_CONF: ${{ secrets.MARS_WG_CONF }}
+          NSH_JWT: ${{ secrets.MARS_NSH_JWT }}
+        run: |
+          set -euo pipefail
+          [ -n "$WG_CONF" ] || { echo "::error::MARS_WG_CONF is not set"; exit 1; }
+          sudo apt-get update -qq && sudo apt-get install -y -qq wireguard-tools >/dev/null
+          printf '%s\n' "$WG_CONF" | sudo install -m 600 /dev/stdin /etc/wireguard/wg0.conf
+          sudo wg-quick up wg0
+          # slurmrestd answers inside the tunnel; this fails fast if the tunnel or the JWT is wrong.
+          curl -fsS --max-time 20 -H "X-SLURM-USER-TOKEN: $NSH_JWT" \
+            "http://$SLURM_API_HOST:6820/slurm/v0.0.43/ping" >/dev/null
+          echo "slurmrestd reachable at $SLURM_API_HOST"
+
+      - name: Configure the nsh client
+        env:
+          NSH_JWT: ${{ secrets.MARS_NSH_JWT }}
+          NSH_SSH_KEY: ${{ secrets.MARS_NSH_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          nix build "$NSH_FLAKE#nix-scheduler-hook" --out-link /tmp/nsh
+          plugin=$(ls /tmp/nsh/lib/nix/plugins/*.so | head -1)
+          # Builds run as root through the daemon, so the key and nsh.conf live in root's home / /etc/nix.
+          sudo install -d -m 700 /root/.ssh
+          printf '%s\n' "$NSH_SSH_KEY" | sudo install -m 600 /dev/stdin /root/.ssh/id_ed25519
+          printf 'Host *\n  StrictHostKeyChecking accept-new\n  ServerAliveInterval 30\n' | sudo install -m 600 /dev/stdin /root/.ssh/config
+          sudo tee /etc/nix/nsh.conf >/dev/null <<EOF
+          slurm-api-host = $SLURM_API_HOST
+          slurm-api-port = 6820
+          slurm-jwt-token = $NSH_JWT
+          slurm-state-dir = /tmp/nsh
+          slurm-batch-state-update = true
+          ssh-port = 2222
+          ssh-user = root
+          systems = x86_64-linux aarch64-linux
+          system-features = builder-rpc-v0 big-parallel benchmark
+          remote-building = true
+          node-max-jobs = 4
+          slurm-system-params = {"x86_64-linux": {"partition": "x86"}, "aarch64-linux": {"partition": "arm"}}
+          EOF
+          sudo chmod 600 /etc/nix/nsh.conf
+          echo "extra-plugin-files = $plugin" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+          sudo systemctl restart nix-daemon
+          nix store info --store nsh:// >/dev/null && echo "nsh store answers"
+
+      - name: Build shards on the cluster
+        env:
+          SHARDS: ${{ matrix.shards }}
+          MAX_JOBS: ${{ inputs.max_jobs || '16' }}
+        run: |
+          set -euo pipefail
+          targets=()
+          for s in $SHARDS; do targets+=(".#\"$s\""); done
+          echo "building ${#targets[@]} shard(s): $SHARDS"
+          # --keep-going: one failing shard must not stop the chunk; the summary below lists failures.
+          set +e
+          nix build --store nsh:// --keep-going --max-jobs "$MAX_JOBS" --no-link --print-out-paths \
+            "${targets[@]}" 2>&1 | tee build.log
+          rc=${PIPESTATUS[0]}
+          set -e
+          {
+            echo "## chunk ${{ matrix.id }}: ${#targets[@]} shard(s), exit $rc"
+            grep -E "^error: (builder for|Cannot build)" build.log | sed 's/^/- /' | head -50 || true
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit "$rc"
+
+      - name: Tunnel down
+        if: always()
+        run: sudo wg-quick down wg0 || true
