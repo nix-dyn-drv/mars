@@ -1,0 +1,96 @@
+# Regenerate every shard's Cargo.toml + Cargo.lock from the current crates.io index and commit
+# the result to the branch. Runs on a schedule and on demand; each run that changes anything
+# lands as one commit ("relock: crates.io-index <sha>"), so the build workflow sees a new
+# revision per relock and the history carries the index pointer each lock set came from.
+#
+# Pushes use RELOCK_TOKEN (a GitHub App installation token or a PAT with contents:write) when it
+# is set, because commits pushed with the default GITHUB_TOKEN never trigger other workflows.
+# Without it the push still happens and build.yml is started explicitly below.
+name: relock
+
+on:
+  schedule:
+    - cron: "17 9 * * *"   # daily 09:17 UTC (03:17 CST)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/index-select/**
+      - .github/workflows/relock.yml
+
+concurrency:
+  group: relock-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  relock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.RELOCK_TOKEN || github.token }}
+          fetch-depth: 1
+          submodules: false
+
+      - name: Fetch the current crates.io index (shallow)
+        run: |
+          set -euo pipefail
+          git submodule init crates.io-index
+          git submodule update --depth 1 crates.io-index
+          git -C crates.io-index fetch --depth 1 origin master
+          git -C crates.io-index checkout -q FETCH_HEAD
+          echo "index=$(git -C crates.io-index rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+        id: index
+
+      - uses: DeterminateSystems/nix-installer-action@v16
+      - uses: DeterminateSystems/flakehub-cache-action@v2
+        continue-on-error: true
+
+      - name: Regenerate the shards
+        run: |
+          set -euo pipefail
+          # resolved.tsv caches per-crate resolutions against the previous index: drop it so
+          # index-select resolves against the index fetched above, then keep it out of the commit.
+          rm -f shards/resolved.tsv
+          nix develop --command gen-crates
+          rm -f shards/resolved.tsv
+          # shards/index.json: crate -> version -> shard, read by the flake's legacyPackages.crates
+          python3 tools/gen-index.py
+
+      - name: Commit and push
+        id: commit
+        run: |
+          set -euo pipefail
+          git add -A shards crates.io-index
+          if git diff --cached --quiet; then
+            echo "no lock changes for index ${{ steps.index.outputs.index }}"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name  "mars-relock[bot]"
+          git config user.email "mars-relock[bot]@users.noreply.github.com"
+          git commit -q -m "relock: crates.io-index ${{ steps.index.outputs.index }} ($(date -u +%Y-%m-%d))" \
+            -m "$(git diff --cached --stat HEAD~0 | tail -1 || true)"
+          # someone may have pushed meanwhile: rebase the single relock commit and retry
+          for attempt in 1 2 3; do
+            git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}" && break
+            sleep $((attempt * 20))
+          done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Start the build workflow (when the push used the default token)
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HAS_RELOCK_TOKEN: ${{ secrets.RELOCK_TOKEN != '' }}
+        run: |
+          if [ "$HAS_RELOCK_TOKEN" = "true" ]; then
+            echo "pushed with RELOCK_TOKEN: the push itself triggers build.yml"
+          else
+            gh workflow run build.yml --ref "${GITHUB_REF_NAME}" || echo "build.yml not present yet"
+          fi
