@@ -77,10 +77,12 @@ jobs:
             *)
               list=$(tr ' ,' '\n\n' <<<"$MODE" | sed '/^$/d') ;;
           esac
-          python3 - "$CHUNKS" <<<"$list" <<'PY'
+          # The program arrives on stdin, so the shard list rides an environment variable
+          # (a here-string and a heredoc on the same stdin leave python nothing to read).
+          LIST="$list" python3 - "$CHUNKS" <<'PY'
           import json, os, sys
           chunks = min(8, max(1, int(sys.argv[1])))  # one WireGuard peer per chunk, see the header
-          shards = [s for s in sys.stdin.read().split() if os.path.isdir(f"shards/{s}")]
+          shards = [s for s in os.environ.get("LIST", "").split() if os.path.isdir(f"shards/{s}")]
           per = -(-len(shards) // chunks) if shards else 0
           matrix = [{"id": i, "shards": " ".join(shards[i*per:(i+1)*per])}
                     for i in range(chunks) if shards[i*per:(i+1)*per]]
