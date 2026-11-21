@@ -177,11 +177,8 @@ jobs:
           ssh-user = root
           systems = x86_64-linux aarch64-linux
           system-features = builder-rpc-v0 big-parallel benchmark
-          # The shards are floating content-addressed (dynamic) derivations, which nsh's whole-graph
-          # planner under remote-building refuses ("not supported in the whole-graph flow", run
-          # 44924562144). The job-script flow builds the shard on the node and copies the
-          # realisations back, so each shard is one reservation that the node builds end to end.
-          remote-building = false
+          remote-building = true
+          node-max-jobs = 4
           slurm-system-params = {"x86_64-linux": {"partition": "x86"}, "aarch64-linux": {"partition": "arm"}}
           EOF
           sudo chmod 600 /etc/nix/nsh.conf
