@@ -152,9 +152,13 @@ jobs:
           nix build "$NSH_FLAKE#nix-scheduler-hook" --out-link /tmp/nsh
           # The plugin is linked against the nix the nsh flake pins (a development build), not the
           # installer's; every nsh-store command below runs that nix, taken from the flake's lock.
+          # `#nix-cli` is the CLI component the plugin shares its libnix* closure with and is what
+          # the mars workers seed into niks3; `#nix` is the "everything" package, which runs the
+          # whole functional test suite as its install check (an hour on a runner, and it fails
+          # inside the worker pods).
           nixref=$(nix flake metadata --json "$NSH_FLAKE" \
             | jq -r '.locks.nodes.nix.locked | "github:\(.owner)/\(.repo)/\(.rev)"')
-          nix build "$nixref#nix" --out-link /tmp/nsh-nix
+          nix build "$nixref#nix-cli" --out-link /tmp/nsh-nix
           echo "nsh-nix=/tmp/nsh-nix/bin/nix ($(/tmp/nsh-nix/bin/nix --version))"
           # The package installs the plugin as lib/nsh.so (nix/package.nix in the nsh repo).
           plugin=/tmp/nsh/lib/nsh.so
