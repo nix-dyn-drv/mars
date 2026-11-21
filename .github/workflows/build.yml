@@ -121,6 +121,8 @@ jobs:
         env:
           WG_CONF: ${{ secrets[format('MARS_WG_CONF_{0}', matrix.id)] }}
           NSH_JWT: ${{ secrets.MARS_NSH_JWT }}
+          NIKS3_URL: ${{ vars.MARS_NIKS3_URL }}
+          NIKS3_PUBKEY: ${{ vars.MARS_NIKS3_PUBKEY }}
         run: |
           set -euo pipefail
           [ -n "$WG_CONF" ] || { echo "::error::MARS_WG_CONF_${{ matrix.id }} is not set"; exit 1; }
@@ -131,6 +133,15 @@ jobs:
           curl -fsS --max-time 20 -H "X-SLURM-USER-TOKEN: $NSH_JWT" \
             "http://$SLURM_API_HOST:6820/slurm/v0.0.43/ping" >/dev/null
           echo "slurmrestd reachable at $SLURM_API_HOST"
+          # The cluster's niks3 cache sits behind an internal load balancer inside the tunnel; every
+          # worker pushes its outputs there, and the nsh closure is seeded into it, so substitute.
+          if [ -n "$NIKS3_URL" ] && [ -n "$NIKS3_PUBKEY" ]; then
+            curl -fsS --max-time 20 "$NIKS3_URL/nix-cache-info" >/dev/null
+            printf 'extra-substituters = %s\nextra-trusted-public-keys = %s\n' "$NIKS3_URL" "$NIKS3_PUBKEY" \
+              | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+            sudo systemctl restart nix-daemon
+            echo "niks3 cache reachable at $NIKS3_URL"
+          fi
 
       - name: Configure the nsh client
         env:
@@ -139,6 +150,12 @@ jobs:
         run: |
           set -euo pipefail
           nix build "$NSH_FLAKE#nix-scheduler-hook" --out-link /tmp/nsh
+          # The plugin is linked against the nix the nsh flake pins (a development build), not the
+          # installer's; every nsh-store command below runs that nix, taken from the flake's lock.
+          nixref=$(nix flake metadata --json "$NSH_FLAKE" \
+            | jq -r '.locks.nodes.nix.locked | "github:\(.owner)/\(.repo)/\(.rev)"')
+          nix build "$nixref#nix" --out-link /tmp/nsh-nix
+          echo "nsh-nix=/tmp/nsh-nix/bin/nix ($(/tmp/nsh-nix/bin/nix --version))"
           # The package installs the plugin as lib/nsh.so (nix/package.nix in the nsh repo).
           plugin=/tmp/nsh/lib/nsh.so
           test -e "$plugin" || { echo "::error::no nsh plugin at $plugin"; ls -R /tmp/nsh/lib; exit 1; }
@@ -165,7 +182,8 @@ jobs:
           # and the plugin never loads); set it outright, the same way raven's nix.custom.conf does.
           echo "plugin-files = $plugin" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
           sudo systemctl restart nix-daemon
-          nix store info --store nsh:// >/dev/null && echo "nsh store answers"
+          # Root reads /etc/nix/nsh.conf and /root/.ssh directly, no daemon round trip.
+          sudo /tmp/nsh-nix/bin/nix store info --store nsh:// >/dev/null && echo "nsh store answers"
 
       - name: Build shards on the cluster
         env:
@@ -178,7 +196,7 @@ jobs:
           echo "building ${#targets[@]} shard(s): $SHARDS"
           # --keep-going: one failing shard must not stop the chunk; the summary below lists failures.
           set +e
-          nix build --store nsh:// --keep-going --max-jobs "$MAX_JOBS" --no-link --print-out-paths \
+          sudo /tmp/nsh-nix/bin/nix build --store nsh:// --keep-going --max-jobs "$MAX_JOBS" --no-link --print-out-paths \
             "${targets[@]}" 2>&1 | tee build.log
           rc=${PIPESTATUS[0]}
           set -e
