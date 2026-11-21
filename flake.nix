@@ -23,12 +23,16 @@
     }:
     let
       # Fixes for cargo-dyndrv (PR 4 head) found while building the shards, carried as a patch until they
-      # land upstream: `--cap-lints allow` for registry crates, one crate type per unit,
+      # land upstream (plus the `crates.drv` output behind `exposeCrates`): `--cap-lints allow` for registry crates, one crate type per unit,
       # CARGO_MANIFEST_LINKS for build scripts, extern entries matched by bare crate name.
       marsOverlay = final: prev: {
         cargo-dyndrv = prev.cargo-dyndrv.overrideAttrs (o: {
           patches = (o.patches or [ ]) ++ [ ./patches/cargo-dyndrv-mars.patch ];
         });
+        # nix/build-crate.nix is the upstream builder plus `exposeCrates` (the `crates.drv`
+        # output the patch above fills); carried as a copy because the input's overlay cannot be
+        # patched without import-from-derivation. Drop both with the patch once upstream has them.
+        buildDynamicCrate = final.callPackage ./nix/build-crate.nix { };
       };
 
       # Default extern map: system libraries for the -sys crates seen so far, found through pkg-config
@@ -143,23 +147,6 @@
             in
             function pkgs system
           );
-      # Every registry crate of a shard's Cargo.lock is also a declared output of the shard,
-      # `<name>-<version>`, which cargo-dyndrv (patched, see patches/) fills with that unit's own
-      # derivation. Shards above this many packages keep only `dummy`: each declared output is an
-      # environment variable in the builder, and the 50k-crate shards would overflow it. (Lifting
-      # the cap means structured attrs for the outputs; tracked as a follow-up.)
-      maxCrateOutputs = 2000;
-      registryPackages =
-        n:
-        builtins.filter (p: nixpkgs.lib.hasPrefix "registry+" (p.source or "")) (
-          builtins.fromTOML (builtins.readFile (./shards + "/${n}/Cargo.lock"))
-        ).package;
-      crateOutputs =
-        n:
-        let
-          ps = registryPackages n;
-        in
-        if builtins.length ps > maxCrateOutputs then [ ] else map (p: "${p.name}-${p.version}") ps;
     in
     {
       overrides = {
@@ -219,7 +206,9 @@
                 '';
                 # env.RUSTFLAGS = "-D warnings -A mismatched_lifetime_syntaxes";
                 cargoLock.lockFile = ./shards + "/${n}/Cargo.lock";
-                outputs = [ "dummy" ] ++ crateOutputs n;
+                outputs = [ "dummy" ];
+                # every registry crate of the lock file as `<shard>.crate "<name>-<version>"`
+                exposeCrates = true;
               }
               // override
               // {
@@ -233,8 +222,8 @@
 
       # Top-level access to every crate: `nix build .#crates.serde."1.0.228"` (legacyPackages, so
       # `nix flake show` does not walk the 460k entries). shards/index.json (tools/gen-index.py,
-      # regenerated with the locks) says which shard carries a crate version; only that shard's
-      # lock is read when an attribute is evaluated.
+      # regenerated with the locks) says which shard carries a crate version; the attribute links
+      # that crate's output of the shard's `crates.drv` (see exposeCrates), whatever the shard's size.
       legacyPackages = eachDefaultSystem [ ] (
         pkgs: system:
         let
@@ -244,13 +233,7 @@
           crates = builtins.mapAttrs (
             name:
             builtins.mapAttrs (
-              version: shard:
-              let
-                drv = self.packages.${system}.${shard};
-                out = "${name}-${version}";
-              in
-              drv.${out}
-                or (throw "${out} lives in shard ${shard}, which has more than ${toString maxCrateOutputs} crates and exposes only its dummy output for now")
+              version: shard: self.packages.${system}.${shard}.crate "${name}-${version}"
             )
           ) index;
         }
