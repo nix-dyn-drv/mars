@@ -189,6 +189,10 @@ jobs:
           # evaluates and schedules them needs both experimental features, the same set the raven
           # sweep ran with (nix-command flakes ca-derivations dynamic-derivations).
           echo "extra-experimental-features = ca-derivations dynamic-derivations" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+          # Let the node substitute what the caches have (niks3, cache.nixos.org) instead of
+          # building it: nsh probes the node with this flag, and without it the whole nixpkgs
+          # bootstrap chain was being compiled on the worker (run 44928988847).
+          echo "builders-use-substitutes = true" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
           sudo systemctl restart nix-daemon
           # Root reads /etc/nix/nsh.conf and /root/.ssh directly, no daemon round trip.
           sudo /tmp/nsh-nix/bin/nix store info --store nsh:// >/dev/null && echo "nsh store answers"
