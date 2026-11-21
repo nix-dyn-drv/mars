@@ -121,6 +121,8 @@ jobs:
         env:
           WG_CONF: ${{ secrets[format('MARS_WG_CONF_{0}', matrix.id)] }}
           NSH_JWT: ${{ secrets.MARS_NSH_JWT }}
+          NIKS3_URL: ${{ vars.MARS_NIKS3_URL }}
+          NIKS3_PUBKEY: ${{ vars.MARS_NIKS3_PUBKEY }}
         run: |
           set -euo pipefail
           [ -n "$WG_CONF" ] || { echo "::error::MARS_WG_CONF_${{ matrix.id }} is not set"; exit 1; }
@@ -131,6 +133,15 @@ jobs:
           curl -fsS --max-time 20 -H "X-SLURM-USER-TOKEN: $NSH_JWT" \
             "http://$SLURM_API_HOST:6820/slurm/v0.0.43/ping" >/dev/null
           echo "slurmrestd reachable at $SLURM_API_HOST"
+          # The cluster's niks3 cache sits behind an internal load balancer inside the tunnel; every
+          # worker pushes its outputs there, and the nsh closure is seeded into it, so substitute.
+          if [ -n "$NIKS3_URL" ] && [ -n "$NIKS3_PUBKEY" ]; then
+            curl -fsS --max-time 20 "$NIKS3_URL/nix-cache-info" >/dev/null
+            printf 'extra-substituters = %s\nextra-trusted-public-keys = %s\n' "$NIKS3_URL" "$NIKS3_PUBKEY" \
+              | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+            sudo systemctl restart nix-daemon
+            echo "niks3 cache reachable at $NIKS3_URL"
+          fi
 
       - name: Configure the nsh client
         env:
@@ -139,7 +150,19 @@ jobs:
         run: |
           set -euo pipefail
           nix build "$NSH_FLAKE#nix-scheduler-hook" --out-link /tmp/nsh
-          plugin=$(ls /tmp/nsh/lib/nix/plugins/*.so | head -1)
+          # The plugin is linked against the nix the nsh flake pins (a development build), not the
+          # installer's; every nsh-store command below runs that nix, taken from the flake's lock.
+          # `#nix-cli` is the CLI component the plugin shares its libnix* closure with and is what
+          # the mars workers seed into niks3; `#nix` is the "everything" package, which runs the
+          # whole functional test suite as its install check (an hour on a runner, and it fails
+          # inside the worker pods).
+          nixref=$(nix flake metadata --json "$NSH_FLAKE" \
+            | jq -r '.locks.nodes.nix.locked | "github:\(.owner)/\(.repo)/\(.rev)"')
+          nix build "$nixref#nix-cli" --out-link /tmp/nsh-nix
+          echo "nsh-nix=/tmp/nsh-nix/bin/nix ($(/tmp/nsh-nix/bin/nix --version))"
+          # The package installs the plugin as lib/nsh.so (nix/package.nix in the nsh repo).
+          plugin=/tmp/nsh/lib/nsh.so
+          test -e "$plugin" || { echo "::error::no nsh plugin at $plugin"; ls -R /tmp/nsh/lib; exit 1; }
           # Builds run as root through the daemon, so the key and nsh.conf live in root's home / /etc/nix.
           sudo install -d -m 700 /root/.ssh
           printf '%s\n' "$NSH_SSH_KEY" | sudo install -m 600 /dev/stdin /root/.ssh/id_ed25519
@@ -152,6 +175,10 @@ jobs:
           slurm-batch-state-update = true
           ssh-port = 2222
           ssh-user = root
+          # The node's daemon for the job is the flake's own nix too: the MARS derivations need
+          # its builder-rpc-v0 feature, which the worker image's nix lacks. Same derivation as
+          # /tmp/nsh-nix, so the same store path on the node (seeded into niks3).
+          remote-nix-bin-dir = $(readlink -f /tmp/nsh-nix)/bin
           systems = x86_64-linux aarch64-linux
           system-features = builder-rpc-v0 big-parallel benchmark
           remote-building = true
@@ -159,9 +186,20 @@ jobs:
           slurm-system-params = {"x86_64-linux": {"partition": "x86"}, "aarch64-linux": {"partition": "arm"}}
           EOF
           sudo chmod 600 /etc/nix/nsh.conf
-          echo "extra-plugin-files = $plugin" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+          # `plugin-files` is not an extra-able list (nix warns "unknown setting 'extra-plugin-files'"
+          # and the plugin never loads); set it outright, the same way raven's nix.custom.conf does.
+          echo "plugin-files = $plugin" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+          # The shards are content-addressed dynamic derivations (cargo-dyndrv): the client that
+          # evaluates and schedules them needs both experimental features, the same set the raven
+          # sweep ran with (nix-command flakes ca-derivations dynamic-derivations).
+          echo "extra-experimental-features = ca-derivations dynamic-derivations" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+          # Let the node substitute what the caches have (niks3, cache.nixos.org) instead of
+          # building it: nsh probes the node with this flag, and without it the whole nixpkgs
+          # bootstrap chain was being compiled on the worker (run 44928988847).
+          echo "builders-use-substitutes = true" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
           sudo systemctl restart nix-daemon
-          nix store info --store nsh:// >/dev/null && echo "nsh store answers"
+          # Root reads /etc/nix/nsh.conf and /root/.ssh directly, no daemon round trip.
+          sudo /tmp/nsh-nix/bin/nix store info --store nsh:// >/dev/null && echo "nsh store answers"
 
       - name: Build shards on the cluster
         env:
@@ -174,7 +212,7 @@ jobs:
           echo "building ${#targets[@]} shard(s): $SHARDS"
           # --keep-going: one failing shard must not stop the chunk; the summary below lists failures.
           set +e
-          nix build --store nsh:// --keep-going --max-jobs "$MAX_JOBS" --no-link --print-out-paths \
+          sudo /tmp/nsh-nix/bin/nix build --store nsh:// --keep-going --max-jobs "$MAX_JOBS" --no-link --print-out-paths \
             "${targets[@]}" 2>&1 | tee build.log
           rc=${PIPESTATUS[0]}
           set -e
