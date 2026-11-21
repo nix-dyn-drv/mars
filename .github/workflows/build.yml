@@ -161,7 +161,9 @@ jobs:
           slurm-system-params = {"x86_64-linux": {"partition": "x86"}, "aarch64-linux": {"partition": "arm"}}
           EOF
           sudo chmod 600 /etc/nix/nsh.conf
-          echo "extra-plugin-files = $plugin" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
+          # `plugin-files` is not an extra-able list (nix warns "unknown setting 'extra-plugin-files'"
+          # and the plugin never loads); set it outright, the same way raven's nix.custom.conf does.
+          echo "plugin-files = $plugin" | sudo tee -a /etc/nix/nix.custom.conf >/dev/null
           sudo systemctl restart nix-daemon
           nix store info --store nsh:// >/dev/null && echo "nsh store answers"
 
