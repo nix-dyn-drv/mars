@@ -8,7 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     cargo-dyndrv = {
-      url = "github:obsidiansystems/cargo-dyndrv/refs/pull/4/head";
+      # Lisanna's fork, branch `mars`: upstream PR 4 plus the shard fixes and the `crates.drv`
+      # output (`exposeCrates`); its overlay provides buildDynamicCrate.
+      url = "github:lisanna-dettwyler/cargo-dyndrv/mars";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -22,15 +24,6 @@
       ...
     }:
     let
-      # Fixes for cargo-dyndrv (PR 4 head) found while building the shards, carried as a patch until they
-      # land upstream: `--cap-lints allow` for registry crates, one crate type per unit,
-      # CARGO_MANIFEST_LINKS for build scripts, extern entries matched by bare crate name.
-      marsOverlay = final: prev: {
-        cargo-dyndrv = prev.cargo-dyndrv.overrideAttrs (o: {
-          patches = (o.patches or [ ]) ++ [ ./patches/cargo-dyndrv-mars.patch ];
-        });
-      };
-
       # Default extern map: system libraries for the -sys crates seen so far, found through pkg-config
       # inside the sandbox. Keys are bare crate names (extern-by-name fix above), so one entry covers
       # every version in a lock file; per-shard `overrides` (exact package ids) are merged on top.
@@ -172,15 +165,13 @@
         };
       };
 
-      overlays.default = nixpkgs.lib.composeManyExtensions [
-        cargo-dyndrv.overlays.default
-        marsOverlay
-      ];
+      overlays.default = cargo-dyndrv.overlays.default;
 
-      packages = eachDefaultSystem [ (import rust-overlay) (cargo-dyndrv.overlays.default) marsOverlay ] (
+      packages = eachDefaultSystem [ (import rust-overlay) cargo-dyndrv.overlays.default ] (
         pkgs: system:
         let
           dir = builtins.readDir ./shards;
+          shards = nixpkgs.lib.filterAttrs (n: v: v == "directory") dir;
           d = builtins.mapAttrs (
             n: v:
             let
@@ -202,15 +193,36 @@
                 # env.RUSTFLAGS = "-D warnings -A mismatched_lifetime_syntaxes";
                 cargoLock.lockFile = ./shards + "/${n}/Cargo.lock";
                 outputs = [ "dummy" ];
+                # every registry crate of the lock file as `<shard>.crate "<name>-<version>"`
+                exposeCrates = true;
               }
               // override
               // {
                 extern = (externFor pkgs) // (override.extern or { });
               }
             )
-          ) dir;
+          ) shards;
         in
         d
+      );
+
+      # Top-level access to every crate: `nix build .#crates.serde."1.0.228"` (legacyPackages, so
+      # `nix flake show` does not walk the 460k entries). shards/index.json (tools/gen-index.py,
+      # regenerated with the locks) says which shard carries a crate version; the attribute links
+      # that crate's output of the shard's `crates.drv` (see exposeCrates), whatever the shard's size.
+      legacyPackages = eachDefaultSystem [ ] (
+        pkgs: system:
+        let
+          index = builtins.fromJSON (builtins.readFile ./shards/index.json);
+        in
+        {
+          crates = builtins.mapAttrs (
+            name:
+            builtins.mapAttrs (
+              version: shard: self.packages.${system}.${shard}.crate "${name}-${version}"
+            )
+          ) index;
+        }
       );
 
       devShells = eachDefaultSystem [ (import rust-overlay) ] (

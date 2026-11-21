@@ -50,8 +50,8 @@ Could not run `PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags
 - Binary cache is currently best-effort: we are interested to provide a proper guarantee depending on adoption and support
 - We provide coarse-grained artifacts at the crate-level, not at the individul compilation unit.
 
-### Fixes carried in this repo
-`patches/cargo-dyndrv-mars.patch` (applied to the pinned cargo-dyndrv by `marsOverlay` in `flake.nix`):
+### cargo-dyndrv fork
+The flake pins [lisanna-dettwyler/cargo-dyndrv](https://github.com/lisanna-dettwyler/cargo-dyndrv) branch `mars`: upstream PR 4 plus the fixes below and the `crates.drv` output behind `exposeCrates` (one derivation per shard whose `<crate>-<version>.drv` outputs expose every library unit). Its overlay provides `buildDynamicCrate`.
 - `--cap-lints allow` for every non-path crate, as cargo does, so `#![deny(warnings)]` in a registry crate no longer fails on a newer rustc (the most common failure in the first sweep: `hiding a lifetime that's elided elsewhere is confusing`, `implicit autoref ...`, `use of deprecated ...`)
 - targets with several crate types (`["cdylib", "rlib"]`) build as `lib` instead of bailing with "unexpected crate types"
 - `CARGO_MANIFEST_LINKS` is set for build scripts of `links` packages (ring's build.rs unwraps it)
