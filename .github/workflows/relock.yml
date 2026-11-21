@@ -58,6 +58,8 @@ jobs:
           rm -f shards/resolved.tsv
           nix develop --command gen-crates
           rm -f shards/resolved.tsv
+          # shards/index.json: crate -> version -> shard, read by the flake's legacyPackages.crates
+          python3 tools/gen-index.py
 
       - name: Commit and push
         id: commit
