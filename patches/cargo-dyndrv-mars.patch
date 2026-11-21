@@ -1,5 +1,5 @@
 diff --git a/cargo-dyndrv/src/main.rs b/cargo-dyndrv/src/main.rs
-index e00b10c..3464821 100644
+index e00b10c..7c64fe7 100644
 --- a/cargo-dyndrv/src/main.rs
 +++ b/cargo-dyndrv/src/main.rs
 @@ -95,6 +95,27 @@ fn add_feature(args: &mut VecDeque<bytes::Bytes>, feature: &str) {
@@ -138,3 +138,67 @@ index e00b10c..3464821 100644
  
              if unit.mode == CompileMode::Check {
                  add_long(&mut args, "emit", &"metadata");
+@@ -662,7 +727,7 @@ async fn main() -> eyre::Result<()> {
+         drv_cache[unit_idx] = Some(UnitCache { drv_path, meta });
+     }
+ 
+-    for unit_idx in unit_graph.roots {
++    for &unit_idx in &unit_graph.roots {
+         let drv_path = &drv_cache[unit_idx].as_ref().unwrap().drv_path;
+         println!("{}", store_dir.display(drv_path));
+ 
+@@ -673,6 +738,54 @@ async fn main() -> eyre::Result<()> {
+         }
+     }
+ 
++    // Every library unit is also offered as its own output, named `<crate>-<version>`, when the
++    // enclosing derivation declares one (`outputs = [ "serde-1.0.200" ... ]` on the Nix side shows
++    // up as a `serde-1.0.200.drv` variable here). Dependencies of a crate thereby become
++    // addressable derivations of their own, so a flake can expose each crate of a lock file as
++    // a top-level package without rebuilding it per consumer.
++    if store::is_in_derivation() {
++        // Nix exports `outputs` (the space-separated output names) to the builder. The
++        // per-output path variables are not usable here: in structured-attrs mode names
++        // like `serde-1.0.200.drv` are not valid shell identifiers and never reach us.
++        let declared: std::collections::HashSet<String> = std::env::var("outputs")
++            .map(|s| s.split_whitespace().map(String::from).collect())
++            .unwrap_or_default();
++        let mut offered = std::collections::HashSet::new();
++        let mut submitted = 0usize;
++        for (unit_idx, unit) in unit_graph.units.iter().enumerate() {
++            if unit.mode != CompileMode::Build {
++                continue;
++            }
++            let lib_like = unit
++                .target
++                .kind
++                .iter()
++                .any(|k| matches!(k.as_str(), "lib" | "rlib" | "dylib" | "proc-macro"));
++            if !lib_like {
++                continue;
++            }
++            let Some((name, version)) = unit
++                .pkg_id
++                .rsplit_once('#')
++                .and_then(|(_, nv)| nv.split_once('@'))
++            else {
++                continue;
++            };
++            let out_name = format!("{}-{}", name, version);
++            let out_drv = format!("{}.drv", out_name);
++            let is_declared = declared.contains(&out_drv) || std::env::var_os(&out_drv).is_some();
++            if !is_declared || !offered.insert(out_name.clone()) {
++                continue;
++            }
++            let drv_path = &drv_cache[unit_idx].as_ref().unwrap().drv_path;
++            store::submit_wrapper(&mut store, &store_dir, &tools.ln, &out_name, drv_path).await?;
++            submitted += 1;
++        }
++        if submitted > 0 {
++            eprintln!("submitted {} per-crate outputs", submitted);
++        }
++    }
++
+     // TODO: run the build if we are outside a derivation,
+     // attach to output if we are inside a derivation.
+ 

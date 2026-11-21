@@ -143,6 +143,23 @@
             in
             function pkgs system
           );
+      # Every registry crate of a shard's Cargo.lock is also a declared output of the shard,
+      # `<name>-<version>`, which cargo-dyndrv (patched, see patches/) fills with that unit's own
+      # derivation. Shards above this many packages keep only `dummy`: each declared output is an
+      # environment variable in the builder, and the 50k-crate shards would overflow it. (Lifting
+      # the cap means structured attrs for the outputs; tracked as a follow-up.)
+      maxCrateOutputs = 2000;
+      registryPackages =
+        n:
+        builtins.filter (p: nixpkgs.lib.hasPrefix "registry+" (p.source or "")) (
+          builtins.fromTOML (builtins.readFile (./shards + "/${n}/Cargo.lock"))
+        ).package;
+      crateOutputs =
+        n:
+        let
+          ps = registryPackages n;
+        in
+        if builtins.length ps > maxCrateOutputs then [ ] else map (p: "${p.name}-${p.version}") ps;
     in
     {
       overrides = {
@@ -181,6 +198,7 @@
         pkgs: system:
         let
           dir = builtins.readDir ./shards;
+          shards = nixpkgs.lib.filterAttrs (n: v: v == "directory") dir;
           d = builtins.mapAttrs (
             n: v:
             let
@@ -201,16 +219,41 @@
                 '';
                 # env.RUSTFLAGS = "-D warnings -A mismatched_lifetime_syntaxes";
                 cargoLock.lockFile = ./shards + "/${n}/Cargo.lock";
-                outputs = [ "dummy" ];
+                outputs = [ "dummy" ] ++ crateOutputs n;
               }
               // override
               // {
                 extern = (externFor pkgs) // (override.extern or { });
               }
             )
-          ) dir;
+          ) shards;
         in
         d
+      );
+
+      # Top-level access to every crate: `nix build .#crates.serde."1.0.228"` (legacyPackages, so
+      # `nix flake show` does not walk the 460k entries). shards/index.json (tools/gen-index.py,
+      # regenerated with the locks) says which shard carries a crate version; only that shard's
+      # lock is read when an attribute is evaluated.
+      legacyPackages = eachDefaultSystem [ ] (
+        pkgs: system:
+        let
+          index = builtins.fromJSON (builtins.readFile ./shards/index.json);
+        in
+        {
+          crates = builtins.mapAttrs (
+            name:
+            builtins.mapAttrs (
+              version: shard:
+              let
+                drv = self.packages.${system}.${shard};
+                out = "${name}-${version}";
+              in
+              drv.${out}
+                or (throw "${out} lives in shard ${shard}, which has more than ${toString maxCrateOutputs} crates and exposes only its dummy output for now")
+            )
+          ) index;
+        }
       );
 
       devShells = eachDefaultSystem [ (import rust-overlay) ] (
