@@ -174,11 +174,16 @@ jobs:
           slurm-state-dir = /tmp/nsh
           slurm-batch-state-update = true
           ssh-port = 2222
-          ssh-user = root
-          # The node's daemon for the job is the flake's own nix too: the MARS derivations need
-          # its builder-rpc-v0 feature, which the worker image's nix lacks. Same derivation as
-          # /tmp/nsh-nix, so the same store path on the node (seeded into niks3).
-          remote-nix-bin-dir = $(readlink -f /tmp/nsh-nix)/bin
+          # The worker image's port-2222 login is the unprivileged nsh user (grey-havens slurmd
+          # image, SLURMD_SSH_USER); its `nix-daemon --stdio` proxies to the pod's real nix daemon,
+          # which trusts it. /bin/nix-daemon in the image is the fork's nix (builder-rpc-v0, the
+          # same derivation as /tmp/nsh-nix here), so no store path needs seeding on the node.
+          ssh-user = nsh
+          remote-nix-bin-dir = /bin
+          # Make the login's `nix-daemon --stdio` forward to the pod's daemon: nix resolves the
+          # default `auto` store to "local" when /nix/var/nix is writable by the user (it is, in
+          # the CI image), and the unprivileged login then dies on the db lock (run 44963866329).
+          remote-store = daemon
           systems = x86_64-linux aarch64-linux
           system-features = builder-rpc-v0 big-parallel benchmark
           remote-building = true
