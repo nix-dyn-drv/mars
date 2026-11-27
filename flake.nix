@@ -60,8 +60,21 @@
               bzip2
               xz
               zstd
+              libffi
+              libsodium
+              pcsclite
+              nettle
+              wayland
+              libx11
+              libxcb
             ]
           );
+          # The GTK/WebKitGTK stack for the gtk-rs -sys crates only: pkg-config follows
+          # Requires.private for --cflags, so the whole propagated closure of these has to be
+          # on PKG_CONFIG_PATH, and that closure is too large to hand every crate.
+          gtkPcDirs = lib.concatMapStringsSep ":" (
+            p: "${lib.getDev p}/lib/pkgconfig:${lib.getDev p}/share/pkgconfig"
+          ) (lib.closePropagation (with pkgs; [ gtk3 gtk4 pango cairo gdk-pixbuf atk harfbuzz graphene libsoup_3 webkitgtk_4_1 ]));
           pc = {
             path = [ "${lib.getBin pkgs.buildPackages.pkg-config}/bin" ];
             env = {
@@ -94,7 +107,31 @@
           "lzma-sys"
           "zstd-sys"
         ] (_: pc)
+        // lib.genAttrs [
+          "gtk-sys"
+          "gtk4-sys"
+          "gdk-sys"
+          "gdk4-sys"
+          "gdkx11-sys"
+          "gsk4-sys"
+          "graphene-sys"
+          "pango-sys"
+          "pangocairo-sys"
+          "cairo-sys-rs"
+          "gdk-pixbuf-sys"
+          "atk-sys"
+          "harfbuzz-sys"
+          "soup2-sys"
+          "soup3-sys"
+          "javascriptcore-rs-sys"
+          "webkit2gtk-sys"
+        ] (_: pc // { env = pc.env // { PKG_CONFIG_PATH = "${pcDirs}:${gtkPcDirs}"; }; })
         // {
+          "libsodium-sys-stable" = pc // {
+            env = pc.env // {
+              SODIUM_USE_PKG_CONFIG = "1";
+            };
+          };
           "openssl-sys" = pc // {
             env = pc.env // {
               OPENSSL_NO_VENDOR = "1";
@@ -117,9 +154,25 @@
                 libtool
                 nasm
                 clang
+                # build scripts spawn these themselves (libffi-sys copies its tree with
+                # `cp`, autotools-based ones run `sh`, `sed`, `awk`); cargo-dyndrv hands a
+                # unit only this PATH, so without them the script dies with "No such file".
+                coreutils
+                bash
+                gnused
+                gawk
+                findutils
+                gnutar
+                gzip
+                diffutils
+                which
+                perl
+                texinfo
               ]
             );
             env = {
+              # crates that gate `#![feature]` on a nightly compiler (E0554 on stable)
+              RUSTC_BOOTSTRAP = "1";
               PKG_CONFIG_PATH = pcDirs;
               PKG_CONFIG = "${pkgs.buildPackages.pkg-config}/bin/pkg-config";
               PROTOC = "${pkgs.buildPackages.protobuf}/bin/protoc";
