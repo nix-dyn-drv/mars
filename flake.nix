@@ -82,6 +82,54 @@
               PKG_CONFIG = lib.getExe pkgs.buildPackages.pkg-config;
             };
           };
+          # libffi-sys copies its bundled libffi tree out of the (read-only) store with
+          # `cp -R` and runs ./configure inside the copy; the copy keeps the store's modes,
+          # so configure cannot write config.log. This cp reopens the copy for writing.
+          cpWritable = pkgs.buildPackages.writeShellScriptBin "cp" ''
+            ${pkgs.buildPackages.coreutils}/bin/cp "$@"
+            rc=$?
+            [ "$rc" = 0 ] && ${pkgs.buildPackages.coreutils}/bin/chmod -R u+w "''${@: -1}" 2>/dev/null
+            exit $rc
+          '';
+          # The build-script environment of every unit without an entry of its own.
+          star = {
+            path = map (p: "${lib.getBin p}/bin") (
+              with pkgs.buildPackages;
+              [
+                pkg-config
+                cmake
+                protobuf
+                python3
+                gnumake
+                autoconf
+                automake
+                libtool
+                nasm
+                clang
+                # build scripts spawn these themselves (libffi-sys copies its tree with
+                # `cp`, autotools-based ones run `sh`, `sed`, `awk`); cargo-dyndrv hands a
+                # unit only this PATH, so without them the script dies with "No such file".
+                coreutils
+                bash
+                gnused
+                gawk
+                gnugrep
+                findutils
+                gnutar
+                gzip
+                diffutils
+                which
+                perl
+                texinfo
+              ]
+            );
+            env = {
+              PKG_CONFIG_PATH = pcDirs;
+              PKG_CONFIG = "${pkgs.buildPackages.pkg-config}/bin/pkg-config";
+              PROTOC = "${pkgs.buildPackages.protobuf}/bin/protoc";
+              LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
+            };
+          };
         in
         lib.genAttrs [
           "openssl-sys"
@@ -127,6 +175,11 @@
           "webkit2gtk-sys"
         ] (_: pc // { env = pc.env // { PKG_CONFIG_PATH = "${pcDirs}:${gtkPcDirs}"; }; })
         // {
+          "libsodium-sys" = pc // {
+            env = pc.env // {
+              SODIUM_USE_PKG_CONFIG = "1";
+            };
+          };
           "libsodium-sys-stable" = pc // {
             env = pc.env // {
               SODIUM_USE_PKG_CONFIG = "1";
@@ -140,44 +193,9 @@
           # "*" applies to every unit without a more specific entry (cargo-dyndrv
           # wildcard fix): the common build-script tools and the variables their
           # crates read (protoc, libclang for bindgen, cmake, pkg-config).
-          "*" = {
-            path = map (p: "${lib.getBin p}/bin") (
-              with pkgs.buildPackages;
-              [
-                pkg-config
-                cmake
-                protobuf
-                python3
-                gnumake
-                autoconf
-                automake
-                libtool
-                nasm
-                clang
-                # build scripts spawn these themselves (libffi-sys copies its tree with
-                # `cp`, autotools-based ones run `sh`, `sed`, `awk`); cargo-dyndrv hands a
-                # unit only this PATH, so without them the script dies with "No such file".
-                coreutils
-                bash
-                gnused
-                gawk
-                findutils
-                gnutar
-                gzip
-                diffutils
-                which
-                perl
-                texinfo
-              ]
-            );
-            env = {
-              # crates that gate `#![feature]` on a nightly compiler (E0554 on stable)
-              RUSTC_BOOTSTRAP = "1";
-              PKG_CONFIG_PATH = pcDirs;
-              PKG_CONFIG = "${pkgs.buildPackages.pkg-config}/bin/pkg-config";
-              PROTOC = "${pkgs.buildPackages.protobuf}/bin/protoc";
-              LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
-            };
+          "*" = star;
+          "libffi-sys" = star // {
+            path = [ "${cpWritable}/bin" ] ++ star.path;
           };
         };
 
